@@ -1,0 +1,96 @@
+<html><head><title>Display page for Popup at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>Popup.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "300" HEIGHT = "200" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "Popup.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "Popup.class"
+            WIDTH = "300"
+            HEIGHT = "200"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "Popup.class" WIDTH = "300" HEIGHT = "200" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:Popup.java
+// Creating popup menus with Swing.
+// &lt;applet code=Popup width=300 height=200&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import com.bruceeckel.swing.*;
+
+public class Popup extends JApplet {
+  private JPopupMenu popup = new JPopupMenu();
+  private JTextField t = new JTextField(10);
+  public void init() {
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(t);
+    ActionListener al = new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        t.setText(((JMenuItem)e.getSource()).getText());
+      }
+    };
+    JMenuItem m = new JMenuItem("Hither");
+    m.addActionListener(al);
+    popup.add(m);
+    m = new JMenuItem("Yon");
+    m.addActionListener(al);
+    popup.add(m);
+    m = new JMenuItem("Afar");
+    m.addActionListener(al);
+    popup.add(m);
+    popup.addSeparator();
+    m = new JMenuItem("Stay Here");
+    m.addActionListener(al);
+    popup.add(m);
+    PopupListener pl = new PopupListener();
+    addMouseListener(pl);
+    t.addMouseListener(pl);
+  }
+  class PopupListener extends MouseAdapter {
+    public void mousePressed(MouseEvent e) {
+      maybeShowPopup(e);
+    }
+    public void mouseReleased(MouseEvent e) {
+      maybeShowPopup(e);
+    }
+    private void maybeShowPopup(MouseEvent e) {
+      if(e.isPopupTrigger())
+        popup.show(((JApplet)e.getComponent())
+          .getContentPane(), e.getX(), e.getY());
+    }
+  }
+  public static void main(String[] args) {
+    Console.run(new Popup(), 300, 200);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

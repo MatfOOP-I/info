@@ -1,0 +1,12 @@
+ir, nemanja, 12, 22.05.2019 01:00, testovi, 3
+ir, nemanja, 11, 22.05.2019, sredio home, 1
+ir, nemanja, 10, 21.05.2019, sredio bag, 2
+ir, milica, 9, 20.05.2019 14:33, Novi testovi za algoritam, 3
+ir, stefan, 8, 19.05.2019 12:31, Implementirana kontakt forma, 1
+ipz, stefan, 7, 18.05.2019 17:00, Prihvacen zahtev, 5
+ir, stefan, 6, 18.05.2019 16:41, Implementirana glavna stranica, 1
+iz, nikola, 5, 18.05.2019 14:31, Predlog izmene interfejsa
+ir, milica, 4, 17.05.2019 14:31, Ispravljen beg sa prijavljivanjem, 2
+ir, stefan, 3, 16.05.2019 17:05, Implementirano prijavljivanje, 1
+ir, milica, 2, 15.05.2019 12:05, Napisani testovi, 3
+ir, stefan, 1, 15.05.2019 09:00, Postavljen projekat, 1

@@ -1,0 +1,72 @@
+1: //: c10:Cleanup.java
+2: // Paying attention to exceptions in constructors.
+3: // {CustomTesting}
+4: import com.bruceeckel.simpletest.*;
+5: import java.io.*;
+6: 
+7: class InputFile {
+8:   private BufferedReader in;
+9:   InputFile(String fname) throws Exception {
+10:     try {
+11:       in =
+12:         new BufferedReader(
+13:           new FileReader(fname));
+14:       // Other code that might throw exceptions
+15:     } catch(FileNotFoundException e) {
+16:       System.err.println(
+17:         "Could not open " + fname);
+18:       // Wasn't open, so don't close it
+19:       throw e;
+20:     } catch(Exception e) {
+21:       // All other exceptions must close it
+22:       try {
+23:         in.close();
+24:       } catch(IOException e2) {
+25:         System.err.println(
+26:           "in.close() unsuccessful");
+27:       }
+28:       throw e; // Rethrow
+29:     } finally {
+30:       // Don't close it here!!!
+31:     }
+32:   }
+33:   String getLine() {
+34:     String s;
+35:     try {
+36:       s = in.readLine();
+37:     } catch(IOException e) {
+38:       System.err.println(
+39:         "readLine() unsuccessful");
+40:       s = "failed";
+41:     }
+42:     return s;
+43:   }
+44:   void cleanup() {
+45:     try {
+46:       in.close();
+47:     } catch(IOException e2) {
+48:       System.err.println(
+49:         "in.close() unsuccessful");
+50:     }
+51:   }
+52: }
+53: 
+54: public class Cleanup {
+55:   public static void main(String[] args) {
+56:     Test monitor = new Test("Cleanup");
+57:     try {
+58:       InputFile in =
+59:         new InputFile("Cleanup.java");
+60:       String s;
+61:       int i = 1;
+62:       while((s = in.getLine()) != null)
+63:         System.out.println(""+ i++ + ": " + s);
+64:       in.cleanup();
+65:     } catch(Exception e) {
+66:       System.err.println(
+67:         "Caught in main, e.printStackTrace()");
+68:       e.printStackTrace(System.err);
+69:     }
+70:     monitor.expect("Cleanup.out");
+71:   }
+72: } ///:~

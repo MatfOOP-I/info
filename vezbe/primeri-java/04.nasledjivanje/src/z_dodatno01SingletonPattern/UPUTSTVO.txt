@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------------------------------------------------------
+                                                    SINGLETON
+-----------------------------------------------------------------------------------------------------------------------
+Logger predstavlja klasu koja nam omogucava da logujemo sadrzaj programa.
+Radi jednostavnosti, implementacija koja sledi nece log pisati u datoteku
+vec na standardni izlaz.
+
+Logger koji ce biti implementiran predstavlja objekat, ali zapitajmo se
+da li nam zaista treba vise instanciranih objekata koji su logeri ili nam
+je dovoljan jedan?
+Ovo je kljucno pitanje i ispostavlja se da je odgovor na njega - jedan.
+U takvim situacijama mozemo koristiti Singleton obrazac za projektovanje (software design pattern)
+Singleton predstavlja objekat koji najcesce zivi tokom rada celokupnog programa i
+za koji zelimo da obezbedimo da nikada ne bude instanciran vise puta.
+
+Kada ga koristiti? Najpre, razmislite da li mozete da prodjete i bez njega,
+i ponekad zaista postoje mnogo elegantnija resenja. Bio dobar ili ne,
+svakako ga treba razumeti i razmotriti pri dizajnu resenja.
+
+Primeri upotrebe:
+    * Thread pool
+    * Kes
+    * Dialog box
+    * Podesavanja programa
+    * Logger
+    * Drajveri
+
+Vise o tematici u:
+* Knjigama:
+    > Elements of Reusable Object-Oriented Software,
+        Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
+    > Head First Design Patterns: A Brain-Friendly Guide (lepa i sarena knjiga sa Java kodom)
+        Eric Freeman, Bert Bates, Kathy Sierra, Elisabeth Robson
+* Veb strani:
+    > http://www.javaworld.com/article/2073352/core-java/simply-singleton.html
+
+Implementacija koja je prikazana nije savrsena i ima odredjene potencijalne mane.
+Na primer, kako obezbediti da singleton bude bezbedan kada program ima vise niti izvrsavanja?
+U kodu je pod komentarom prikazano jednostavno (ali potencijalno neefikasno resenje).
+Koriscenje kljucne reci synchronized nad funkcijom nam obezbedjuje bezbednost pri radu sa nitima,
+ali uz potencijalno veliko usporavanje koda. Ohrabrujem studente da dalje istraze kako ovo resiti :)

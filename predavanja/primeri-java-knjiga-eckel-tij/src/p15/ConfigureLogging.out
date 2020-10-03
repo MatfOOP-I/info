@@ -1,0 +1,41 @@
+ Logger Name : com Level: SEVERE
+%% .* ConfigureLogging sendLogMessages
+SEVERE: Severe
+ Logger Name : com.bruceeckel Level: FINEST
+%% .* ConfigureLogging sendLogMessages
+FINEST: Finest
+%% .* ConfigureLogging sendLogMessages
+FINER: Finer
+%% .* ConfigureLogging sendLogMessages
+FINE: Fine
+%% .* ConfigureLogging sendLogMessages
+CONFIG: Config
+%% .* ConfigureLogging sendLogMessages
+INFO: Info
+%% .* ConfigureLogging sendLogMessages
+WARNING: Warning
+%% .* ConfigureLogging sendLogMessages
+SEVERE: Severe
+ Logger Name : com.bruceeckel.util Level: INFO
+%% .* ConfigureLogging sendLogMessages
+INFO: Info
+%% .* ConfigureLogging sendLogMessages
+WARNING: Warning
+%% .* ConfigureLogging sendLogMessages
+SEVERE: Severe
+ Logger Name : com.bruceeckel.test Level: FINER
+%% .* ConfigureLogging sendLogMessages
+FINER: Finer
+%% .* ConfigureLogging sendLogMessages
+FINE: Fine
+%% .* ConfigureLogging sendLogMessages
+CONFIG: Config
+%% .* ConfigureLogging sendLogMessages
+INFO: Info
+%% .* ConfigureLogging sendLogMessages
+WARNING: Warning
+%% .* ConfigureLogging sendLogMessages
+SEVERE: Severe
+ Logger Name : random Level: SEVERE
+%% .* ConfigureLogging sendLogMessages
+SEVERE: Severe

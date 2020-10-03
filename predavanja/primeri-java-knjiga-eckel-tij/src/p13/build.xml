@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c13)" default="c13.run" basedir=".">
+
+  <description>
+  build.xml for c13 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c13.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c13.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c13.build" depends="JDK.version.check,c13.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c13.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c13.run" depends="c13.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="AlwaysEven.run"/>
+    <antcall target="CriticalSection.run"/>
+    <antcall target="Daemons.run"/>
+    <antcall target="DiningPhilosophers.run"/>
+    <antcall target="EvenGenerator.run"/>
+    <antcall target="Interrupt.run"/>
+    <antcall target="Joining.run"/>
+    <antcall target="PipedIO.run"/>
+    <antcall target="ResponsiveUI.run"/>
+    <antcall target="Restaurant.run"/>
+    <antcall target="RunnableThread.run"/>
+    <antcall target="SemaphoreTester.run"/>
+    <antcall target="SerialNumberChecker.run"/>
+    <antcall target="SimpleDaemons.run"/>
+    <antcall target="SimplePriorities.run"/>
+    <antcall target="SimpleThread.run"/>
+    <antcall target="SleepingThread.run"/>
+    <antcall target="Stopping.run"/>
+    <antcall target="SynchronizedEvenGenerator.run"/>
+    <antcall target="SynchronizedSemaphore.run"/>
+    <antcall target="SyncObject.run"/>
+    <antcall target="ThreadVariations.run"/>
+    <antcall target="YieldingThread.run"/>
+    <echo message="* Suspend must be run by hand. *"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="AlwaysEven.run">
+    <java
+      taskname="AlwaysEven"
+      classname="AlwaysEven"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CriticalSection.run">
+    <java
+      taskname="CriticalSection"
+      classname="CriticalSection"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Daemons.run">
+    <java
+      taskname="Daemons"
+      classname="Daemons"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="DiningPhilosophers.run">
+    <java
+      taskname="DiningPhilosophers"
+      classname="DiningPhilosophers"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' 5 0 deadlock 4'/>
+    </java>
+  </target>
+
+  <target name="EvenGenerator.run">
+    <java
+      taskname="EvenGenerator"
+      classname="EvenGenerator"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Interrupt.run">
+    <java
+      taskname="Interrupt"
+      classname="Interrupt"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Joining.run">
+    <java
+      taskname="Joining"
+      classname="Joining"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PipedIO.run">
+    <java
+      taskname="PipedIO"
+      classname="PipedIO"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ResponsiveUI.run">
+    <java
+      taskname="ResponsiveUI"
+      classname="ResponsiveUI"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Restaurant.run">
+    <java
+      taskname="Restaurant"
+      classname="Restaurant"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="RunnableThread.run">
+    <java
+      taskname="RunnableThread"
+      classname="RunnableThread"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SemaphoreTester.run">
+    <java
+      taskname="SemaphoreTester"
+      classname="SemaphoreTester"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SerialNumberChecker.run">
+    <java
+      taskname="SerialNumberChecker"
+      classname="SerialNumberChecker"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimpleDaemons.run">
+    <java
+      taskname="SimpleDaemons"
+      classname="SimpleDaemons"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimplePriorities.run">
+    <java
+      taskname="SimplePriorities"
+      classname="SimplePriorities"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimpleThread.run">
+    <java
+      taskname="SimpleThread"
+      classname="SimpleThread"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SleepingThread.run">
+    <java
+      taskname="SleepingThread"
+      classname="SleepingThread"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Stopping.run">
+    <java
+      taskname="Stopping"
+      classname="Stopping"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SynchronizedEvenGenerator.run">
+    <java
+      taskname="SynchronizedEvenGenerator"
+      classname="SynchronizedEvenGenerator"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SynchronizedSemaphore.run">
+    <java
+      taskname="SynchronizedSemaphore"
+      classname="SynchronizedSemaphore"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SyncObject.run">
+    <java
+      taskname="SyncObject"
+      classname="SyncObject"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ThreadVariations.run">
+    <java
+      taskname="ThreadVariations"
+      classname="ThreadVariations"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="YieldingThread.run">
+    <java
+      taskname="YieldingThread"
+      classname="YieldingThread"
+      classpath="${basedir};${basedir}/.."
+      dir="../c13"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c13"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

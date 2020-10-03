@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp codebase="__codebase__" href="jnlp/filechooser.jnlp"> 
+   <information> 
+      <title>FileChooser demo application</title> 
+      <vendor>Mindview Inc.</vendor> 
+      <description>Jnlp File choose Application</description> 
+      <description kind="short">A demonstration of opening, reading and writing a text file</description> 
+      <icon href="images/tijicon.gif"/>
+      <offline-allowed/> 
+    </information> 
+    <resources> 
+        <j2se version="1.3+"/> 
+        <jar href="jnlp/jnlpfilechooser.jar" download="eager"/> 
+    </resources> 
+    <application-desc main-class="c14.jnlp.JnlpFileChooser"/> 
+</jnlp> 

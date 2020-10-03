@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<ime>primeri-java</ime>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<ime>org.eclipse.jdt.core.javabuilder</ime>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<ime>org.eclipse.m2e.core.maven2Builder</ime>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+	</natures>
+</projectDescription>

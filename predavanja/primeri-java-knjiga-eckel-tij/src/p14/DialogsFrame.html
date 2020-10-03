@@ -1,0 +1,82 @@
+<html><head><title>Display page for Dialogs at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>Dialogs.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "125" HEIGHT = "75" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "Dialogs.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "Dialogs.class"
+            WIDTH = "125"
+            HEIGHT = "75"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "Dialogs.class" WIDTH = "125" HEIGHT = "75" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:Dialogs.java
+// Creating and using Dialog Boxes.
+// &lt;applet code=Dialogs width=125 height=75&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+class MyDialog extends JDialog {
+  public MyDialog(JFrame parent) {
+    super(parent, "My dialog", true);
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(new JLabel("Here is my dialog"));
+    JButton ok = new JButton("OK");
+    ok.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        dispose(); // Closes the dialog
+      }
+    });
+    cp.add(ok);
+    setSize(150,125);
+  }
+}
+
+public class Dialogs extends JApplet {
+  private JButton b1 = new JButton("Dialog Box");
+  private MyDialog dlg = new MyDialog(null);
+  public void init() {
+    b1.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        dlg.show();
+      }
+    });
+    getContentPane().add(b1);
+  }
+  public static void main(String[] args) {
+    Console.run(new Dialogs(), 125, 75);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

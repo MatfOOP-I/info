@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c06)" default="c06.run" basedir=".">
+
+  <description>
+  build.xml for c06 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c06.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c06.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c06.build" depends="JDK.version.check,c06.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c06.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c06.run" depends="c06.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="Bath.run"/>
+    <antcall target="Beetle.run"/>
+    <antcall target="BlankFinal.run"/>
+    <antcall target="CADSystem.run"/>
+    <antcall target="Car.run"/>
+    <antcall target="Cartoon.run"/>
+    <antcall target="Chess.run"/>
+    <antcall target="Detergent.run"/>
+    <antcall target="FinalArguments.run"/>
+    <antcall target="FinalData.run"/>
+    <antcall target="FinalOverridingIllusion.run"/>
+    <antcall target="Hide.run"/>
+    <antcall target="Jurassic.run"/>
+    <antcall target="Orc.run"/>
+    <antcall target="PlaceSetting.run"/>
+    <antcall target="SprinklerSystem.run"/>
+    <antcall target="Wind.run"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="Bath.run">
+    <java
+      taskname="Bath"
+      classname="Bath"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Beetle.run">
+    <java
+      taskname="Beetle"
+      classname="Beetle"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="BlankFinal.run">
+    <java
+      taskname="BlankFinal"
+      classname="BlankFinal"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CADSystem.run">
+    <java
+      taskname="CADSystem"
+      classname="c06.CADSystem"
+      classpath="${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Car.run">
+    <java
+      taskname="Car"
+      classname="Car"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Cartoon.run">
+    <java
+      taskname="Cartoon"
+      classname="Cartoon"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Chess.run">
+    <java
+      taskname="Chess"
+      classname="Chess"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Detergent.run">
+    <java
+      taskname="Detergent"
+      classname="Detergent"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FinalArguments.run">
+    <java
+      taskname="FinalArguments"
+      classname="FinalArguments"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FinalData.run">
+    <java
+      taskname="FinalData"
+      classname="FinalData"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FinalOverridingIllusion.run">
+    <java
+      taskname="FinalOverridingIllusion"
+      classname="FinalOverridingIllusion"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Hide.run">
+    <java
+      taskname="Hide"
+      classname="Hide"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Jurassic.run">
+    <java
+      taskname="Jurassic"
+      classname="Jurassic"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Orc.run">
+    <java
+      taskname="Orc"
+      classname="Orc"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PlaceSetting.run">
+    <java
+      taskname="PlaceSetting"
+      classname="PlaceSetting"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SprinklerSystem.run">
+    <java
+      taskname="SprinklerSystem"
+      classname="SprinklerSystem"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Wind.run">
+    <java
+      taskname="Wind"
+      classname="Wind"
+      classpath="${basedir};${basedir}/.."
+      dir="../c06"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c06"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

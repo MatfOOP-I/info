@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c11)" default="c11.run" basedir=".">
+
+  <description>
+  build.xml for c11 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c11.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c11.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/../c08/build.xml"
+      target="c08.build"
+      dir="${basedir}/../c08"
+      output="${basedir}/../c08/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c11.build" depends="JDK.version.check,c11.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c11.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c11.run" depends="c11.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="AlphabeticSearch.run"/>
+    <antcall target="AlphabeticSorting.run"/>
+    <antcall target="ArraySearching.run"/>
+    <antcall target="ArraySize.run"/>
+    <antcall target="Bits.run"/>
+    <antcall target="CanonicalMapping.run"/>
+    <antcall target="CatsAndDogs.run"/>
+    <antcall target="CatsAndDogs2.run"/>
+    <antcall target="Collection1.run"/>
+    <antcall target="ComparatorTest.run"/>
+    <antcall target="ComparingArrays.run"/>
+    <antcall target="CompType.run"/>
+    <antcall target="CopyingArrays.run"/>
+    <antcall target="CountedString.run"/>
+    <antcall target="Enumerations.run"/>
+    <antcall target="FailFast.run"/>
+    <antcall target="FillingArrays.run"/>
+    <antcall target="FillingLists.run"/>
+    <antcall target="FillTest.run"/>
+    <antcall target="HamsterMaze.run"/>
+    <antcall target="IceCream.run"/>
+    <antcall target="Iterators2.run"/>
+    <antcall target="LinkedHashMapDemo.run"/>
+    <antcall target="List1.run"/>
+    <antcall target="ListPerformance.run"/>
+    <antcall target="ListSortSearch.run"/>
+    <antcall target="Map1.run"/>
+    <antcall target="MapPerformance.run"/>
+    <antcall target="MouseListTest.run"/>
+    <antcall target="PrintingContainers.run"/>
+    <antcall target="Queue.run"/>
+    <antcall target="ReadOnly.run"/>
+    <antcall target="References.run"/>
+    <antcall target="Reverse.run"/>
+    <antcall target="Set1.run"/>
+    <antcall target="Set2.run"/>
+    <antcall target="SetPerformance.run"/>
+    <antcall target="SimpleCollection.run"/>
+    <antcall target="SimpleHashMap.run"/>
+    <antcall target="SlowMap.run"/>
+    <antcall target="SortedMapDemo.run"/>
+    <antcall target="SortedSetDemo.run"/>
+    <antcall target="SpringDetector.run"/>
+    <antcall target="SpringDetector2.run"/>
+    <antcall target="StackL.run"/>
+    <antcall target="Stacks.run"/>
+    <antcall target="Statistics.run"/>
+    <antcall target="StringHashCode.run"/>
+    <antcall target="StringSorting.run"/>
+    <antcall target="Synchronization.run"/>
+    <antcall target="TestArrays2.run"/>
+    <antcall target="Unsupported.run"/>
+    <antcall target="Utilities.run"/>
+    <antcall target="WorksAnyway.run"/>
+    <echo message="* InfiniteRecursion must be run by hand. *"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="AlphabeticSearch.run">
+    <java
+      taskname="AlphabeticSearch"
+      classname="AlphabeticSearch"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="AlphabeticSorting.run">
+    <java
+      taskname="AlphabeticSorting"
+      classname="AlphabeticSorting"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ArraySearching.run">
+    <java
+      taskname="ArraySearching"
+      classname="ArraySearching"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ArraySize.run">
+    <java
+      taskname="ArraySize"
+      classname="ArraySize"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Bits.run">
+    <java
+      taskname="Bits"
+      classname="Bits"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CanonicalMapping.run">
+    <java
+      taskname="CanonicalMapping"
+      classname="CanonicalMapping"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CatsAndDogs.run">
+    <java
+      taskname="CatsAndDogs"
+      classname="c11.CatsAndDogs"
+      classpath="${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="CatsAndDogs2.run">
+    <java
+      taskname="CatsAndDogs2"
+      classname="c11.CatsAndDogs2"
+      classpath="${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Collection1.run">
+    <java
+      taskname="Collection1"
+      classname="Collection1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ComparatorTest.run">
+    <java
+      taskname="ComparatorTest"
+      classname="ComparatorTest"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ComparingArrays.run">
+    <java
+      taskname="ComparingArrays"
+      classname="ComparingArrays"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CompType.run">
+    <java
+      taskname="CompType"
+      classname="CompType"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CopyingArrays.run">
+    <java
+      taskname="CopyingArrays"
+      classname="CopyingArrays"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CountedString.run">
+    <java
+      taskname="CountedString"
+      classname="CountedString"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Enumerations.run">
+    <java
+      taskname="Enumerations"
+      classname="Enumerations"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FailFast.run">
+    <java
+      taskname="FailFast"
+      classname="FailFast"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="FillingArrays.run">
+    <java
+      taskname="FillingArrays"
+      classname="FillingArrays"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FillingLists.run">
+    <java
+      taskname="FillingLists"
+      classname="FillingLists"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FillTest.run">
+    <java
+      taskname="FillTest"
+      classname="FillTest"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="HamsterMaze.run">
+    <java
+      taskname="HamsterMaze"
+      classname="HamsterMaze"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="IceCream.run">
+    <java
+      taskname="IceCream"
+      classname="IceCream"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Iterators2.run">
+    <java
+      taskname="Iterators2"
+      classname="Iterators2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LinkedHashMapDemo.run">
+    <java
+      taskname="LinkedHashMapDemo"
+      classname="LinkedHashMapDemo"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="List1.run">
+    <java
+      taskname="List1"
+      classname="List1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ListPerformance.run">
+    <java
+      taskname="ListPerformance"
+      classname="ListPerformance"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' 500'/>
+    </java>
+  </target>
+
+  <target name="ListSortSearch.run">
+    <java
+      taskname="ListSortSearch"
+      classname="ListSortSearch"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Map1.run">
+    <java
+      taskname="Map1"
+      classname="Map1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MapPerformance.run">
+    <java
+      taskname="MapPerformance"
+      classname="MapPerformance"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' 500'/>
+    </java>
+  </target>
+
+  <target name="MouseListTest.run">
+    <java
+      taskname="MouseListTest"
+      classname="MouseListTest"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PrintingContainers.run">
+    <java
+      taskname="PrintingContainers"
+      classname="PrintingContainers"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Queue.run">
+    <java
+      taskname="Queue"
+      classname="Queue"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ReadOnly.run">
+    <java
+      taskname="ReadOnly"
+      classname="ReadOnly"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="References.run">
+    <java
+      taskname="References"
+      classname="References"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Reverse.run">
+    <java
+      taskname="Reverse"
+      classname="Reverse"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Set1.run">
+    <java
+      taskname="Set1"
+      classname="Set1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Set2.run">
+    <java
+      taskname="Set2"
+      classname="Set2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SetPerformance.run">
+    <java
+      taskname="SetPerformance"
+      classname="SetPerformance"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' 500'/>
+    </java>
+  </target>
+
+  <target name="SimpleCollection.run">
+    <java
+      taskname="SimpleCollection"
+      classname="SimpleCollection"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimpleHashMap.run">
+    <java
+      taskname="SimpleHashMap"
+      classname="SimpleHashMap"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SlowMap.run">
+    <java
+      taskname="SlowMap"
+      classname="SlowMap"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SortedMapDemo.run">
+    <java
+      taskname="SortedMapDemo"
+      classname="SortedMapDemo"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SortedSetDemo.run">
+    <java
+      taskname="SortedSetDemo"
+      classname="SortedSetDemo"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SpringDetector.run">
+    <java
+      taskname="SpringDetector"
+      classname="SpringDetector"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SpringDetector2.run">
+    <java
+      taskname="SpringDetector2"
+      classname="SpringDetector2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="StackL.run">
+    <java
+      taskname="StackL"
+      classname="StackL"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Stacks.run">
+    <java
+      taskname="Stacks"
+      classname="Stacks"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Statistics.run">
+    <java
+      taskname="Statistics"
+      classname="Statistics"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="StringHashCode.run">
+    <java
+      taskname="StringHashCode"
+      classname="StringHashCode"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="StringSorting.run">
+    <java
+      taskname="StringSorting"
+      classname="StringSorting"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Synchronization.run">
+    <java
+      taskname="Synchronization"
+      classname="Synchronization"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="TestArrays2.run">
+    <java
+      taskname="TestArrays2"
+      classname="TestArrays2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Unsupported.run">
+    <java
+      taskname="Unsupported"
+      classname="Unsupported"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="Utilities.run">
+    <java
+      taskname="Utilities"
+      classname="Utilities"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="WorksAnyway.run">
+    <java
+      taskname="WorksAnyway"
+      classname="WorksAnyway"
+      classpath="${basedir};${basedir}/.."
+      dir="../c11"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c11"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

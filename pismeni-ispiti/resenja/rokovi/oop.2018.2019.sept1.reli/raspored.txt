@@ -1,0 +1,6 @@
+6, 45, Colin McRae, Grupa A, Subaru Impreza, 1995, 4WD
+10, 25, Henri Toivonen, Grupa B, Lancia Delta S4, 1985, 4WD, S
+7, 35, Sebastien Loeb, Grupa A, Citroen C4, 2007, 4WD
+8, 10, Miki Biasion, Grupa B, Opel Manta 400, 1982, RWD, S
+13, 45, Tommi Makinen, Grupa A, Mitsubishi Lancer Evo III, 1996, 4WD
+12, 15, Sebastien Ogier, Grupa B, Opel Adam R2, 2008, FWD

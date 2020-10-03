@@ -1,0 +1,73 @@
+ -- printing levels -- com : null com.bruceeckel : null com.bruceeckel.util : null com.bruceeckel.test : null random : null
+ -- printing levels -- com : SEVERE com.bruceeckel : null com.bruceeckel.util : null com.bruceeckel.test : null random : null
+com level: SEVERE
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com Severe
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel Severe
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.util Severe
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.test Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: random Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: random Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: random Severe
+ -- printing levels -- com : SEVERE com.bruceeckel : null com.bruceeckel.util : FINEST com.bruceeckel.test : FINEST random : FINEST
+individual loggers set to FINEST
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com Severe
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com.bruceeckel.util Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com.bruceeckel.util Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.util Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com.bruceeckel.test Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com.bruceeckel.test Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.test Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: random Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: random Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: random Severe
+ -- printing levels -- com : FINEST com.bruceeckel : null com.bruceeckel.util : FINEST com.bruceeckel.test : FINEST random : FINEST
+com level: FINEST
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com.bruceeckel Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com.bruceeckel Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com.bruceeckel.util Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com.bruceeckel.util Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.util Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: com.bruceeckel.test Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: com.bruceeckel.test Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: com.bruceeckel.test Severe
+%% .* LoggingLevelManipulation printLogMessages
+INFO: random Info
+%% .* LoggingLevelManipulation printLogMessages
+WARNING: random Warning
+%% .* LoggingLevelManipulation printLogMessages
+SEVERE: random Severe

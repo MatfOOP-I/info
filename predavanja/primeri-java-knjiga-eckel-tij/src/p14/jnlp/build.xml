@@ -1,0 +1,126 @@
+<project name="JNLP file chooser class example" default="all" basedir=".">
+  <property name="store.pass"        value="changeit"/>
+  <property name="key.store"         value="${java.home}\lib\security\cacerts"/>
+  <property name="key.file"          value="mindview.cer"/>
+  <property name="key.alias"         value="TestKey"/>
+  <property name="app.name"          value="webstarttest"/>
+  <property name="build.home"        value="."/>
+  <property name="bruceeckel.home"   value="com.bruceeckel"/>
+  <property name="webroot.name"      value="webroot"/>
+  <property name="webapp.root"       value="${build.home}/${webroot.name}"/>
+  <property name="deploy.war"        value="jnlpfilechooser.war"/>
+  <property name="jnlp.jar"          value="jnlpfilechooser.jar"/>
+  <property name="debug.value"       value="off"/>
+
+  <target name="prepare">
+    <mkdir dir="${webapp.root}"/>
+    <mkdir dir="${build.home}/classes"/>       
+    <copy file="${build.home}/filechoosertemplate.jnlp" tofile="${build.home}/filechooser.jnlp"/>
+    <replace file="${build.home}/filechooser.jnlp"
+      token="__codebase__"
+      value="file://${user.dir}"/>
+    <condition property="javaws.jar.missing">
+      <not>
+        <available file="${java.ext.dirs}/javaws.jar"/>
+      </not>
+    </condition>
+    <antcall target="javaws.jar.check"/>
+  </target>       
+
+  <target name="javaws.jar.check" if="javaws.jar.missing">
+    <echo file="${basedir}/../../errors.txt" append="true">Jnlp requires javaws.jar
+    Please place this jar in your extensions
+    directory: ${java.ext.dirs}
+    
+    </echo>
+    <echo message="javaws.jar is missing.  See errors.txt"/>
+    <sleep seconds="5"/>
+  </target>
+
+  <target name="clean" description="Clean up the build directory tree">
+    <delete>
+      <fileset dir="${build.home}">
+        <include name="**/*.jar"/>
+        <include name="**/*.class"/>
+        <include name="**/*.war"/>
+        <include name="filechooser.jnlp"/>
+      </fileset>
+    </delete>
+    <delete dir="${webapp.root}"/>
+    <delete dir="classes"/>
+  </target>
+
+  <target name="compile" depends="prepare" description="Compile the entire application" unless="javaws.jar.missing">
+    <!-- compile utilities first -->
+    <javac debug="${debug.value}"  
+           srcdir="${build.home}"                           
+           destdir="${build.home}/classes" >
+    </javac>
+  </target>
+
+  <target name="all" depends="clean, jar" description="Clean all directories and rebuild the jar."/>
+
+  <target name="makekey" description="Use this to make a key if you want to experiment with a signed jar">
+      <genkey alias="${key.alias}" keystore ="${key.store}" storepass="${store.pass}" validity="1825">
+        <dname>
+          <param name="CN" value="My Name"/>
+          <param name="OU" value="My Organizational Unit"/>
+          <param name="O"  value="My Organization"/>
+          <param name="L"  value="My City"/>
+          <param name="ST" value="My State"/>
+          <param name="C"  value="My Country"/>
+        </dname>
+      </genkey>
+  </target>
+  
+  <target name="deletekey" description="Use this to delete a key if you have made one.">
+<!--     <exec dir="${java.home}\bin" executable="keytool.exe" os="Windows 2000">
+        <arg line="-delete -alias ${key.alias} -keystore ${key.store} -storepass ${store.pass} "/> 
+     </exec> -->
+     <exec dir="${java.home}\bin" executable="keytool" os="${os.name}">
+        <arg line="-delete -alias ${key.alias} -keystore ${key.store} -storepass ${store.pass} "/> <!-- valid for 5 years -->
+     </exec>
+  </target>
+
+  <!-- Makes the jar file for the webstart application only -->
+
+  <target name="jar" depends="compile" description="Make a jar file " unless="javaws.jar.missing">
+    <jar jarfile="${build.home}/${jnlp.jar}"
+      basedir="${build.home}/classes"
+      includes="**/*.class"/>
+  </target>
+
+
+  <!-- Makes the war file for the webapp with the tag libraries-->
+  <target name="signedwar" depends="signjar, war" description="Make a war file with the classes and html etc."/>
+  
+  <target name="war" depends="jar" description="Make a war file with the classes and html etc.">
+    <copy todir="${webapp.root}">
+      <fileset dir="${build.home}">
+         <include name="*.jar"/>
+      </fileset>
+      <fileset dir="${build.home}">
+         <include name="*.htm*"/>
+         <include name="**/*.gif"/>  
+      </fileset>
+    </copy>
+    <copy file="${build.home}/filechoosertemplate.jnlp" tofile="${webapp.root}/filechooser.jnlp"/>
+    <replace file="${webapp.root}/filechooser.jnlp"
+      token="__codebase__"
+      value="http://localhost:8080/jnlpfilechooser"/>
+    <jar jarfile="${build.home}/${deploy.war}"
+      basedir="${webapp.root}"
+      includes="**/*.*"/>
+  </target>
+
+  <target name="signjar" depends="jar" description="Use this to sign the jar if you are experimenting with signed jars">
+     <signjar jar="${build.home}/${applet.jar}" 
+        alias="${key.alias}"
+        storepass="${store.pass}"
+        keystore="${key.store}"/>
+  </target>
+
+
+  <!-- Jars up all the source, the jar file, the applet policy file, etc. for passing on to someone else. -->
+
+  </project>

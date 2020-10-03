@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java" default="run" basedir=".">
+
+  <description>
+  Main build.xml for "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples
+  ant build
+    compiles but does not run the examples
+  ant clean
+    removes old class files
+  </description>
+
+  <!-- remove old errors.txt and check JDK version -->
+  <target name="prepare">
+    <delete file="errors.txt"/>
+    <javac
+      includes="CheckVersion.java"
+      srcdir="com/bruceeckel/tools/"
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- builds all examples -->
+  <target name="build" description="Compiles all the examples in the book">
+    <ant
+      antfile="${basedir}/c02/build.xml"
+      target="c02.build"
+      dir="${basedir}/c02"
+      output="${basedir}/c02/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c03/build.xml"
+      target="c03.build"
+      dir="${basedir}/c03"
+      output="${basedir}/c03/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c04/build.xml"
+      target="c04.build"
+      dir="${basedir}/c04"
+      output="${basedir}/c04/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c05/build.xml"
+      target="c05.build"
+      dir="${basedir}/c05"
+      output="${basedir}/c05/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c06/build.xml"
+      target="c06.build"
+      dir="${basedir}/c06"
+      output="${basedir}/c06/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c07/build.xml"
+      target="c07.build"
+      dir="${basedir}/c07"
+      output="${basedir}/c07/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c08/build.xml"
+      target="c08.build"
+      dir="${basedir}/c08"
+      output="${basedir}/c08/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c09/build.xml"
+      target="c09.build"
+      dir="${basedir}/c09"
+      output="${basedir}/c09/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c10/build.xml"
+      target="c10.build"
+      dir="${basedir}/c10"
+      output="${basedir}/c10/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c11/build.xml"
+      target="c11.build"
+      dir="${basedir}/c11"
+      output="${basedir}/c11/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c12/build.xml"
+      target="c12.build"
+      dir="${basedir}/c12"
+      output="${basedir}/c12/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c13/build.xml"
+      target="c13.build"
+      dir="${basedir}/c13"
+      output="${basedir}/c13/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c14/build.xml"
+      target="c14.build"
+      dir="${basedir}/c14"
+      output="${basedir}/c14/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c15/build.xml"
+      target="c15.build"
+      dir="${basedir}/c15"
+      output="${basedir}/c15/log.txt"
+    />
+    <ant
+      antfile="${basedir}/com/build.xml"
+      target="com.build"
+      dir="${basedir}/com"
+      output="${basedir}/com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/appendixa/build.xml"
+      target="appendixa.build"
+      dir="${basedir}/appendixa"
+      output="${basedir}/appendixa/log.txt"
+    />
+    <ant
+      antfile="${basedir}/bangbean/build.xml"
+      target="bangbean.build"
+      dir="${basedir}/bangbean"
+      output="${basedir}/bangbean/log.txt"
+    />
+    <ant
+      antfile="${basedir}/frogbean/build.xml"
+      target="frogbean.build"
+      dir="${basedir}/frogbean"
+      output="${basedir}/frogbean/log.txt"
+    />
+    <available file="errors.txt" property="errors"/>
+    <antcall target="finish"/>
+  </target>
+
+  <!-- forces all tests -->
+  <target name="test" description="Compiles and runs all the examples in the book">
+    <ant
+      antfile="${basedir}/c02/build.xml"
+      target="test"
+      dir="${basedir}/c02"
+      output="${basedir}/c02/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c03/build.xml"
+      target="test"
+      dir="${basedir}/c03"
+      output="${basedir}/c03/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c04/build.xml"
+      target="test"
+      dir="${basedir}/c04"
+      output="${basedir}/c04/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c05/build.xml"
+      target="test"
+      dir="${basedir}/c05"
+      output="${basedir}/c05/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c06/build.xml"
+      target="test"
+      dir="${basedir}/c06"
+      output="${basedir}/c06/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c07/build.xml"
+      target="test"
+      dir="${basedir}/c07"
+      output="${basedir}/c07/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c08/build.xml"
+      target="test"
+      dir="${basedir}/c08"
+      output="${basedir}/c08/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c09/build.xml"
+      target="test"
+      dir="${basedir}/c09"
+      output="${basedir}/c09/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c10/build.xml"
+      target="test"
+      dir="${basedir}/c10"
+      output="${basedir}/c10/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c11/build.xml"
+      target="test"
+      dir="${basedir}/c11"
+      output="${basedir}/c11/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c12/build.xml"
+      target="test"
+      dir="${basedir}/c12"
+      output="${basedir}/c12/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c13/build.xml"
+      target="test"
+      dir="${basedir}/c13"
+      output="${basedir}/c13/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c14/build.xml"
+      target="test"
+      dir="${basedir}/c14"
+      output="${basedir}/c14/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c15/build.xml"
+      target="test"
+      dir="${basedir}/c15"
+      output="${basedir}/c15/log.txt"
+    />
+    <ant
+      antfile="${basedir}/com/build.xml"
+      target="test"
+      dir="${basedir}/com"
+      output="${basedir}/com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/appendixa/build.xml"
+      target="test"
+      dir="${basedir}/appendixa"
+      output="${basedir}/appendixa/log.txt"
+    />
+    <ant
+      antfile="${basedir}/bangbean/build.xml"
+      target="test"
+      dir="${basedir}/bangbean"
+      output="${basedir}/bangbean/log.txt"
+    />
+    <ant
+      antfile="${basedir}/frogbean/build.xml"
+      target="test"
+      dir="${basedir}/frogbean"
+      output="${basedir}/frogbean/log.txt"
+    />
+    <available file="errors.txt" property="errors"/>
+    <antcall target="finish"/>
+  </target>
+
+  <!-- runs all untested examples -->
+  <target name="run" description="Compiles and runs all untested examples in the book">
+    <ant
+      antfile="${basedir}/c02/build.xml"
+      dir="${basedir}/c02"
+      output="${basedir}/c02/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c03/build.xml"
+      dir="${basedir}/c03"
+      output="${basedir}/c03/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c04/build.xml"
+      dir="${basedir}/c04"
+      output="${basedir}/c04/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c05/build.xml"
+      dir="${basedir}/c05"
+      output="${basedir}/c05/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c06/build.xml"
+      dir="${basedir}/c06"
+      output="${basedir}/c06/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c07/build.xml"
+      dir="${basedir}/c07"
+      output="${basedir}/c07/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c08/build.xml"
+      dir="${basedir}/c08"
+      output="${basedir}/c08/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c09/build.xml"
+      dir="${basedir}/c09"
+      output="${basedir}/c09/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c10/build.xml"
+      dir="${basedir}/c10"
+      output="${basedir}/c10/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c11/build.xml"
+      dir="${basedir}/c11"
+      output="${basedir}/c11/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c12/build.xml"
+      dir="${basedir}/c12"
+      output="${basedir}/c12/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c13/build.xml"
+      dir="${basedir}/c13"
+      output="${basedir}/c13/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c14/build.xml"
+      dir="${basedir}/c14"
+      output="${basedir}/c14/log.txt"
+    />
+    <ant
+      antfile="${basedir}/c15/build.xml"
+      dir="${basedir}/c15"
+      output="${basedir}/c15/log.txt"
+    />
+    <ant
+      antfile="${basedir}/com/build.xml"
+      dir="${basedir}/com"
+      output="${basedir}/com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/appendixa/build.xml"
+      dir="${basedir}/appendixa"
+      output="${basedir}/appendixa/log.txt"
+    />
+    <ant
+      antfile="${basedir}/bangbean/build.xml"
+      dir="${basedir}/bangbean"
+      output="${basedir}/bangbean/log.txt"
+    />
+    <ant
+      antfile="${basedir}/frogbean/build.xml"
+      dir="${basedir}/frogbean"
+      output="${basedir}/frogbean/log.txt"
+    />
+    <available file="errors.txt" property="errors"/>
+    <antcall target="finish"/>
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <ant
+      antfile="${basedir}/c02/build.xml"
+      target="clean"
+      dir="${basedir}/c02"
+    />
+    <ant
+      antfile="${basedir}/c03/build.xml"
+      target="clean"
+      dir="${basedir}/c03"
+    />
+    <ant
+      antfile="${basedir}/c04/build.xml"
+      target="clean"
+      dir="${basedir}/c04"
+    />
+    <ant
+      antfile="${basedir}/c05/build.xml"
+      target="clean"
+      dir="${basedir}/c05"
+    />
+    <ant
+      antfile="${basedir}/c06/build.xml"
+      target="clean"
+      dir="${basedir}/c06"
+    />
+    <ant
+      antfile="${basedir}/c07/build.xml"
+      target="clean"
+      dir="${basedir}/c07"
+    />
+    <ant
+      antfile="${basedir}/c08/build.xml"
+      target="clean"
+      dir="${basedir}/c08"
+    />
+    <ant
+      antfile="${basedir}/c09/build.xml"
+      target="clean"
+      dir="${basedir}/c09"
+    />
+    <ant
+      antfile="${basedir}/c10/build.xml"
+      target="clean"
+      dir="${basedir}/c10"
+    />
+    <ant
+      antfile="${basedir}/c11/build.xml"
+      target="clean"
+      dir="${basedir}/c11"
+    />
+    <ant
+      antfile="${basedir}/c12/build.xml"
+      target="clean"
+      dir="${basedir}/c12"
+    />
+    <ant
+      antfile="${basedir}/c13/build.xml"
+      target="clean"
+      dir="${basedir}/c13"
+    />
+    <ant
+      antfile="${basedir}/c14/build.xml"
+      target="clean"
+      dir="${basedir}/c14"
+    />
+    <ant
+      antfile="${basedir}/c15/build.xml"
+      target="clean"
+      dir="${basedir}/c15"
+    />
+    <ant
+      antfile="${basedir}/com/build.xml"
+      target="clean"
+      dir="${basedir}/com"
+    />
+    <ant
+      antfile="${basedir}/appendixa/build.xml"
+      target="clean"
+      dir="${basedir}/appendixa"
+    />
+    <ant
+      antfile="${basedir}/bangbean/build.xml"
+      target="clean"
+      dir="${basedir}/bangbean"
+    />
+    <ant
+      antfile="${basedir}/frogbean/build.xml"
+      target="clean"
+      dir="${basedir}/frogbean"
+    />
+    <delete>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="errors.txt"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <!-- checks for erors -->
+  <target name="finish" if="errors">
+    <echo message="Errors occurred.  See errors.txt for information."/>
+  </target>
+</project>

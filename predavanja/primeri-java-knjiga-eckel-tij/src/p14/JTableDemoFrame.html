@@ -1,0 +1,97 @@
+<html><head><title>Display page for JTableDemo at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>JTableDemo.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "350" HEIGHT = "200" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "JTableDemo.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "JTableDemo.class"
+            WIDTH = "350"
+            HEIGHT = "200"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "JTableDemo.class" WIDTH = "350" HEIGHT = "200" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:JTableDemo.java
+// Simple demonstration of JTable.
+// &lt;applet code=Table width=350 height=200&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.table.*;
+import javax.swing.event.*;
+import com.bruceeckel.swing.*;
+
+public class JTableDemo extends JApplet {
+  private JTextArea txt = new JTextArea(4, 20);
+  // The TableModel controls all the data:
+  class DataModel extends AbstractTableModel {
+    Object[][] data = {
+      {"one", "two", "three", "four"},
+      {"five", "six", "seven", "eight"},
+      {"nine", "ten", "eleven", "twelve"},
+    };
+    // Prints data when table changes:
+    class TML implements TableModelListener {
+      public void tableChanged(TableModelEvent e) {
+        txt.setText(""); // Clear it
+        for(int i = 0; i &lt; data.length; i++) {
+          for(int j = 0; j &lt; data[0].length; j++)
+            txt.append(data[i][j] + " ");
+          txt.append("\n");
+        }
+      }
+    }
+    public DataModel() { addTableModelListener(new TML());}
+    public int getColumnCount() { return data[0].length; }
+    public int getRowCount() { return data.length; }
+    public Object getValueAt(int row, int col) {
+      return data[row][col];
+    }
+    public void setValueAt(Object val, int row, int col) {
+      data[row][col] = val;
+      // Indicate the change has happened:
+      fireTableDataChanged();
+    }
+    public boolean isCellEditable(int row, int col) {
+      return true;
+    }
+  }
+  public void init() {
+    Container cp = getContentPane();
+    JTable table = new JTable(new DataModel());
+    cp.add(new JScrollPane(table));
+    cp.add(BorderLayout.SOUTH, txt);
+  }
+  public static void main(String[] args) {
+    Console.run(new JTableDemo(), 350, 200);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

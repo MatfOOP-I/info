@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c14)" default="c14.run" basedir=".">
+
+  <description>
+  build.xml for c14 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c14.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c14.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/../bangbean/build.xml"
+      target="bangbean.build"
+      dir="${basedir}/../bangbean"
+      output="${basedir}/../bangbean/log.txt"
+    />
+  </target>
+
+  <!-- set of files to compile (exclude files that lack necessary jars) -->
+  <patternset id="compile.sources">
+    <include name="**/*.java"/>
+    <exclude name="jnlp/**/*.java"/>
+    <exclude name="signedapplet/**/*.java"/>
+  </patternset>
+
+  <!-- build all classes in this directory -->
+  <target name="c14.build" depends="JDK.version.check,c14.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    >
+      <patternset refid="compile.sources"/>
+    </javac>
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c14.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c14.run" depends="c14.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <ant
+      antfile="${basedir}/jnlp/build.xml"
+      target="all"
+      dir="${basedir}/jnlp"
+    />
+    <ant
+      antfile="${basedir}/signedapplet/build.xml"
+      target="all"
+      dir="${basedir}/signedapplet"
+    />
+    <echo message="* Applet1c must be run by hand. *"/>
+    <echo message="* Applet1d must be run by hand. *"/>
+    <echo message="* BangBean2 must be run by hand. *"/>
+    <echo message="* BangBeanTest must be run by hand. *"/>
+    <echo message="* BeanDumper must be run by hand. *"/>
+    <echo message="* BorderLayout1 must be run by hand. *"/>
+    <echo message="* Borders must be run by hand. *"/>
+    <echo message="* Box1 must be run by hand. *"/>
+    <echo message="* Box2 must be run by hand. *"/>
+    <echo message="* Box3 must be run by hand. *"/>
+    <echo message="* Box4 must be run by hand. *"/>
+    <echo message="* BoxLayout1 must be run by hand. *"/>
+    <echo message="* Button1 must be run by hand. *"/>
+    <echo message="* Button2 must be run by hand. *"/>
+    <echo message="* Button2b must be run by hand. *"/>
+    <echo message="* ButtonGroups must be run by hand. *"/>
+    <echo message="* Buttons must be run by hand. *"/>
+    <echo message="* CheckBoxes must be run by hand. *"/>
+    <echo message="* ColorBoxes must be run by hand. *"/>
+    <echo message="* ComboBoxes must be run by hand. *"/>
+    <echo message="* CutAndPaste must be run by hand. *"/>
+    <echo message="* Dialogs must be run by hand. *"/>
+    <echo message="* DynamicEvents must be run by hand. *"/>
+    <echo message="* EventThreadFrame must be run by hand. *"/>
+    <echo message="* Faces must be run by hand. *"/>
+    <echo message="* FileChooserTest must be run by hand. *"/>
+    <echo message="* FlowLayout1 must be run by hand. *"/>
+    <echo message="* GridLayout1 must be run by hand. *"/>
+    <echo message="* HTMLButton must be run by hand. *"/>
+    <echo message="* InvokeLaterFrame must be run by hand. *"/>
+    <echo message="* JScrollPanes must be run by hand. *"/>
+    <echo message="* JTableDemo must be run by hand. *"/>
+    <echo message="* List must be run by hand. *"/>
+    <echo message="* LookAndFeel must be run by hand. *"/>
+    <echo message="* Menus must be run by hand. *"/>
+    <echo message="* MessageBoxes must be run by hand. *"/>
+    <echo message="* Popup must be run by hand. *"/>
+    <echo message="* Progress must be run by hand. *"/>
+    <echo message="* RadioButtons must be run by hand. *"/>
+    <echo message="* Separation must be run by hand. *"/>
+    <echo message="* ShowAddListeners must be run by hand. *"/>
+    <echo message="* SimpleMenus must be run by hand. *"/>
+    <echo message="* SineWave must be run by hand. *"/>
+    <echo message="* TabbedPane1 must be run by hand. *"/>
+    <echo message="* TextArea must be run by hand. *"/>
+    <echo message="* TextFields must be run by hand. *"/>
+    <echo message="* TextPane must be run by hand. *"/>
+    <echo message="* TicTacToe must be run by hand. *"/>
+    <echo message="* TrackEvent must be run by hand. *"/>
+    <echo message="* Trees must be run by hand. *"/>
+    <delete file="failed"/>
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c14"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

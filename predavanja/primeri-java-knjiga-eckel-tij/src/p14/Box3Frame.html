@@ -1,0 +1,73 @@
+<html><head><title>Display page for Box3 at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>Box3.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "450" HEIGHT = "300" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "Box3.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "Box3.class"
+            WIDTH = "450"
+            HEIGHT = "300"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "Box3.class" WIDTH = "450" HEIGHT = "300" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:Box3.java
+// Using Glue.
+// &lt;applet code=Box3 width=450 height=300&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+public class Box3 extends JApplet {
+  public void init() {
+    Box bv = Box.createVerticalBox();
+    bv.add(new JLabel("Hello"));
+    bv.add(Box.createVerticalGlue());
+    bv.add(new JLabel("Applet"));
+    bv.add(Box.createVerticalGlue());
+    bv.add(new JLabel("World"));
+    Box bh = Box.createHorizontalBox();
+    bh.add(new JLabel("Hello"));
+    bh.add(Box.createHorizontalGlue());
+    bh.add(new JLabel("Applet"));
+    bh.add(Box.createHorizontalGlue());
+    bh.add(new JLabel("World"));
+    bv.add(Box.createVerticalGlue());
+    bv.add(bh);
+    bv.add(Box.createVerticalGlue());
+    getContentPane().add(bv);
+  }
+  public static void main(String[] args) {
+    Console.run(new Box3(), 450, 300);
+  }
+} ///:~
+
+</B></PRE></FONT>
+</html>

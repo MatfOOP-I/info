@@ -1,0 +1,19 @@
+com level: SEVERE
+%% .* LoggingLevels logMessages
+SEVERE: test : severe
+%% .* LoggingLevels logMessages
+INFO: random : info
+individual loggers set to FINEST
+%% .* LoggingLevels logMessages
+INFO: util : info
+%% .* LoggingLevels logMessages
+SEVERE: test : severe
+%% .* LoggingLevels logMessages
+INFO: random : info
+com level: SEVERE
+%% .* LoggingLevels logMessages
+INFO: util : info
+%% .* LoggingLevels logMessages
+SEVERE: test : severe
+%% .* LoggingLevels logMessages
+INFO: random : info

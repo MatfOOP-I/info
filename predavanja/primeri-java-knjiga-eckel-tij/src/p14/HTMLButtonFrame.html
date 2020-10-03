@@ -1,0 +1,72 @@
+<html><head><title>Display page for HTMLButton at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>HTMLButton.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "250" HEIGHT = "500" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "HTMLButton.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "HTMLButton.class"
+            WIDTH = "250"
+            HEIGHT = "500"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "HTMLButton.class" WIDTH = "250" HEIGHT = "500" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:HTMLButton.java
+// Putting HTML text on Swing components.
+// &lt;applet code=HTMLButton width=250 height=500&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+public class HTMLButton extends JApplet {
+  private JButton b = new JButton(
+    "&lt;html&gt;&lt;b&gt;&lt;font size=+2&gt;" +
+    "&lt;center&gt;Hello!&lt;br&gt;&lt;i&gt;Press me now!");
+  public void init() {
+    b.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        getContentPane().add(new JLabel("&lt;html&gt;" +
+          "&lt;i&gt;&lt;font size=+4&gt;Kapow!"));
+        // Force a re-layout to include the new label:
+        validate();
+      }
+    });
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(b);
+  }
+  public static void main(String[] args) {
+    Console.run(new HTMLButton(), 200, 500);
+  }
+} ///:~
+
+</B></PRE></FONT>
+</html>

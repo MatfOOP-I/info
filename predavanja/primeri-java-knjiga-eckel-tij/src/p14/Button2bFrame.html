@@ -1,0 +1,75 @@
+<html><head><title>Display page for Button2b at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>Button2b.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "200" HEIGHT = "75" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "Button2b.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "Button2b.class"
+            WIDTH = "200"
+            HEIGHT = "75"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "Button2b.class" WIDTH = "200" HEIGHT = "75" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:Button2b.java
+// Using anonymous inner classes.
+// &lt;applet code=Button2b width=200 height=75&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+public class Button2b extends JApplet {
+  private JButton
+    b1 = new JButton("Button 1"),
+    b2 = new JButton("Button 2");
+  private JTextField txt = new JTextField(10);
+  private ActionListener bl = new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+      String name = ((JButton)e.getSource()).getText();
+      txt.setText(name);
+    }
+  };
+  public void init() {
+    b1.addActionListener(bl);
+    b2.addActionListener(bl);
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(b1);
+    cp.add(b2);
+    cp.add(txt);
+  }
+  public static void main(String[] args) {
+    Console.run(new Button2b(), 200, 75);
+  }
+} ///:~
+
+</B></PRE></FONT>
+</html>

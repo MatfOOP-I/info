@@ -1,0 +1,121 @@
+<html><head><title>Display page for ColorBoxes at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>ColorBoxes.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "500" HEIGHT = "400" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "ColorBoxes.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "ColorBoxes.class"
+            WIDTH = "500"
+            HEIGHT = "400"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "ColorBoxes.class" WIDTH = "500" HEIGHT = "400" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:ColorBoxes.java
+// Using the Runnable interface.
+// &lt;applet code=ColorBoxes width=500 height=400&gt;
+// &lt;param name=grid value="12"&gt;
+// &lt;param name=pause value="50"&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import com.bruceeckel.swing.*;
+
+class CBox extends JPanel implements Runnable {
+  private Thread t;
+  private int pause;
+  private static final Color[] colors = {
+    Color.BLACK, Color.BLUE, Color.CYAN,
+    Color.DARK_GRAY, Color.GRAY, Color.GREEN,
+    Color.LIGHT_GRAY, Color.MAGENTA,
+    Color.ORANGE, Color.PINK, Color.RED,
+    Color.WHITE, Color.YELLOW
+  };
+  private static Random rand = new Random();
+  private static final Color newColor() {
+    return colors[rand.nextInt(colors.length)];
+  }
+  private Color cColor = newColor();
+  public void paintComponent(Graphics  g) {
+    super.paintComponent(g);
+    g.setColor(cColor);
+    Dimension s = getSize();
+    g.fillRect(0, 0, s.width, s.height);
+  }
+  public CBox(int pause) {
+    this.pause = pause;
+    t = new Thread(this);
+    t.start();
+  }
+  public void run() {
+    while(true) {
+      cColor = newColor();
+      repaint();
+      try {
+        t.sleep(pause);
+      } catch(InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+    }
+  }
+}
+
+public class ColorBoxes extends JApplet {
+  private boolean isApplet = true;
+  private int grid = 12;
+  private int pause = 50;
+  public void init() {
+    // Get parameters from Web page:
+    if(isApplet) {
+      String gsize = getParameter("grid");
+      if(gsize != null)
+        grid = Integer.parseInt(gsize);
+      String pse = getParameter("pause");
+      if(pse != null)
+        pause = Integer.parseInt(pse);
+    }
+    Container cp = getContentPane();
+    cp.setLayout(new GridLayout(grid, grid));
+    for(int i = 0; i &lt; grid * grid; i++)
+      cp.add(new CBox(pause));
+  }
+  public static void main(String[] args) {
+    ColorBoxes applet = new ColorBoxes();
+    applet.isApplet = false;
+    if(args.length &gt; 0)
+      applet.grid = Integer.parseInt(args[0]);
+    if(args.length &gt; 1)
+      applet.pause = Integer.parseInt(args[1]);
+    Console.run(applet, 500, 400);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

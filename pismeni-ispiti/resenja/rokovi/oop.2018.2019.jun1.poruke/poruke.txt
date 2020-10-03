@@ -1,0 +1,7 @@
+r; 12.06.2019.; Ljubica; Hvala, takodje!; ne
+r; 12.06.2019.; Kosta; Kako je prosao ispit?; ne
+r; 06.06.2019.; Mira; Usmeni je u ucionici 840.; da
+r; 06.06.2019.; Marko; Srecno na ispitu!; da
+s; 12.06.2019.; Ljubica; Srecno na ispitu!
+s; 06.06.2019.; Marko; HVALA!
+s; 05.06.2019.; Janko; Sta ce biti na ispitu iz OOP-a?

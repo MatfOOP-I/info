@@ -1,0 +1,8 @@
+A , 1022 , Google Chrome , 4020 , 62
+P , 1212 , Windows Defender , 10 , sys
+A , 3122 , Steam , 121 , 5
+A , 1190 , VLC , 912 , 10
+P , 912 , explorer.exe , 32 , sys
+P , 1001 , Avast Antivirus , 123
+P , 2100 , Windows update , 92 , sys
+P , 3123 , Steam update , 9

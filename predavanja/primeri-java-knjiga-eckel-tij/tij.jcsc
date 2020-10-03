@@ -1,0 +1,136 @@
+# ==============================================================
+#                        JCSC Testing Rules                     
+# ==============================================================
+# Date: Mon Nov 04 21:14:43 PST 2002
+# ==============================================================
+# General                                                       
+# ==============================================================
+General.LineLength=60
+General.MaxNumberOfArgumentsPerConstructor=-1
+General.MaxNumberOfNCSSPerConstructor=-1
+General.TabsAllowed=false
+General.AllowDotStarImport=true
+General.TypeDeclarationModifierOrder=true
+General.NestedTypeDeclarationModifierOrder=true
+General.InterfaceCheckAbstract=true
+General.PackageNameRegExp=[a-z][\\w]*(\\.[a-z][\\w]*)*
+General.ClassNameRegExp=[A-Z][\\w\\d]*
+General.AbstractClassNameRegExp=[A-Z][\\w\\d]*
+General.InterfaceNameRegExp=[A-Z][\\w\\d]*
+General.LabelNameRegExp=[A-Z][A-Z0-9_]*
+General.OnlyCapitalLForLong=true
+General.SpaceAfterStatementKeyword=false
+General.SpaceAroundBinaryExpression=true
+General.SwitchRequiresDefault=true
+General.AssignmentInConditionalExpression=false
+General.ComplexLoopExpression=false
+General.ConditionalExpression=true
+General.AllowedComplexLoopExpression=equals|contains|next|size|readLine|has(Next|More(Elements|Tokens))
+General.StringLiteralAllowed=true
+General.EmptyStringLiteralAllowed=true
+General.EmptyCatchBlockAllowed=false
+General.EmptyFinallyBlockAllowed=false
+General.BracesAroundSingleLineStatement=false
+General.SemicolonAfterTypeDeclaration=false
+# General.NestedTypeBlockPlaceRule=NTPR_BEGINNING_OF_CLASS
+# General.NestedTypeBlockPlaceRule=NTPR_END_OF_CLASS
+General.NestedTypeBlockPlaceRule=NTPR_END_OF_CLASS
+# ==============================================================
+# Field                                                         
+# ==============================================================
+Field.OnlyOneFieldDeclarationPerLine=false
+Field.AllowPublicField=true
+Field.AllowProtectedField=true
+Field.AllowPackageField=true
+Field.FieldDeclarationModifierOrder=true
+Field.CheckArrayAtType=true
+Field.IFPriRegExp=[a-z][\\w\\d]*
+Field.IFPacRegExp=[a-z][\\w\\d]*
+Field.IFProRegExp=[a-z][\\w\\d]*
+Field.IFPubRegExp=[a-z][\\w\\d]*
+Field.CFPriRegExp=[a-z][\\w\\d]*
+Field.CFPacRegExp=[a-z][\\w\\d]*
+Field.CFProRegExp=[a-z][\\w\\d]*
+Field.CFPubRegExp=[a-z][\\w\\d]*
+Field.FCFPriRegExp=[A-Z][A-Z0-9_]*
+Field.FCFPacRegExp=[A-Z][A-Z0-9_]*
+Field.FCFProRegExp=[A-Z][A-Z0-9_]*
+Field.FCFPubRegExp=[A-Z][A-Z0-9_]*
+Field.LVRegExp=[\\w][\\w\\d]*
+# Field.FieldBlockPlaceRule=FPR_BEFORE_METHOD
+# Field.FieldBlockPlaceRule=FPR_AFTER_METHOD
+Field.FieldBlockPlaceRule=FPR_BEFORE_METHOD
+Field.FieldOrderRule=FOR_NO_ORDER
+# Field.FieldOrderRule=FOR_PUBPROPACPRI
+# Field.FieldOrderRule=FOR_PRIPACPROPUB
+# Field.FieldOrderRule=FOR_STATFIN_STAT_INS
+Field.FieldOrderRule=FOR_STATFIN_STAT_INS
+# ==============================================================
+# Method                                                        
+# ==============================================================
+Method.SpaceAfterMethodName=false
+# -1 -> no checking from # of parameter
+Method.MaxNumberOfArgumentsPerMethod=-1
+Method.MaxNumberOfNCSSPerMethod=-1
+Method.RegExpPrefixForMethodReturingBoolean=^[a-z][\\w\\d]*
+Method.DontReturnTypeVector=true
+Method.DontReturnTypeHashtable=true
+Method.MethodDeclarationModifierOrder=true
+General.OnlyThrowSubclassedException=false
+Method.IMetPriRegExp=[a-z][\\w\\d]*
+Method.IMetPacRegExp=[a-z][\\w\\d]*
+Method.IMetProRegExp=[a-z][\\w\\d]*
+Method.IMetPubRegExp=[a-z][\\w\\d]*
+Method.CMetPriRegExp=[a-z][\\w\\d]*
+Method.CMetPacRegExp=[a-z][\\w\\d]*
+Method.CMetProRegExp=[a-z][\\w\\d]*
+Method.CMetPubRegExp=[a-z][\\w\\d]*
+Method.FMetPriRegExp=[a-z][\\w\\d]*
+Method.FMetPacRegExp=[a-z][\\w\\d]*
+Method.FMetProRegExp=[a-z][\\w\\d]*
+Method.FMetPubRegExp=[a-z][\\w\\d]*
+Method.FCMetPriRegExp=[a-z][\\w\\d]*
+Method.FCMetPacRegExp=[a-z][\\w\\d]*
+Method.FCMetProRegExp=[a-z][\\w\\d]*
+Method.FCMetPubRegExp=[a-z][\\w\\d]*
+Method.ParaRegExp=[a-z][\\w\\d]*
+Method.FinParaRegExp=[a-z][\\w\\d]*
+# Method.MethodBlockPlaceRule=MPR_BEFORE_FIELD
+# Method.MethodBlockPlaceRule=MPR_AFTER_FIELD
+Method.MethodBlockPlaceRule=MPR_AFTER_FIELD
+# Method.MethodOrderRule=MOR_NO_ORDER
+# Method.MethodOrderRule=MOR_PUBPROPACPRI
+# Method.MethodOrderRule=MOR_PRIPACPROPUB
+# Method.MethodOrderRule=MOR_CTOR_INS_STAT
+# Method.MethodOrderRule=MOR_CTOR_STAT_INS
+# Method.MethodOrderRule=MOR_STAT_CTOR_INS
+Method.MethodOrderRule=MOR_NO_ORDER
+# ==============================================================
+# JavaDoc                                                       
+# ==============================================================
+JavaDoc.TypeDeclarationAuthor=false
+JavaDoc.TypeDeclarationVersion=false
+JavaDoc.CtorDeclarationParam=false
+JavaDoc.CtorDeclarationThrows=false
+JavaDoc.CtorJavaDocPublic=false
+JavaDoc.CtorJavaDocProtected=false
+JavaDoc.CtorJavaDocPackage=false
+JavaDoc.CtorJavaDocPrivate=false
+JavaDoc.MethodDeclarationParam=false
+JavaDoc.MethodDeclarationThrows=false
+JavaDoc.MethodDeclarationReturn=false
+JavaDoc.MethodVoidNoReturn=false
+JavaDoc.AnonymousClassMethodJavaDoc=false
+JavaDoc.MethodJavaDocPublic=false
+JavaDoc.MethodJavaDocProtected=false
+JavaDoc.MethodJavaDocPackage=false
+JavaDoc.MethodJavaDocPrivate=false
+JavaDoc.FieldJavaDocPublic=false
+JavaDoc.FieldJavaDocProtected=false
+JavaDoc.FieldJavaDocPackage=false
+JavaDoc.FieldJavaDocPrivate=false
+JavaDoc.JavaDocTagOrder=false
+# =============================================================
+#                   (c) 1999-2002  Ralph Jocham                
+#                   http://jcsc.sourceforge.net                
+# =============================================================

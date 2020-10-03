@@ -1,0 +1,103 @@
+<project name="Signed Applet example" default="all" basedir=".">
+  <property name="store.pass"        value="changeit"/>
+  <property name="key.store"         value="${java.home}\lib\security\cacerts"/>
+  <property name="key.file"          value="mindview.cer"/>
+  <property name="key.alias"         value="TestKey"/>
+  <property name="app.name"          value="fileaccess"/>
+  <property name="build.home"        value="."/>
+  <property name="bruceeckel.home"   value="com.bruceeckel"/>
+  <property name="webroot.name"      value="webroot"/>
+  <property name="webapp.root"       value="${build.home}/${webroot.name}"/>
+  <property name="dist.home"         value="distribution"/>
+  <property name="deploy.war"        value="fileaccess.war"/>
+  <property name="applet.jar"        value="fileaccess.jar"/>
+  <property name="debug.value"       value="off"/>
+
+  <target name="prepare">
+    <mkdir dir="${webapp.root}"/>
+    <mkdir dir="${webapp.root}/${app.name}"/>
+    <mkdir dir="${build.home}/classes"/> 
+  </target>
+
+  <target name="clean" depends="deletekey" description="Clean up the build directory tree">
+    <delete>
+      <fileset dir="${build.home}">
+         <include name="**/*.jar"/>
+         <include name="**/*.class"/>
+         <include name="**/*.war"/>
+      </fileset>
+    </delete>
+    <delete dir="${webapp.root}"/>
+    <delete dir="classes"/>
+  </target>
+
+  <target name="compile" depends="prepare" description="Compile the entire application">
+    <!-- compile utilities first -->
+    <javac debug="${debug.value}"                      
+           srcdir="${build.home}"
+           destdir="${build.home}/classes" 
+           classpath="${basedir}/..;${basedir}/../..">
+    </javac>
+  </target>
+
+  <target name="all" depends="clean, signjar" description="Clean all directories and rebuild the jar."/>
+
+  <target name="makekey" description="Makes a key and stores it in the specified keystore">
+      <genkey alias="${key.alias}" keystore ="${key.store}" storepass="${store.pass}" validity="1825"> <!-- valid for 5 years -->
+        <dname>
+          <param name="CN" value="A Signer"/>
+          <param name="OU" value="Signing Unit"/>
+          <param name="O"  value="My Company"/>
+          <param name="C"  value="US"/>
+        </dname>
+      </genkey>
+  </target>
+  
+  <target name="deletekey" description="Deletes the key with the specified alias from the specified keystore">
+     <exec dir="${java.home}\bin" executable="keytool" os="${os.name}">
+        <arg line="-delete -alias ${key.alias} -keystore ${key.store} -storepass ${store.pass} "/>
+     </exec>
+  </target>
+  
+  <target name = "exportkey" description="exports a key with the specified alias to a file">
+     <exec dir="${build.home}" executable="keytool" os="${os.name}">
+        <arg line="-export -file ${key.file} -alias ${key.alias} -keystore ${key.store} -storepass ${store.pass} "/>
+     </exec>
+  </target>
+
+  <!-- Makes the jar file for the applet only -->
+
+  <target name="jar" depends="compile" description="Make a jar file "  >
+    <jar jarfile="${build.home}/${applet.jar}"
+      basedir="${build.home}/classes"
+      includes="**/*.class"/>
+  </target>
+
+
+  <!-- Makes the war file for the webapp with signed applet jar-->
+  <target name="war" depends="clean, signjar, unsignedwar" description="Make a war file with the classes and html etc.">
+  </target>
+
+  <!-- Optional target for testing with unsigned jar-->
+  <target name="unsignedwar" depends="jar" description="Make a war file with the classes and html etc.">
+    <copy todir="${webapp.root}">
+      <fileset dir="${build.home}">
+         <include name="*.htm*"/>
+      </fileset>
+      <fileset dir="${build.home}">
+         <include name="*.jar"/>
+      </fileset>    
+    </copy>
+    <jar jarfile="${build.home}/${deploy.war}"
+      basedir="${webapp.root}"
+      includes="**/*.*"/>
+  </target>
+
+   <target name="signjar" depends="jar,makekey">
+      <signjar jar="${build.home}/${applet.jar}" 
+         alias="${key.alias}"
+         storepass="${store.pass}"
+         keystore="${key.store}"/>
+   </target>
+</project>
+

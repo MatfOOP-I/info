@@ -1,0 +1,89 @@
+<html><head><title>Display page for CheckBoxes at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>CheckBoxes.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "200" HEIGHT = "200" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "CheckBoxes.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "CheckBoxes.class"
+            WIDTH = "200"
+            HEIGHT = "200"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "CheckBoxes.class" WIDTH = "200" HEIGHT = "200" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:CheckBoxes.java
+// Using JCheckBoxes.
+// &lt;applet code=CheckBoxes width=200 height=200&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+public class CheckBoxes extends JApplet {
+  private JTextArea t = new JTextArea(6, 15);
+  private JCheckBox
+    cb1 = new JCheckBox("Check Box 1"),
+    cb2 = new JCheckBox("Check Box 2"),
+    cb3 = new JCheckBox("Check Box 3");
+  public void init() {
+    cb1.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        trace("1", cb1);
+      }
+    });
+    cb2.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        trace("2", cb2);
+      }
+    });
+    cb3.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        trace("3", cb3);
+      }
+    });
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(new JScrollPane(t));
+    cp.add(cb1);
+    cp.add(cb2);
+    cp.add(cb3);
+  }
+  private void trace(String b, JCheckBox cb) {
+    if(cb.isSelected())
+      t.append("Box " + b + " Set\n");
+    else
+      t.append("Box " + b + " Cleared\n");
+  }
+  public static void main(String[] args) {
+    Console.run(new CheckBoxes(), 200, 200);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

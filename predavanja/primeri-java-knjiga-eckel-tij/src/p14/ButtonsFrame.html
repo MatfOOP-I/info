@@ -1,0 +1,78 @@
+<html><head><title>Display page for Buttons at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>Buttons.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "350" HEIGHT = "100" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "Buttons.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "Buttons.class"
+            WIDTH = "350"
+            HEIGHT = "100"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "Buttons.class" WIDTH = "350" HEIGHT = "100" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:Buttons.java
+// Various Swing buttons.
+// &lt;applet code=Buttons width=350 height=100&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.plaf.basic.*;
+import javax.swing.border.*;
+import com.bruceeckel.swing.*;
+
+public class Buttons extends JApplet {
+  private JButton jb = new JButton("JButton");
+  private BasicArrowButton
+    up = new BasicArrowButton(BasicArrowButton.NORTH),
+    down = new BasicArrowButton(BasicArrowButton.SOUTH),
+    right = new BasicArrowButton(BasicArrowButton.EAST),
+    left = new BasicArrowButton(BasicArrowButton.WEST);
+  public void init() {
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(jb);
+    cp.add(new JToggleButton("JToggleButton"));
+    cp.add(new JCheckBox("JCheckBox"));
+    cp.add(new JRadioButton("JRadioButton"));
+    JPanel jp = new JPanel();
+    jp.setBorder(new TitledBorder("Directions"));
+    jp.add(up);
+    jp.add(down);
+    jp.add(left);
+    jp.add(right);
+    cp.add(jp);
+  }
+  public static void main(String[] args) {
+    Console.run(new Buttons(), 350, 100);
+  }
+} ///:~
+</B></PRE></FONT>
+</html>

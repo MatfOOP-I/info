@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c08)" default="c08.run" basedir=".">
+
+  <description>
+  build.xml for c08 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c08.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c08.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+    <ant
+      antfile="${basedir}/../c07/build.xml"
+      target="c07.build"
+      dir="${basedir}/../c07"
+      output="${basedir}/../c07/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c08.build" depends="JDK.version.check,c08.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c08.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c08.run" depends="c08.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="Adventure.run"/>
+    <antcall target="AnonymousConstructor.run"/>
+    <antcall target="BigEgg.run"/>
+    <antcall target="BigEgg2.run"/>
+    <antcall target="Callbacks.run"/>
+    <antcall target="GreenhouseController.run"/>
+    <antcall target="HorrorShow.run"/>
+    <antcall target="InheritInner.run"/>
+    <antcall target="LocalInnerClass.run"/>
+    <antcall target="Month.run"/>
+    <antcall target="MultiImplementation.run"/>
+    <antcall target="MultiInterfaces.run"/>
+    <antcall target="MultiNestingAccess.run"/>
+    <antcall target="Parcel1.run"/>
+    <antcall target="Parcel10.run"/>
+    <antcall target="Parcel11.run"/>
+    <antcall target="Parcel2.run"/>
+    <antcall target="Parcel4.run"/>
+    <antcall target="Parcel5.run"/>
+    <antcall target="Parcel6.run"/>
+    <antcall target="Parcel7.run"/>
+    <antcall target="Parcel8.run"/>
+    <antcall target="Parcel9.run"/>
+    <antcall target="Sequence.run"/>
+    <antcall target="TestParcel.run"/>
+    <antcall target="TestRandVals.run"/>
+    <antcall target="Music5.run"/>
+    <antcall target="NestingInterfaces.run"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="Adventure.run">
+    <java
+      taskname="Adventure"
+      classname="Adventure"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="AnonymousConstructor.run">
+    <java
+      taskname="AnonymousConstructor"
+      classname="AnonymousConstructor"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="BigEgg.run">
+    <java
+      taskname="BigEgg"
+      classname="BigEgg"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="BigEgg2.run">
+    <java
+      taskname="BigEgg2"
+      classname="BigEgg2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Callbacks.run">
+    <java
+      taskname="Callbacks"
+      classname="Callbacks"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="GreenhouseController.run">
+    <java
+      taskname="GreenhouseController"
+      classname="GreenhouseController"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' 5000'/>
+    </java>
+  </target>
+
+  <target name="HorrorShow.run">
+    <java
+      taskname="HorrorShow"
+      classname="HorrorShow"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="InheritInner.run">
+    <java
+      taskname="InheritInner"
+      classname="InheritInner"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LocalInnerClass.run">
+    <java
+      taskname="LocalInnerClass"
+      classname="LocalInnerClass"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Month.run">
+    <java
+      taskname="Month"
+      classname="c08.Month"
+      classpath="${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MultiImplementation.run">
+    <java
+      taskname="MultiImplementation"
+      classname="c08.MultiImplementation"
+      classpath="${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MultiInterfaces.run">
+    <java
+      taskname="MultiInterfaces"
+      classname="MultiInterfaces"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MultiNestingAccess.run">
+    <java
+      taskname="MultiNestingAccess"
+      classname="MultiNestingAccess"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel1.run">
+    <java
+      taskname="Parcel1"
+      classname="Parcel1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel10.run">
+    <java
+      taskname="Parcel10"
+      classname="Parcel10"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel11.run">
+    <java
+      taskname="Parcel11"
+      classname="Parcel11"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel2.run">
+    <java
+      taskname="Parcel2"
+      classname="Parcel2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel4.run">
+    <java
+      taskname="Parcel4"
+      classname="Parcel4"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel5.run">
+    <java
+      taskname="Parcel5"
+      classname="Parcel5"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel6.run">
+    <java
+      taskname="Parcel6"
+      classname="Parcel6"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel7.run">
+    <java
+      taskname="Parcel7"
+      classname="Parcel7"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel8.run">
+    <java
+      taskname="Parcel8"
+      classname="Parcel8"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Parcel9.run">
+    <java
+      taskname="Parcel9"
+      classname="Parcel9"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Sequence.run">
+    <java
+      taskname="Sequence"
+      classname="Sequence"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="TestParcel.run">
+    <java
+      taskname="TestParcel"
+      classname="TestParcel"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="TestRandVals.run">
+    <java
+      taskname="TestRandVals"
+      classname="TestRandVals"
+      classpath="${basedir};${basedir}/.."
+      dir="../c08"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Music5.run">
+    <java
+      taskname="Music5"
+      classname="c08.music5.Music5"
+      classpath="${basedir}/.."
+      dir="../c08/music5"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="NestingInterfaces.run">
+    <java
+      taskname="NestingInterfaces"
+      classname="c08.nesting.NestingInterfaces"
+      classpath="${basedir}/.."
+      dir="../c08/nesting"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c08"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

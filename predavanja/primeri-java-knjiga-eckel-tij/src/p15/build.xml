@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c15)" default="c15.run" basedir=".">
+
+  <description>
+  build.xml for c15 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c15.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok" depends="c15.check">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- check the JDK version and for any jar dependencies -->
+  <target name="c15.check">
+    <condition property="mail.jar.missing">
+      <not>
+        <available file="${java.ext.dirs}/mail.jar"/>
+      </not>
+    </condition>
+    <antcall target="mail.jar.check"/>
+    <condition property="activation.jar.missing">
+      <not>
+        <available file="${java.ext.dirs}/activation.jar"/>
+      </not>
+    </condition>
+    <antcall target="activation.jar.check"/>
+    <condition property="junit.jar.missing">
+      <not>
+        <available file="${java.ext.dirs}/junit.jar"/>
+      </not>
+    </condition>
+    <antcall target="junit.jar.check"/>
+  </target>
+
+  <!-- insure that mail.jar exists. -->
+  <target name="mail.jar.check" if="mail.jar.missing">
+    <echo file="${basedir}/../errors.txt" append="true">c15 requires mail.jar
+    Please place this jar in your extensions
+    directory: ${java.ext.dirs}
+    
+    </echo>
+    <echo message="mail.jar is missing.  See errors.txt"/>
+    <sleep seconds="5"/>
+  </target>
+
+  <!-- insure that activation.jar exists. -->
+  <target name="activation.jar.check" if="activation.jar.missing">
+    <echo file="${basedir}/../errors.txt" append="true">c15 requires activation.jar
+    Please place this jar in your extensions
+    directory: ${java.ext.dirs}
+    
+    </echo>
+    <echo message="activation.jar is missing.  See errors.txt"/>
+    <sleep seconds="5"/>
+  </target>
+
+  <!-- insure that junit.jar exists. -->
+  <target name="junit.jar.check" if="junit.jar.missing">
+    <echo file="${basedir}/../errors.txt" append="true">c15 requires junit.jar
+    Please place this jar in your extensions
+    directory: ${java.ext.dirs}
+    
+    </echo>
+    <echo message="junit.jar is missing.  See errors.txt"/>
+    <sleep seconds="5"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c15.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- set of files to compile (exclude files that lack necessary jars) -->
+  <patternset id="compile.sources">
+    <include name="**/*.java"/>
+    <exclude name="**/EmailLogger.java" if="mail.jar.missing"/>
+    <exclude name="**/EmailLogger.java" if="activation.jar.missing"/>
+    <exclude name="**/Queue.java" if="junit.jar.missing"/>
+    <exclude name="**/JUnitDemo.java" if="junit.jar.missing"/>
+  </patternset>
+
+  <!-- build all classes in this directory -->
+  <target name="c15.build" depends="JDK.version.check,c15.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    >
+      <patternset refid="compile.sources"/>
+    </javac>
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c15.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c15.run" depends="c15.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="Assert1.run"/>
+    <antcall target="Assert2.run"/>
+    <antcall target="ConfigureLogging.run"/>
+    <antcall target="CustomHandler.run"/>
+    <antcall target="InfoLogging.run"/>
+    <antcall target="InfoLogging2.run"/>
+    <antcall target="JUnitDemo.run"/>
+    <antcall target="LoaderAssertions.run"/>
+    <antcall target="LoggingLevelManipulation.run"/>
+    <antcall target="LoggingLevels.run"/>
+    <antcall target="LogToFile.run"/>
+    <antcall target="LogToFile2.run"/>
+    <antcall target="MultipleHandlers.run"/>
+    <antcall target="MultipleHandlers2.run"/>
+    <antcall target="PrintableLogRecord.run"/>
+    <antcall target="Queue.run"/>
+    <antcall target="SimpleDebugging.run"/>
+    <antcall target="SimpleFilter.run"/>
+    <antcall target="SimpleFormatterExample.run"/>
+    <echo message="* EmailLogger must be run by hand. *"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="Assert1.run">
+    <java
+      taskname="Assert1"
+      classname="Assert1"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="false"
+    >
+      <jvmarg value="-ea"/>
+    </java>
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="Assert2.run">
+    <java
+      taskname="Assert2"
+      classname="Assert2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="false"
+    >
+      <jvmarg value="-ea"/>
+    </java>
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="ConfigureLogging.run">
+    <java
+      taskname="ConfigureLogging"
+      classname="ConfigureLogging"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    >
+      <jvmarg value="-Djava.util.logging.config.file=log.prop"/>
+    </java>
+  </target>
+
+  <target name="CustomHandler.run">
+    <java
+      taskname="CustomHandler"
+      classname="CustomHandler"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="InfoLogging.run">
+    <java
+      taskname="InfoLogging"
+      classname="InfoLogging"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="InfoLogging2.run">
+    <java
+      taskname="InfoLogging2"
+      classname="InfoLogging2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="JUnitDemo.run" unless="junit.jar.missing">
+    <java
+      taskname="JUnitDemo"
+      classname="JUnitDemo"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LoaderAssertions.run">
+    <java
+      taskname="LoaderAssertions"
+      classname="LoaderAssertions"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="LoggingLevelManipulation.run">
+    <java
+      taskname="LoggingLevelManipulation"
+      classname="LoggingLevelManipulation"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LoggingLevels.run">
+    <java
+      taskname="LoggingLevels"
+      classname="LoggingLevels"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LogToFile.run">
+    <java
+      taskname="LogToFile"
+      classname="LogToFile"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LogToFile2.run">
+    <java
+      taskname="LogToFile2"
+      classname="LogToFile2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MultipleHandlers.run">
+    <java
+      taskname="MultipleHandlers"
+      classname="MultipleHandlers"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MultipleHandlers2.run">
+    <java
+      taskname="MultipleHandlers2"
+      classname="MultipleHandlers2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PrintableLogRecord.run">
+    <java
+      taskname="PrintableLogRecord"
+      classname="PrintableLogRecord"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Queue.run" unless="junit.jar.missing">
+    <java
+      taskname="Queue"
+      classname="Queue"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimpleDebugging.run">
+    <java
+      taskname="SimpleDebugging"
+      classname="SimpleDebugging"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="SimpleFilter.run">
+    <java
+      taskname="SimpleFilter"
+      classname="SimpleFilter"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="SimpleFormatterExample.run">
+    <java
+      taskname="SimpleFormatterExample"
+      classname="SimpleFormatterExample"
+      classpath="${basedir};${basedir}/.."
+      dir="../c15"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}/..">
+        <patternset>
+          <include name="c15/java0.log"/>
+          <include name="c15/java0.log.lck"/>
+          <include name="c15/LogToFile.xml"/>
+          <include name="c15/LogToFile.xml.lck"/>
+          <include name="c15/LogToFile2.txt"/>
+          <include name="c15/LogToFile2.txt.lck"/>
+          <include name="c15/MultipleHandlers.xml"/>
+          <include name="c15/MultipleHandlers.xml.lck"/>
+          <include name="c15/MultipleHandlers2.xml"/>
+          <include name="c15/MultipleHandlers2.xml.lck"/>
+        </patternset>
+      </fileset>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c15"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

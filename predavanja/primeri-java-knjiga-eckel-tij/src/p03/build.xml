@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c03)" default="c03.run" basedir=".">
+
+  <description>
+  build.xml for c03 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c03.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c03.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c03.build" depends="JDK.version.check,c03.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c03.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c03.run" depends="c03.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="Assignment.run"/>
+    <antcall target="AutoInc.run"/>
+    <antcall target="BitManipulation.run"/>
+    <antcall target="Bool.run"/>
+    <antcall target="BreakAndContinue.run"/>
+    <antcall target="CastingNumbers.run"/>
+    <antcall target="CommaOperator.run"/>
+    <antcall target="EqualsMethod.run"/>
+    <antcall target="EqualsMethod2.run"/>
+    <antcall target="Equivalence.run"/>
+    <antcall target="IfElse.run"/>
+    <antcall target="IfElse2.run"/>
+    <antcall target="LabeledFor.run"/>
+    <antcall target="LabeledWhile.run"/>
+    <antcall target="ListCharacters.run"/>
+    <antcall target="MathOps.run"/>
+    <antcall target="Overflow.run"/>
+    <antcall target="PassObject.run"/>
+    <antcall target="ShortCircuit.run"/>
+    <antcall target="URShift.run"/>
+    <antcall target="VowelsAndConsonants.run"/>
+    <antcall target="WhileTest.run"/>
+    <echo message="* RandomBounds must be run by hand. *"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="Assignment.run">
+    <java
+      taskname="Assignment"
+      classname="Assignment"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="AutoInc.run">
+    <java
+      taskname="AutoInc"
+      classname="AutoInc"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="BitManipulation.run">
+    <java
+      taskname="BitManipulation"
+      classname="BitManipulation"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Bool.run">
+    <java
+      taskname="Bool"
+      classname="Bool"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="BreakAndContinue.run">
+    <java
+      taskname="BreakAndContinue"
+      classname="BreakAndContinue"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CastingNumbers.run">
+    <java
+      taskname="CastingNumbers"
+      classname="CastingNumbers"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="CommaOperator.run">
+    <java
+      taskname="CommaOperator"
+      classname="CommaOperator"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="EqualsMethod.run">
+    <java
+      taskname="EqualsMethod"
+      classname="EqualsMethod"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="EqualsMethod2.run">
+    <java
+      taskname="EqualsMethod2"
+      classname="EqualsMethod2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Equivalence.run">
+    <java
+      taskname="Equivalence"
+      classname="Equivalence"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="IfElse.run">
+    <java
+      taskname="IfElse"
+      classname="IfElse"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="IfElse2.run">
+    <java
+      taskname="IfElse2"
+      classname="IfElse2"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LabeledFor.run">
+    <java
+      taskname="LabeledFor"
+      classname="LabeledFor"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LabeledWhile.run">
+    <java
+      taskname="LabeledWhile"
+      classname="LabeledWhile"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ListCharacters.run">
+    <java
+      taskname="ListCharacters"
+      classname="ListCharacters"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="MathOps.run">
+    <java
+      taskname="MathOps"
+      classname="MathOps"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Overflow.run">
+    <java
+      taskname="Overflow"
+      classname="Overflow"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PassObject.run">
+    <java
+      taskname="PassObject"
+      classname="PassObject"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ShortCircuit.run">
+    <java
+      taskname="ShortCircuit"
+      classname="ShortCircuit"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="URShift.run">
+    <java
+      taskname="URShift"
+      classname="URShift"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="VowelsAndConsonants.run">
+    <java
+      taskname="VowelsAndConsonants"
+      classname="VowelsAndConsonants"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="WhileTest.run">
+    <java
+      taskname="WhileTest"
+      classname="WhileTest"
+      classpath="${basedir};${basedir}/.."
+      dir="../c03"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c03"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

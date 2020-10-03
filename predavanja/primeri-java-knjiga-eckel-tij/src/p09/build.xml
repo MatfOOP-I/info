@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c09)" default="c09.run" basedir=".">
+
+  <description>
+  build.xml for c09 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c09.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c09.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c09.build" depends="JDK.version.check,c09.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c09.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c09.run" depends="c09.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="AlwaysFinally.run"/>
+    <antcall target="Cleanup.run"/>
+    <antcall target="DynamicFields.run"/>
+    <antcall target="ExceptionMethods.run"/>
+    <antcall target="ExtraFeatures.run"/>
+    <antcall target="FinallyWorks.run"/>
+    <antcall target="FullConstructors.run"/>
+    <antcall target="Human.run"/>
+    <antcall target="LostMessage.run"/>
+    <antcall target="MainException.run"/>
+    <antcall target="NeverCaught.run"/>
+    <antcall target="OnOffSwitch.run"/>
+    <antcall target="Rethrowing.run"/>
+    <antcall target="RethrowNew.run"/>
+    <antcall target="SimpleExceptionDemo.run"/>
+    <antcall target="StormyInning.run"/>
+    <antcall target="ThrowOut.run"/>
+    <antcall target="TurnOffChecking.run"/>
+    <antcall target="WithFinally.run"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="AlwaysFinally.run">
+    <java
+      taskname="AlwaysFinally"
+      classname="AlwaysFinally"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Cleanup.run">
+    <java
+      taskname="Cleanup"
+      classname="Cleanup"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="DynamicFields.run">
+    <java
+      taskname="DynamicFields"
+      classname="DynamicFields"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="ExceptionMethods.run">
+    <java
+      taskname="ExceptionMethods"
+      classname="ExceptionMethods"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ExtraFeatures.run">
+    <java
+      taskname="ExtraFeatures"
+      classname="ExtraFeatures"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FinallyWorks.run">
+    <java
+      taskname="FinallyWorks"
+      classname="FinallyWorks"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FullConstructors.run">
+    <java
+      taskname="FullConstructors"
+      classname="FullConstructors"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Human.run">
+    <java
+      taskname="Human"
+      classname="Human"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="LostMessage.run">
+    <java
+      taskname="LostMessage"
+      classname="LostMessage"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="MainException.run">
+    <java
+      taskname="MainException"
+      classname="MainException"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="NeverCaught.run">
+    <java
+      taskname="NeverCaught"
+      classname="NeverCaught"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="OnOffSwitch.run">
+    <java
+      taskname="OnOffSwitch"
+      classname="OnOffSwitch"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Rethrowing.run">
+    <java
+      taskname="Rethrowing"
+      classname="Rethrowing"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="RethrowNew.run">
+    <java
+      taskname="RethrowNew"
+      classname="RethrowNew"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="SimpleExceptionDemo.run">
+    <java
+      taskname="SimpleExceptionDemo"
+      classname="SimpleExceptionDemo"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="StormyInning.run">
+    <java
+      taskname="StormyInning"
+      classname="StormyInning"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ThrowOut.run">
+    <java
+      taskname="ThrowOut"
+      classname="ThrowOut"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="false"
+    />
+    <echo message="* Exception was expected *"/>
+  </target>
+
+  <target name="TurnOffChecking.run">
+    <java
+      taskname="TurnOffChecking"
+      classname="TurnOffChecking"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="WithFinally.run">
+    <java
+      taskname="WithFinally"
+      classname="WithFinally"
+      classpath="${basedir};${basedir}/.."
+      dir="../c09"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c09"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

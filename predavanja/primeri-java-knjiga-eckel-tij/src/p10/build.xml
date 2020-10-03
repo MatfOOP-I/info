@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+
+
+<project name="Thinking in Java (c10)" default="c10.run" basedir=".">
+
+  <description>
+  build.xml for c10 of "Thinking in Java, 3rd Edition"
+  by Bruce Eckel
+  Available at http://www.MindView.net
+  See copyright notice in CopyRight.txt
+
+  Ant must be downloaded from:
+  http://jakarta.apache.org/ant
+
+  Options:
+  ant
+    compiles and runs all examples (if necessary)
+  ant test
+    compiles and runs all examples
+  ant c10.build
+    compiles but does not run examples
+  ant clean
+    removes old class files
+  </description>
+
+  <target name="JDK.version.check" unless="JDK.version.ok">
+    <javac
+      includes="CheckVersion.java"
+      srcdir="${basedir}/../com/bruceeckel/tools/"
+      classpath="${basedir}/.."
+    />
+    <java
+      taskname="CheckVersion"
+      classname="com.bruceeckel.tools.CheckVersion"
+      classpath="${basedir}/.."
+      fork="true"
+      failonerror="true"
+    />
+    <property name="JDK.version.ok" value="true"/>
+  </target>
+
+  <!-- build all dependencies and check to see if tests are up to date -->
+  <target name="c10.prepare">
+    <condition property="test.run" value="true">
+      <or>
+        <uptodate>
+          <srcfiles dir= "${basedir}" includes="**/*Output.txt"/>
+          <mapper type="glob" from="*Output.txt" to="*.class"/>
+        </uptodate>
+        <available file="failed"/>
+      </or>
+    </condition>
+    <ant
+      antfile="${basedir}/../com/build.xml"
+      target="com.build"
+      dir="${basedir}/../com"
+      output="${basedir}/../com/log.txt"
+    />
+  </target>
+
+  <!-- build all classes in this directory -->
+  <target name="c10.build" depends="JDK.version.check,c10.prepare"
+    description="Compile all source files">
+    <javac
+      srcdir="${basedir}"
+      classpath="${basedir}/.."
+      source="1.4"
+    />
+  </target>
+
+  <!-- force all tests to be run -->
+  <target name="test" description="Compile and test all examples">
+    <property name="test.run" value="true"/>
+    <antcall target="c10.run"/>
+  </target>
+
+  <!-- run all untested examples in this directory -->
+  <target name="c10.run" depends="c10.build" if="test.run"
+    description="Compile and run untested examples">
+    <touch file="failed"/>
+    <antcall target="AssociativeArray.run"/>
+    <antcall target="FamilyVsExactType.run"/>
+    <antcall target="PetCount.run"/>
+    <antcall target="PetCount2.run"/>
+    <antcall target="PetCount3.run"/>
+    <antcall target="Shapes.run"/>
+    <antcall target="ShowMethods.run"/>
+    <antcall target="SweetShop.run"/>
+    <antcall target="ToyTest.run"/>
+    <delete file="failed"/>
+  </target>
+
+  <target name="AssociativeArray.run">
+    <java
+      taskname="AssociativeArray"
+      classname="c10.AssociativeArray"
+      classpath="${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="FamilyVsExactType.run">
+    <java
+      taskname="FamilyVsExactType"
+      classname="c10.FamilyVsExactType"
+      classpath="${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PetCount.run">
+    <java
+      taskname="PetCount"
+      classname="c10.PetCount"
+      classpath="${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PetCount2.run">
+    <java
+      taskname="PetCount2"
+      classname="c10.PetCount2"
+      classpath="${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="PetCount3.run">
+    <java
+      taskname="PetCount3"
+      classname="c10.PetCount3"
+      classpath="${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="Shapes.run">
+    <java
+      taskname="Shapes"
+      classname="Shapes"
+      classpath="${basedir};${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ShowMethods.run">
+    <java
+      taskname="ShowMethods"
+      classname="ShowMethods"
+      classpath="${basedir};${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    >
+      <arg line=' ShowMethods'/>
+    </java>
+  </target>
+
+  <target name="SweetShop.run">
+    <java
+      taskname="SweetShop"
+      classname="SweetShop"
+      classpath="${basedir};${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <target name="ToyTest.run">
+    <java
+      taskname="ToyTest"
+      classname="ToyTest"
+      classpath="${basedir};${basedir}/.."
+      dir="../c10"
+      fork="true"
+      failonerror="true"
+    />
+  </target>
+
+  <!-- delete all class files -->
+  <target name="clean" description="Removes all old class files">
+    <delete>
+      <fileset dir="${basedir}" includes="**/*.class"/>
+      <fileset dir="${basedir}" includes="**/*Output.txt"/>
+      <fileset dir="${basedir}" includes="**/log.txt"/>
+      <fileset dir="${basedir}" includes="failed"/>
+    </delete>
+    <echo message="clean successful"/>
+  </target>
+
+  <target name="jcsc">
+    <taskdef name="jcsc" classname="rj.tools.jcsc.ant.JCSCTask"/>
+    <jcsc rules="${basedir}/../tij.jcsc"
+      startpackage="c10"
+      destdir="${basedir}/../jcsc"
+      worstcount="20">
+      <fileset dir="${basedir}" includes="**/*.java"/>
+    </jcsc>
+  </target>
+</project>

@@ -1,0 +1,105 @@
+<html><head><title>Display page for ShowAddListeners at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>ShowAddListeners.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "500" HEIGHT = "400" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "ShowAddListeners.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "ShowAddListeners.class"
+            WIDTH = "500"
+            HEIGHT = "400"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "ShowAddListeners.class" WIDTH = "500" HEIGHT = "400" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:ShowAddListeners.java
+// Display the "addXXXListener" methods of any Swing class.
+// &lt;applet code=ShowAddListeners
+// width=500 height=400&gt;&lt;/applet&gt;
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.lang.reflect.*;
+import java.util.regex.*;
+import com.bruceeckel.swing.*;
+
+public class ShowAddListeners extends JApplet {
+  private JTextField name = new JTextField(25);
+  private JTextArea results = new JTextArea(40, 65);
+  private static Pattern addListener =
+    Pattern.compile("(add\\w+?Listener\\(.*?\\))");
+  private static Pattern qualifier =
+    Pattern.compile("\\w+\\.");
+  class NameL implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+      String nm = name.getText().trim();
+      if(nm.length() == 0) {
+        results.setText("No match");
+        return;
+      }
+      Class klass;
+      try {
+        klass = Class.forName("javax.swing." + nm);
+      } catch(ClassNotFoundException ex) {
+        results.setText("No match");
+        return;
+      }
+      Method[] methods = klass.getMethods();
+      results.setText("");
+      for(int i = 0; i &lt; methods.length; i++) {
+        Matcher matcher =
+          addListener.matcher(methods[i].toString());
+        if(matcher.find())
+          results.append(qualifier.matcher(
+            matcher.group(1)).replaceAll("") + "\n");
+      }
+    }
+  }
+  public void init() {
+    NameL nameListener = new NameL();
+    name.addActionListener(nameListener);
+    JPanel top = new JPanel();
+    top.add(new JLabel("Swing class name (press ENTER):"));
+    top.add(name);
+    Container cp = getContentPane();
+    cp.add(BorderLayout.NORTH, top);
+    cp.add(new JScrollPane(results));
+    // Initial data and test:
+    name.setText("JTextArea");
+    nameListener.actionPerformed(
+      new ActionEvent("", 0 ,""));
+  }
+  public static void main(String[] args) {
+    Console.run(new ShowAddListeners(), 500,400);
+  }
+} ///:~
+
+</B></PRE></FONT>
+</html>

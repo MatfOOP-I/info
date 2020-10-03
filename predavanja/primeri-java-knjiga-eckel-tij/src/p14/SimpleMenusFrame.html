@@ -1,0 +1,85 @@
+<html><head><title>Display page for SimpleMenus at www.BruceEckel.com</title></head>
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans" SIZE="-1">
+<FONT FACE="Verdana,Tahoma,Arial,Helvetica,Sans"><H2>SimpleMenus.java</H2><hr></FONT>
+<!--"CONVERTED_APPLET"-->
+<!-- HTML CONVERTER -->
+<OBJECT 
+    classid = "clsid:CAFEEFAC-0014-0001-0001-ABCDEFFEDCBA"
+    codebase = "http://java.sun.com/products/plugin/autodl/jinstall-1_4_1_01-windows-i586.cab#Version=1,4,1,1"
+    WIDTH = "200" HEIGHT = "75" ALIGN = "baseline" >
+    <PARAM NAME = CODE VALUE = "SimpleMenus.class" >
+    <PARAM NAME = "type" VALUE = "application/x-java-applet;jpi-version=1.4.1_01">
+    <PARAM NAME = "scriptable" VALUE = "false">
+
+    <COMMENT>
+	<EMBED 
+            type = "application/x-java-applet;jpi-version=1.4.1_01" 
+            CODE = "SimpleMenus.class"
+            WIDTH = "200"
+            HEIGHT = "75"
+            ALIGN = "baseline"  
+	    scriptable = false 
+	    pluginspage = "http://java.sun.com/products/plugin/index.html#download">
+	    <NOEMBED>
+            
+            </NOEMBED>
+	</EMBED>
+    </COMMENT>
+</OBJECT>
+
+<!--
+<APPLET CODE = "SimpleMenus.class" WIDTH = "200" HEIGHT = "75" ALIGN = "baseline">
+
+
+</APPLET>
+-->
+
+
+<!--"END_CONVERTED_APPLET"-->
+
+<FONT SIZE="+3"><PRE><B>
+//: c14:SimpleMenus.java
+// &lt;applet code=SimpleMenus width=200 height=75&gt;&lt;/applet&gt;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import com.bruceeckel.swing.*;
+
+public class SimpleMenus extends JApplet {
+  private JTextField t = new JTextField(15);
+  private ActionListener al = new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+      t.setText(((JMenuItem)e.getSource()).getText());
+    }
+  };
+  private JMenu[] menus = {
+    new JMenu("Winken"), new JMenu("Blinken"),
+    new JMenu("Nod")
+  };
+  private JMenuItem[] items = {
+    new JMenuItem("Fee"), new JMenuItem("Fi"),
+    new JMenuItem("Fo"),  new JMenuItem("Zip"),
+    new JMenuItem("Zap"), new JMenuItem("Zot"),
+    new JMenuItem("Olly"), new JMenuItem("Oxen"),
+    new JMenuItem("Free")
+  };
+  public void init() {
+    for(int i = 0; i &lt; items.length; i++) {
+      items[i].addActionListener(al);
+      menus[i%3].add(items[i]);
+    }
+    JMenuBar mb = new JMenuBar();
+    for(int i = 0; i &lt; menus.length; i++)
+      mb.add(menus[i]);
+    setJMenuBar(mb);
+    Container cp = getContentPane();
+    cp.setLayout(new FlowLayout());
+    cp.add(t);
+  }
+  public static void main(String[] args) {
+    Console.run(new SimpleMenus(), 200, 75);
+  }
+} ///:~
+
+</B></PRE></FONT>
+</html>
