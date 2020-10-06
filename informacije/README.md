@@ -44,6 +44,7 @@
   *[Растко Ђорђевић](http://www.matf.bg.ac.rs/p/rastko-djordjevic/pocetna/){:target="_blank"}*
 
   *[Денис Аличић](http://www.matf.bg.ac.rs/~denis_alicic/){:target="_blank"}*
+
 ---
 
 [ООП](../README.md)
