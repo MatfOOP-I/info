@@ -8,7 +8,7 @@
 
 * Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis_alicic/){:target="_blank"}**
 
-* Асистент: **[Филип Видојевић](http://poincare.matf.bg.ac.rs/~filip-vidojevic/nastava/){:target="_blank"}**
+* Асистент: **[Филип Видојевић](http://www.matf.bg.ac.rs/p/filip-vidojevic/nastava/){:target="_blank"}**
 ---
 
 ## План и програм курса
