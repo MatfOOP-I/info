@@ -1,4 +1,4 @@
-package rs.math.oop1.z70401.definicjeMetoda.z02.geometrija;
+package rs.math.oop1.z070401.definicjeMetoda.z02.geometrija;
 
 class Trougao {
    String oznaka;

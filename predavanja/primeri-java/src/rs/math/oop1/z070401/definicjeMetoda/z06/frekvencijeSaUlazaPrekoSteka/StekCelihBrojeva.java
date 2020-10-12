@@ -8,7 +8,7 @@
  
  */
 
-package rs.math.oop1.z70401.definicjeMetoda.z06.frekvencijeSaUlazaPrekoSteka;
+package rs.math.oop1.z070401.definicjeMetoda.z06.frekvencijeSaUlazaPrekoSteka;
 
 class StekCelihBrojeva {
 

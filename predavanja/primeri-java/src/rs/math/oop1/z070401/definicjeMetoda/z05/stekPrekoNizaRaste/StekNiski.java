@@ -8,7 +8,7 @@
  
  */
 
-package rs.math.oop1.z70401.definicjeMetoda.z05.stekPrekoNizaRaste;
+package rs.math.oop1.z070401.definicjeMetoda.z05.stekPrekoNizaRaste;
 
 class StekNiski {
 

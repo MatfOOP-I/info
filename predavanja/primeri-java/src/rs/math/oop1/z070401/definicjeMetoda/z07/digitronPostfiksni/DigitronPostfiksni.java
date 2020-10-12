@@ -1,4 +1,4 @@
-package rs.math.oop1.z70401.definicjeMetoda.z07.digitronPostfiksni;
+package rs.math.oop1.z070401.definicjeMetoda.z07.digitronPostfiksni;
 
 class DigitronPostfiksni {
    StekNiski operatori;

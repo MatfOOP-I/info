@@ -1,4 +1,4 @@
-package rs.math.oop1.z100101tipoviIzuzetaka.z01.nastanak;
+package rs.math.oop1.z100101.tipoviIzuzetaka.z01.nastanak;
 
 public class PokretanjeBezHvatanjaIzuzetka {
     public static void main(String[] args) {

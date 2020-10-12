@@ -16,7 +16,7 @@ Windows системе, односно <Ctrl>+d за Unix системе
 // Програм илуструје коришење стека који може да расте по потреби у циљу
 // чувања и преписа података.
 
-package rs.math.oop1.z70401.definicjeMetoda.z05.stekPrekoNizaRaste;
+package rs.math.oop1.z070401.definicjeMetoda.z05.stekPrekoNizaRaste;
 
 
 public class PokretanjeObratnoSveReci {

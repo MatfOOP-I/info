@@ -1,4 +1,4 @@
-package rs.math.oop1.z70401.definicjeMetoda.z03.frekvencije;
+package rs.math.oop1.z070401.definicjeMetoda.z03.frekvencije;
 
 /*
   

@@ -1,4 +1,4 @@
-package rs.math.oop1.z100101tipoviIzuzetaka.z02.indeksVanGranica;
+package rs.math.oop1.z100101.tipoviIzuzetaka.z02.indeksVanGranica;
 
 public class PokretanjeIndeksVanGranica {
 
