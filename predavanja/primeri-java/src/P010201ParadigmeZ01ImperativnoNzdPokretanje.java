@@ -22,7 +22,7 @@ class PokretanjeImperativnoNzd {
         // одређивање НЗД за први и други број
         nzdPrviDrugi:
         for (; ; ) {
-            if (prviBroj == drugiBroj)
+            if (drugiBroj == 0 || prviBroj==0)
                 break nzdPrviDrugi;
             // размени бројеве тако да други број буде већи од првог
             if (prviBroj > drugiBroj) {
@@ -33,18 +33,18 @@ class PokretanjeImperativnoNzd {
             // нови пар бројева су дотадашњи мањи и разлика између већег и мањег
             drugiBroj = drugiBroj % prviBroj;
         }
-
+        if( prviBroj == 0)
+            prviBroj = drugiBroj;
         // одређивање НЗД за НЗД прва два броја и трећи број
         nzdNadPrvaDvaTreci:
         for (; ; ) {
             // ако су бројеви исти, НЗД је ма који од њих
-            if (prviBroj == treciBroj)
+            if (prviBroj == 0 || treciBroj == 0)
                 break nzdNadPrvaDvaTreci;
             // размени бројеве тако да трећи број буде већи од првог
             if (prviBroj > treciBroj) {
                 int privremeni = prviBroj;
                 prviBroj = treciBroj;
-                treciBroj = privremeni;
             }
             // ако мањи број дели већи број, тада је мањи број НЗД
             if (treciBroj % prviBroj == 0)
@@ -52,7 +52,8 @@ class PokretanjeImperativnoNzd {
             // "преживљавају" мањи од два броја и остатак при дељењу између већег и мењег
             treciBroj = treciBroj % prviBroj;
         }
-
+        if (prviBroj == 0) 
+            prviBroj = treciBroj;
         // приказ резултата
         System.out.println("НЗД ова три броја је " + prviBroj);
     }
