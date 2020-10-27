@@ -113,15 +113,15 @@
 
 4. Структура Јава програма [презентација](/prezentacije/OOP04-Elementarne konstrukcije u Javi.pdf){:target="_blank"}
 
-    1. Језици за опис конструкција језика Јава [филм](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Језици за опис конструкција језика Јава [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Бекусова нотација
 
         1. Синтаксни дијаграми
 
-    1. Азбука језика Јава  [филм](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=14m23s){:target="_blank"}
+    1. Азбука језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=14m23s){:target="_blank"}
 
-    1. Елементарне конструкције језика Јава  [филм](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=16m30s){:target="_blank"}
+    1. Елементарне конструкције језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=16m30s){:target="_blank"}
 
         1. Идентификатори
 
@@ -137,7 +137,7 @@
 
         1. Белине
 
-    1. Типови података у Јави [презентација](/prezentacije/OOP05-Tipovi podataka u Javi.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Типови података у Јави [презентација](/prezentacije/OOP05-Tipovi podataka u Javi.pdf){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Примитивни тип
 
@@ -157,13 +157,13 @@
 
             1. Енумерисани тип
 
-    1. Променљиве [презентација](/prezentacije/OOP06-Slozene konstrukcije u Javi.pdf){:target="_blank"}  [филм](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Променљиве [презентација](/prezentacije/OOP06-Slozene konstrukcije u Javi.pdf){:target="_blank"}  [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Декларација и иницјализација вредности променљиве
 
         1. Опсег важења променљиве
 
-    1. Једноставне наредбе [филм](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=16m25s){:target="_blank"}
+    1. Једноставне наредбе [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=16m25s){:target="_blank"}
 
         1. Блок
 
@@ -179,7 +179,7 @@
 
             1. Оператори: арност, асоцијативност, приоритет
 
-    1. Наредбе гранања и наредбе циклуса [презентација](/prezentacije/OOP07-Upravljacke stukture u Javi.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Наредбе гранања и наредбе циклуса [презентација](/prezentacije/OOP07-Upravljacke stukture u Javi.pdf){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Наредбе гранања
 
@@ -201,9 +201,9 @@
 
             1. Наредба `continue` и циклуси
 
-    1. Улазна тачка програма, `static` метода `main` [филм](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Улазна тачка програма, `static` метода `main` [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=0m0s){:target="_blank"}
 
-    1. Функционална декомпозиција програма [филм](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=6m50s){:target="_blank"}
+    1. Функционална декомпозиција програма [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=6m50s){:target="_blank"}
 
         1. Дефиниција `static` метода
 
@@ -223,7 +223,7 @@
 
 5. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](/prezentacije/OOP07-1-Predefinisani tipovi u Javi.pdf){:target="_blank"}
 
-    1. Приступ систему, класа `System` [филм](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Приступ систему, класа `System` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=0m0s){:target="_blank"}
   
         1. Приказ текста
 
@@ -251,7 +251,7 @@
 
         1. Излазак из апликације, метод `System.exit()`
 
-    1. Рад са објектима, примерцима класе `Object` [филм](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=26m16s){:target="_blank"}
+    1. Рад са објектима, примерцима класе `Object` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=26m16s){:target="_blank"}
 
         1. Креирање објекта, оператор `new`
 
@@ -259,7 +259,7 @@
 
         1. Одређивање да ли објекат припада класи
 
-    1. Рад са нискама, примерцима класе `String` [филм](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=35m51s){:target="_blank"}
+    1. Рад са нискама, примерцима класе `String` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=35m51s){:target="_blank"}
 
         1. Каракеристике ниски, имутабилност  
 
@@ -269,7 +269,7 @@
 
         1. Коришћење осталих метода класе `String` и `StringBuilder`
 
-    1. Рад са објектима омотачима података примитивног типа [филм](https://www.youtube.com/watch?v=7aen-NVmfUs&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Рад са објектима омотачима података примитивног типа [филм (2019/20)](https://www.youtube.com/watch?v=7aen-NVmfUs&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Карактеристике класа-омотача за примитивне типове
 
@@ -281,13 +281,13 @@
 
         1. Рад са објектима типа `Boolean`
 
-    1. Рад са скенерима, примерцима класе `java.util.Scanner` [филм](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=23m24s){:target="_blank"}
+    1. Рад са скенерима, примерцима класе `java.util.Scanner` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=23m24s){:target="_blank"}
 
         1. Скенирање података из ниске  
 
         1. Скенирање података са стандардног улаза
 
-    1. Рад са математичким функцијама, класа `Math` [филм](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Рад са математичким функцијама, класа `Math` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Приспуп пољима класе `Math`
 
@@ -295,7 +295,7 @@
 
         1. Коришћење метода класе `Math` за рад са псеудо-случајним бројевима
 
-    1. Рад са датумима и временима [филм](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=11m52s){:target="_blank"}
+    1. Рад са датумима и временима [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=11m52s){:target="_blank"}
 
         1. Коришћење метода класе `LocalDate` из пакета `java.time`
 
@@ -307,11 +307,11 @@
 
 6. Низови у Јави [презентација](/prezentacije/OOP08-Nizovi u Javi.pdf){:target="_blank"}
 
-    1. Декларација и иницијализација низа [филм](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Декларација и иницијализација низа [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=0m0s){:target="_blank"}
 
-    1. Низовна променљива и индексна променљива [филм](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=3m58s){:target="_blank"}
+    1. Низовна променљива и индексна променљива [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=3m58s){:target="_blank"}
 
-    1. Бројачки и колекцијски `for` циклус [филм](https://www.youtube.com/watch?v=wPur8Ucguxs&list=PL4uJwj46TjzOMgpZF5a82_cCBq3gxGXDe&feature=youtu.be&t=0m0s){:target="_blank"}
+    1. Бројачки и колекцијски `for` циклус [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&list=PL4uJwj46TjzOMgpZF5a82_cCBq3gxGXDe&feature=youtu.be&t=0m0s){:target="_blank"}
 
         1. Синтакса колекцијског `for` циклуса
 
@@ -319,15 +319,15 @@
 
         1. Прескакање дела тела циклуса
 
-    1. Аргументи команде линије код улазне тачке програма [филм](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=8m46s){:target="_blank"}
+    1. Аргументи команде линије код улазне тачке програма [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=8m46s){:target="_blank"}
 
-    1. Низови низова [филм](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=16m50s){:target="_blank"}
+    1. Низови низова [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=16m50s){:target="_blank"}
 
         1. Дводимензионални низови
 
         1. Вишедимензионални низови
 
-    1. Коришћење класе `Arrays` [филм](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=0m0s){:target="_blank"}
+    1. Коришћење класе `Arrays` [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=0m0s){:target="_blank"}
 
         1. Попуњавање низа вредношћу
 
@@ -337,7 +337,7 @@
 
         1. Копирање низа
 
-    1. Функције са аргументима променљиве дужине [филм](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=20m07s){:target="_blank"}
+    1. Функције са аргументима променљиве дужине [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=20m07s){:target="_blank"}
 
         1. Предности коришћења аргумената променљиве дужине
 
@@ -491,13 +491,13 @@
 
 8. Напредни рад са класама и објектима [презентација](/prezentacije/OOP11-Apstraktne klase i interfejsi.pdf){:target="_blank"}
 
-    1. Апстрактне класе [филм](https://www.youtube.com/watch?v=j2dAq4adfq8&feature=youtu.be&&t=0m0s){:target="_blank"}
+    1. Апстрактне класе [филм (2019/20)](https://www.youtube.com/watch?v=j2dAq4adfq8&feature=youtu.be&&t=0m0s){:target="_blank"}
 
         1. Дефинисање апстрактне класе
 
         1. Наслеђивање између апстрактних и конкретних класа
 
-    1. Интерфејси [филм](https://www.youtube.com/watch?v=Z7dMwl7SAgw&feature=youtu.be&&t=0m0s){:target="_blank"}
+    1. Интерфејси [филм (2019/20)](https://www.youtube.com/watch?v=Z7dMwl7SAgw&feature=youtu.be&&t=0m0s){:target="_blank"}
 
         1. Дефинисање интерфејса
 
@@ -507,7 +507,7 @@
 
         1. Параметри типа интерфејса
 
-    1. Интерфејси у ЈДК-у [филм](https://www.youtube.com/watch?v=RDAEOcYik2g&feature=youtu.be&&t=0m0s){:target="_blank"}
+    1. Интерфејси у ЈДК-у [филм (2019/20)](https://www.youtube.com/watch?v=RDAEOcYik2g&feature=youtu.be&&t=0m0s){:target="_blank"}
 
         1. Уређење у колекцији, интерфејс `Comparable`
 
@@ -517,7 +517,7 @@
 
         1. Клонирање објеката, интерфејс `Cloneable`
 
-    1. Препоруке за објектно оријентисани дизајн [филм](https://www.youtube.com/watch?v=71zLBtFWsFk&feature=youtu.be&&t=0m0s){:target="_blank"}
+    1. Препоруке за објектно оријентисани дизајн [филм (2019/20)](https://www.youtube.com/watch?v=71zLBtFWsFk&feature=youtu.be&&t=0m0s){:target="_blank"}
 
         1. Принципи SOLID
 
@@ -545,7 +545,7 @@
 
             1. Користити полиморфизам, а не информације о типу
 
-    1. Догађаји [филм](https://www.youtube.com/watch?v=gzgIXGsCbec&feature=youtu.be&&t=0m0s)
+    1. Догађаји [филм (2019/20)](https://www.youtube.com/watch?v=gzgIXGsCbec&feature=youtu.be&&t=0m0s)
 
         1. Догађаји и образац дизајна "Посматрач"
 
