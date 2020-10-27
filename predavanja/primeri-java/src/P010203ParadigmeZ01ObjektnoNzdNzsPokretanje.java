@@ -61,8 +61,7 @@ class CeoBrojNas {
 }
 
 class PokretanjeObjektnoNzdNzsCeoBrojNas {
-
-    // улазна тачка програма
+     // улазна тачка програма
     public static void main(String[] args) {
         // бројеви чији се НЗД тражи
         CeoBrojNas prvi = new CeoBrojNas(48);
@@ -80,7 +79,7 @@ class PokretanjeObjektnoNzdNzsCeoBrojNas {
         // одређивање НЗД за ова три броја
         CeoBrojNas nzd = prvi.NZD(drugi, treci);
         // одређивање НЗС за ова три броја
-        // CeoBroj nzs = prvi.NZS(drugi, treci);
+        // CeoBrojNas nzs = prvi.NZS(drugi, treci);
 
         // приказ резултата
         System.out.print("НЗД ова три броја је ");
