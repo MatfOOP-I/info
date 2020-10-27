@@ -20,9 +20,11 @@
 
 * **[Предавања](/predavanja/README.md)**
 
+* **[Часови предавања уживо](/predavanja/casovi-uzivo/README.md)**
+
 * **[Вежбе](/vezbe/README.md)**
 
-* **[Часови уживо](/vezbe/casovi-uzivo/README.md)**
+* **[Часови вежби уживо](/vezbe/casovi-uzivo/README.md)**
 
 ## Колоквијуми и испити
 
