@@ -17,6 +17,7 @@
 
 - Час 2: Низови и матрице у Јави
 	- [Денис](https://youtu.be/pcXbNZJuRy8)
+	- [Филип](https://youtu.be/hpjpvVPesvM)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
