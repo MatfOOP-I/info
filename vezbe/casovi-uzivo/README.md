@@ -19,5 +19,8 @@
 	- [Денис](https://youtu.be/pcXbNZJuRy8)
 	- [Филип](https://youtu.be/hpjpvVPesvM)
 
+- Час 3: Класе и објекти у Јави
+	- [Филип](https://youtu.be/rhTG-M27zOE)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
