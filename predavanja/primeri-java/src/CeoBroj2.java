@@ -8,31 +8,31 @@
 
 class CeoBroj2 {
     // вредност датог целог броја
-    int vrednost;
+    int vrednostBroja;
 
     // конструктор
-    CeoBroj2(int vrednostBroja) {
+    CeoBroj2(int vrednost) {
 
-        vrednost = vrednostBroja;
+        vrednostBroja = vrednost;
     }
 
     // метод за приказ целог броја
     void prikaz() {
-        System.out.print(vrednost);
+        System.out.print(vrednostBroja);
         System.out.println();
     }
 
     // одређивање НЗД датог броја и другог целог броја
     CeoBroj2 promeniZnak() {
-        return new CeoBroj2(-vrednost);
+        return new CeoBroj2(-vrednostBroja);
     }
 
     void uvecajSeZa(int uvecanje) {
-        vrednost += uvecanje;
+        vrednostBroja += uvecanje;
     }
 
     boolean jednakSa(CeoBroj2 drugi) {
-        return vrednost == drugi.vrednost;
+        return vrednostBroja == drugi.vrednostBroja;
     }
 
 }
@@ -40,7 +40,15 @@ class CeoBroj2 {
 class PokretanjeCeoBroj2 {
     // улазна тачка програма
     public static void main(String[] args) {
-        // бројеви чији се НЗД тражи
+
+        int a = 1;
+        int b = 43;
+        while (a != b) {
+            System.out.println(a);
+            a++;
+        }
+
+        System.out.println("------");
         CeoBroj2 x = new CeoBroj2(1);
         CeoBroj2 kraj = new CeoBroj2(43);
         while (!x.jednakSa(kraj)) {

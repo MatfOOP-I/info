@@ -1,18 +1,20 @@
 /**
- * Програм (у виду конзолне апликације) за приказ податак о студентима.
- * Програм је реализован коришћењем објектно-орјентисане парадигме.
- * Програмски код је модуларно организован - реализовано je чување Јава кода у различитим датотекама.
- * Покретање програма је могуће само из датотеке која у себи садржи методу main.
+ * Програм (у виду конзолне апликације) за приказ податак о студентима. Програм
+ * је реализован коришћењем објектно-орјентисане парадигме. Програмски код је
+ * модуларно организован - реализовано je чување Јава кода у различитим
+ * датотекама. Покретање програма је могуће само из датотеке која у себи садржи
+ * методу main.
  **/
 
 class Student {
     String ime;
+    String prezime;
     int brojIndeksa;
     int godinaUpisa;
 
     void stampajPodatke() {
-        System.out.println("Ime studenta je: " + ime
-                + ". Broj indeksa je " + brojIndeksa + "/" + godinaUpisa + ".");
+        System.out.println("Ime studenta je: " + ime + " " + prezime + ". Broj indeksa je " + brojIndeksa + "/"
+                + godinaUpisa + ".");
     }
 }
 
@@ -21,13 +23,15 @@ class PokretanjeStudent {
     // улазна тачка програма
     public static void main(String[] args) {
         Student prvi = new Student();
-        prvi.ime = "Petar Peric";
+        prvi.ime = "Petar";
+        prvi.prezime = "Peric";
         prvi.brojIndeksa = 3;
         prvi.godinaUpisa = 2017;
 
         Student drugi;
         drugi = new Student();
-        drugi.ime = "Milan Mikic";
+        drugi.ime = "Milan";
+        drugi.prezime = "Mikic";
         drugi.brojIndeksa = 23;
         drugi.godinaUpisa = 2018;
 
