@@ -11,11 +11,18 @@ class Student {
     String prezime;
     int brojIndeksa;
     int godinaUpisa;
+    boolean diplomirao;
 
     void stampajPodatke() {
-        System.out.println("Ime studenta je: " + ime + " " + prezime + ". Broj indeksa je " + brojIndeksa + "/"
+        System.out.print("Ime studenta je: " + ime + " " + prezime + ". Broj indeksa je " + brojIndeksa + "/"
                 + godinaUpisa + ".");
+        System.out.println(diplomirao ? " Diplomirao!" : " Jos studira");
     }
+
+    void setDiplomirao(boolean jeDiplomirao) {
+        diplomirao = jeDiplomirao;
+    }
+
 }
 
 class PokretanjeStudent {
@@ -36,6 +43,11 @@ class PokretanjeStudent {
         drugi.godinaUpisa = 2018;
 
         prvi.stampajPodatke();
+        drugi.setDiplomirao(true);
         drugi.stampajPodatke();
+
+        if (prvi instanceof Student)
+            System.out.println(prvi + " je Student");
+
     }
 }

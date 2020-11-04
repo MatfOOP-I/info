@@ -1,15 +1,15 @@
 // class PokretanjeZdravoSvete {
-//     public static void main(String[] args) {
-//         System.out.println("Zdravo svete!");
-//     }
+// public static void main(String[] args) {
+// System.out.println("Zdravo svete!");
+// }
 // }
 
-class PokretanjeZdravoSvetePorukaCirilica {
+// class PokretanjeZdravoSvetePorukaCirilica {
 
-    public static void main(String[] args) {
-        System.out.println("Здраво свете!");
-    }
-}
+// public static void main(String[] args) {
+// System.out.println("Здраво свете!");
+// }
+// }
 
 // class PokretanjeZdravoSvetePromenljivaCirilica {
 // public static void main(String[] аргументи) {

@@ -13,7 +13,7 @@ class PokretanjeKljucneReci {
 
         // kljucne reci za naredbe ciklusa
 
-        for( String argument : komandnaLinija)
+        for (String argument : komandnaLinija)
             System.out.println(argument);
 
     }

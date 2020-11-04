@@ -16,10 +16,10 @@ class PokretanjeJavaAzbuka {
         System.out.println(реченица);
         String recenica = "Ovako je bolje.";
         System.out.println(recenica);
-        String kombinovanaPisma = "Могу се mešati različita pisma, односно алфабети. Ово је нпр. нешто на тајландском: บางสิ่งบางอย่าง.";
+        String kombinovanaPisma = "Могу се mešati različita pisma, односно алфабети."
+                + "Ово је нпр. нешто на тајландском: บางสิ่งบางอย่าง.";
         System.out.println(kombinovanaPisma);
         String บางสิ่งบางอย่าง = "AAA";
         System.out.println(บางสิ่งบางอย่าง);
-
     }
 }

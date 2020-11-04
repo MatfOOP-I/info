@@ -16,10 +16,15 @@ class PokretanjeLiterali {
         boolean logickiTacno = true;
 
         // znakovni literali
-        char znak1 = 'A';
+        char znak1 = 'B';
+        System.out.println(znak1);
         char znak2 = '\n';
+        System.out.println(znak2);
+        char znak3 = '\uu0042';
+        System.out.println(znak3);
 
         // stringovni literali
         String niska = "Ovo je niska-literal.";
+        System.out.println(niska);
     }
 }

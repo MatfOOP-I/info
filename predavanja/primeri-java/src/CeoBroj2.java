@@ -27,12 +27,28 @@ class CeoBroj2 {
         return new CeoBroj2(-vrednostBroja);
     }
 
-    void uvecajSeZa(int uvecanje) {
-        vrednostBroja += uvecanje;
+    CeoBroj2 saberi(CeoBroj2 sabirak) {
+        return new CeoBroj2(vrednostBroja + sabirak.vrednostBroja);
     }
 
-    boolean jednakSa(CeoBroj2 drugi) {
+    CeoBroj2 oduzmi(CeoBroj2 umanjilac) {
+        return new CeoBroj2(vrednostBroja - umanjilac.vrednostBroja);
+    }
+
+    boolean jednak(CeoBroj2 drugi) {
         return vrednostBroja == drugi.vrednostBroja;
+    }
+
+    boolean manji(CeoBroj2 drugi) {
+        return vrednostBroja < drugi.vrednostBroja;
+    }
+
+    boolean manjiIliJednak(CeoBroj2 drugi) {
+        return manji(drugi) || jednak(drugi);
+    }
+
+    boolean veci(CeoBroj2 drugi) {
+        return !manjiIliJednak(drugi);
     }
 
 }
@@ -41,20 +57,27 @@ class PokretanjeCeoBroj2 {
     // улазна тачка програма
     public static void main(String[] args) {
 
+        System.out.println("---");
         int a = 1;
-        int b = 43;
-        while (a != b) {
-            System.out.println(a);
+        int b = 4_200_000;
+        int s = 0;
+        while (a <= b) {
+            s += a;
             a++;
         }
+        System.out.println(s);
 
-        System.out.println("------");
-        CeoBroj2 x = new CeoBroj2(1);
-        CeoBroj2 kraj = new CeoBroj2(43);
-        while (!x.jednakSa(kraj)) {
-            x.prikaz();
-            x.uvecajSeZa(1);
+        System.out.println("---");
+
+        CeoBroj2 broj1 = new CeoBroj2(1);
+        CeoBroj2 aa = new CeoBroj2(1);
+        CeoBroj2 bb = new CeoBroj2(b);
+        CeoBroj2 ss = new CeoBroj2(0);
+        while (aa.manjiIliJednak(bb)) {
+            ss = ss.saberi(aa);
+            aa = aa.saberi(broj1);
         }
+        ss.prikaz();
 
     }
 
