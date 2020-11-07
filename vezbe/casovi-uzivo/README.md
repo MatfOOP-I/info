@@ -25,6 +25,7 @@
 
 - Час 4: Наслеђивање
 	- [Филип](https://youtu.be/aTAQ1uzFgK4)
+	- [Денис](https://youtu.be/GP2yTBKLnxU)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
