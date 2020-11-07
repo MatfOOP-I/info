@@ -23,5 +23,8 @@
 	- [Филип](https://youtu.be/rhTG-M27zOE)
 	- [Денис](https://youtu.be/qNkB4PAZc98)
 
+- Час 4: Наслеђивање
+	- [Филип](https://youtu.be/aTAQ1uzFgK4)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
