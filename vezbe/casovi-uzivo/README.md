@@ -27,7 +27,7 @@
 	- [Филип](https://youtu.be/aTAQ1uzFgK4)
 	- [Денис](https://youtu.be/GP2yTBKLnxU)
 	
-- Час 4: Наслеђивање
+- Час 5: Апстрактне класе, полиморфизам
 	- [Филип](https://youtu.be/GgnDxpdumd8)
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
