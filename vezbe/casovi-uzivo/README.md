@@ -30,5 +30,6 @@
 - Час 5: Апстрактне класе, полиморфизам
 	- [Филип](https://youtu.be/GgnDxpdumd8)
 	- [Денис](https://youtu.be/ipLntBXAZwo)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
