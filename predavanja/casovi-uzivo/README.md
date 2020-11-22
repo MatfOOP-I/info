@@ -86,5 +86,23 @@
 
 [Снимак предавања од 09.11.2020. (трећи час)](https://youtu.be/OJjx_ArLCfE){:target="_blank"}
 
+### Шеста сесија
+
+- Ток 2И1
+
+[Снимак предавања од 16.11.2020. (први час)](https://youtu.be/6VAkwjpWN9w){:target="_blank"}
+
+[Снимак предавања од 16.11.2020. (други час)](https://youtu.be/Jkgvs5gKvGg){:target="_blank"}
+
+[Снимак предавања од 16.11.2020. (трећи час)](https://youtu.be/BeOz_Np7YZ4){:target="_blank"}
+
+- Ток 2И2
+
+[Снимак предавања од 16.11.2020. (први час)](https://youtu.be/XZD5qh_dIZw){:target="_blank"}
+
+[Снимак предавања од 16.11.2020. (други час)](https://youtu.be/TnInHa0Cex4){:target="_blank"}
+
+[Снимак предавања од 16.11.2020. (трећи час)](https://youtu.be/aWTv8Omk6AM){:target="_blank"}
+
 
 [ООП](../../README.md) [Предавања](../README.md)
