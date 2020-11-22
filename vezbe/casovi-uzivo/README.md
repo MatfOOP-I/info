@@ -31,6 +31,9 @@
 	- [Филип](https://youtu.be/GgnDxpdumd8)
 	- [Денис](https://youtu.be/ipLntBXAZwo)
 	- [Денис 2. час](https://youtu.be/FnzyEd_i8bs)
+	
+- Час 6: Интерфејси
+	- [Филип](https://youtu.be/E2parVCJwHE)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
