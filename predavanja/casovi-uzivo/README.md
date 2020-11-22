@@ -104,5 +104,4 @@
 
 [Снимак предавања од 16.11.2020. (трећи час)](https://youtu.be/aWTv8Omk6AM){:target="_blank"}
 
-
 [ООП](../../README.md) [Предавања](../README.md)
