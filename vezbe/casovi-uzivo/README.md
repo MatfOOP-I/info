@@ -34,6 +34,7 @@
 	
 - Час 6: Интерфејси
 	- [Филип](https://youtu.be/E2parVCJwHE)
+	- [Денис](https://youtu.be/B_IVYCXqL3I)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
