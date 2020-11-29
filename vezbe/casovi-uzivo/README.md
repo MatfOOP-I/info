@@ -36,5 +36,8 @@
 	- [Филип](https://youtu.be/E2parVCJwHE)
 	- [Денис](https://youtu.be/B_IVYCXqL3I)
 
+- Час 7: Изузеци, датотеке и колонирање 
+	- [Денис](https://youtu.be/36pRs-EBbwQ)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
