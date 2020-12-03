@@ -120,6 +120,24 @@
 
 [Снимак предавања од 23.11.2020. (други час)](https://youtu.be/bEl3IkyeCjM){:target="_blank"}
 
-[Снимак предавања од 23.11.2020. (трећи час)](https://youtu.be/bEl3IkyeCjM){:target="_blank"}
+[Снимак предавања од 23.11.2020. (трећи час)](https://youtu.be/m0VXfOhPSYQ){:target="_blank"}
+
+### Осма сесија
+
+- Ток 2И1
+
+[Снимак предавања од 30.11.2020. (први час)](https://youtu.be/m-LwAKe_5Dw){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (други час)](https://youtu.be/tq8LaT40WyE){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (трећи час)](https://youtu.be/UlEgoAk52fA){:target="_blank"}
+
+- Ток 2И2
+
+[Снимак предавања од 30.11.2020. (први час)](https://youtu.be/et_Ij6OEJnk){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (други час)](https://youtu.be/-Udu9w82E9o){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (трећи час)](https://youtu.be/bOS4Qn9bfnI){:target="_blank"}
 
 [ООП](../../README.md) [Предавања](../README.md)

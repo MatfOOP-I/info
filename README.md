@@ -19,7 +19,7 @@
 
 * **[Предавања](/predavanja/README.md)**
 
-* **[Часови предавања уживо](/predavanja/casovi-uzivo/README.md)**
+* **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
