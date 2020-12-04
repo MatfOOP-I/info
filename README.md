@@ -4,9 +4,6 @@
 
 ---
 
-
----
-
 ## Информације о курсу
 
 * **[Основне информације](/informacije/README.md)**
@@ -19,7 +16,11 @@
 
 * **[Предавања](/predavanja/README.md)**
 
+* **[Предавања, академска 2019/2020](/predavanja/README-2019-2020.md)**
+
 * **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README.md)**
+
+* **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-2020.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
