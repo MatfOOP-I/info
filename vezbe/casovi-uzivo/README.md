@@ -40,5 +40,8 @@
 	- [Денис](https://youtu.be/36pRs-EBbwQ)
 	- [Филип](https://youtu.be/Z-C6cgHGw2E)
 	
+- Час 8: Генеричке класе и функције 
+	- [Денис](https://youtu.be/B1LnF_vc1bM)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
