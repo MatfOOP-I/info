@@ -140,6 +140,24 @@
 
 [Снимак предавања од 30.11.2020. (трећи час)](https://youtu.be/bOS4Qn9bfnI){:target="_blank"}
 
+### Девета сесија
+
+- Ток 2И1
+
+[Снимак предавања од 30.11.2020. (први час)](https://youtu.be/XpPySFOZh9M){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (други час)](https://youtu.be/Y64Hg17iH6A){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (трећи час)](https://youtu.be/abb0Qpj3DjE){:target="_blank"}
+
+- Ток 2И2
+
+[Снимак предавања од 30.11.2020. (први час)](https://youtu.be/BFELVm4p98k){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (други час)](https://youtu.be/GJR0b5lhch0){:target="_blank"}
+
+[Снимак предавања од 30.11.2020. (трећи час)](https://youtu.be/NCXaW2scGZI){:target="_blank"}
+
 [ООП](../../README.md) [Предавања](../README.md)
 
 ---

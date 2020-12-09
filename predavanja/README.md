@@ -49,7 +49,7 @@
 
 2. Карактеристике програмског језика Јава [презентација](/prezentacije/OOP01-Karakteristike jezika Java.pdf){:target="_blank"}
 
-    2.1. Историјат и развој програмског језика и окружења Јава [текст](tekstovi/Karakteristike-jezika-Java.md#настанак-и-развој){:target="_blank"} [филм 1/2](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=22m46s){:target="_blank"} [филм 2/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=0m3s){:target="_blank"}
+    2.1. Историјат и развој програмског језика и окружења Јава [филм 1/2](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=22m46s){:target="_blank"} [филм 2/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=0m3s){:target="_blank"}
 
         2.1.1. Историјат 
 
@@ -57,7 +57,7 @@
 
         2.1.3. Планиране карактериситке за нове верзије Јаве
 
-    2.2. Захтеви постављени за програмски језик и окружење Јава [текст](tekstovi/Karakteristike-jezika-Java.md#захтеви-за-јаву){:target="_blank"} [филм](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=4m12s){:target="_blank"}
+    2.2. Захтеви постављени за програмски језик и окружење Јава [филм](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=4m12s){:target="_blank"}
 
         2.2.1. Једноставаност, објектна оријентисаност, фамилијарност
 
