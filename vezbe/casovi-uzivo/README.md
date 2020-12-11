@@ -44,5 +44,8 @@
 	- [Денис](https://youtu.be/B1LnF_vc1bM)
 	- [Филип](https://youtu.be/VDEjHaI9TWY)
 		
+- Час 9: Генеричке колекције и поређење објеката 
+	- [Денис](https://youtu.be/Lbpo_aOi0sA)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
