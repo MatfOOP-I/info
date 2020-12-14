@@ -14,13 +14,13 @@
 
 ## Настава
 
-* **[Предавања](/predavanja/README.md)**
+* **[Предавања](/predavanja/README-2020-21.md)**
 
-* **[Предавања, академска 2019/2020](/predavanja/README-2019-2020.md)**
+* **[Предавања, академска 2019/2020](/predavanja/README-2019-20.md)**
 
-* **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README.md)**
+* **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README-2020-21.md)**
 
-* **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-2020.md)**
+* **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-20.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
