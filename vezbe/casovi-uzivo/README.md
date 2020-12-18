@@ -48,5 +48,8 @@
 	- [Денис](https://youtu.be/Lbpo_aOi0sA)
 	- [Филип](https://youtu.be/m2UhT-1eTQ0)
 
+- Час 10: Поређење објеката 
+	- [Филип](https://youtu.be/FTiuW67S6sE)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
