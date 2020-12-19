@@ -50,6 +50,7 @@
 
 - Час 10: Поређење објеката 
 	- [Филип](https://youtu.be/FTiuW67S6sE)
+	- [Денис](https://youtu.be/fHYFcXkoPc4) (Tokovi i funkcionalni koncepti u Javi)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
