@@ -54,6 +54,7 @@
 
 - Час 11: Графичко корисничко окружење (JavaFx) 
 	- [Филип](https://youtu.be/I7Ilf2l5Nu4)
+	- [Денис](https://youtu.be/8QYYKPpPcBA)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
