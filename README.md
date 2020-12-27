@@ -16,15 +16,17 @@
 
 * **[Предавања](/predavanja/README-2020-21.md)**
 
-* **[Предавања, академска 2019/2020](/predavanja/README-2019-20.md)**
-
-* **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README-2020-21.md)**
-
-* **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-20.md)**
+* **[Часови предавања уживо](/predavanja/casovi-uzivo/README-2020-21.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
 * **[Часови вежби уживо](/vezbe/casovi-uzivo/README.md)**
+
+* **Настава у претходним академским годинама**
+
+  * **[Предавања, академска 2019/2020](/predavanja/README-2019-20.md)**
+
+  * **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-20.md)**
 
 ## Колоквијуми и испити
 
