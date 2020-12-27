@@ -52,5 +52,9 @@
 	- [Филип](https://youtu.be/FTiuW67S6sE)
 	- [Денис](https://youtu.be/fHYFcXkoPc4) (Tokovi i funkcionalni koncepti u Javi)
 
+- Час 11: Графичко корисничко окружење (JavaFx) 
+	- [Филип](https://youtu.be/I7Ilf2l5Nu4)
+	- [Денис](https://youtu.be/8QYYKPpPcBA)
+
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
