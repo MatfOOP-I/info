@@ -59,7 +59,7 @@
 - Час 12: Припрема за испит 
 	- [Денис](https://youtu.be/-JUoa5BTg6s) (Болница)
 	- [Денис](https://youtu.be/23hzyX7kQH4) (Покемони)
-
+	- [Филип](https://youtu.be/tBJf-QBjyis) (Лутрија)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
