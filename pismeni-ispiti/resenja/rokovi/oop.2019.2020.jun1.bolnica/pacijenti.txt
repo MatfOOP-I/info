@@ -1,0 +1,6 @@
+Pera, Peric, k, 2, da
+Mika, Mikic, k, 5, ne
+Laza, Lazic, g, 3
+Mara, Maric, g, 10
+Boza, Bozic, k, 1, ne
+Dora, Doric, k, 7, da
