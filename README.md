@@ -4,8 +4,8 @@
 
 ---
 
-## Пријава за испит 30.01.2021.
-Сви студенти који планирају да изађу на испит из објектно-оријентисаног програмирања 30.01.2021. треба да попуне следећу **[анкету](https://docs.google.com/forms/d/e/1FAIpQLSefR1n1e1YNqVnuvGb8w3YG9qdvOyIJqGzIo8EFfMxJm-Nqow/viewform?usp=sf_link)**. Обратити пажњу на распоред испита, могуће су промене у наредних пар дана.
+## Распоред седења за испит 30.01.2021.
+Распоред седења налази се на следећој **[адреси](https://docs.google.com/spreadsheets/d/1uKbQajFYuyWDZRcHnUdSdnvAguZ49E1_Wa72_DZNU4I/edit?usp=sharing)**.
 
 
 ## Информације о курсу
