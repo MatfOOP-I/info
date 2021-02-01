@@ -6,6 +6,9 @@
 
 ## Резултати Јан1
 
+Резултати писменог дела испита у року Јан1 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1p7Pz_YYzWn1FxyyLTRC0XlCeKgCf7ZtLL9rbwRuoeV4/edit?usp=sharing).
+За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до среде 3.2.2021. у 12ч.
+
 Резултати писменог дела испита у року Јан1 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan1/oop.jan1.denis.pdf).
 За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до уторка 2.2.2021. у 12ч.
 
