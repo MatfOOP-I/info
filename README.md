@@ -4,6 +4,9 @@
 
 ---
 
+## Распоред седења у року Јануар 2
+Распоред седења налази се на следећем [линку](https://docs.google.com/spreadsheets/d/1cQvP6S3VACG0DucgPBX_vuqfPRrqyRVWaQ6J8CvIWvw/edit?usp=sharing).
+
 ## Пријава за Јан2
 
 Сви студенти који планирају да изађу на практични део испита 17.02.2021. треба да попуне следећу [анкету](https://docs.google.com/forms/d/e/1FAIpQLScUVM8544k0HqHhLMicMuDhVbZIKXxwZWWy70WHJ_i_6LThrA/viewform?usp=sf_link).
