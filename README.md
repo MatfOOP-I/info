@@ -4,6 +4,11 @@
 
 ---
 
+## Резултати Јан2
+
+Резултати писменог дела испита у року Јан2 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1T9AaKR31261psE9WPf46vZvJ38i0LN-W-XpZDtWFR2c/edit?usp=sharing).
+За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до понедељка 22.2.2021. у 12ч.
+
 ## Распоред седења у року Јануар 2
 Распоред седења налази се на следећем [линку](https://docs.google.com/spreadsheets/d/1cQvP6S3VACG0DucgPBX_vuqfPRrqyRVWaQ6J8CvIWvw/edit?usp=sharing).
 
