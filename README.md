@@ -6,6 +6,9 @@
 
 ## Резултати Јан2
 
+Резултати писменог дела испита у року Јан2 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan2/oop.jan2.denis.pdf).
+За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до среде 24.2.2021. у 12ч.
+
 Резултати писменог дела испита у року Јан2 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1T9AaKR31261psE9WPf46vZvJ38i0LN-W-XpZDtWFR2c/edit?usp=sharing).
 За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до понедељка 22.2.2021. у 12ч.
 
