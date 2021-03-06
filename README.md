@@ -4,16 +4,13 @@
 
 ---
 
-## Распоред седења у року Јануар 2
-Распоред седења налази се на следећем [линку](https://docs.google.com/spreadsheets/d/1cQvP6S3VACG0DucgPBX_vuqfPRrqyRVWaQ6J8CvIWvw/edit?usp=sharing).
+## Резултати Јан2
 
-## Пријава за Јан2
+Резултати писменог дела испита у року Јан2 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan2/oop.jan2.denis.pdf).
+За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до среде 24.2.2021. у 12ч.
 
-Сви студенти који планирају да изађу на практични део испита 17.02.2021. треба да попуне следећу [анкету](https://docs.google.com/forms/d/e/1FAIpQLScUVM8544k0HqHhLMicMuDhVbZIKXxwZWWy70WHJ_i_6LThrA/viewform?usp=sf_link).
-
-## Усмени Јан1 - накнадни термин
-
-Накнадни термин за усмени део испита у року јануар 1 код проф. Филиповића је уторак, 16.02.2021, у 9ч, у просторијама факултета у улици Светог Николе.
+Резултати писменог дела испита у року Јан2 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1T9AaKR31261psE9WPf46vZvJ38i0LN-W-XpZDtWFR2c/edit?usp=sharing).
+За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до понедељка 22.2.2021. у 12ч.
 
 ## Резултати Јан1
 
