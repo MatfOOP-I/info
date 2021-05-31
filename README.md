@@ -4,21 +4,9 @@
 
 ---
 
-## Резултати Јан2
+## Анкета
 
-Резултати писменог дела испита у року Јан2 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan2/oop.jan2.denis.pdf).
-За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до среде 24.2.2021. у 12ч.
-
-Резултати писменог дела испита у року Јан2 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1T9AaKR31261psE9WPf46vZvJ38i0LN-W-XpZDtWFR2c/edit?usp=sharing).
-За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до понедељка 22.2.2021. у 12ч.
-
-## Резултати Јан1
-
-Резултати писменог дела испита у року Јан1 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1p7Pz_YYzWn1FxyyLTRC0XlCeKgCf7ZtLL9rbwRuoeV4/edit?usp=sharing).
-За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до среде 3.2.2021. у 12ч.
-
-Резултати писменог дела испита у року Јан1 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan1/oop.jan1.denis.pdf).
-За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до уторка 2.2.2021. у 12ч.
+Моле се сви студенти који планирају да изађу на практични део испита 08.06.2021. да попуне следећу [анкету](https://docs.google.com/forms/d/e/1FAIpQLSdU1zC0PlnMbdB6zkNbry1ZjYyjzTE9z-EvqcNlFw5OfIiD6A/viewform?usp=sf_link). Анкета ће бити активна до 05.06.2021. у 12 часова.
 
 
 ## Информације о курсу
