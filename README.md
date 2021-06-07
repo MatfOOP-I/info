@@ -4,9 +4,9 @@
 
 ---
 
-## Анкета - практични део испита у јуну 1
+## Распоред седења - практични део испита у јуну 1
 
-Моле се сви студенти који планирају да изађу на практични део испита 08.06.2021. да попуне следећу [анкету](https://docs.google.com/forms/d/e/1FAIpQLSdU1zC0PlnMbdB6zkNbry1ZjYyjzTE9z-EvqcNlFw5OfIiD6A/viewform?usp=sf_link). Анкета ће бити активна до 05.06.2021. у 12 часова.
+Распоред седења налази се на следећем [линку](https://docs.google.com/spreadsheets/d/1NSJGYWrb85P5RcLHYD2fzSKhx9Hv-YlSu4N8bhsh6qk/edit?usp=sharing).
 
 
 ## Информације о курсу
