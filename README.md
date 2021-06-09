@@ -4,9 +4,9 @@
 
 ---
 
-## Распоред седења - практични део испита у јуну 1
+## РЕЗУЛТАТИ - практични део испита у јуну 1
 
-Распоред седења налази се на следећем [линку](https://docs.google.com/spreadsheets/d/1NSJGYWrb85P5RcLHYD2fzSKhx9Hv-YlSu4N8bhsh6qk/edit?usp=sharing).
+Резултати практичног дела испита код Филипа се налазе на следећем [линку](https://docs.google.com/spreadsheets/d/1rPREW8nbboiYGNEqvqgZDw4o0KaGZ2_bd0oVz6VKYVA/edit?usp=sharing).
 
 
 ## Информације о курсу
