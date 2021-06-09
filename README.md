@@ -6,7 +6,7 @@
 
 ## РЕЗУЛТАТИ - практични део испита у јуну 1
 
-Резултати практичног дела испита код Филипа се налазе на следећем [линку](https://docs.google.com/spreadsheets/d/1rPREW8nbboiYGNEqvqgZDw4o0KaGZ2_bd0oVz6VKYVA/edit?usp=sharing).
+Резултати практичног дела испита код Филипа се налазе на следећем [линку](https://docs.google.com/spreadsheets/d/1rPREW8nbboiYGNEqvqgZDw4o0KaGZ2_bd0oVz6VKYVA/edit?usp=sharing). За увид се јавити мејлом до 12.06.2021.
 
 
 ## Информације о курсу
