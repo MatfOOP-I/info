@@ -14,9 +14,9 @@
 
 ## Настава
 
-* **[Предавања](/predavanja/README-2020-21.md)**
+* **[Предавања](/predavanja/README-2021-22.md)**
 
-* **[Часови предавања уживо](/predavanja/casovi-uzivo/README-2020-21.md)**
+* **[Снимљени часови предавања](/predavanja/casovi-uzivo/README-2020-21.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
