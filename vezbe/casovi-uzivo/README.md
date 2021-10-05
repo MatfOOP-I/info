@@ -6,60 +6,11 @@
 
 ## Линкови за приступ часовима
 
-- Денис:
-    - [Среда 14:15 - 16:00](https://matf.webex.com/matf/j.php?MTID=m15d40dece5f9b68f11b75e5572087a87)
-    - [Петак 11:15 - 13:00](https://matf.webex.com/matf/j.php?MTID=m2663ba84225a94c25e5126d1ecaeb048)
+- Иван:
+    - [Понедељак 19:15 - 21:00](https://matf.webex.com/meet/ivan_ristovic)
 
 ## Снимци одржаних часова вежби
 
-- Час 1: Увод у Јаву
-	- [Денис](https://youtu.be/ggszXF-NKac) 
-
-- Час 2: Низови и матрице у Јави
-	- [Денис](https://youtu.be/pcXbNZJuRy8)
-	- [Филип](https://youtu.be/hpjpvVPesvM)
-
-- Час 3: Класе и објекти у Јави
-	- [Филип](https://youtu.be/rhTG-M27zOE)
-	- [Денис](https://youtu.be/qNkB4PAZc98)
-
-- Час 4: Наслеђивање
-	- [Филип](https://youtu.be/aTAQ1uzFgK4)
-	- [Денис](https://youtu.be/GP2yTBKLnxU)
-	
-- Час 5: Апстрактне класе, полиморфизам
-	- [Филип](https://youtu.be/GgnDxpdumd8)
-	- [Денис](https://youtu.be/ipLntBXAZwo)
-	- [Денис 2. час](https://youtu.be/FnzyEd_i8bs)
-	
-- Час 6: Интерфејси
-	- [Филип](https://youtu.be/E2parVCJwHE)
-	- [Денис](https://youtu.be/B_IVYCXqL3I)
-
-- Час 7: Изузеци, датотеке и колонирање 
-	- [Денис](https://youtu.be/36pRs-EBbwQ)
-	- [Филип](https://youtu.be/Z-C6cgHGw2E)
-	
-- Час 8: Генеричке класе и функције 
-	- [Денис](https://youtu.be/B1LnF_vc1bM)
-	- [Филип](https://youtu.be/VDEjHaI9TWY)
-		
-- Час 9: Генеричке колекције и поређење објеката 
-	- [Денис](https://youtu.be/Lbpo_aOi0sA)
-	- [Филип](https://youtu.be/m2UhT-1eTQ0)
-
-- Час 10: Поређење објеката 
-	- [Филип](https://youtu.be/FTiuW67S6sE)
-	- [Денис](https://youtu.be/fHYFcXkoPc4) (Tokovi i funkcionalni koncepti u Javi)
-
-- Час 11: Графичко корисничко окружење (JavaFx) 
-	- [Филип](https://youtu.be/I7Ilf2l5Nu4)
-	- [Денис](https://youtu.be/8QYYKPpPcBA)
-
-- Час 12: Припрема за испит 
-	- [Денис](https://youtu.be/-JUoa5BTg6s) (Болница)
-	- [Денис](https://youtu.be/23hzyX7kQH4) (Покемони)
-	- [Филип](https://youtu.be/tBJf-QBjyis) (Лутрија)
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)

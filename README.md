@@ -4,26 +4,9 @@
 
 ---
 
-## Резултати Јан2
-
-Резултати писменог дела испита у року Јан2 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan2/oop.jan2.denis.pdf).
-За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до среде 24.2.2021. у 12ч.
-
-Резултати писменог дела испита у року Јан2 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1T9AaKR31261psE9WPf46vZvJ38i0LN-W-XpZDtWFR2c/edit?usp=sharing).
-За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до понедељка 22.2.2021. у 12ч.
-
-## Резултати Јан1
-
-Резултати писменог дела испита у року Јан1 код Филипа су доступни на [линку](https://docs.google.com/spreadsheets/d/1p7Pz_YYzWn1FxyyLTRC0XlCeKgCf7ZtLL9rbwRuoeV4/edit?usp=sharing).
-За увид се јавити на мејл: filip_vidojevic@matf.bg.ac.rs до среде 3.2.2021. у 12ч.
-
-Резултати писменог дела испита у року Јан1 код Дениса су доступни на [линку](/pismeni-ispiti/info/202021/jan1/oop.jan1.denis.pdf).
-За увид се јавити на мејл: denis_alicic@matf.bg.ac.rs до уторка 2.2.2021. у 12ч.
-
-
 ## Информације о курсу
 
-* **[Основне информације](/informacije/README-2020-21.md)**
+* **[Основне информације](/informacije/README-2021-22.md)**
 
 * **[Инсталације](/INSTALACIJE-2020-21.md)**
 
@@ -41,9 +24,9 @@
 
 * **Настава у претходним академским годинама**
 
-  * **[Предавања, академска 2019/2020](/predavanja/README-2019-20.md)**
+  * **[Предавања, академска 2020/2021](/predavanja/README-2020-21.md)**
 
-  * **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-20.md)**
+  * **[Снимци одржаних предавања, академска 2020/2021](/predavanja/casovi-uzivo/README-2020-21.md)**
 
 ## Колоквијуми и испити
 
