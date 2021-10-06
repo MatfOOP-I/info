@@ -4,6 +4,10 @@
 
 ---
 
+**Обавештење:** Предавања код проф. Филиповића ће бити одржавана у терминима који су дати распоредом преко Webex-a, на адреси 
+[https://matf.webex.com/meet/vladaf](https://matf.webex.com/meet/vladaf){:target="_blank"}.
+---
+
 ## Информације о курсу
 
 * **[Основне информације](/informacije/README-2021-22.md)**
@@ -16,7 +20,7 @@
 
 * **[Предавања](/predavanja/README-2021-22.md)**
 
-* **[Снимљени часови предавања](/predavanja/casovi-uzivo/README-2020-21.md)**
+* **[Снимљени часови предавања](/predavanja/casovi-uzivo/README-2021-22.md)**
 
 * **[Вежбе](/vezbe/README.md)**
 
@@ -27,6 +31,10 @@
   * **[Предавања, академска 2020/2021](/predavanja/README-2020-21.md)**
 
   * **[Снимци одржаних предавања, академска 2020/2021](/predavanja/casovi-uzivo/README-2020-21.md)**
+
+  * **[Предавања, академска 2019/2020](/predavanja/README-2019-20.md)**
+
+  * **[Снимци одржаних предавања, академска 2019/2020](/predavanja/casovi-uzivo/README-2019-20.md)**
 
 ## Колоквијуми и испити
 
