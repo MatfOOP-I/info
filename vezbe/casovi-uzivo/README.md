@@ -14,6 +14,9 @@
 
 ## Снимци одржаних часова вежби
 
+- Иван:
+    - [YouTube](https://www.youtube.com/playlist?list=PLOGAKiQpHThMfo0A7UumHheZ5RkXxPq3m)
+
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
