@@ -98,9 +98,9 @@
 
 7. B. Eckel, [Thinking in Java](https://archive.org/details/TIJ4CcR1/page/n3){:target="_blank"}
 
-8. А. B. Downey, [How to Think Like a Computer Scientist](http://www.vias.org/javacourse/){:target="_blank"}
+8. А. B. Downey, [How to Think Like a Computer Scientist](http://www.vias.org/javacourse){:target="_blank"}
 
-9. D.J. Eck, [Introduction to Programming Using Java](http://math.hws.edu/javanotes/){target:"_blank"}
+9. D.J. Eck, [Introduction to Programming Using Java](http://math.hws.edu/javanotes){target:"_blank"}
 
 - Списак легално доступних књига из Јаве на [адреси](http://www.computer-books.us/java.php){target:"_blank"}
 

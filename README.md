@@ -6,7 +6,6 @@
 
 **Обавештење:** Предавања код проф. Филиповића ће бити одржавана у терминима који су дати распоредом преко Webex-a, на адреси [https://matf.webex.com/meet/vladaf](https://matf.webex.com/meet/vladaf){:target="_blank"}.
 
-
 ---
 
 ## Информације о курсу
