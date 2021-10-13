@@ -11,6 +11,9 @@
 
 - Страхиња:
     - [Среда 15:15 - 17:00](https://matf.webex.com/meet/strahinja_stanojevic)
+    
+- Владан:
+    - [Петак: 15:15 - 17:00 (2И2Б), 17:15 - 19:00 (2И2А)](https://matf.webex.com/meet/vladan_kovacevic)    
 
 ## Снимци одржаних часова вежби
 
