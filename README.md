@@ -4,11 +4,11 @@
 
 ---
 
-**Обавештење:** Колегу Владана ће у петак 08.10. заменити колеге Иван и Страхиња, по распореду:
-- од 15 сати: Иван, линк за приступ: [https://matf.webex.com/meet/ivan_ristovic](https://matf.webex.com/meet/ivan_ristovic){:target="_blank"}
-- од 17 сати: Страхиња, линк за приступ: [https://matf.webex.com/meet/strahinja_stanojevic](https://matf.webex.com/meet/strahinja_stanojevic){:target="_blank"}
+<!-- **[Резултати усменог дела испита у року Јун 1](/usmeni-ispiti/info/2019.06.29-RS2.pdf){:target="_blank"}** -->
 
-**Обавештење:** Предавања код проф. Филиповића ће бити одржавана у терминима који су дати распоредом преко Webex-a, на адреси [https://matf.webex.com/meet/vladaf](https://matf.webex.com/meet/vladaf){:target="_blank"}.
+**[Замена реализатора вежби](/vezbe/info/README.md)**
+
+**[Адреса за праћење предавања](/predavanja/info/README.md)**
 
 ---
 
