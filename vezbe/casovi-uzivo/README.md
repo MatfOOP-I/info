@@ -20,6 +20,9 @@
 - Иван:
     - [YouTube](https://www.youtube.com/playlist?list=PLOGAKiQpHThMfo0A7UumHheZ5RkXxPq3m)
 
+- Владан:
+    - [YouTube](https://www.youtube.com/channel/UCNVRGjPV7uvAZrtgfcNrlFA)
+
 
 --- 
 [ООП](../../README.md) [Вежбе](../README.md)
