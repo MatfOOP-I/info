@@ -145,6 +145,35 @@
    
    5. [Пројекат са свим кодовима](./primeri-java/07.izuzeci.kloniranje.zip){:target="_blank"} 
 
+8. Генеричке класе
+
+   1. Генеричке функције
+   
+   2. Генеричка класа `Kutija`
+   
+   3. Генеричка класа `OpcionaVrednost`, `wildcard`
+   
+   4. Генеричка класа `UredjeniPar` - више типских параметара
+   
+   5. Генерички интерфејс `GenerickiStek` 
+   
+   6. [Пројекат са свим кодовима](./primeri-java/08.genericke.klase.zip){:target="_blank"}  
+
+
+9.  Генеричке колекције
+
+    1.  `LinkendList<T>`
+
+    2.  `ArrayList<T>`
+
+    3.  `TreeSet<T>`
+
+    4.  `TreeMap<T>` 
+
+    5.  `HashMap<T>` 
+   
+    6.  [Пројекат са свим кодовима](./primeri-java/09.kolekcije.zip){:target="_blank"}  
+
 ---
 
 [ООП](../README.md)  [Часови уживо](./casovi-uzivo/README.md)
