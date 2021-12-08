@@ -174,6 +174,18 @@
    
     6.  [Пројекат са свим кодовима](./primeri-java/09.kolekcije.zip){:target="_blank"}  
 
+
+10. Поређење објеката
+   
+    1.  Интерфејс `Comparable<T>`
+
+    2.  Интерфејс `Comparator<T>`
+    
+	1.  Поређење објеката хијерархије облика  
+   
+    1.  [Пројекат са свим кодовима](./primeri-java/10.poredjenje.objekata.zip){:target="_blank"} 
+
+
 ---
 
 [ООП](../README.md)  [Часови уживо](./casovi-uzivo/README.md)
