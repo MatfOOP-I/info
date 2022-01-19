@@ -16,7 +16,7 @@
 
 - **[Страхиња](./202122/jan_1_rezultati_strahinja.pdf)**
 
-- **[Владан](./202122/jan1_rezultati_vladan.pdf)**
+- **[Владан](./202122/jan1_rezultati_vladan2.pdf)**
 
 ---
 
