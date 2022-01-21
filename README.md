@@ -4,6 +4,8 @@
 
 ---
 
+**[Усмени испит у року јануар 1](pismeni-ispiti/info/README.md)**
+
 **[Резултати практичног дела испита у року Јануар 1](pismeni-ispiti/info/README.md)**
 
 **[Распоред полагања практичног дела испита у року Јануар 1](pismeni-ispiti/info/README.md)**
