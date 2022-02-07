@@ -14,6 +14,7 @@
 
 - **[Иван](./202122/jan2_rezultati_ivan.pdf)**
 - **[Владан](./202122/jan2_rezultati_vladan.pdf)**
+- **[Страхиња](./202122/jan2_rezultati_strahinja.pdf)**
 
 ---
 
