@@ -4,6 +4,8 @@
 
 ---
 
+**[Термин усменог дела испита у року Јуни 1](usmeni-ispiti/info/README.md)**
+
 **[Резултати практичног дела испита у року Јун 1](pismeni-ispiti/info/README.md)**
 
 **[Термин усменог дела испита у року Јануар 2](pismeni-ispiti/info/README.md)**
