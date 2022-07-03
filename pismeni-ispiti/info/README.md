@@ -14,6 +14,7 @@
 
 - **[Иван](./202122/jun2_rezultati_ivan.pdf)**
 - **[Владан](./202122/jun2_rezultati_vladan_2.pdf)**
+- **[Страхиња](./202122/jun2_rezultati_strahinja.pdf)**
 
 --- 
 
@@ -43,7 +44,7 @@
 
 - **[Иван](./202122/jun1_rezultati_ivan.pdf)**
 - **[Владан](./202122/jun1_rezultati_vladan.pdf)**
-- **[Страхиња](./202122/jun_rezultati_strahinja.pdf)**
+- **[Страхиња](./202122/jun2_rezultati_strahinja.pdf)**
 
 ---
 
