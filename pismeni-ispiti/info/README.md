@@ -14,7 +14,7 @@
 
 - **[Иван](./202122/sep1_rezultati_ivan.pdf)**
 - **[Страхиња](./202122/sept1_rezultati_strahinja.pdf)**
-- **[Владан](./202122/sep1_rezulatati_vladan.pdf.pdf)**
+- **[Владан](./202122/sep1_rezulatati_vladan.pdf)**
 --- 
 
 29.08.
