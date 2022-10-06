@@ -8,8 +8,6 @@
 
   * Картељ, Филиповић, Тошић: [Објектно оријентисано програмирање - програмски језик Јава - 1](predavanja/tekstovi-2022-23/OOP.skripta.20220529.pdf){:target="_blank"} нерецензирани уџбенк (скрипта)
 
-  * Eckel: [Thinking in Java](https://archive.org/details/TIJ4CcR1){:target="_blank"}, 4th edition  
-
   * Downey, Mayfield: [Think Java: How to Think Like a Computer Scientist](http://greenteapress.com/thinkjava6/html/index.html){:target="_blank"}  
 
   * Eck: [Introduction to Programming Using Java](http://math.hws.edu/javanotes/){:target="_blank"}, 7th edition
