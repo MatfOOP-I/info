@@ -28,7 +28,7 @@
 
 1. А. Картељ, В. Филиповић, Д. Тошић, Објектно оријентисано програмирање - програмски језик Јава - 1, нерецензирани уџбеник (скрипта), 2022.
 
-2. M. Ivanović, Z. Budimac, M. Radovanović, D. Mitrović, Objektno-orijentisano programiranje i programski jezik Java , Sigra star, Нови Сад, 2016.
+2. M. Ivanović, Z. Budimac, M. Radovanović, D. Mitrović, Objektno-orijentisano programiranje i programski jezik Java, Sigra star, Нови Сад, 2016.
 
 3. C. Horstmann, G Cornell, Jezgro Jave, Tom 1- Оsnove, CET, Београд, 2008.
 
