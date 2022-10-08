@@ -6,11 +6,11 @@
 
 * Наставник: **[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html){:target="_blank"}**
 
-* Асистент: **[Иван Ристовић](http://poincare.matf.bg.ac.rs/~ivan_ristovic/){:target="_blank"}**
-
-* Асистент: **[Страхиња Станојевић](http://poincare.matf.bg.ac.rs/~strahinja_stanojevic/){:target="_blank"}**
-
 * Асистент: **[Владан Ковачевић](http://poincare.matf.bg.ac.rs/~vladan_kovacevic/){:target="_blank"}**
+
+* Асистент: **[Бојана Јошић](http://www.matf.bg.ac.rs/p/-bojana-josic){:target="_blank"}**
+
+* Асистент: **[Вукан Антић](http://www.amtf.bg.ac.rs){:target="_blank"}**
 
 ---
 
@@ -18,7 +18,7 @@
 
 * **[Званичан план и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf){:target="_blank"}**
 
-* **[Начин реализације курса у академској 2022/2023 години](Nacin-realizacije-kursa-2022-23.md)**
+* **[Начин реализације курса](Nacin-realizacije-kursa.md)**
 
 ---
 
@@ -26,11 +26,11 @@
 
 * Владимир Филиповић: биће накнадно истакнут.
 
-* Иван Ристовић: биће накнадно истакнут.
-
-* Страхиња Станојевић: биће накнадно истакнут.
-
 * Владан Ковачевић: биће накнадно истакнут.
+
+* Бојана Јошић: биће накнадно истакнут.
+
+* Вукан Антић: биће накнадно истакнут.
 
 ---
 
@@ -65,4 +65,3 @@
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br />Овај садржај је заштићен лиценцом <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
 
 За програмски код који се односи на садржај овог курса се може сматрати да је заштићен [MIT лиценцом](/LICENSE).
-

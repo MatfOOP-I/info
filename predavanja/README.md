@@ -65,7 +65,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g02.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g02){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g02){:target="_blank"}
 
     3.2. Друге прогрaмске парадигме [презентација](prezentacije-2022-23/03.Neke.Programske.Paradigme.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=1m20s){:target="_blank"}
 
@@ -77,7 +77,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g03.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g03){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g03){:target="_blank"}
 
 4. Карактеристике програмског језика Јава [презентација](prezentacije-2022-23/04.Karakteristike.Programskog.Jezika.pdf){:target="_blank"}
 
@@ -257,7 +257,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g05.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g05){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g05){:target="_blank"}
 
 6. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](prezentacije-2022-23/06.Koriscenje.Klasa.I.Objekata.Isporucenih.Uz.JDK.pdf){:target="_blank"}
 
@@ -347,7 +347,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g06.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g06){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g06){:target="_blank"}
 
 7. Низови у Јави [презентација](prezentacije-2022-23/07.Nizovi.U.Javi.pdf){:target="_blank"}
 
@@ -389,7 +389,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g07.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g07){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g07){:target="_blank"}
 
 8. Класе, пакети, поља, методи и објекти у Јави [презентација](prezentacije-2022-23/08.Klase.Paketi.Polja.Metodi.Objekti.U.Javi.pdf){:target="_blank"}
 
@@ -539,7 +539,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g08.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g08){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g08){:target="_blank"}
 
 9. Напредни рад са класама и објектима [презентација](prezentacije-2022-23/09.Napredni.Rad.Sa.Klasama.I.Objektima.pdf){:target="_blank"}
 
@@ -605,7 +605,7 @@
 
    * [Примери програмског кода](izvorni-kod-2022-23/g09.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g09){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g09){:target="_blank"}
 
 10. Угњеждене и унутрашње класе [презентација](prezentacije-2022-23/10.Ugnjezdene.I.Unutrasnje.Klase.pdf){:target="_blank"}
 
@@ -623,7 +623,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g10.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g10){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g10){:target="_blank"}
 
 11. Изузеци и тврдње [презентација](prezentacije-2022-23/11.Izuzeci.I.Tvrdnje.pdf){:target="_blank"}
 
@@ -659,7 +659,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g11.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g11){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g11){:target="_blank"}
 
 12. Енумерисани типови [презентација](prezentacije-2022-23/12.Nabrojivi.Tip.pdf){:target="_blank"}
 
@@ -671,7 +671,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g12.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g12){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g12){:target="_blank"}
 
 13. Генерички типови [презентација](prezentacije-2022-23/13.Genericki.Tip.pdf){:target="_blank"}
 
@@ -695,7 +695,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g13.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g13){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g13){:target="_blank"}
 
 14. Колекције и речници [презентација](prezentacije-2022-23/14.Kolekcije.I.Recnici.pdf){:target="_blank"}
 
@@ -767,7 +767,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g14.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g14){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g14){:target="_blank"}
 
 15. Улаз и излаз [презентација](prezentacije-2022-23/15.Ulaz.I.Izlaz.pdf){:target="_blank"}
 
@@ -795,7 +795,7 @@
 
     * [Примери програмског кода](izvorni-kod-2022-23/g15.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23/tree/main/project/src/rs/math/oop/g15){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/project/src/rs/math/oop/g15){:target="_blank"}
 
 16. Рефлексија [презентација](/prezentacije-2020-21/OOP15-Refleksija i anotacija.pdf){:target="_blank"}
 
@@ -943,7 +943,7 @@
 
 * Примери Јава програмског кода
 
-  * [Github репозиторијум са примерима](https://github.com/MatfOOP-I/primeri-predavanja-2022-23){:target="_blank"}
+  * [Github репозиторијум са примерима](https://github.com/MatfOOP-I/primeri-predavanja){:target="_blank"}
 
   * [Примери из књиге "Java", аутори Хорстман, Корнел](https://github.com/MatfOOP-I/primeri-knjiga-horstman-cj2){:target="_blank"}
 

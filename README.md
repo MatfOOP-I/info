@@ -40,15 +40,15 @@
 
 ## Информације о курсу
 
-* **[Основне информације](/informacije/README-2022-23.md)**
+* **[Основне информације](/informacije/README.md)**
 
-* **[Инсталације](/INSTALACIJE-2022-23.md)**
+* **[Инсталације](/INSTALACIJE.md)**
 
-* **[Ресурси за учење](/RESURSI-ZA-UCENJE-2022-23.md)**
+* **[Ресурси за учење](/RESURSI-ZA-UCENJE.md)**
 
 ## Настава
 
-* **[Предавања](/predavanja/README-2022-23.md)**
+* **[Предавања](/predavanja/README.md)**
 
 * **[Снимци одржаних предавања, академска 2020/2021](/predavanja/casovi-uzivo/README-2021-22.md)**
 
