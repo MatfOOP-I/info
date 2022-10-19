@@ -5,7 +5,7 @@
 
 Овде су постављена предавања из предмета **Објектно-оријентисано програмирање** на **И смеру** основних студија.
 
-1. Уводне напомене
+1. Уводне напомене [презентација](prezentacije/00.Informacije.O.Kursu.pdf){:target="_blank"}
 
     1.1  Опис сајта курса [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=0m3s){:target="_blank"}
 
@@ -21,7 +21,7 @@
 
     1.4. Кратак опис развојног окружења Visual Studio Code [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=44m19s){:target="_blank"}
 
-2. Поступак решавања проблема помоћу рачунара [презентација](prezentacije-2022-23/01.Resavanje.Problema.Pomocu.Racunara.pdf){:target="_blank"}
+2. Поступак решавања проблема помоћу рачунара [презентација](prezentacije/01.Resavanje.Problema.Pomocu.Racunara.pdf){:target="_blank"}
 
     2.1. Фазе решавања проблема [филм (2019/20)](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=0m0s){:target="_blank"}
 
@@ -37,7 +37,7 @@
 
 3. Објектно оријентисана парадигма и друге парадигме
 
-    3.1. Објектно оријентисано програмирање [презентација](prezentacije-2022-23/02.Objektno.Orijentisano.Programiranje.pdf){:target="_blank"}  
+    3.1. Објектно оријентисано програмирање [презентација](prezentacije/02.Objektno.Orijentisano.Programiranje.pdf){:target="_blank"}  
 
         3.1.1. Историјат 
 
@@ -63,11 +63,11 @@
 
         3.1.5. УМЛ дијаграми класа 
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g02.zip)
+   * [Примери програмског кода](izvorni-kod/g02.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g02){:target="_blank"}
 
-    3.2. Друге прогрaмске парадигме [презентација](prezentacije-2022-23/03.Neke.Programske.Paradigme.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=1m20s){:target="_blank"}
+    3.2. Друге прогрaмске парадигме [презентација](prezentacije/03.Neke.Programske.Paradigme.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=1m20s){:target="_blank"}
 
         3.2.1. Парадигма императивног програмирања
 
@@ -75,11 +75,11 @@
 
         3.2.3. Парадигма функционалног програмирања
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g03.zip)
+   * [Примери програмског кода](izvorni-kod/g03.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g03){:target="_blank"}
 
-4. Карактеристике програмског језика Јава [презентација](prezentacije-2022-23/04.Karakteristike.Programskog.Jezika.pdf){:target="_blank"}
+4. Карактеристике програмског језика Јава [презентација](prezentacije/04.Karakteristike.Programskog.Jezika.pdf){:target="_blank"}
 
     4.1. Историјат и развој програмског језика и окружења Јава [филм (2019/20) 1/2](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=22m46s){:target="_blank"} [филм (2019/20) 2/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=0m3s){:target="_blank"}
 
@@ -255,11 +255,11 @@
 
             - Рекурзиja код `static` метода
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g05.zip)
+   * [Примери програмског кода](izvorni-kod/g05.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g05){:target="_blank"}
 
-6. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](prezentacije-2022-23/06.Koriscenje.Klasa.I.Objekata.Isporucenih.Uz.JDK.pdf){:target="_blank"}
+6. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](prezentacije/06.Koriscenje.Klasa.I.Objekata.Isporucenih.Uz.JDK.pdf){:target="_blank"}
 
     6.1. Приступ систему, класа `System` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=0m0s){:target="_blank"}
   
@@ -345,11 +345,11 @@
 
         6.7.4. Формати датума и времена помоћу `DateTimeFormatter` из пакета `java.time.format`
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g06.zip)
+   * [Примери програмског кода](izvorni-kod/g06.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g06){:target="_blank"}
 
-7. Низови у Јави [презентација](prezentacije-2022-23/07.Nizovi.U.Javi.pdf){:target="_blank"}
+7. Низови у Јави [презентација](prezentacije/07.Nizovi.U.Javi.pdf){:target="_blank"}
 
     7.1. Декларација и иницијализација низа [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=0m0s){:target="_blank"}
 
@@ -387,11 +387,11 @@
 
         7.7.2. Препоруке за коришћење агумената променљиве дужине
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g07.zip)
+   * [Примери програмског кода](izvorni-kod/g07.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g07){:target="_blank"}
 
-8. Класе, пакети, поља, методи и објекти у Јави [презентација](prezentacije-2022-23/08.Klase.Paketi.Polja.Metodi.Objekti.U.Javi.pdf){:target="_blank"}
+8. Класе, пакети, поља, методи и објекти у Јави [презентација](prezentacije/08.Klase.Paketi.Polja.Metodi.Objekti.U.Javi.pdf){:target="_blank"}
 
     8.1. Класе у Јави
 
@@ -537,11 +537,11 @@
 
         8.9.4. Реализација класа омотача за примитивне типове
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g08.zip)
+   * [Примери програмског кода](izvorni-kod/g08.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g08){:target="_blank"}
 
-9. Напредни рад са класама и објектима [презентација](prezentacije-2022-23/09.Napredni.Rad.Sa.Klasama.I.Objektima.pdf){:target="_blank"}
+9. Напредни рад са класама и објектима [презентација](prezentacije/09.Napredni.Rad.Sa.Klasama.I.Objektima.pdf){:target="_blank"}
 
     9.1. Апстрактне класе [филм (2019/20)](https://www.youtube.com/watch?v=j2dAq4adfq8&feature=youtu.be&&t=0m0s){:target="_blank"}
 
@@ -603,11 +603,11 @@
 
         9.5.2. Дефинисање сопствених догађаја
 
-   * [Примери програмског кода](izvorni-kod-2022-23/g09.zip)
+   * [Примери програмског кода](izvorni-kod/g09.zip)
 
    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g09){:target="_blank"}
 
-10. Угњеждене и унутрашње класе [презентација](prezentacije-2022-23/10.Ugnjezdene.I.Unutrasnje.Klase.pdf){:target="_blank"}
+10. Угњеждене и унутрашње класе [презентација](prezentacije/10.Ugnjezdene.I.Unutrasnje.Klase.pdf){:target="_blank"}
 
     10.1. Угњеждене класе
 
@@ -621,11 +621,11 @@
 
     10.4. Анонимне класе
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g10.zip)
+    * [Примери програмског кода](izvorni-kod/g10.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g10){:target="_blank"}
 
-11. Изузеци и тврдње [презентација](prezentacije-2022-23/11.Izuzeci.I.Tvrdnje.pdf){:target="_blank"}
+11. Изузеци и тврдње [презентација](prezentacije/11.Izuzeci.I.Tvrdnje.pdf){:target="_blank"}
 
     11.1. Изузеци у Јави
 
@@ -657,11 +657,11 @@
 
         11.2.2. Препоруке за рад са тврдњама
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g11.zip)
+    * [Примери програмског кода](izvorni-kod/g11.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g11){:target="_blank"}
 
-12. Енумерисани типови [презентација](prezentacije-2022-23/12.Nabrojivi.Tip.pdf){:target="_blank"}
+12. Енумерисани типови [презентација](prezentacije/12.Nabrojivi.Tip.pdf){:target="_blank"}
 
     12.1. Карактеристике набројивог типа
 
@@ -669,11 +669,11 @@
 
     12.3. Коришћење набројивог типа
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g12.zip)
+    * [Примери програмског кода](izvorni-kod/g12.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g12){:target="_blank"}
 
-13. Генерички типови [презентација](prezentacije-2022-23/13.Genericki.Tip.pdf){:target="_blank"}
+13. Генерички типови [презентација](prezentacije/13.Genericki.Tip.pdf){:target="_blank"}
 
     13.1. Појам генеричког типа
 
@@ -693,11 +693,11 @@
 
     13.8. Генериции и наслеђивање
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g13.zip)
+    * [Примери програмског кода](izvorni-kod/g13.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g13){:target="_blank"}
 
-14. Колекције и речници [презентација](prezentacije-2022-23/14.Kolekcije.I.Recnici.pdf){:target="_blank"}
+14. Колекције и речници [презентација](prezentacije/14.Kolekcije.I.Recnici.pdf){:target="_blank"}
 
     14.1. Интерфејс и имплементација
 
@@ -765,11 +765,11 @@
 
         14.9.4. Апстрактне колекцијске класе, креирање нових колекција
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g14.zip)
+    * [Примери програмског кода](izvorni-kod/g14.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g14){:target="_blank"}
 
-15. Улаз и излаз [презентација](prezentacije-2022-23/15.Ulaz.I.Izlaz.pdf){:target="_blank"}
+15. Улаз и излаз [презентација](prezentacije/15.Ulaz.I.Izlaz.pdf){:target="_blank"}
 
     15.1. Токови, читачи и писачи
 
@@ -793,7 +793,7 @@
 
     15.4. Класа `Scanner`
 
-    * [Примери програмског кода](izvorni-kod-2022-23/g15.zip)
+    * [Примери програмског кода](izvorni-kod/g15.zip)
 
     * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g15){:target="_blank"}
 
