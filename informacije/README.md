@@ -10,7 +10,7 @@
 
 * Асистент: **[Бојана Јошић](http://www.matf.bg.ac.rs/p/-bojana-josic){:target="_blank"}**
 
-* Асистент: **[Вукан Антић](http://www.amtf.bg.ac.rs){:target="_blank"}**
+* Асистент: **[Вукан Антић](http://poincare.matf.bg.ac.rs/~vukan_antic/){:target="_blank"}**
 
 ---
 
