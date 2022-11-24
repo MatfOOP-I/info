@@ -22,6 +22,7 @@
 
 - Владан:
     - [YouTube](https://www.youtube.com/channel/UCNVRGjPV7uvAZrtgfcNrlFA)
+    - [Час 11.11.2022.](https://matf.webex.com/matf/ldr.php?RCID=c6adb07e0f5fd1daada6e03386f7e1bb) (Шифра: 7KmZpuaPS56)
 
 
 --- 
