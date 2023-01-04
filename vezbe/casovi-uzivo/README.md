@@ -21,8 +21,8 @@
     - [YouTube](https://www.youtube.com/playlist?list=PLOGAKiQpHThMfo0A7UumHheZ5RkXxPq3m)
 
 - Владан:
-    - [YouTube](https://www.youtube.com/channel/UCNVRGjPV7uvAZrtgfcNrlFA)
     - [Час 11.11.2022.](https://matf.webex.com/matf/ldr.php?RCID=c6adb07e0f5fd1daada6e03386f7e1bb) (Шифра: 7KmZpuaPS56)
+    - [JavaFX и вежбање за испит](https://matf.webex.com/matf/ldr.php?RCID=0ed10ff17059017912f4e6df3197b4a4) (Шифра: dDX4GxCF)
 
 
 --- 
