@@ -4,6 +4,8 @@
 
 ---
 
+**[Термин усменог испита у року Јануар 1](predavanja/info/README.md)**
+
 **[(ВАЖНО!) Резултати практичног дела испита у Јан 1](pismeni-ispiti/info/README.md)**
 
 **[(ВАЖНО!) Распоред седења на практичном у Јан 1](https://docs.google.com/spreadsheets/d/1lvBCUgSm4fvwHjjStzl-sBOH-EH4GBC9CCfkfVOLwxc/edit?usp=sharing)**
