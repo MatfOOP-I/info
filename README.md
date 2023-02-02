@@ -4,6 +4,8 @@
 
 ---
 
+**[(ВАЖНО!) Распоред седења на практичном у Јан2](pismeni-ispiti/info/README.md)**
+
 **[(ВАЖНО!) Пријава за практични у Јан 2](pismeni-ispiti/info/README.md)**
 
 **[Термин усменог испита у року Јануар 1](predavanja/info/README.md)**
