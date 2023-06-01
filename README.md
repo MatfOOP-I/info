@@ -4,6 +4,8 @@
 
 ---
 
+**[(ВАЖНО!) Пријава за практични у Јун 1](pismeni-ispiti/info/README.md)**
+
 **[(ВАЖНО!) Резултати практичног дела испита у Јан 2](pismeni-ispiti/info/README.md)**
 
 **[(ВАЖНО!) Распоред седења на практичном у Јан 2](pismeni-ispiti/info/README.md)**
