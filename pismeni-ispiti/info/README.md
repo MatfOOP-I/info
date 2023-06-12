@@ -15,6 +15,8 @@
 
 - **[Владан](https://docs.google.com/spreadsheets/d/186Xs5WSfWdN-4FtM96T4ze8GNUyEk_f10683uhkEjqo/edit?usp=sharing)** - увид у радове мејлом, најкасније до 14.6. у 23:59.
 
+- **[Бојана](./202223/jun1_rezultati_bojana.pdf)** - За увид у радове јавити се на мејл mr17128@alas.matf.bg.ac.rs.
+
 ---
 
 02.02.
