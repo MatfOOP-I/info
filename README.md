@@ -4,7 +4,7 @@
 
 ---
 
-**[Резултати практичног дела испита у Јун 1](pismeni-ispiti/info/README.md)**
+**[(НОВО - 2И1Б!) Резултати практичног дела испита у Јун 1](pismeni-ispiti/info/README.md)**
 
 **[(ВАЖНО!) Распоред седења на практичном у Јун 1](pismeni-ispiti/info/README.md)**
 
