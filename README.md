@@ -4,27 +4,29 @@
 
 ---
 
-**[(НОВО - 2И1Б!) Резултати практичног дела испита у Јун 1](pismeni-ispiti/info/README.md)**
+**[Термин усменог испита у року Јун 1](predavanja/info/README.md)**
 
-**[(ВАЖНО!) Распоред седења на практичном у Јун 1](pismeni-ispiti/info/README.md)**
+**[Резултати практичног дела испита у Јун 1](pismeni-ispiti/info/README.md)**
 
-**[(ВАЖНО!) Пријава за практични у Јун 1](pismeni-ispiti/info/README.md)**
+<!-- **[(ВАЖНО!) Распоред седења на практичном у Јун 1](pismeni-ispiti/info/README.md)** -->
 
-**[(ВАЖНО!) Резултати практичног дела испита у Јан 2](pismeni-ispiti/info/README.md)**
+<!-- **[(ВАЖНО!) Пријава за практични у Јун 1](pismeni-ispiti/info/README.md)** -->
 
-**[(ВАЖНО!) Распоред седења на практичном у Јан 2](pismeni-ispiti/info/README.md)**
+<!-- **[(ВАЖНО!) Резултати практичног дела испита у Јан 2](pismeni-ispiti/info/README.md)** -->
 
-**[(ВАЖНО!) Пријава за практични у Јан 2](pismeni-ispiti/info/README.md)**
+<!-- **[(ВАЖНО!) Распоред седења на практичном у Јан 2](pismeni-ispiti/info/README.md)** -->
 
-**[Термин усменог испита у року Јануар 1](predavanja/info/README.md)**
+<!-- **[(ВАЖНО!) Пријава за практични у Јан 2](pismeni-ispiti/info/README.md)** -->
 
-**[(ВАЖНО!) Резултати практичног дела испита у Јан 1](pismeni-ispiti/info/README.md)**
+<!-- **[Термин усменог испита у року Јануар 1](predavanja/info/README.md)** -->
 
-**[(ВАЖНО!) Распоред седења на практичном у Јан 1](https://docs.google.com/spreadsheets/d/1lvBCUgSm4fvwHjjStzl-sBOH-EH4GBC9CCfkfVOLwxc/edit?usp=sharing)**
+<!-- **[(ВАЖНО!) Резултати практичног дела испита у Јан 1](pismeni-ispiti/info/README.md)** -->
 
-**[(Важно!) Пријава за практични у Јан 1](pismeni-ispiti/info/README.md)**
+<!-- **[(ВАЖНО!) Распоред седења на практичном у Јан 1](https://docs.google.com/spreadsheets/d/1lvBCUgSm4fvwHjjStzl-sBOH-EH4GBC9CCfkfVOLwxc/edit?usp=sharing)** -->
 
-**[Додатни час вежби за групу 2и1б](vezbe/info/README.md)**
+<!-- **[(Важно!) Пријава за практични у Јан 1](pismeni-ispiti/info/README.md)** -->
+
+<!-- **[Додатни час вежби за групу 2и1б](vezbe/info/README.md)** -->
 
 <!-- **[Промена термина вежби за групе 2и2а и 2и2б последње недеље](vezbe/info/README.md)** -->
 
