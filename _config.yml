@@ -1,1 +1,9 @@
+# Theme
 theme: jekyll-theme-hacker
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    measurement_id: "G-E3XQ0GLQXE"
+    anonymize_ip: # true, false (default)
