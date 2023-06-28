@@ -5,5 +5,5 @@ theme: jekyll-theme-hacker
 analytics:
   provider: "google-gtag"
   google:
-    measurement_id: "G-E3XQ0GLQXE"
+    measurement_id: "G-KEJXZJRC9J"
     anonymize_ip: # true, false (default)
