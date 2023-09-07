@@ -12,6 +12,7 @@
 05.09.
 
 ### Сеп 1 - резултати практичног дела испита
+- **[Вукан](./202223/vukan_sept1_rezultati.xlsx)** - увид у радове у петак, 8.9., у 18:30 на Тргу, обавезно јавити се мејлом.
 
 - **[Владан](https://docs.google.com/spreadsheets/d/1PusV-8_jNGyoEXB0UQ6p-alftjacD_RhVX2RRLO932U/edit?usp=sharing)** - увид у радове мејлом, најкасније до 7.9. у 23:59.
 
