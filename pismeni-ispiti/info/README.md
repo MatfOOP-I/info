@@ -15,6 +15,7 @@
 
 - **[Владан](https://docs.google.com/spreadsheets/d/1PusV-8_jNGyoEXB0UQ6p-alftjacD_RhVX2RRLO932U/edit?usp=sharing)** - увид у радове мејлом, најкасније до 7.9. у 23:59.
 
+- **[Бојана](./202223/bojana-rez-sep1.pdf)** - За увид у радове јавити се на мејл mr17128@alas.matf.bg.ac.rs.
 
 ---
 
