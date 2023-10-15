@@ -6,7 +6,7 @@
 
 * Књиге и упутства за Јава језик и окружење
 
-  * Картељ, Филиповић, Тошић: [Објектно оријентисано програмирање - програмски језик Јава - 1](predavanja/tekstovi-2022-23/OOP.skripta.20220529.pdf){:target="_blank"} нерецензирани уџбенк (скрипта)
+  * Картељ, Филиповић, Тошић: Објектно оријентисано програмирање - програмски језик Јава - 1, Математички факултет, 2023
 
   * Downey, Mayfield: [Think Java: How to Think Like a Computer Scientist](http://greenteapress.com/thinkjava6/html/index.html){:target="_blank"}  
 
