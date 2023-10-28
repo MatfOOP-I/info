@@ -4,9 +4,9 @@
 
 ---
 
-**[Информације](info/README.md)**
+**[Обавештења](info/README.md)**
 
-**[Испитна питања](ispitna-pitanja/README.md)**
+**[Испитна питања](./ispitna-pitanja/ISPITNA-PITANJA-2021-22.md)**
 
 ---
 

@@ -6,33 +6,19 @@
 
 * Наставник: **[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html){:target="_blank"}**
 
-* Асистент: **[Владан Ковачевић](http://poincare.matf.bg.ac.rs/~vladan_kovacevic/){:target="_blank"}**
+* Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/){:target="_blank"}**
 
-* Асистент: **[Бојана Јошић](http://www.matf.bg.ac.rs/p/-bojana-josic){:target="_blank"}**
+* Асистент: **[Милица Карличић](http://www.matf.bg.ac.rs/p/milica-karlicic/pocetna/){:target="_blank"}**
 
-* Асистент: **[Вукан Антић](http://poincare.matf.bg.ac.rs/~vukan_antic/){:target="_blank"}**
+* Асистент: **[Иван Поп-Јованов]{:target="_blank"}**
 
 ---
 
 ## План и програм курса
 
-* **[Званичан план и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf){:target="_blank"}**
+* **[План и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf){:target="_blank"}**
 
-* **[Начин реализације курса](Nacin-realizacije-kursa.md)**
-
----
-
-## Термини за консултације у академској 2022/23 години
-
-* Владимир Филиповић: биће накнадно истакнут.
-
-* Владан Ковачевић: биће накнадно истакнут.
-
-* Бојана Јошић: биће накнадно истакнут.
-
-* Вукан Антић: биће накнадно истакнут.
-
----
+* **[Начин бодовања](Nacin-realizacije-kursa.md)**
 
 ## Аутори веб страна курса
 
