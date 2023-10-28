@@ -4,11 +4,11 @@
 
 ---
 
-**[НОВО - Резултати практичног дела испита у року Септембар 1 (Бојана)](pismeni-ispiti/info/README.md)**
+<!-- **[НОВО - Резултати практичног дела испита у року Септембар 1 (Бојана)](pismeni-ispiti/info/README.md)**
 
-**[Термин усменог испита у року Септембар 1](predavanja/info/README.md)**
+<!-- **[Термин усменог испита у року Септембар 1](predavanja/info/README.md)**
 
-**[Резултати практичног дела испита у Септембар 1](pismeni-ispiti/info/README.md)**
+<!-- **[Резултати практичног дела испита у Септембар 1](pismeni-ispiti/info/README.md)**
 
 <!-- **[Пријава за практични у Септембар 1](pismeni-ispiti/info/README.md)** -->
 
@@ -92,23 +92,19 @@
 
 * **[Инсталације](/INSTALACIJE.md)**
 
-* **[Ресурси за учење](/RESURSI-ZA-UCENJE.md)**
+* **[Литература](/RESURSI-ZA-UCENJE.md)**
 
 ## Настава
 
 * **[Предавања](/predavanja/README.md)**
 
-* **[Снимци одржаних предавања](/predavanja/casovi-uzivo/README.md)**
-
 * **[Вежбе](/vezbe/README.md)**
-
-* **[Часови вежби уживо](/vezbe/casovi-uzivo/README.md)**
 
 ## Испити
 
 <!-- * **[Колоквијуми](/kolokvijumi/README.md)** -->
 
-* **[Писмени испити](/pismeni-ispiti/README.md)**
+* **[Практични испити](/pismeni-ispiti/README.md)**
 
 * **[Усмени испити](/usmeni-ispiti/README.md)**
 
