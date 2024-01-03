@@ -6,6 +6,8 @@
 
 Задаци из претходних рокова:
 
+* 2023-2024: [Пример рока](./rokovi/oop.2023.2024.primerRoka.pdf){:target="_blank"}
+
 * 2021-2022: [Одржавање софтвера](./rokovi/oop.2021.2022.jan1.odrzavanjeSoftvera.pdf){:target="_blank"}, [Спортови](./rokovi/oop.2021.2022.jan2.sportovi.pdf){:target="_blank"}, [Телефони](./rokovi/oop.2021.2022.jun1.telefoni.pdf){:target="_blank"}, [Смештај](./rokovi/oop.2021.2022.jun2.smestaj.pdf){:target="_blank"}, [УЕФА](./rokovi/oop.2021.2022.sep1.UEFA.pdf){:target="_blank"}, [Ресторан](./rokovi/oop.2021.2022.sep2.restoran.pdf){:target="_blank"}
 
 * 2019-2020: [Лозинке](./rokovi/oop.2019.2020.jun1.lozinke.pdf){:target="_blank"}, [Болница](./rokovi/oop.2019.2020.jun1.bolnica.pdf){:target="_blank"}, [Продавница](./rokovi/oop.2019.2020.jun2.prodavnica.pdf){:target="_blank"}, [Лутрија](./rokovi/oop.2019.2020.sep1.lutrija.pdf){:target="_blank"}, [Настава](./rokovi/oop.2019.2020.sep2.nastava.pdf){:target="_blank"}

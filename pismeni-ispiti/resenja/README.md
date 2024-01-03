@@ -6,6 +6,8 @@
 
 Решења задатака из претходних година:
 
+* 2023-2024: [Пример рока] (./rokovi/oop.2023.2024.primerRoka.zip){:target="_blank"}
+
 * 2018-2019: [Тиг](./rokovi/oop.2018.2019.jun1.tig.zip){:target="_blank"}, [Поруке](./rokovi/oop.2018.2019.jun1.poruke.zip){:target="_blank"}, [Процеси](./rokovi/oop.2018.2019.jun2.procesi.zip){:target="_blank"}, [БусПлус](./rokovi/oop.2018.2019.jun2.busplus.zip){:target="_blank"}, [Рели](./rokovi/oop.2018.2019.sept1.reli.zip){:target="_blank"}, [Вешала](./rokovi/oop.2018.2019.sept2.vesala.zip){:target="_blank"}
   
 * 2017-2018: [Покемони](./rokovi/oop.2017.2018.jun1.pokemoni.zip){:target="_blank"}, [Сакупљање драгуља](./rokovi/oop.2017.2018.jun1.sakupljanjeDragulja.zip){:target="_blank"}, [Препоруке](./rokovi/oop.2017.2018.jun2.preporuke.zip){:target="_blank"}, [Рачунари](./rokovi/oop.2017.2018.jun2.racunari.zip){:target="_blank"}, [Класификација](./rokovi/oop.2017.2018.sept1.klasifikacija.zip){:target="_blank"}, [Подморнице](./rokovi/oop.2017.2018.sept2.podmornice.zip){:target="_blank"}
