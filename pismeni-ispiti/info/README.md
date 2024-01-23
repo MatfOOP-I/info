@@ -12,6 +12,7 @@
 
 ### Јан 1 - резултати практичног дела испита
 - **[Милица](./202324/jan1_rezultati_milica.pdf)** - увид у радове мејлом, јавити се до 25.01.
+- **[Иван](https://docs.google.com/spreadsheets/d/195qPAISX0Q0xUhXnBvIBku_BjS9E41R3wSjcYqyA79A/edit?usp=sharing)** - увид у радове мејлом, јавити се до 25.01.
 
 ---
 
