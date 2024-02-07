@@ -4,6 +4,8 @@
 
 ---
 
+**[Резултати практичног дела испита у Јан 2](pismeni-ispiti/info/README.md)**
+
 **[Термин усменог испита у Јан 2](predavanja/info/README.md)**
 
 <!-- **[(ВАЖНО!) Распоред седења на практичном испиту у Јан 2](pismeni-ispiti/info/README.md)** -->
