@@ -14,6 +14,7 @@
 
 - **[Милица](./202324/jan2_rezultati_milica.pdf)** - увид у радове мејлом, јавити се до 09.02.
 - **[Денис](./202324/jan2_rezultati_denis.pdf)** - увид у радове мејлом, јавити се до 09.02.
+- **[Иван](https://docs.google.com/spreadsheets/d/1WE82gHRCJISpgiWrxpyzSw3nXDNrpLDHjW5lOqUvMtk/edit?usp=sharing)** - увид у радове мејлом, јавити се до 09.02. увече.
 
 ---
 
