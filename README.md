@@ -4,7 +4,7 @@
 
 ---
 
-[Термин усменог испита у Јун 1](predavanja/info/README.md)
+[Термин усменог испита у року Јун 1](predavanja/info/README.md)
 
 
 **[(ВАЖНО!) Пријава за практични испит у испитном року Јун 1](pismeni-ispiti/info/README.md)**
