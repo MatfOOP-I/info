@@ -4,10 +4,12 @@
 
 ---
 
+**[Резултати практичног дела испита у року Јун 1](pismeni-ispiti/info/README.md)**
+
 [Термин усменог испита у року Јун 1](predavanja/info/README.md)
 
 
-**[(ВАЖНО!) Пријава за практични испит у испитном року Јун 1](pismeni-ispiti/info/README.md)**
+<!--**[(ВАЖНО!) Пријава за практични испит у испитном року Јун 1](pismeni-ispiti/info/README.md)**
 
 <!-- **[Резултати практичног дела испита у Јан 2](pismeni-ispiti/info/README.md)** -->
 
