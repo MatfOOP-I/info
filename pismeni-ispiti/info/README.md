@@ -13,6 +13,7 @@
 ### Јун 1 - резултати практичног дела испита
 
 - **[Милица](./202324/jun1_rezultati_milica.pdf)** - увид у радове мејлом, јавити се до 13.06.
+- **[Иван](https://docs.google.com/spreadsheets/d/1cO2F-r1JEFG6VgDfaNblZ83Y9AOL8TsNXFxHbZx2A1A/edit?usp=sharing)** - увид у радове мејлом, јавити се до 16.06.
 
 ---
 
