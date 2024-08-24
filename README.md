@@ -4,7 +4,7 @@
 
 ---
 
-**[Резултати практичног дела испита у року Јун 1](pismeni-ispiti/info/README.md)**
+**[Септембар 1 - пријава за полагање практичног дела испита](pismeni-ispiti/info/README.md)**
 
 [Термин усменог испита у року Јун 1](predavanja/info/README.md)
 
