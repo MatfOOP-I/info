@@ -10,9 +10,9 @@
 
 30.08.
 
-### Распоред седења на практичном испиту у Септембар 1
+### Септембар 1 - Распоред седења на практичном испиту
 
-Практични испит за све студенте ће се одржати у 9h. [Прва група](https://docs.google.com/spreadsheets/d/1UjuJhBzaZWCfNHRaluwTeZ5uVfp6I8qGLaWi1xapscA/edit?usp=sharing) студената испит ради на Студентском тргу а [друга група](https://docs.google.com/spreadsheets/d/1Okd24vFdsGZ8U_zBA3ecZccnOuaY-u9Q07RTbLrwsO0/edit?usp=sharing) у Јагићу.
+Практични испит за све студенте ће се одржати у 9h. [ПРВА ГРУПА](https://docs.google.com/spreadsheets/d/1UjuJhBzaZWCfNHRaluwTeZ5uVfp6I8qGLaWi1xapscA/edit?usp=sharing) студената испит ради на Студентском тргу, а [ДРУГА ГРУПА](https://docs.google.com/spreadsheets/d/1Okd24vFdsGZ8U_zBA3ecZccnOuaY-u9Q07RTbLrwsO0/edit?usp=sharing) у Јагићу.
 
 Уколико неком не одговара група у којој је распоређен, може се пребацити у другу ако нађе замену.
 
