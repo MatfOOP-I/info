@@ -14,6 +14,7 @@
 
 - **[Милица](./202324/sep1_rezultati_milica.pdf)** - увид у радове мејлом, јавити се до 06.09.
 - **[Иван](https://docs.google.com/spreadsheets/d/1mfYNObaMSVr8UWBq8r0AH9TuOnEZ7ZQaNhXrZaEnrPE/edit?usp=sharing)** - увид у радове мејлом, јавити се до 12.09.
+- **[Денис](https://docs.google.com/spreadsheets/d/17B8FZ7S-lFzjXbtbznGOlX223SyXGfHF2TzblyzDzN8/edit?usp=sharing)** - увид у радове мејлом, јавити се до 14.09.
 
 ---
 
