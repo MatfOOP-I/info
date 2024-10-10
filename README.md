@@ -136,7 +136,6 @@
 
 * **[Вежбе](/vezbe/README.md)**
 
-* **[Часови вежби уживо](/vezbe/casovi-uzivo/README.md)**
 
 ## Испити
 
