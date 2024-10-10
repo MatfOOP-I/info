@@ -6,11 +6,12 @@
 
 * Наставник: **[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html){:target="_blank"}**
 
-* Асистент: **[Владан Ковачевић](http://poincare.matf.bg.ac.rs/~vladan_kovacevic/){:target="_blank"}**
+* Наставник: **[др Сташа Вујичић Станковић](https://www.stasa.in.rs/){:target="_blank"}**
 
-* Асистент: **[Бојана Јошић](http://www.matf.bg.ac.rs/p/-bojana-josic){:target="_blank"}**
+* Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/){:target="_blank"}**
 
-* Асистент: **[Вукан Антић](http://poincare.matf.bg.ac.rs/~vukan_antic/){:target="_blank"}**
+* Асистент: **[Милица Карличић](.){:target="_blank"}**
+
 
 ---
 
@@ -26,11 +27,6 @@
 
 * Владимир Филиповић: биће накнадно истакнут.
 
-* Владан Ковачевић: биће накнадно истакнут.
-
-* Бојана Јошић: биће накнадно истакнут.
-
-* Вукан Антић: биће накнадно истакнут.
 
 ---
 
