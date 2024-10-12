@@ -10,7 +10,7 @@
 
 * Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/){:target="_blank"}**
 
-* Асистент: **[Милица Карличић](.){:target="_blank"}**
+* Асистент: **[Милица Карличић](http://www.matf.bg.ac.rs/p/milica-karlicic/pocetna/){:target="_blank"}**
 
 
 ---
