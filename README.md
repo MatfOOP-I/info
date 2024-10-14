@@ -136,7 +136,8 @@
 
 * **[Вежбе](/vezbe/README.md)**
 
-* **[Снимци одржаних вежби](/vezbe/casovi-uzivo/README-2021-2022.md)**
+* **[Снимци одржаних вежби 2021/2022](/vezbe/casovi-uzivo/README-2021-2022.md)**
+* **[Снимци одржаних вежби 2020/2021](/vezbe/casovi-uzivo/README-2020-2021.md)**
 
 
 ## Испити
