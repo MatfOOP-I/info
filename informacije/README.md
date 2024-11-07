@@ -12,6 +12,7 @@
 
 * Асистент: **[Милица Карличић](http://www.matf.bg.ac.rs/p/milica-karlicic/pocetna/){:target="_blank"}**
 
+* Асистент: **[Јелена Бонџић]**
 
 ---
 
