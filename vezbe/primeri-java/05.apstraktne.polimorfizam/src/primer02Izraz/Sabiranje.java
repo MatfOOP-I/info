@@ -15,9 +15,4 @@ public class Sabiranje extends BinarnaOperacija {
 	public String toString() {
 		return getLevi().toString() + " + " + getDesni().toString();
 	}
-
-	@Override
-	public char karakterOperacije() {
-		return '+';
-	}
 }

@@ -11,7 +11,6 @@ public abstract class BinarnaOperacija extends Izraz {
         this.desni = desni.klon();
     }
 
-    public abstract char karakterOperacije();
 
     public Izraz getLevi() {
         return levi;
@@ -20,6 +19,13 @@ public abstract class BinarnaOperacija extends Izraz {
     public Izraz getDesni() {
         return desni;
     }
+
+    // Pošto se toString() metoda u izvedenim klasama razlikuje isključivo u jednom karakteru,
+    // metod toString() možemo definisati u okviru apstraktne klase i tražiti od izvedene klase da implementira
+    // apstraktni metod karakterOperacije().
+    // Na ovaj način koristimo hijerarhijsko nasleđivanje da bismo izbegli nepotrebno kopiranje koda
+
+    public abstract char karakterOperacije();
 
     @Override
     public String toString() {

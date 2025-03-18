@@ -7,13 +7,12 @@ public class Mnozenje extends BinarnaOperacija {
 	}
 
 	@Override
-	public char karakterOperacije() {
-		return '*';
-	}
-
-	@Override
 	public double izracunaj() {
 		return getLevi().izracunaj() * getDesni().izracunaj();
 	}
 	
+	@Override
+	public String toString() {
+		return getLevi().toString() + " * " + getDesni().toString();
+	}
 }
