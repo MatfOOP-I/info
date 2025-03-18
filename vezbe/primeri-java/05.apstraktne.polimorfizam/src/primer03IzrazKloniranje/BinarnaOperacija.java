@@ -25,7 +25,7 @@ public abstract class BinarnaOperacija extends Izraz {
     // apstraktni metod karakterOperacije().
     // Na ovaj način koristimo hijerarhijsko nasleđivanje da bismo izbegli nepotrebno kopiranje koda
 
-    public abstract char karakterOperacije();
+    protected abstract char karakterOperacije();
 
     @Override
     public String toString() {

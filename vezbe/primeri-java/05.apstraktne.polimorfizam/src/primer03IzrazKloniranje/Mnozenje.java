@@ -21,7 +21,7 @@ public class Mnozenje extends BinarnaOperacija {
     }
 
     @Override
-    public char karakterOperacije() {
+    protected char karakterOperacije() {
         return '*';
     }
 }
