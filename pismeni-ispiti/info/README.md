@@ -5,6 +5,7 @@
 ---
 16.08.2025.
 **Јануар 1 - Резултати**
+
 [Денис](https://docs.google.com/spreadsheets/d/1Wk1gU6GIrKXYsuc8BI3zY7qDgFAdaGAwznNxDb5E6g0/edit?usp=sharing) - Јавити се мејлом за увид до 16.08. у поноћ.
 
 
