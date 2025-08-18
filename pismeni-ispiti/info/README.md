@@ -8,6 +8,8 @@
 
 **Јануар 1 - резултати практичног дела испита**
 
+[Јелена](https://docs.google.com/spreadsheets/d/1zgVaQ59hTS684VORuW6Jtk-P_cECvJBxxWcFvzqeC1s/edit?usp=sharing) - Јавити се мејлом за увид до 19.08. у поноћ.
+
 [Милица](./202425/jan1_rezultati_milica.pdf) - Јавити се мејлом за увид до 16.08. у поноћ.
 
 [Денис](https://docs.google.com/spreadsheets/d/1Wk1gU6GIrKXYsuc8BI3zY7qDgFAdaGAwznNxDb5E6g0/edit?usp=sharing) - Јавити се мејлом за увид до 16.08. у поноћ.
