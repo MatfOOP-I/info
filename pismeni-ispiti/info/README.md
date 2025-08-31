@@ -8,6 +8,7 @@
 
 **Јануар 2 - резултати практичног дела испита**
 
+[Јелена]([./202425/jan2_rezultati_milica.pdf](https://docs.google.com/spreadsheets/d/1P-NDZZu-NholzD304XVkZ-KeXnNcswlmg2x-sbBBH-s/edit?usp=sharing)) - Јавити се мејлом за увид до 03.09.
 [Милица](./202425/jan2_rezultati_milica.pdf) - Јавити се мејлом за увид до 01.09.
 
 ---
