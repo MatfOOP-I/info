@@ -12,6 +12,8 @@
 
 [Милица](./202425/jan2_rezultati_milica.pdf) - Јавити се мејлом за увид до 01.09.
 
+[Денис](https://docs.google.com/spreadsheets/d/1Wk1gU6GIrKXYsuc8BI3zY7qDgFAdaGAwznNxDb5E6g0/edit?usp=sharing) - Јавити се мејлом за увид до 5.09.
+
 ---
 
 27.08.2025.
