@@ -9,6 +9,7 @@
 **Јун 1 - резултати практичног дела испита**
 
 [Милица](./202425/jun1_rezultati_milica.pdf) - Јавити се мејлом за увид до 19.09.
+
 [Јелена](https://docs.google.com/spreadsheets/d/1cwVk01RT3y3cZH-U9agDuD2PDv6EHdtwXspCQgl-q6M/edit?usp=sharing) - јавити се мејлом за увид.
 
 ---
