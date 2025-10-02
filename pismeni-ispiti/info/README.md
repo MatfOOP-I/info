@@ -10,6 +10,8 @@
 
 [Милица](./202425/jun2_rezultati_milica.pdf) - Јавити се мејлом за увид до 03.10.
 
+[Јелена](https://docs.google.com/spreadsheets/d/108Hhn52Gk9_Q8GLozCZIkhxj-s-nkEsvq0VG0XjNTjg/edit?usp=sharing) - Јавити се мејлом за увид
+
 ---
 
 29.09.2025.
