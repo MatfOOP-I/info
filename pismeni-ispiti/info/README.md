@@ -12,6 +12,8 @@
 
 [Јелена](https://docs.google.com/spreadsheets/d/1Sq6--5cVUUc8f-RlZmAqPmEzgy2pUvayO04r5IcvxYo/edit?usp=sharing) - Јавити се мејлом за увид
 
+[Денис](https://docs.google.com/spreadsheets/d/1Wk1gU6GIrKXYsuc8BI3zY7qDgFAdaGAwznNxDb5E6g0/edit?usp=sharing) - Јавити се мејлом за увид.
+
 ---
 
 12.10.2025.
