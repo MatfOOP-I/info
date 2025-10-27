@@ -8,7 +8,7 @@
 
 **Септембар 2 - резултати практичног дела испита**
 
-[Јелена](https://docs.google.com/spreadsheets/d/1jFy3YLTa1LQUmRQkI0D8GmS1WOO8y2gaXieD-HqkA2c/edit?gid=0#gid=0) - Јавити се мејлом за увид
+[Јелена](https://docs.google.com/spreadsheets/d/1jFy3YLTa1LQUmRQkI0D8GmS1WOO8y2gaXieD-HqkA2c/edit?usp=sharing) - Јавити се мејлом за увид
 
 ---
 
