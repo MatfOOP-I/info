@@ -6,7 +6,7 @@
 
 Задаци из претходних рокова:
 
-* 2024-2025: [Јануар 1](./rokovi/oop.2024.2025.jan1.pdf){:target="_blank"}
+* 2024-2025: [Јануар 1](./rokovi/oop.2024.2025.jan1.pdf){:target="_blank"}, [Јануар 2](./rokovi/oop.2024.2025.jan2.pdf){:target="_blank"}, [Јун 1](./rokovi/oop.2024.2025.jun1.pdf){:target="_blank"}
 
 * 2023-2024: [Пример рока](./rokovi/oop.2023.2024.primerRoka.pdf){:target="_blank"}, [Јануар 1](./rokovi/oop.2023.2024.jan1.pdf){:target="_blank"}, [Јануар 2](./rokovi/oop.2023.2024.jan2.pdf){:target="_blank"}, [Јун 1](./rokovi/oop.2023.2024.jun1.pdf){:target="_blank"}, [Септембар 1](./rokovi/oop.2023.2024.sep1.pdf){:target="_blank"}
 
