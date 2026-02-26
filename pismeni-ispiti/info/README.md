@@ -4,6 +4,14 @@
 
 ---
 
+26.02.2026.
+
+**Јануар 1 - резултати практичног дела испита**
+
+[Милица](https://docs.google.com/spreadsheets/d/1BrG_hyuDEYo4qsQZRzqGF63UWAwSxOKGXYZsO-rd1SQ/edit?usp=sharing) - Јавити се мејлом за увид.
+
+---
+
 19.02.2026.
 
 **Јануар 1 - полагање практичног дела испита**
