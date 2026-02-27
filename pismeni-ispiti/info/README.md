@@ -10,6 +10,8 @@
 
 [Милица](https://docs.google.com/spreadsheets/d/1BrG_hyuDEYo4qsQZRzqGF63UWAwSxOKGXYZsO-rd1SQ/edit?usp=sharing) - Јавити се мејлом за увид.
 
+[Марија](https://docs.google.com/spreadsheets/d/1bCc6jUz11U9bL86z8aq3JW_PVI3LBh05tBjRb744TQY/edit?usp=sharing) - Јавити се мејлом за увид.
+
 ---
 
 19.02.2026.
