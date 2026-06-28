@@ -4,6 +4,14 @@
 
 ---
 
+28.06.2026.
+
+**Јун 1 - резултати практичног дела испита**
+
+[Денис](https://docs.google.com/spreadsheets/d/1iW2ICwHEHI-PLa6k_UBuhWqyX5kpBCK9MtiVSj9ZADc/edit?usp=sharing) - Јавити се мејлом за увид до 30.06.
+
+---
+
 13.03.2026.
 
 **Јануар 2 - резултати практичног дела испита**
