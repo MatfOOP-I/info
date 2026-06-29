@@ -12,6 +12,8 @@
 
 [Милица](https://docs.google.com/spreadsheets/d/1BrG_hyuDEYo4qsQZRzqGF63UWAwSxOKGXYZsO-rd1SQ/edit?usp=sharing) - Јавити се мејлом за увид до 01.07.
 
+[Марија](https://docs.google.com/spreadsheets/d/1bCc6jUz11U9bL86z8aq3JW_PVI3LBh05tBjRb744TQY/edit?gid=1769126521#gid=1769126521) - Јавити се мејлом за увид до 03.07.
+
 ---
 
 13.03.2026.
