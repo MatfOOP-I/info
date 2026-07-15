@@ -10,6 +10,8 @@
 
 [Милица](https://docs.google.com/spreadsheets/d/1BrG_hyuDEYo4qsQZRzqGF63UWAwSxOKGXYZsO-rd1SQ/edit?usp=sharing) - Јавити се мејлом за увид до 17.07.
 
+[Денис](https://docs.google.com/spreadsheets/d/1iW2ICwHEHI-PLa6k_UBuhWqyX5kpBCK9MtiVSj9ZADc/edit?usp=sharing) - Јавити се мејлом за увид до 17.07.
+
 ---
 
 28.06.2026.
