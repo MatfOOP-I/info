@@ -12,6 +12,8 @@
 
 [Денис](https://docs.google.com/spreadsheets/d/1iW2ICwHEHI-PLa6k_UBuhWqyX5kpBCK9MtiVSj9ZADc/edit?usp=sharing) - Јавити се мејлом за увид до 20.09.
 
+[Марија](https://docs.google.com/spreadsheets/d/1bCc6jUz11U9bL86z8aq3JW_PVI3LBh05tBjRb744TQY/edit?gid=628810840#gid=628810840) - Јавити се мејлом за увид до 21.09.
+
 ---
 
 27.08.2026.
