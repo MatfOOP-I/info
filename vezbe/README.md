@@ -19,12 +19,3 @@ Materijali za 13 nedelja, po 2 × 45 minuta. JDK 21; svaka nedelja je samostalan
 | 11 | [Datoteke, izuzeci i tvrdnje](primeri-java/11.datoteke.i.izuzeci/README.md) | [Zadatak](primeri-java/11.datoteke.i.izuzeci/ZADATAK.md) | [ZIP](primeri-java/11.datoteke.i.izuzeci.zip) |
 | 12 | [JavaFX — odvajanje modela i prikaza](primeri-java/12.javafx.odvajanje.modela.i.ui/README.md) | [Zadatak](primeri-java/12.javafx.odvajanje.modela.i.ui/ZADATAK.md) | [ZIP](primeri-java/12.javafx.odvajanje.modela.i.ui.zip) |
 | 13 | [Projektovanje, refaktorisanje i testiranje](primeri-java/13.projektovanje.refaktorisanje.i.testiranje/README.md) | [Zadatak](primeri-java/13.projektovanje.refaktorisanje.i.testiranje/ZADATAK.md) | [ZIP](primeri-java/13.projektovanje.refaktorisanje.i.testiranje.zip) |
-
-Za svaki čas README objašnjava temu, KORACI_ZA_CAS bira obavezne primere, a
-ZADATAK sadrži vođeni i samostalni deo. Stare prezentacije i domaći nisu deo ovog
-novog redosleda; mogu ostati arhiva, ali se ne koriste kao neoznačeni obavezni materijal.
-
-## Provera svih projekata
-
-U folderu `primeri-java` pokrenuti `mvn verify`, ili `proveri.cmd` na Windows-u /
-`sh proveri.sh` na Linux/macOS-u. GUI se ručno pokreće prema uputstvu nedelje 12.
