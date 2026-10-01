@@ -1,214 +1,30 @@
-# Вежбе -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
-
-[ООП](../README.md)
-
----
-
-## Садржај курса
-
-1. [Увод у Јаву](./prezentacije/01.uvod.pdf){:target="_blank"}
-
-    * [Здраво свете](./primeri-java/01.uvod/src/primeri/Primer01.java){:target="_blank"}
-    
-    * [Декларација променљивих](./primeri-java/01.uvod/src/primeri/Primer02.java){:target="_blank"}
-    
-    * [Фунцкије](./primeri-java/01.uvod/src/primeri/Primer03.java){:target="_blank"}
-    
-    * [Учитавање са стандардног улаза](./primeri-java/01.uvod/src/primeri/Primer04Scanner.java){:target="_blank"}
-    
-    * [Учитавање са провером](./primeri-java/01.uvod/src/primeri/Primer05ScannerProvera.java){:target="_blank"}
-    
-    * [`while` петља](./primeri-java/01.uvod/src/primeri/Primer06SumaBrojeva.java){:target="_blank"}
-    
-    * [`for` петља](./primeri-java/01.uvod/src/primeri/Primer07ParniBrojevi.java){:target="_blank"}
-        
-    * [Рекурзија](./primeri-java/01.uvod/src/primeri/Primer08Fibonacci.java){:target="_blank"}
-    
-    * [Карактери](./primeri-java/01.uvod/src/primeri/Primer09Character.java){:target="_blank"}
-    
-    * [Математика](./primeri-java/01.uvod/src/primeri/Primer10Math.java){:target="_blank"} 
-
-    * [Пројекат са свим кодовима](./primeri-java/01.uvod.zip)
-
-    * [Домаћи](./domaci/01.txt)
-
-
-2. Низови, матрице и ниске
-   1. [Низови и матрице](./prezentacije/02.nizovi.matrice.pdf){:target="_blank"}
-
-      * Низови 
-         * [Декларација, учитавање и испис низа](./primeri-java/02.nizovi.matrice.stringovi/src/a_nizovi/Primer01.java){:target="_blank"}
-
-         * [Низ као параметар и повратна вредност функције](./primeri-java/02.nizovi.matrice.stringovi/src/a_nizovi/Primer02.java){:target="_blank"}
-
-         * [Како се низ преноси функцији](./primeri-java/02.nizovi.matrice.stringovi/src/a_nizovi/Primer03.java){:target="_blank"}
-
-       * Матрице
-         * [Декларација, учитавање и испис матрице](./primeri-java/02.nizovi.matrice.stringovi/src/b_matrice/Primer01_Matrica.java){:target="_blank"}
-
-         * [Матрица као параметар и повратна вредност функције](./primeri-java/02.nizovi.matrice.stringovi/src/b_matrice/Primer02_Matrica.java){:target="_blank"}
-
-         * [Размена 2 врсте матрице](./primeri-java/02.nizovi.matrice.stringovi/src/b_matrice/Primer03_RazmenaVrsti.java){:target="_blank"}
-
-      * Класа `Arrays`
-        * [Сортирање и бинарна претрага](./primeri-java/02.nizovi.matrice.stringovi/src/c_klasaArrays/Primer01_SortBSearch.java){:target="_blank"}
-
-        * [Пуњење, подниз и копије низова](./primeri-java/02.nizovi.matrice.stringovi/src/c_klasaArrays/Primer02_FillCopy.java){:target="_blank"}
-
-   2. [Ниске](./prezentacije/02.stringovi.pdf){:target="_blank"}
-
-       * [Поређење ниски](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer01.java){:target="_blank"}
-
-       * [Пребројавање карактера](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer02Brojanje.java){:target="_blank"}
-
-       * [Имутабилност стринга](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer03Imutabilnost.java){:target="_blank"}
-
-       * [Подниске](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer04DNA.java){:target="_blank"}
-
-       * [Тражење подниске, префикс, суфикс](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer05Podstring.java){:target="_blank"}
-
-       * [Издвајање токена из ниске](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer06Split.java){:target="_blank"}
-
-       * [Сортирање ниске](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer07StringSort.java){:target="_blank"}
-
-       * [Како против имутабилности стрингова](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer08StringBuilder.java){:target="_blank"}
-
-       * [Функције класе `StringBuilder`](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer09StringBuilderFunctions.java){:target="_blank"}
-
-       * [Палиндром](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer10Palindrom.java){:target="_blank"}
-
-       * [Поређење `String` и `StringBuilder`](./primeri-java/02.nizovi.matrice.stringovi/src/d_stringovi/Primer11StringVSStringBuilder.java){:target="_blank"}
-
-    1. [Пројекат са свим кодовима](./primeri-java/02.nizovi.matrice.stringovi.zip)
-
-    2. Домаћи: [низови](./domaci/02_nizovi.txt), [ниске](./domaci/02_stringovi.pdf)
-
-
-3. [Објектно-оријентисано програмирање](./prezentacije/03.oop.pdf){:target="_blank"}
-   1. Класа `Student` : поља, конструктор, `get` и `set` методе, метод `toString`, `this`
-
-   2. Побољшање класе `Student`: увођење валидација, приватни методи
-
-   3. Класа `Tacka`: подразумевани и стандардни конструктор, поређење објеката
-   
-   4. [Пројекат са свим кодовима](./primeri-java/03.oop.zip)
-
-   5. [Домаћи](./domaci/03_oop.pdf){:target="_blank"}
-
-   
-4. [Наслеђивање](./prezentacije/04.klase.nasledjivanje.pdf){:target="_blank"}
-
-   1. Допуна класе `Tacka`: конструктор копије, статичке променљиве и методе
-
-   2. Наслеђивање кроз пример хијерарјије облика:
-      * Енкапсулација
-      * Спецификатори видљивости 
-      * Конструктори наткласе и променљива `super`
-      * Превазилажење метода наткласе (`toString` из класе `Object`)
-
-   3. [Пројекат са свим кодовима](./primeri-java/04.nasledjivanje.zip)
-
-   4. [Домаћи](./domaci/04_nasledjivanje.pdf){:target="_blank"} 
-
-
-5. Апстрактне класе, полиморфизам
-   1. Проширивање хијерархије облика: апстрактни методи за рачунање површине и обима, оператор `instanceof` и метод `getClass()`.
-
-   2. Хијерархија класа за описивање израза
-
-   3. Допуна хијерархије израза: апстрактни метод за прављење копија објеката
-
-   4. [Пројекат са свим кодовима](./primeri-java/05.apstraktne.polimorfizam.zip){:target="_blank"} 
-
-6. Интерфејси
-   1. Имплементација интерфејса `SrpskiJezik` и `EngleskiJezik`.
-   
-   2.  Проширивање хијерархије облика: класа `Duz`, интерфејси `Obim` и `Povrsina`.
-   
-   3. Имплементација интерфејса `Stek`, енумерациони тип `Operacija`.
-   
-   4. Имплементација интерфејса `Red`. 
-   
-   5. Клонирање: имплементација интерфејса `Clonable`, плитко и дубоко клонирање. 
-   
-   6. [Пројекат са свим кодовима](./primeri-java/06.interfejsi.zip){:target="_blank"} 
-   
-7. Изузеци
-   
-   1. Хватање изузетка - `try-catch`  блок
-   
-   2. Вишеструки изузеци
-   
-   3. Затварање ресурса - `finally`  блок
-   
-   4. Аутоматско затварање ресурса - `try-with-resources`  блок
-   
-   5. [Пројекат са свим кодовима](./primeri-java/07.izuzeci.kloniranje.zip){:target="_blank"} 
-
-8. Генеричке класе
-
-   1. Генеричке функције
-   
-   2. Генеричка класа `Kutija`
-   
-   3. Генеричка класа `OpcionaVrednost`, `wildcard`
-   
-   4. Генеричка класа `UredjeniPar` - више типских параметара
-   
-   5. Генерички интерфејс `GenerickiStek` 
-   
-   6. [Пројекат са свим кодовима](./primeri-java/08.genericke.klase.zip){:target="_blank"}  
-
-
-9.  Генеричке колекције
-
-    1.  `LinkendList<T>`
-
-    2.  `ArrayList<T>`
-
-    3.  `TreeSet<T>`
-
-    4.  `TreeMap<T>` 
-
-    5.  `HashMap<T>` 
-   
-    6.  [Пројекат са свим кодовима](./primeri-java/09.kolekcije.zip){:target="_blank"}  
-
-
-10. Поређење објеката
-   
-    1.  Интерфејс `Comparable<T>`
-
-    2.  Интерфејс `Comparator<T>`
-    
-	1.  Поређење објеката хијерархије облика  
-   
-    1.  [Пројекат са свим кодовима](./primeri-java/10.poredjenje.objekata.zip){:target="_blank"} 
-
-11. [Датотеке](./primeri-java/11.datoteke/src/datoteke/CitanjePisanje.java){:target="_blank"}  
-
-12. Графичко корисничко окружење
-
-    1.  Библиотека `JavaFx`
-
-    2.  Контејнер елементи - `HBox` и `VBox`
-    
-	2.  Елементи за обележавање - `Label`
-    
-	3.  Дугмићи и акције - `Button`	
-    
-	4.  Текстуална поља и области - `TextField` и `TextArea`
-    
-	5.  Радио дугмићи - `RadioButton`
-    
-	6.  Платно за цртање - `Canvas`
-    
-	7.  [Пројекат са свим кодовима](./primeri-java/12.javafx.zip){:target="_blank"} 
-
-
-13. [Токови](./primeri-java/13.tokovi.zip){:target="_blank"}
-
-
----
-
-[ООП](../README.md)
+# Vežbe — Objektno-orijentisano programiranje, Informatika
+
+Materijali za 13 nedelja, po 2 × 45 minuta. JDK 21; svaka nedelja je samostalan Maven projekat.
+
+[Instalacija](../INSTALACIJE.md)
+
+| Nedelja | Tema i primeri | Samostalni rad | Projekat |
+|---|---|---|---|
+| 1 | [Uvod u Javu i rad u IDE-u](primeri-java/01.uvod/README.md) | [Zadatak](primeri-java/01.uvod/ZADATAK.md) | [ZIP](primeri-java/01.uvod.zip) |
+| 2 | [Nizovi, reference i stringovi](primeri-java/02.nizovi.matrice.stringovi/README.md) | [Zadatak](primeri-java/02.nizovi.matrice.stringovi/ZADATAK.md) | [ZIP](primeri-java/02.nizovi.matrice.stringovi.zip) |
+| 3 | [Klase, objekti i enkapsulacija](primeri-java/03.klase.objekti.enkapsulacija/README.md) | [Zadatak](primeri-java/03.klase.objekti.enkapsulacija/ZADATAK.md) | [ZIP](primeri-java/03.klase.objekti.enkapsulacija.zip) |
+| 4 | [Odnosi objekata i kompozicija](primeri-java/04.odnosi.objekata.kompozicija/README.md) | [Zadatak](primeri-java/04.odnosi.objekata.kompozicija/ZADATAK.md) | [ZIP](primeri-java/04.odnosi.objekata.kompozicija.zip) |
+| 5 | [Nasleđivanje, apstrakcija i polimorfizam](primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/README.md) | [Zadatak](primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/ZADATAK.md) | [ZIP](primeri-java/05.nasledjivanje.apstrakcija.polimorfizam.zip) |
+| 6 | [Interfejsi, ugovori i ugnježdene klase](primeri-java/06.interfejsi.i.ugovori/README.md) | [Zadatak](primeri-java/06.interfejsi.i.ugovori/ZADATAK.md) | [ZIP](primeri-java/06.interfejsi.i.ugovori.zip) |
+| 7 | [Kompozicija i Strategy](primeri-java/07.kompozicija.i.strategy/README.md) | [Zadatak](primeri-java/07.kompozicija.i.strategy/ZADATAK.md) | [ZIP](primeri-java/07.kompozicija.i.strategy.zip) |
+| 8 | [State i životni ciklus](primeri-java/08.state.i.zivotni.ciklus/README.md) | [Zadatak](primeri-java/08.state.i.zivotni.ciklus/ZADATAK.md) | [ZIP](primeri-java/08.state.i.zivotni.ciklus.zip) |
+| 9 | [Generički tipovi](primeri-java/09.genericki.tipovi/README.md) | [Zadatak](primeri-java/09.genericki.tipovi/ZADATAK.md) | [ZIP](primeri-java/09.genericki.tipovi.zip) |
+| 10 | [Kolekcije, jednakost i poređenje](primeri-java/10.kolekcije.jednakost.i.poredjenje/README.md) | [Zadatak](primeri-java/10.kolekcije.jednakost.i.poredjenje/ZADATAK.md) | [ZIP](primeri-java/10.kolekcije.jednakost.i.poredjenje.zip) |
+| 11 | [Datoteke, izuzeci i tvrdnje](primeri-java/11.datoteke.i.izuzeci/README.md) | [Zadatak](primeri-java/11.datoteke.i.izuzeci/ZADATAK.md) | [ZIP](primeri-java/11.datoteke.i.izuzeci.zip) |
+| 12 | [JavaFX — odvajanje modela i prikaza](primeri-java/12.javafx.odvajanje.modela.i.ui/README.md) | [Zadatak](primeri-java/12.javafx.odvajanje.modela.i.ui/ZADATAK.md) | [ZIP](primeri-java/12.javafx.odvajanje.modela.i.ui.zip) |
+| 13 | [Projektovanje, refaktorisanje i testiranje](primeri-java/13.projektovanje.refaktorisanje.i.testiranje/README.md) | [Zadatak](primeri-java/13.projektovanje.refaktorisanje.i.testiranje/ZADATAK.md) | [ZIP](primeri-java/13.projektovanje.refaktorisanje.i.testiranje.zip) |
+
+Za svaki čas README objašnjava temu, KORACI_ZA_CAS bira obavezne primere, a
+ZADATAK sadrži vođeni i samostalni deo. Stare prezentacije i domaći nisu deo ovog
+novog redosleda; mogu ostati arhiva, ali se ne koriste kao neoznačeni obavezni materijal.
+
+## Provera svih projekata
+
+U folderu `primeri-java` pokrenuti `mvn verify`, ili `proveri.cmd` na Windows-u /
+`sh proveri.sh` na Linux/macOS-u. GUI se ručno pokreće prema uputstvu nedelje 12.

@@ -1,5 +1,9 @@
 # Nedelja 12 — JavaFX i odvajanje modela od korisničkog interfejsa
 
+[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
+
+**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
+
 Ove nedelje prvi put pravimo grafičku aplikaciju.
 
 Cilj nije samo da naučimo:
@@ -692,3 +696,18 @@ opens ...
 ```
 
 To nije cilj ove nedelje. JavaFX Maven plugin podržava i non-modular projekte, pa možemo da učimo JavaFX i separation of concerns bez dodatne module sintakse.
+
+## Priprema i granice modela
+
+Pre časa otvoriti Maven projekat i pokrenuti prvi prozor. Ponoviti lambda callback
+iz nedelje 10. Na času studenti povezuju jednu akciju, ne kucaju ceo UI od nule.
+
+`List.copyOf` štiti strukturu vraćene liste, ali ne pravi duboke kopije mutabilnih
+Zadatak objekata. U ovom jednostavnom modelu Zadatak sam dopušta završi(), pa se
+njegova invarijanta ne krši. Ako sve izmene moraju ići kroz servis, potreban je
+read-only prikaz podataka ili drugačija granica pristupa.
+
+Indeksi su bezbedni ovde samo zato što prikaz prati isti redosled kao model.
+Samostalni zadatak sa filtriranjem zahteva stabilan ID ili izabrani objekat.
+Kontroler nezavisan od JavaFX-a je izbor ovog nastavnog modela, ne univerzalno
+pravilo za svaki JavaFX kontroler.

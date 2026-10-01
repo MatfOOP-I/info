@@ -1,75 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>rs.ac.bg.matf.oop</groupId>
-    <artifactId>nedelja12-javafx</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!--
-            Materijali na kursu koriste Java 21 sintaksu.
-            Ako se verzija JDK-a na kursu promeni, dovoljno je promeniti ovu vrednost.
-        -->
-        <maven.compiler.release>21</maven.compiler.release>
-
-        <!-- Stabilna JavaFX 21 linija, kompatibilna sa JDK 21. -->
-        <javafx.version>21</javafx.version>
-
-        <!--
-            Podrazumevano pokrećemo završni primer.
-            Može se promeniti iz komandne linije pomoću:
-            -Djavafx.mainClass=...
-        -->
-        <javafx.mainClass>
-            primer05_zavrsna_aplikacija.prikaz.PlanerAplikacija
-        </javafx.mainClass>
-    </properties>
-
-    <dependencies>
-        <!--
-            javafx-controls povlači i potrebne JavaFX base/graphics module.
-            FXML nam ove nedelje nije potreban.
-        -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <!--
-            U ovom repozitorijumu namerno koristimo src/ direktno,
-            a ne Maven-ov podrazumevani src/main/java.
-        -->
-        <sourceDirectory>src</sourceDirectory>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
-                <configuration>
-                    <mainClass>${javafx.mainClass}</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>rs.ac.bg.matf.oop</groupId><artifactId>nedelja12</artifactId><version>1.0</version>
+ <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><maven.compiler.release>21</maven.compiler.release>
+  <javafx.mainClass>primer05_zavrsna_aplikacija.prikaz.PlanerAplikacija</javafx.mainClass>
+ </properties>
+ <dependencies><dependency><groupId>org.openjfx</groupId><artifactId>javafx-controls</artifactId><version>21</version></dependency></dependencies>
+ <build>
+  <sourceDirectory>src</sourceDirectory><testSourceDirectory>test</testSourceDirectory>
+  <plugins>
+   <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version></plugin>
+   <plugin><groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.1.0</version>
+    <executions><execution><id>provera-materijala</id><phase>verify</phase><goals><goal>java</goal></goals>
+     <configuration><mainClass>provere.Main</mainClass><classpathScope>test</classpathScope></configuration>
+    </execution></executions>
+   </plugin>
+   <plugin><groupId>org.openjfx</groupId><artifactId>javafx-maven-plugin</artifactId><version>0.0.8</version><configuration><mainClass>${javafx.mainClass}</mainClass></configuration></plugin>
+  </plugins>
+ </build>
 </project>

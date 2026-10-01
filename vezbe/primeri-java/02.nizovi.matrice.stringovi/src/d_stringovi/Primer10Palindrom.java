@@ -11,7 +11,7 @@ public class Primer10Palindrom {
     public static boolean palindrom(String str){
         // svaki razmak zamenimo praznim stringom
         // i smanjimo sva velika slova:
-        String bezBelinaMalaSlova = str.replace(" ", "").toLowerCase();
+        String bezBelinaMalaSlova = str.replaceAll("\\s+", "").toLowerCase();
         // jos jedna ilustracija kako se pozivi metoda za StringBuilder mogu ulancavati
         return new StringBuilder(bezBelinaMalaSlova).reverse().toString().equals(bezBelinaMalaSlova);
     }

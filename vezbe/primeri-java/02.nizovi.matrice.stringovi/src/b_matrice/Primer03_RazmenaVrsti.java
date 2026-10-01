@@ -17,7 +17,7 @@ public class Primer03_RazmenaVrsti {
 		int j = unesiSiguranInt();
 		
 		// Proveravamo da li su uneti indeksi validnih vrsti
-		if (i < 0 || i >= a.length || j < 0 || j > a.length) {
+		if (i < 0 || i >= a.length || j < 0 || j >= a.length) {
 			System.out.println("Indeks vrste more biti izmedju 0 i " + (a.length-1));
 			System.exit(1);
 		}

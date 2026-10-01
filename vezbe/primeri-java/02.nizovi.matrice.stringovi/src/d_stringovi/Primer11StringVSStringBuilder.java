@@ -3,7 +3,7 @@ package d_stringovi;
 // Primer ilustruje razliku u brzini konkatenaciji stringova koristeci 'String' i 'StringBuilder'.
 public class Primer11StringVSStringBuilder {
 
-	static int TEST_SIZE = 100000;
+	static int TEST_SIZE = 10000;
 
 	public static void main(String[] args) {
 		long timeString, timeSBuilder;
@@ -21,7 +21,7 @@ public class Primer11StringVSStringBuilder {
 		System.out.println("String:\t\t" + timeString);
 		System.out.println("StringBuilder:\t" + timeSBuilder);
 
-		// Zakljucite sta je brze :)
+		// Ilustracija, ne pouzdan mikrobenchmark: JVM zagrevanje i optimizacije utiču na rezultat.
 	}
 
 	static void runStringTest() {
@@ -31,7 +31,6 @@ public class Primer11StringVSStringBuilder {
 			tmp += word;
 
 			// logging
-			if (i % 10 == 0) System.out.println("String: " + i);
 		}
 	}
 
@@ -40,7 +39,6 @@ public class Primer11StringVSStringBuilder {
 		String word = "test";
 		for (int i = 0; i < TEST_SIZE; i++) {
 			sb.append(word);
-			if (i % 10 == 0) System.out.println("isb: " + i);
 		}
 	}
 

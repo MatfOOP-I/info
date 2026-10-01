@@ -147,3 +147,13 @@ Razmisliti:
 - da li je filter deo modela ili prikaza;
 - ko treba da odluči koji proizvodi se trenutno prikazuju;
 - da li izbor boje za kupljeni proizvod pripada modelu.
+
+## Samostalni deo — Filter bez pogrešnog indeksa
+
+Na listu za kupovinu dodati prikaz samo nekupljenih proizvoda. Definisati kako UI identifikuje izabrani proizvod kad je lista filtrirana.
+
+**Kriterijum provere:** Posle filtriranja označiti drugi vidljivi proizvod i proveriti da je promenjen pravi objekat modela. Indeks filtriranog prikaza nije nužno indeks u modelu; koristiti stabilan ID ili odgovarajući izabrani objekat.
+
+Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
+nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
+je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
