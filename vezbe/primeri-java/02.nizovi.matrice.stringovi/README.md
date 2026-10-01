@@ -1,9 +1,5 @@
 # Nedelja 2 — Nizovi, reference i stringovi
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Ova nedelja je prelaz sa prethodnog programiranja na Javu.
 Materijala ima više nego što staje u dvočas: [plan časa](KORACI_ZA_CAS.md)
 određuje obavezni deo i samostalno čitanje.

@@ -1,8 +1,5 @@
 # Nedelja 11 — Datoteke i izuzeci
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
 
 Ove nedelje spajamo dve teme koje prirodno pripadaju zajedno:
 

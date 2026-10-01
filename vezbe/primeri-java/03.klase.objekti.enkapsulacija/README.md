@@ -1,8 +1,5 @@
 # Nedelja 3 — Klase, objekti i enkapsulacija
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
 
 Ove nedelje prvi put prelazimo sa programa koji prvenstveno obrađuje podatke na program u kome **objekti čuvaju stanje i nude operacije nad tim stanjem**.
 

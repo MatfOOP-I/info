@@ -1,9 +1,5 @@
 # Nedelja 4 — Odnosi između objekata i kompozicija
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Do sada smo uglavnom posmatrali jedan objekat izolovano. U realnim programima objekti skoro uvek **sarađuju sa drugim objektima**.
 
 Ove nedelje koristimo pojednostavljen sistem za poručivanje hrane. Domen je namerno jednostavan: kupac ima adresu, porudžbina ima stavke, a svaka stavka se odnosi na proizvod. Fokus nije na pravljenju aplikacije za dostavu, već na pitanju:

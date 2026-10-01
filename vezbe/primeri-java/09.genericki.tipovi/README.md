@@ -1,9 +1,5 @@
 # Nedelja 9 — Generički tipovi
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Do sada smo pravili klase koje rade sa unapred poznatim tipovima.
 
 Na primer:

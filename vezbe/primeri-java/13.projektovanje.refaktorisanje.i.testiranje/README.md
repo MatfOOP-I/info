@@ -1,7 +1,5 @@
 # Nedelja 13 — Projektovanje, refaktorisanje i testiranje
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
 ## Cilj
 
 Odrediti koji objekat je odgovoran za ponašanje i proveriti da promena dizajna

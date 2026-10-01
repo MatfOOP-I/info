@@ -1,9 +1,5 @@
 # Nedelja 5 — Nasleđivanje, apstraktne klase i polimorfizam
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Prethodne nedelje smo videli da se objekti veoma često povezuju odnosom **HAS-A**. Sada uvodimo drugi važan odnos:
 
 > Kada za jedan objekat ima smisla reći da **JESTE** posebna vrsta drugog objekta?

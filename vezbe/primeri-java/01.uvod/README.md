@@ -1,8 +1,5 @@
 # Nedelja 1 — Uvod u Javu i rad u IDE-u
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
 
 Ova nedelja je prelaz sa prethodnog programiranja na Javu.
 Materijala ima više nego što staje u dvočas: [plan časa](KORACI_ZA_CAS.md)

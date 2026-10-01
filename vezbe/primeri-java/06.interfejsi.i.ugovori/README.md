@@ -1,9 +1,5 @@
 # Nedelja 6 — Interfejsi i ugovori
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Prethodne nedelje smo videli da nasleđivanje koristimo kada modelujemo odnos **IS-A**:
 
 ```text

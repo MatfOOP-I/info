@@ -1,9 +1,5 @@
 # Nedelja 8 — State i životni ciklus objekta
 
-[Pokretanje](POKRETANJE.md) · [Plan za 90 minuta](KORACI_ZA_CAS.md) · [Zadatak](ZADATAK.md)
-
-**Na času biramo obavezne primere iz plana; ostali su dodatni materijal.**
-
 Prethodne nedelje smo videli Strategy:
 
 > objekat koristi zamenljivo ponašanje koje možemo da promenimo.
