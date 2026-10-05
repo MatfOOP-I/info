@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/04.odnosi.objekata.kompozicija/"
-title: "Недеља 4"
-parent: "Вежбе"
-nav_order: 4
-nav_exclude: false
----
-
 # Nedelja 4 — Odnosi između objekata i kompozicija
 
 Do sada smo uglavnom posmatrali jedan objekat izolovano. U realnim programima objekti skoro uvek **sarađuju sa drugim objektima**.

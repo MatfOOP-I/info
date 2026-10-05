@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/03.klase.objekti.enkapsulacija/"
-title: "Недеља 3"
-parent: "Вежбе"
-nav_order: 3
-nav_exclude: false
----
-
 # Nedelja 3 — Klase, objekti i enkapsulacija
 
 

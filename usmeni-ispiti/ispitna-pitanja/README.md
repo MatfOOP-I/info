@@ -1,12 +1,3 @@
----
-permalink: "/usmeni-ispiti/ispitna-pitanja/"
-title: "Испитна питања"
-parent: "Усмени испити"
-grand_parent: "Испити"
-nav_order: 2
-nav_exclude: false
----
-
 # Испитна питања за усмени део испита
 
 * **[Академска 2025/26. година](ISPITNA-PITANJA-2025-26.md)**

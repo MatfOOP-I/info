@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/08.state.i.zivotni.ciklus/"
-title: "Недеља 8"
-parent: "Вежбе"
-nav_order: 8
-nav_exclude: false
----
-
 # Nedelja 8 — State i životni ciklus objekta
 
 Prethodne nedelje smo videli Strategy:

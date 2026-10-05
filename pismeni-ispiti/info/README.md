@@ -1,12 +1,3 @@
----
-permalink: "/pismeni-ispiti/info/"
-title: "Обавештења"
-parent: "Писмени испити"
-grand_parent: "Испити"
-nav_order: 1
-nav_exclude: false
----
-
 # Обавештења за писмене испите
 
 ### Септембар 2 - резултати практичног дела испита

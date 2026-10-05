@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/07.kompozicija.i.strategy/"
-title: "Недеља 7"
-parent: "Вежбе"
-nav_order: 7
-nav_exclude: false
----
-
 # Nedelja 7 — Kompozicija i Strategy obrazac
 
 Do sada smo naučili:

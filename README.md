@@ -1,58 +1,30 @@
----
-title: "Објектно-оријентисано програмирање (И смер) @ МАТФ"
-permalink: "/"
----
-
-# Објектно-оријентисано програмирање
-
-И смер · Математички факултет
-{: .label .label-blue }
+# Објектно-оријентисано програмирање (И смер) @ МАТФ
 
 Материјали за курс **Објектно-оријентисано програмирање** на **И смеру** основних студија Математичког факултета Универзитета у Београду.
-{: .fs-6 .fw-300 }
 
-[Вежбе]({{ '/vezbe/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Предавања]({{ '/predavanja/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+**Сајт курса: <https://matfoop-i.github.io/info/>**
 
----
+## Садржај
 
-## Новости
+* [Информације о курсу](informacije/README.md) — наставници, начин реализације, бодовање и литература
+* [Инсталације](INSTALACIJE.md) и [ресурси за учење](RESURSI-ZA-UCENJE.md)
+* [Предавања](predavanja/README.md)
+* [Вежбе](vezbe/README.md) — 13 недеља примера и задатака
+* Испити: [писмени](pismeni-ispiti/README.md) и [усмени](usmeni-ispiti/README.md)
+* [Архива](arhiva.md) — материјали из претходних школских година
 
-{: .novo }
-Драги студенти, добродошли на курс Објектно-оријентисаног програмирања у школској 2026/2027!
+## Уређивање сајта
 
-<!--
-Шаблон за нову вест (копирати изнад, најновија иде на врх):
+Сајт се гради помоћу [GitHub Pages](https://pages.github.com/) и теме [Just the Docs](https://just-the-docs.com/).
 
-{: .novo }
-> **21.09.2026.** [Додатни термин усменог дела испита у року Септембар 2 код проф. Филиповића](usmeni-ispiti/info/README.md)
--->
+* Почетна страница сајта (са новостима) је [`index.md`](index.md).
+* Наслови, редослед и хијерархија странице у менију подешавају се у [`_config.yml`](_config.yml) (одељак `defaults`).
+* Локални преглед (потребан Docker), па отворити <http://localhost:4000/info/>:
 
-## Садржај сајта
+  ```
+  docker run --rm -it -p 4000:4000 -v "${PWD}:/site" -v oop-gems:/usr/local/bundle -w /site ruby:3.3 bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --no-watch"
+  ```
 
-<div class="kartice">
-  <a class="kartica" href="{{ '/informacije/' | relative_url }}">
-    <strong>Информације о курсу</strong>
-    <span>Наставници, начин реализације, бодовање и литература</span>
-  </a>
-  <a class="kartica" href="{{ '/predavanja/' | relative_url }}">
-    <strong>Предавања</strong>
-    <span>Теме, презентације, снимци и примери кода</span>
-  </a>
-  <a class="kartica" href="{{ '/vezbe/' | relative_url }}">
-    <strong>Вежбе</strong>
-    <span>13 недеља примера, задаци за самосталан рад и пројекти</span>
-  </a>
-  <a class="kartica" href="{{ '/ispiti.html' | relative_url }}">
-    <strong>Испити</strong>
-    <span>Обавештења, задаци и решења са писмених и усмених испита</span>
-  </a>
-  <a class="kartica" href="{{ '/INSTALACIJE.html' | relative_url }}">
-    <strong>Инсталације</strong>
-    <span>Java (JDK) и IntelliJ IDEA</span>
-  </a>
-  <a class="kartica" href="{{ '/arhiva.html' | relative_url }}">
-    <strong>Архива</strong>
-    <span>Материјали и снимци из претходних школских година</span>
-  </a>
-</div>
+## Лиценца
+
+Садржај је заштићен лиценцом [Creative Commons Attribution-NonCommercial 3.0](https://creativecommons.org/licenses/by-nc/3.0/), а програмски код [MIT лиценцом](LICENSE).

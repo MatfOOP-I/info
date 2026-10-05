@@ -1,23 +1,15 @@
----
-permalink: "/predavanja/"
-title: "Предавања"
-nav_order: 3
-has_children: true
-nav_exclude: false
----
-
 # Предавања
 
 
 Овде су постављена предавања из предмета **Објектно-оријентисано програмирање** на **И смеру** основних студија.
 
-1. Уводне напомене [презентација](prezentacije/00.Informacije.O.Kursu.pdf){:target="_blank"}
+1. Уводне напомене [презентација](prezentacije/00.Informacije.O.Kursu.pdf)
 
-    1.1  Опис сајта курса [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=0m3s){:target="_blank"}
+    1.1  Опис сајта курса [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=0m3s)
 
-    1.2. Опис структуре курса (садржај, организација рада, бодовање и сл.) [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=2m45s){:target="_blank"}
+    1.2. Опис структуре курса (садржај, организација рада, бодовање и сл.) [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=2m45s)
 
-    1.3. Кратак опис Јава програма који **неће** бити проучавани на курсу [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=23m05s){:target="_blank"}
+    1.3. Кратак опис Јава програма који **неће** бити проучавани на курсу [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=23m05s)
 
         1.3.1. Андроид апликације
 
@@ -25,11 +17,11 @@ nav_exclude: false
 
         1.3.3. Апликација за аутоматско тестирање веб апликације 
 
-    1.4. Кратак опис развојног окружења Visual Studio Code [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=44m19s){:target="_blank"}
+    1.4. Кратак опис развојног окружења Visual Studio Code [филм (2019/20)](https://www.youtube.com/watch?v=VKYgOMRQrI8&feature=youtu.be&t=44m19s)
 
-2. Поступак решавања проблема помоћу рачунара [презентација](prezentacije/01.Resavanje.Problema.Pomocu.Racunara.pdf){:target="_blank"}
+2. Поступак решавања проблема помоћу рачунара [презентација](prezentacije/01.Resavanje.Problema.Pomocu.Racunara.pdf)
 
-    2.1. Фазе решавања проблема [филм (2019/20)](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=0m0s){:target="_blank"}
+    2.1. Фазе решавања проблема [филм (2019/20)](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=0m0s)
 
         2.1.1. Фаза анализе проблема
 
@@ -43,7 +35,7 @@ nav_exclude: false
 
 3. Објектно оријентисана парадигма и друге парадигме
 
-    3.1. Објектно оријентисано програмирање [презентација](prezentacije/02.Objektno.Orijentisano.Programiranje.pdf){:target="_blank"}  
+    3.1. Објектно оријентисано програмирање [презентација](prezentacije/02.Objektno.Orijentisano.Programiranje.pdf)  
 
         3.1.1. Историјат 
 
@@ -71,9 +63,9 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g02.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g02){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g02)
 
-    3.2. Друге прогрaмске парадигме [презентација](prezentacije/03.Neke.Programske.Paradigme.pdf){:target="_blank"} [филм](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=1m20s){:target="_blank"}
+    3.2. Друге прогрaмске парадигме [презентација](prezentacije/03.Neke.Programske.Paradigme.pdf) [филм](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=1m20s)
 
         3.2.1. Парадигма императивног програмирања
 
@@ -83,11 +75,11 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g03.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g03){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g03)
 
-4. Карактеристике програмског језика Јава [презентација](prezentacije/04.Karakteristike.Programskog.Jezika.Java.pdf){:target="_blank"}
+4. Карактеристике програмског језика Јава [презентација](prezentacije/04.Karakteristike.Programskog.Jezika.Java.pdf)
 
-    4.1. Историјат и развој програмског језика и окружења Јава [филм (2019/20) 1/2](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=22m46s){:target="_blank"} [филм (2019/20) 2/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=0m3s){:target="_blank"}
+    4.1. Историјат и развој програмског језика и окружења Јава [филм (2019/20) 1/2](https://www.youtube.com/watch?v=Wpjtyzz1RNk&feature=youtu.be&t=22m46s) [филм (2019/20) 2/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=0m3s)
 
         4.1.1. Историјат 
 
@@ -95,7 +87,7 @@ nav_exclude: false
 
         4.1.3. Планиране карактериситке за нове верзије Јаве
 
-    4.2. Захтеви постављени за програмски језик и окружење Јава [филм (2019/20)](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=4m12s){:target="_blank"}
+    4.2. Захтеви постављени за програмски језик и окружење Јава [филм (2019/20)](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=4m12s)
 
         4.2.1. Једноставаност, објектна оријентисаност, фамилијарност
 
@@ -107,7 +99,7 @@ nav_exclude: false
 
         4.2.5. Интерпретираност, вишенитност и динамичност
 
-    4.3. Типови Јава апликација [филм (2019/20) 1/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=27m12s){:target="_blank"} [филм 2/2](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=0m3s){:target="_blank"}
+    4.3. Типови Јава апликација [филм (2019/20) 1/2](https://www.youtube.com/watch?v=9WtCq21miD4&feature=youtu.be&t=27m12s) [филм 2/2](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=0m3s)
 
         4.3.1. Десктоп апликације са графичким корисничким интерфејсом
 
@@ -123,7 +115,7 @@ nav_exclude: false
 
         4.3.7. Библиотеке класа
 
-    4.4. Процес извршавања Јава програма [филм (2019/20)](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=12m9s){:target="_blank"}
+    4.4. Процес извршавања Јава програма [филм (2019/20)](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=12m9s)
 
         4.4.1. Превођење и интерпретација Јава програма
 
@@ -131,7 +123,7 @@ nav_exclude: false
 
         4.4.3. Јава виртуелна машина
 
-    4.5. Јава алати за развој [филм (2019/20)](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=36m55s){:target="_blank"} 
+    4.5. Јава алати за развој [филм (2019/20)](https://www.youtube.com/watch?v=dumWPA_5yhk&feature=youtu.be&t=36m55s) 
 
         4.5.1. Класе, библиотеке класа и пакети
 
@@ -151,17 +143,17 @@ nav_exclude: false
 
         4.6.3. Хијерархија наслеђивања у Јави, класа Object
 
-5. Структура Јава програма [презентација](<prezentacije-2020-21/OOP04-Elementarne konstrukcije u Javi.pdf>){:target="_blank"}
+5. Структура Јава програма [презентација](<prezentacije-2020-21/OOP04-Elementarne konstrukcije u Javi.pdf>)
 
-    5.1. Језици за опис конструкција језика Јава [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.1. Језици за опис конструкција језика Јава [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=0m0s)
 
         5.1.1. Бекусова нотација
 
         5.1.2. Синтаксни дијаграми
 
-    5.2. Азбука језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=14m23s){:target="_blank"}
+    5.2. Азбука језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=14m23s)
 
-    5.3. Елементарне конструкције језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=16m30s){:target="_blank"}
+    5.3. Елементарне конструкције језика Јава  [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=16m30s)
 
         5.3.1. Идентификатори
 
@@ -177,7 +169,7 @@ nav_exclude: false
 
         5.3.7. Белине
 
-    5.4. Типови података у Јави [презентација](<prezentacije-2020-21/OOP05-Tipovi podataka u Javi.pdf>){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.4. Типови података у Јави [презентација](<prezentacije-2020-21/OOP05-Tipovi podataka u Javi.pdf>) [филм (2019/20)](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s)
 
         5.4.1. Примитивни тип
 
@@ -197,13 +189,13 @@ nav_exclude: false
 
             - Енумерисани тип
 
-    5.5. Променљиве [презентација](<prezentacije-2020-21/OOP06-Slozene konstrukcije u Javi.pdf>){:target="_blank"}  [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.5. Променљиве [презентација](<prezentacije-2020-21/OOP06-Slozene konstrukcije u Javi.pdf>)  [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s)
 
         5.5.1. Декларација и иницјализација вредности променљиве
 
         5.5.2. Опсег важења променљиве
 
-    5.6. Једноставне наредбе [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=16m25s){:target="_blank"}
+    5.6. Једноставне наредбе [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=16m25s)
 
         5.6.1. Блок
 
@@ -219,7 +211,7 @@ nav_exclude: false
 
             - Оператори: арност, асоцијативност, приоритет
 
-    5.7. Наредбе гранања и наредбе циклуса [презентација](<prezentacije-2020-21/OOP07-Upravljacke stukture u Javi.pdf>){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.7. Наредбе гранања и наредбе циклуса [презентација](<prezentacije-2020-21/OOP07-Upravljacke stukture u Javi.pdf>) [филм (2019/20)](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s)
 
         5.7.1. Наредбе гранања
 
@@ -241,9 +233,9 @@ nav_exclude: false
 
             - Наредба `continue` и циклуси
 
-    5.8. Улазна тачка програма, `static` метода `main` [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.8. Улазна тачка програма, `static` метода `main` [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=0m0s)
 
-    5.9. Функционална декомпозиција програма [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=6m50s){:target="_blank"}
+    5.9. Функционална декомпозиција програма [филм (2019/20)](https://www.youtube.com/watch?v=Wh9S8oQ7O6U&feature=youtu.be&t=6m50s)
 
         5.9.1. Дефиниција `static` метода
 
@@ -263,11 +255,11 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g05.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g05){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g05)
 
-6. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](prezentacije/06.Koriscenje.Klasa.I.Objekata.Isporucenih.Uz.JDK.pdf){:target="_blank"}
+6. Коришћење популарних класа и објеката испоручених уз ЈДК [презентација](prezentacije/06.Koriscenje.Klasa.I.Objekata.Isporucenih.Uz.JDK.pdf)
 
-    6.1. Приступ систему, класа `System` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=0m0s){:target="_blank"}
+    6.1. Приступ систему, класа `System` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=0m0s)
   
         6.1.1. Приказ текста
 
@@ -295,7 +287,7 @@ nav_exclude: false
 
         6.1.5. Излазак из апликације, метод `System.exit()`
 
-    6.2. Рад са објектима, примерцима класе `Object` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=26m16s){:target="_blank"}
+    6.2. Рад са објектима, примерцима класе `Object` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=26m16s)
 
         6.2.1. Креирање објекта, оператор `new`
 
@@ -303,7 +295,7 @@ nav_exclude: false
 
         6.2.3. Одређивање да ли објекат припада класи
 
-    6.3. Рад са нискама, примерцима класе `String` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=35m51s){:target="_blank"}
+    6.3. Рад са нискама, примерцима класе `String` [филм (2019/20)](https://www.youtube.com/watch?v=d5-U_Ds7Qy8&feature=youtu.be&t=35m51s)
 
         6.3.1. Каракеристике ниски, имутабилност  
 
@@ -315,7 +307,7 @@ nav_exclude: false
         
         6.3.5. Надовезивање ниски коришћењем класе `StringBuilder`
 
-    6.4. Рад са објектима омотачима података примитивног типа [филм (2019/20)](https://www.youtube.com/watch?v=7aen-NVmfUs&feature=youtu.be&t=0m0s){:target="_blank"}
+    6.4. Рад са објектима омотачима података примитивног типа [филм (2019/20)](https://www.youtube.com/watch?v=7aen-NVmfUs&feature=youtu.be&t=0m0s)
 
         6.4.1. Карактеристике класа-омотача за примитивне типове
 
@@ -327,13 +319,13 @@ nav_exclude: false
 
         6.4.5. Рад са објектима типа `Boolean`
 
-    6.5. Рад са скенерима, примерцима класе `java.util.Scanner` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=23m24s){:target="_blank"}
+    6.5. Рад са скенерима, примерцима класе `java.util.Scanner` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=23m24s)
 
         6.5.1. Скенирање података из ниске  
 
         6.5.2. Скенирање података са стандардног улаза
 
-    6.6. Рад са математичким функцијама, класа `Math` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=0m0s){:target="_blank"}
+    6.6. Рад са математичким функцијама, класа `Math` [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=0m0s)
 
         6.6.1. Приспуп пољима класе `Math`
 
@@ -341,7 +333,7 @@ nav_exclude: false
 
         6.6.3. Коришћење метода класе `Math` за рад са псеудо-случајним бројевима
 
-    6.7. Рад са датумима и временима [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=11m52s){:target="_blank"}
+    6.7. Рад са датумима и временима [филм (2019/20)](https://www.youtube.com/watch?v=LCBrzO7oxzw&feature=youtu.be&t=11m52s)
 
         6.7.1. Коришћење метода класе `LocalDate` из пакета `java.time`
 
@@ -353,15 +345,15 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g06.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g06){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g06)
 
-7. Низови у Јави [презентација](prezentacije/07.Nizovi.U.Javi.pdf){:target="_blank"}
+7. Низови у Јави [презентација](prezentacije/07.Nizovi.U.Javi.pdf)
 
-    7.1. Декларација и иницијализација низа [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=0m0s){:target="_blank"}
+    7.1. Декларација и иницијализација низа [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=0m0s)
 
-    7.2. Низовна променљива и индексна променљива [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=3m58s){:target="_blank"}
+    7.2. Низовна променљива и индексна променљива [филм (2019/20)](https://www.youtube.com/watch?v=ZJP5WIINRos&feature=youtu.be&t=3m58s)
 
-    7.3. Бројачки и колекцијски `for` циклус [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&list=PL4uJwj46TjzOMgpZF5a82_cCBq3gxGXDe&feature=youtu.be&t=0m0s){:target="_blank"}
+    7.3. Бројачки и колекцијски `for` циклус [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&list=PL4uJwj46TjzOMgpZF5a82_cCBq3gxGXDe&feature=youtu.be&t=0m0s)
 
         7.3.1. Синтакса колекцијског `for` циклуса
 
@@ -369,15 +361,15 @@ nav_exclude: false
 
         7.3.3. Прескакање дела тела циклуса
 
-    7.4. Аргументи команде линије код улазне тачке програма [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=8m46s){:target="_blank"}
+    7.4. Аргументи команде линије код улазне тачке програма [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=8m46s)
 
-    7.5. Низови низова [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=16m50s){:target="_blank"}
+    7.5. Низови низова [филм (2019/20)](https://www.youtube.com/watch?v=wPur8Ucguxs&feature=youtu.be&t=16m50s)
 
         7.5.1. Дводимензионални низови
 
         7.5.2. Вишедимензионални низови
 
-    7.6. Коришћење класе `Arrays` [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=0m0s){:target="_blank"}
+    7.6. Коришћење класе `Arrays` [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=0m0s)
 
         7.6.1. Попуњавање низа вредношћу
 
@@ -387,7 +379,7 @@ nav_exclude: false
 
         7.6.4. Копирање низа
 
-    7.7. Функције са аргументима променљиве дужине [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=20m07s){:target="_blank"}
+    7.7. Функције са аргументима променљиве дужине [филм (2019/20)](https://www.youtube.com/watch?v=gapMpZVPJcg&feature=youtu.be&&t=20m07s)
 
         7.7.1. Предности коришћења аргумената променљиве дужине
 
@@ -395,9 +387,9 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g07.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g07){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g07)
 
-8. Класе, пакети, поља, методи и објекти у Јави [презентација](prezentacije/08.Klase.Paketi.Polja.Metodi.Objekti.U.Javi.pdf){:target="_blank"}
+8. Класе, пакети, поља, методи и објекти у Јави [презентација](prezentacije/08.Klase.Paketi.Polja.Metodi.Objekti.U.Javi.pdf)
 
     8.1. Класе у Јави
 
@@ -545,17 +537,17 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g08.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g08){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g08)
 
-9. Напредни рад са класама и објектима [презентација](prezentacije/09.Napredni.Rad.Sa.Klasama.I.Objektima.pdf){:target="_blank"}
+9. Напредни рад са класама и објектима [презентација](prezentacije/09.Napredni.Rad.Sa.Klasama.I.Objektima.pdf)
 
-    9.1. Апстрактне класе [филм (2019/20)](https://www.youtube.com/watch?v=j2dAq4adfq8&feature=youtu.be&&t=0m0s){:target="_blank"}
+    9.1. Апстрактне класе [филм (2019/20)](https://www.youtube.com/watch?v=j2dAq4adfq8&feature=youtu.be&&t=0m0s)
 
         9.1.1. Дефинисање апстрактне класе
 
         9.1.2. Наслеђивање између апстрактних и конкретних класа
 
-    9.2. Интерфејси [филм (2019/20)](https://www.youtube.com/watch?v=Z7dMwl7SAgw&feature=youtu.be&&t=0m0s){:target="_blank"}
+    9.2. Интерфејси [филм (2019/20)](https://www.youtube.com/watch?v=Z7dMwl7SAgw&feature=youtu.be&&t=0m0s)
 
         9.2.1. Дефинисање интерфејса
 
@@ -565,7 +557,7 @@ nav_exclude: false
 
         9.2.4. Параметри типа интерфејса
 
-    9.3. Интерфејси у ЈДК-у [филм (2019/20)](https://www.youtube.com/watch?v=RDAEOcYik2g&feature=youtu.be&&t=0m0s){:target="_blank"}
+    9.3. Интерфејси у ЈДК-у [филм (2019/20)](https://www.youtube.com/watch?v=RDAEOcYik2g&feature=youtu.be&&t=0m0s)
 
         9.3.1. Уређење у колекцији, интерфејс `Comparable`
 
@@ -575,7 +567,7 @@ nav_exclude: false
 
         9.3.4. Клонирање објеката, интерфејс `Cloneable`
 
-    9.4. Препоруке за објектно оријентисани дизајн [филм (2019/20)](https://www.youtube.com/watch?v=71zLBtFWsFk&feature=youtu.be&&t=0m0s){:target="_blank"}
+    9.4. Препоруке за објектно оријентисани дизајн [филм (2019/20)](https://www.youtube.com/watch?v=71zLBtFWsFk&feature=youtu.be&&t=0m0s)
 
         9.4.1. Принципи SOLID
 
@@ -611,9 +603,9 @@ nav_exclude: false
 
    * [Примери програмског кода](izvorni-kod/g09.zip)
 
-   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g09){:target="_blank"}
+   * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g09)
 
-10. Угњеждене и унутрашње класе [презентација](prezentacije/10.Ugnjezdene.I.Unutrasnje.Klase.pdf){:target="_blank"}
+10. Угњеждене и унутрашње класе [презентација](prezentacije/10.Ugnjezdene.I.Unutrasnje.Klase.pdf)
 
     10.1. Угњеждене класе
 
@@ -629,9 +621,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g10.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g10){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g10)
 
-11. Изузеци и тврдње [презентација](prezentacije/11.Izuzeci.I.Tvrdnje.pdf){:target="_blank"}
+11. Изузеци и тврдње [презентација](prezentacije/11.Izuzeci.I.Tvrdnje.pdf)
 
     11.1. Изузеци у Јави
 
@@ -665,9 +657,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g11.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g11){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g11)
 
-12. Енумерисани типови [презентација](prezentacije/12.Nabrojivi.Tip.pdf){:target="_blank"}
+12. Енумерисани типови [презентација](prezentacije/12.Nabrojivi.Tip.pdf)
 
     12.1. Карактеристике набројивог типа
 
@@ -677,9 +669,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g12.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g12){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g12)
 
-13. Генерички типови [презентација](prezentacije/13.Genericki.Tip.pdf){:target="_blank"}
+13. Генерички типови [презентација](prezentacije/13.Genericki.Tip.pdf)
 
     13.1. Појам генеричког типа
 
@@ -701,9 +693,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g13.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g13){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g13)
 
-14. Колекције и речници [презентација](prezentacije/14.Kolekcije.I.Recnici.pdf){:target="_blank"}
+14. Колекције и речници [презентација](prezentacije/14.Kolekcije.I.Recnici.pdf)
 
     14.1. Интерфејс и имплементација
 
@@ -773,9 +765,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g14.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g14){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g14)
 
-15. Улаз и излаз [презентација](prezentacije/15.Ulaz.I.Izlaz.pdf){:target="_blank"}
+15. Улаз и излаз [презентација](prezentacije/15.Ulaz.I.Izlaz.pdf)
 
     15.1. Токови, читачи и писачи
 
@@ -801,9 +793,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g15.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g15){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g15)
 
-16. Рефлексија [презентација](prezentacije/16.Refleksija.pdf){:target="_blank"}
+16. Рефлексија [презентација](prezentacije/16.Refleksija.pdf)
 
     16.1. Рефлексивни програм
 
@@ -849,9 +841,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g16.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g16){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g16)
 
-17. Забелешкe (анотације) [презентација](prezentacije/17.Anotacija.pdf ){:target="_blank"}
+17. Забелешкe (анотације) [презентација](prezentacije/17.Anotacija.pdf )
 
     17.1. Формат забелешке
 
@@ -865,9 +857,9 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g17.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g17){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g17)
 
-18. Елементи функционалног програмирања у Јави [презентација](prezentacije/18.Lambda.Izrazi.pdf){:target="_blank"}
+18. Елементи функционалног програмирања у Јави [презентација](prezentacije/18.Lambda.Izrazi.pdf)
 
     18.1. Ламбда изрази и парадигма функционаног програмирања
 
@@ -908,13 +900,13 @@ nav_exclude: false
 
     * [Примери програмског кода](izvorni-kod/g18.zip)
 
-    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g18){:target="_blank"}
+    * [Github локација са примерима](https://github.com/MatfOOP-I/primeri-predavanja/tree/main/src/rs/math/oop/g18)
 
 
 * Примери Јава програмског кода
 
-  * [Github репозиторијум са примерима](https://github.com/MatfOOP-I/primeri-predavanja){:target="_blank"}
+  * [Github репозиторијум са примерима](https://github.com/MatfOOP-I/primeri-predavanja)
 
-  * [Примери из књиге "Java", аутори Хорстман, Корнел](https://github.com/MatfOOP-I/primeri-knjiga-horstman-cj2){:target="_blank"}
+  * [Примери из књиге "Java", аутори Хорстман, Корнел](https://github.com/MatfOOP-I/primeri-knjiga-horstman-cj2)
 
-  * [Примери из књиге "Java", аутор Хортон](https://github.com/MatfOOP-I/primeri-knjiga-horton-j2){:target="_blank"}
+  * [Примери из књиге "Java", аутор Хортон](https://github.com/MatfOOP-I/primeri-knjiga-horton-j2)

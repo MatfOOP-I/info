@@ -1,10 +1,3 @@
----
-title: "Ресурси за учење"
-parent: "Информације о курсу"
-nav_order: 3
-nav_exclude: false
----
-
 # Ресурси за учење
 
 
@@ -14,64 +7,64 @@ nav_exclude: false
 
   * Картељ, Филиповић, Тошић: Објектно оријентисано програмирање - програмски језик Јава - 1, Математички факултет, 2023
 
-  * Downey, Mayfield: [Think Java: How to Think Like a Computer Scientist](http://greenteapress.com/thinkjava6/html/index.html){:target="_blank"}  
+  * Downey, Mayfield: [Think Java: How to Think Like a Computer Scientist](http://greenteapress.com/thinkjava6/html/index.html)  
 
-  * Eck: [Introduction to Programming Using Java](http://math.hws.edu/javanotes/){:target="_blank"}, 7th edition
+  * Eck: [Introduction to Programming Using Java](http://math.hws.edu/javanotes/), 7th edition
 
-  * [Java Tutorial](https://docs.oracle.com/javase/tutorial/){:target="_blank"} - Oracle
+  * [Java Tutorial](https://docs.oracle.com/javase/tutorial/) - Oracle
 
-  * [Java Tutorial](https://www.tutorialspoint.com/java/index.htm){:target="_blank"} - TutorialsPoint
+  * [Java Tutorial](https://www.tutorialspoint.com/java/index.htm) - TutorialsPoint
 
 * Књиге и упутства за различите верзије Јаве
 
-  * Davis: [What's New in Java 8](https://leanpub.com/whatsnewinjava8/read){:target="_blank"}  
+  * Davis: [What's New in Java 8](https://leanpub.com/whatsnewinjava8/read)  
 
-  * [What's New in Java 8](https://www.tutorialspoint.com/java8/index.htm){:target="_blank"} - TutorialsPoint  
+  * [What's New in Java 8](https://www.tutorialspoint.com/java8/index.htm) - TutorialsPoint  
 
-  * [What's New in Java 9](https://www.tutorialspoint.com/java9/index.htm){:target="_blank"} - TutorialsPoint  
+  * [What's New in Java 9](https://www.tutorialspoint.com/java9/index.htm) - TutorialsPoint  
 
-  * Gosling et al: [Java Language Specification (Java SE 10 Edition)](https://docs.oracle.com/javase/specs/jls/se10/html/index.html){:target="_blank"}
+  * Gosling et al: [Java Language Specification (Java SE 10 Edition)](https://docs.oracle.com/javase/specs/jls/se10/html/index.html)
 
-  * Lindholm et al: [Java Virtual Machine Specification (Java SE 10 Edition)](https://docs.oracle.com/javase/specs/jvms/se10/html/index.html){:target="_blank"}
+  * Lindholm et al: [Java Virtual Machine Specification (Java SE 10 Edition)](https://docs.oracle.com/javase/specs/jvms/se10/html/index.html)
 
 * Компоненте Јава језика и окружења  
 
-  * [Java programming examples](https://www.tutorialspoint.com/javaexamples/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Java programming examples](https://www.tutorialspoint.com/javaexamples/index.htm) - TutorialsPoint  
 
-  * [Package java.lang](https://www.tutorialspoint.com/java/lang/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Package java.lang](https://www.tutorialspoint.com/java/lang/index.htm) - TutorialsPoint  
 
-  * [Package java.math](https://www.tutorialspoint.com/java/math/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Package java.math](https://www.tutorialspoint.com/java/math/index.htm) - TutorialsPoint  
 
-  * [Package java.io](https://www.tutorialspoint.com/java/io/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Package java.io](https://www.tutorialspoint.com/java/io/index.htm) - TutorialsPoint  
 
-  * [Package java.util](https://www.tutorialspoint.com/java/util/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Package java.util](https://www.tutorialspoint.com/java/util/index.htm) - TutorialsPoint  
 
-  * [GUI programming and JavaFX](https://www.tutorialspoint.com/javafx/index.htm){:target="_blank"} - TutorialsPoint
+  * [GUI programming and JavaFX](https://www.tutorialspoint.com/javafx/index.htm) - TutorialsPoint
 
-  * [Unit testing with JUnit](https://www.tutorialspoint.com/junit/){:target="_blank"} - TutorialsPoint  
+  * [Unit testing with JUnit](https://www.tutorialspoint.com/junit/) - TutorialsPoint  
 
-  * [XML and Java](https://www.tutorialspoint.com/java_xml/index.htm){:target="_blank"} - TutorialsPoint
+  * [XML and Java](https://www.tutorialspoint.com/java_xml/index.htm) - TutorialsPoint
 
-  * [Databases and JDBC](http://www.tutorialspoint.com/jdbc/){:target="_blank"} - TutorialsPoint
+  * [Databases and JDBC](http://www.tutorialspoint.com/jdbc/) - TutorialsPoint
 
 * Развојна окружења за Јаву
 
-  * [IntelliJ IDEA Tutorial](https://www.tutorialspoint.com/intellij_idea/index.htm){:target="_blank"} - TutorialsPoint
+  * [IntelliJ IDEA Tutorial](https://www.tutorialspoint.com/intellij_idea/index.htm) - TutorialsPoint
 
-  * [Java debugger jdb](https://www.tutorialspoint.com/jdb/index.htm){:target="_blank"} - TutorialsPoint  
+  * [Java debugger jdb](https://www.tutorialspoint.com/jdb/index.htm) - TutorialsPoint  
 
   * Видео упутства за рад са `JavaFX` у развојномм окружењеу `Eclipse`
 
-    * [Особине JavaFX](https://www.youtube.com/watch?v=Y-c978bikns&index=4&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B){:target="_blank"}
+    * [Особине JavaFX](https://www.youtube.com/watch?v=Y-c978bikns&index=4&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B)
 
-    * [JavaFX - Паскалов троугао - подешавање сцене програмским кодом](https://www.youtube.com/watch?v=TMaE7L9aaLU&index=5&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B){:target="_blank"}
+    * [JavaFX - Паскалов троугао - подешавање сцене програмским кодом](https://www.youtube.com/watch?v=TMaE7L9aaLU&index=5&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B)
 
-    * [JavaFX - Паскалов троугао - подешавање сцене помоћу JavaFX Scene Builder](https://www.youtube.com/watch?v=TMaE7L9aaLU&index=5&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B){:target="_blank"}
+    * [JavaFX - Паскалов троугао - подешавање сцене помоћу JavaFX Scene Builder](https://www.youtube.com/watch?v=TMaE7L9aaLU&index=5&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B)
 
-    * [Подешавање JAR за JavaFX](https://www.youtube.com/watch?v=QMD0JHiz6PQ&index=2&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B){:target="_blank"}
+    * [Подешавање JAR за JavaFX](https://www.youtube.com/watch?v=QMD0JHiz6PQ&index=2&t=0s&list=PL4uJwj46TjzPI5jJ-D-tx9gW_3ZUnjp1B)
 
 * Језик за моделирање UML
 
-  * [UML Tutorial](https://www.sparxsystems.com/resources/uml2_tutorial/index.html){:target="_blank"}  - Sparx Systems
+  * [UML Tutorial](https://www.sparxsystems.com/resources/uml2_tutorial/index.html)  - Sparx Systems
 
-  * [UML Tutorial](http://www.tutorialspoint.com/uml/){:target="_blank"}  - TutorialsPoint
+  * [UML Tutorial](http://www.tutorialspoint.com/uml/)  - TutorialsPoint

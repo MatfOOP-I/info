@@ -66,7 +66,250 @@ defaults:
       layout: default
       nav_exclude: true
 
+  - scope:
+      path: "index.md"
+    values:
+      title: "Објектно-оријентисано програмирање (И смер) @ МАТФ"
+
+  # Мени: наслов, редослед и родитељ сваке странице (front matter је овде да би
+  # .md фајлови остали чисти и при прегледу на GitHub-у).
+  - scope:
+      path: "INSTALACIJE.md"
+    values:
+      title: "Инсталације"
+      parent: "Информације о курсу"
+      nav_order: 2
+      nav_exclude: false
+  - scope:
+      path: "RESURSI-ZA-UCENJE.md"
+    values:
+      title: "Ресурси за учење"
+      parent: "Информације о курсу"
+      nav_order: 3
+      nav_exclude: false
+  - scope:
+      path: "arhiva.md"
+    values:
+      title: "Архива"
+      nav_order: 6
+      nav_exclude: false
+  - scope:
+      path: "informacije/Nacin-realizacije-kursa.md"
+    values:
+      title: "Начин реализације"
+      parent: "Информације о курсу"
+      nav_order: 1
+      nav_exclude: false
+  - scope:
+      path: "informacije/README.md"
+    values:
+      title: "Информације о курсу"
+      nav_order: 2
+      has_children: true
+      permalink: "/informacije/"
+      nav_exclude: false
+  - scope:
+      path: "ispiti.md"
+    values:
+      title: "Испити"
+      nav_order: 5
+      has_children: true
+      nav_exclude: false
+  - scope:
+      path: "pismeni-ispiti/README.md"
+    values:
+      title: "Писмени испити"
+      parent: "Испити"
+      nav_order: 1
+      has_children: true
+      permalink: "/pismeni-ispiti/"
+      nav_exclude: false
+  - scope:
+      path: "pismeni-ispiti/info/README.md"
+    values:
+      title: "Обавештења"
+      parent: "Писмени испити"
+      grand_parent: "Испити"
+      nav_order: 1
+      permalink: "/pismeni-ispiti/info/"
+      nav_exclude: false
+  - scope:
+      path: "pismeni-ispiti/resenja/README.md"
+    values:
+      title: "Решења"
+      parent: "Писмени испити"
+      grand_parent: "Испити"
+      nav_order: 3
+      permalink: "/pismeni-ispiti/resenja/"
+      nav_exclude: false
+  - scope:
+      path: "pismeni-ispiti/zadaci/README.md"
+    values:
+      title: "Задаци"
+      parent: "Писмени испити"
+      grand_parent: "Испити"
+      nav_order: 2
+      permalink: "/pismeni-ispiti/zadaci/"
+      nav_exclude: false
+  - scope:
+      path: "predavanja/README.md"
+    values:
+      title: "Предавања"
+      nav_order: 3
+      has_children: true
+      permalink: "/predavanja/"
+      nav_exclude: false
+  - scope:
+      path: "predavanja/casovi-uzivo/README.md"
+    values:
+      title: "Снимци предавања"
+      parent: "Предавања"
+      nav_order: 1
+      permalink: "/predavanja/casovi-uzivo/"
+      nav_exclude: false
+  - scope:
+      path: "usmeni-ispiti/README.md"
+    values:
+      title: "Усмени испити"
+      parent: "Испити"
+      nav_order: 2
+      has_children: true
+      permalink: "/usmeni-ispiti/"
+      nav_exclude: false
+  - scope:
+      path: "usmeni-ispiti/info/README.md"
+    values:
+      title: "Обавештења"
+      parent: "Усмени испити"
+      grand_parent: "Испити"
+      nav_order: 1
+      permalink: "/usmeni-ispiti/info/"
+      nav_exclude: false
+  - scope:
+      path: "usmeni-ispiti/ispitna-pitanja/README.md"
+    values:
+      title: "Испитна питања"
+      parent: "Усмени испити"
+      grand_parent: "Испити"
+      nav_order: 2
+      permalink: "/usmeni-ispiti/ispitna-pitanja/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/README.md"
+    values:
+      title: "Вежбе"
+      nav_order: 4
+      has_children: true
+      has_toc: false
+      permalink: "/vezbe/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/01.uvod/README.md"
+    values:
+      title: "Недеља 1"
+      parent: "Вежбе"
+      nav_order: 1
+      permalink: "/vezbe/primeri-java/01.uvod/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/02.nizovi.matrice.stringovi/README.md"
+    values:
+      title: "Недеља 2"
+      parent: "Вежбе"
+      nav_order: 2
+      permalink: "/vezbe/primeri-java/02.nizovi.matrice.stringovi/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/03.klase.objekti.enkapsulacija/README.md"
+    values:
+      title: "Недеља 3"
+      parent: "Вежбе"
+      nav_order: 3
+      permalink: "/vezbe/primeri-java/03.klase.objekti.enkapsulacija/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/04.odnosi.objekata.kompozicija/README.md"
+    values:
+      title: "Недеља 4"
+      parent: "Вежбе"
+      nav_order: 4
+      permalink: "/vezbe/primeri-java/04.odnosi.objekata.kompozicija/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/README.md"
+    values:
+      title: "Недеља 5"
+      parent: "Вежбе"
+      nav_order: 5
+      permalink: "/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/06.interfejsi.i.ugovori/README.md"
+    values:
+      title: "Недеља 6"
+      parent: "Вежбе"
+      nav_order: 6
+      permalink: "/vezbe/primeri-java/06.interfejsi.i.ugovori/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/07.kompozicija.i.strategy/README.md"
+    values:
+      title: "Недеља 7"
+      parent: "Вежбе"
+      nav_order: 7
+      permalink: "/vezbe/primeri-java/07.kompozicija.i.strategy/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/08.state.i.zivotni.ciklus/README.md"
+    values:
+      title: "Недеља 8"
+      parent: "Вежбе"
+      nav_order: 8
+      permalink: "/vezbe/primeri-java/08.state.i.zivotni.ciklus/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/09.genericki.tipovi/README.md"
+    values:
+      title: "Недеља 9"
+      parent: "Вежбе"
+      nav_order: 9
+      permalink: "/vezbe/primeri-java/09.genericki.tipovi/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/README.md"
+    values:
+      title: "Недеља 10"
+      parent: "Вежбе"
+      nav_order: 10
+      permalink: "/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/11.datoteke.i.izuzeci/README.md"
+    values:
+      title: "Недеља 11"
+      parent: "Вежбе"
+      nav_order: 11
+      permalink: "/vezbe/primeri-java/11.datoteke.i.izuzeci/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/README.md"
+    values:
+      title: "Недеља 12"
+      parent: "Вежбе"
+      nav_order: 12
+      permalink: "/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/"
+      nav_exclude: false
+  - scope:
+      path: "vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/README.md"
+    values:
+      title: "Недеља 13"
+      parent: "Вежбе"
+      nav_order: 13
+      permalink: "/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/"
+      nav_exclude: false
+
 exclude:
+  - README.md   # опис репозиторијума за GitHub; почетна сајта је index.md
   - .vscode
   - .gitignore
   - Gemfile

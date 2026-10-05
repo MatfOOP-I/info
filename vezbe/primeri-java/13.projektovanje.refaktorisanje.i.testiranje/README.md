@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/"
-title: "Недеља 13"
-parent: "Вежбе"
-nav_order: 13
-nav_exclude: false
----
-
 # Nedelja 13 — Projektovanje, refaktorisanje i testiranje
 
 ## Cilj

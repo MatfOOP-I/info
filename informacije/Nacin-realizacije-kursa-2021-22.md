@@ -95,33 +95,33 @@
 
 6. C. Dea, JavaFX – Introduction by Example , Apress, 2012.
 
-7. B. Eckel, [Thinking in Java](https://archive.org/details/TIJ4CcR1/page/n3){:target="_blank"}
+7. B. Eckel, [Thinking in Java](https://archive.org/details/TIJ4CcR1/page/n3)
 
-8. А. B. Downey, [How to Think Like a Computer Scientist](http://www.vias.org/javacourse){:target="_blank"}
+8. А. B. Downey, [How to Think Like a Computer Scientist](http://www.vias.org/javacourse)
 
-9. D.J. Eck, [Introduction to Programming Using Java](http://math.hws.edu/javanotes){target:"_blank"}
+9. D.J. Eck, [Introduction to Programming Using Java](http://math.hws.edu/javanotes)
 
-- Списак легално доступних књига из Јаве на [адреси](http://www.computer-books.us/java.php){target:"_blank"}
+- Списак легално доступних књига из Јаве на [адреси](http://www.computer-books.us/java.php)
 
 - Корисне адресе
 
-  - [Јава (Википедија)](http://sr.wikipedia.org/sr/Јава_(програмски_језик)){target:"_blank"}
+  - [Јава (Википедија)](http://sr.wikipedia.org/sr/Јава_(програмски_језик))
   
-  - [Јавa (Java Svet)](http://javasvet.rs/doc/40/uskocite-u-javu.html){target:"_blank"}
+  - [Јавa (Java Svet)](http://javasvet.rs/doc/40/uskocite-u-javu.html)
   
-  - [Јава (Wikipedia)](http://en.wikipedia.org/wiki/Java_(programming_language)){target:"_blank"}
+  - [Јава (Wikipedia)](http://en.wikipedia.org/wiki/Java_(programming_language))
   
-  - [Java in Action](http://www.java.com/en/java_in_action/){target:"_blank"}
+  - [Java in Action](http://www.java.com/en/java_in_action/)
   
-  - [Java SE (Oracle)](http://docs.oracle.com/javase/tutorial/){target:"_blank"}
+  - [Java SE (Oracle)](http://docs.oracle.com/javase/tutorial/)
   
-  - [Java SE Tutorial (Oracle)](http://docs.oracle.com/javase/tutorial/java/index.html){target:"_blank"}
+  - [Java SE Tutorial (Oracle)](http://docs.oracle.com/javase/tutorial/java/index.html)
   
-  - [Java Tutorial (Oracle Techwork)](https://www.oracle.com/java/technologies/){:target="_blank"}
+  - [Java Tutorial (Oracle Techwork)](https://www.oracle.com/java/technologies/)
   
-  - [Java Beginner](http://www.javabeginner.com/){target:"_blank"}
+  - [Java Beginner](http://www.javabeginner.com/)
   
-  - [Java World](http://www.javaworld.com/){target:"_blank"}
+  - [Java World](http://www.javaworld.com/)
 
 ## Захвалница
 

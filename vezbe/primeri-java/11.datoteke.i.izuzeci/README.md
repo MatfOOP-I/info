@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/11.datoteke.i.izuzeci/"
-title: "Недеља 11"
-parent: "Вежбе"
-nav_order: 11
-nav_exclude: false
----
-
 # Nedelja 11 — Datoteke i izuzeci
 
 

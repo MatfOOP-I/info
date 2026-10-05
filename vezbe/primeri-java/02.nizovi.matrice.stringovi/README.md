@@ -1,11 +1,3 @@
----
-permalink: "/vezbe/primeri-java/02.nizovi.matrice.stringovi/"
-title: "Недеља 2"
-parent: "Вежбе"
-nav_order: 2
-nav_exclude: false
----
-
 # Nedelja 2 — Nizovi, reference i stringovi
 
 Ova nedelja je prelaz sa prethodnog programiranja na Javu.

@@ -19,3 +19,16 @@
     }).observe(results, { childList: true, subtree: true });
   });
 </script>
+<script>
+  // Спољни линкови и PDF документи се отварају у новом табу
+  // (уместо {:target="_blank"} у сваком .md фајлу).
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.main-content a[href]').forEach(function (a) {
+      var external = a.hostname && a.hostname !== location.hostname;
+      if (external || /\.pdf$/i.test(a.pathname)) {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      }
+    });
+  });
+</script>
