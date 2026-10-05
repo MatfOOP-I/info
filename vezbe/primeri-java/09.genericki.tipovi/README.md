@@ -1,3 +1,11 @@
+---
+permalink: "/vezbe/primeri-java/09.genericki.tipovi/"
+title: "Недеља 9"
+parent: "Вежбе"
+nav_order: 9
+nav_exclude: false
+---
+
 # Nedelja 9 — Generički tipovi
 
 Do sada smo pravili klase koje rade sa unapred poznatim tipovima.

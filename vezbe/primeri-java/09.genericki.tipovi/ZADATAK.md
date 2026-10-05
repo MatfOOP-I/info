@@ -1,5 +1,7 @@
 # Zadatak — Pametni ormarić
 
+[← Nedelja 9](README.md)
+
 Potrebno je napraviti generičku klasu:
 
 ```java

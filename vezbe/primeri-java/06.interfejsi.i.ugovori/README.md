@@ -1,3 +1,11 @@
+---
+permalink: "/vezbe/primeri-java/06.interfejsi.i.ugovori/"
+title: "Недеља 6"
+parent: "Вежбе"
+nav_order: 6
+nav_exclude: false
+---
+
 # Nedelja 6 — Interfejsi i ugovori
 
 Prethodne nedelje smo videli da nasleđivanje koristimo kada modelujemo odnos **IS-A**:

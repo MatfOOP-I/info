@@ -1,0 +1,56 @@
+// Наслов сајта у бочном менију
+.site-title {
+  font-weight: 700;
+  color: $link-color;
+}
+
+// Дугачке речи у насловима не смеју да шире страницу на телефону
+.main-content h1 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+// Табела недеља на страници вежби
+.main-content table {
+  min-width: 100%;
+}
+
+// Ставке у дугачком садржају предавања
+.main-content li + li {
+  margin-top: 0.25rem;
+}
+
+// Картице на почетној страници
+.kartice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.kartica {
+  display: block;
+  padding: 1rem 1.25rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  border-top: 4px solid $link-color;
+  color: $body-text-color;
+  text-decoration: none;
+  background-image: none !important;
+
+  strong {
+    display: block;
+    color: $link-color;
+    margin-bottom: 0.25rem;
+  }
+
+  span {
+    font-size: 0.875rem;
+    color: $grey-dk-000;
+  }
+
+  &:hover {
+    border-color: $link-color;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+}

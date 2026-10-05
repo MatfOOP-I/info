@@ -1,6 +1,12 @@
-# Ресурси за учење -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
+---
+title: "Ресурси за учење"
+parent: "Информације о курсу"
+nav_order: 3
+nav_exclude: false
+---
 
-[ООП](/README.md)
+# Ресурси за учење
+
 
 Овде су постављене везе према веб ресурсима за учење, који могу помоћи при учењу садржаја који се обрађују на курсу **Објектно-оријентисано програмирање** на **И смеру** основних студија.
 
@@ -69,5 +75,3 @@
   * [UML Tutorial](https://www.sparxsystems.com/resources/uml2_tutorial/index.html){:target="_blank"}  - Sparx Systems
 
   * [UML Tutorial](http://www.tutorialspoint.com/uml/){:target="_blank"}  - TutorialsPoint
-
-[ООП](/README.md)

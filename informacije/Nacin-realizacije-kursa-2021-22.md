@@ -1,6 +1,5 @@
-# Начин реализације курса -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
+# Начин реализације курса
 
-[ООП](../README.md) [Информације о курсу](README.md)
 
 ## Концепција курса
 
@@ -76,7 +75,7 @@
 
 5. K. Arnold, J.Gosling, D. Holmes, Programski jezik Java, CET, Београд, 2001.
 
-- Материјал са [предавања](../predavanja/README-2020-21-all.md) (нису и не могу бити замена за праву литературу)
+- Материјал са [предавања](../predavanja/prezentacije-2020-21/README.md) (нису и не могу бити замена за праву литературу)
 
 - Скрипта са задацима са вежби (укључује и већи број решених испитних задатака)
 
@@ -118,7 +117,7 @@
   
   - [Java SE Tutorial (Oracle)](http://docs.oracle.com/javase/tutorial/java/index.html){target:"_blank"}
   
-  - [Java Tutorial (Oracle Techwork)](]http://www.oracle.com/technetwork/java/index.html){target:"_blank"}
+  - [Java Tutorial (Oracle Techwork)](https://www.oracle.com/java/technologies/){:target="_blank"}
   
   - [Java Beginner](http://www.javabeginner.com/){target:"_blank"}
   
@@ -130,7 +129,3 @@
 држао курс Објектно орјентисано програмирање) направио проф. др Душан Тошић.
 
 Хвала проф. Тошићу што се сагласио са укључивањем тог материјала, као и на помоћи коју је пружио током конципирања и реализације курса.
-
----
-
-[ООП](../README.md) [Информације о курсу](README.md)

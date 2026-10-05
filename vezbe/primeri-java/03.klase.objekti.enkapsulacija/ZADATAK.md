@@ -1,5 +1,7 @@
 # Zadatak — Poklon kartica
 
+[← Nedelja 3](README.md)
+
 Napraviti klasu `PoklonKartica` koja predstavlja poklon karticu neke prodavnice.
 
 Svaka kartica ima:

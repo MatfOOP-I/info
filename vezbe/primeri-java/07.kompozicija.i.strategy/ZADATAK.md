@@ -1,5 +1,7 @@
 # Zadatak — Navigacija i izbor rute
 
+[← Nedelja 7](README.md)
+
 Potrebno je napraviti jednostavan model navigacije.
 
 Navigacija treba da podrži različite načine računanja rute:

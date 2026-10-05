@@ -1,5 +1,7 @@
 # Zadatak — nedelja 2
 
+[← Nedelja 2](README.md)
+
 ## Vođeni deo
 
 Za niz [2,4,6] napraviti drugu referencu i promeniti njen prvi element na 9. Zatim napraviti kopiju Arrays.copyOf i promeniti prvi element kopije na 0. Ispisati sva tri niza i objasniti rezultat. Očekivanje: original i druga referenca [9,4,6], kopija [0,4,6].

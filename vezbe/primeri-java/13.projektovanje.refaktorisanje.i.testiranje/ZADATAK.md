@@ -1,5 +1,7 @@
 # Završni zadatak — Refaktorisanje sistema dostave
 
+[← Nedelja 13](README.md)
+
 Ovaj zadatak je namenjen za samostalno povezivanje gradiva.
 
 Početni kod je `src/zadatak_pocetni/Dostava.java`. Pokrenuti ga, zabeležiti očekivanja,

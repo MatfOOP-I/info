@@ -1,5 +1,7 @@
 # Zadatak — Lična biblioteka
 
+[← Nedelja 10](README.md)
+
 Napraviti model za jednostavnu ličnu biblioteku.
 
 ## `ZanrKnjige`

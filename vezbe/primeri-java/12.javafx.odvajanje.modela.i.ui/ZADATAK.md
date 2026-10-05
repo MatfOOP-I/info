@@ -1,5 +1,7 @@
 # Zadatak — Lista za kupovinu
 
+[← Nedelja 12](README.md)
+
 Napraviti malu JavaFX aplikaciju za listu za kupovinu.
 
 Aplikacija treba da omogući:

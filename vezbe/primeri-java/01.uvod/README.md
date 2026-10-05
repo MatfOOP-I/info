@@ -1,9 +1,15 @@
+---
+permalink: "/vezbe/primeri-java/01.uvod/"
+title: "Недеља 1"
+parent: "Вежбе"
+nav_order: 1
+nav_exclude: false
+---
+
 # Nedelja 1 — Uvod u Javu i rad u IDE-u
 
 
 Ova nedelja je prelaz sa prethodnog programiranja na Javu.
-Materijala ima više nego što staje u dvočas: [plan časa](KORACI_ZA_CAS.md)
-određuje obavezni deo i samostalno čitanje.
 
 ## Glavni cilj
 

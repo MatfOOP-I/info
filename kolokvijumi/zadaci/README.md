@@ -1,8 +1,4 @@
-# ООП - Информације које се односе на задатке са колоквијума
-
-[ООП](../../README.md) [Колоквијуми](../README.md)
-
----
+# Информације које се односе на задатке са колоквијума
 
 Задаци из претходних година:
 
@@ -15,9 +11,3 @@
 * 2015-2016: [Чланарине](./rokovi/kol201516_Clanarine.pdf){:target="_blank"}, [Досије](./rokovi/kol201516_Dosije.pdf){:target="_blank"}, [Торта](./rokovi/kol201516_Torta.pdf){:target="_blank"}, [Животињска фарма](./rokovi/kol201516_ZivotinjskaFarma.pdf){:target="_blank"}
 
 * 2014-2015: [Функције](./rokovi/kol201415_Funkcije.pdf){:target="_blank"}, [Пол детета](./rokovi/kol201415_PolDeteta.pdf){:target="_blank"}, [Поруке](./rokovi/kol201415_Poruke.pdf){:target="_blank"}, [Стамбени објекти](./rokovi/kol201415_StambeniObjekti.pdf){:target="_blank"}, [Возни парк](./rokovi/kol201415_VozniPark.pdf){:target="_blank"}
-
-
----
-
-[ООП](../../README.md) [Колоквијуми](../README.md)    
-

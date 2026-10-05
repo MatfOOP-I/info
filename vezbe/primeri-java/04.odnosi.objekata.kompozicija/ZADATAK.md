@@ -1,5 +1,7 @@
 # Zadatak — Rezervacija bioskopske projekcije
 
+[← Nedelja 4](README.md)
+
 Napraviti mali objektni model za rezervaciju mesta u bioskopu.
 
 Potrebne su najmanje sledeće klase:

@@ -1,9 +1,72 @@
-# Theme
-theme: jekyll-theme-hacker
+# Сајт курса Објектно-оријентисано програмирање (И смер) @ Математички факултет
+title: ООП @ МАТФ
+description: >-
+  Материјали за курс Објектно-оријентисано програмирање на И смеру
+  основних студија Математичког факултета Универзитета у Београду.
+lang: sr
+url: https://matfoop-i.github.io
+baseurl: /info
+
+# Тема
+remote_theme: just-the-docs/just-the-docs@v0.10.1
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+color_scheme: matf
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  button: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: "Назад на врх"
+nav_external_links: []
+
+aux_links:
+  "Математички факултет":
+    - "https://www.matf.bg.ac.rs"
+  "GitHub":
+    - "https://github.com/MatfOOP-I"
+aux_links_new_tab: true
 
 # Analytics
-analytics:
-  provider: "google-gtag"
-  google:
-    measurement_id: "G-KEJXZJRC9J"
-    anonymize_ip: # true, false (default)
+ga_tracking: G-KEJXZJRC9J
+ga_tracking_anonymize_ip: true
+
+callouts_level: quiet
+callouts:
+  napomena:
+    title: Напомена
+    color: blue
+  vazno:
+    title: Важно
+    color: red
+  novo:
+    title: Новости
+    color: green
+
+# Ниједна страница није у менију осим ако то експлицитно не тражи
+# (GitHub Pages свакој страници додељује наслов из првог заглавља).
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      nav_exclude: true
+
+exclude:
+  - .vscode
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - "**/*.iml"
+  - vendor

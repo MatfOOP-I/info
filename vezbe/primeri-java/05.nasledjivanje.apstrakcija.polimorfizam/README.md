@@ -1,3 +1,11 @@
+---
+permalink: "/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/"
+title: "Недеља 5"
+parent: "Вежбе"
+nav_order: 5
+nav_exclude: false
+---
+
 # Nedelja 5 — Nasleđivanje, apstraktne klase i polimorfizam
 
 Prethodne nedelje smo videli da se objekti veoma često povezuju odnosom **HAS-A**. Sada uvodimo drugi važan odnos:

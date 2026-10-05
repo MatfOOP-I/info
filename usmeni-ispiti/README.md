@@ -1,13 +1,12 @@
-# Усмени испити -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
-
-[ООП](../README.md)
-
+---
+permalink: "/usmeni-ispiti/"
+title: "Усмени испити"
+parent: "Испити"
+nav_order: 2
+has_children: true
+nav_exclude: false
 ---
 
-**[Информације](info/README.md)**
+# Усмени испити
 
-**[Испитна питања](ispitna-pitanja/README.md)**
-
----
-
-[ООП](../README.md)
+Термини усменог дела испита и испитна питања.

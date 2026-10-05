@@ -1,5 +1,7 @@
 # Zadatak — Rezervacija bioskopske karte
 
+[← Nedelja 8](README.md)
+
 Modelovati rezervaciju bioskopske karte.
 
 Rezervacija ima:

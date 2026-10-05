@@ -1,5 +1,7 @@
 # Zadatak — Sistem obaveštavanja
 
+[← Nedelja 6](README.md)
+
 Potrebno je modelovati jednostavan sistem za slanje podsetnika.
 
 Podsetnik ima:

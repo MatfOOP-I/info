@@ -1,7 +1,13 @@
+---
+permalink: "/predavanja/"
+title: "Предавања"
+nav_order: 3
+has_children: true
+nav_exclude: false
+---
 
-# Предавања -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
+# Предавања
 
-[ООП](../README.md)
 
 Овде су постављена предавања из предмета **Објектно-оријентисано програмирање** на **И смеру** основних студија.
 
@@ -145,7 +151,7 @@
 
         4.6.3. Хијерархија наслеђивања у Јави, класа Object
 
-5. Структура Јава програма [презентација](/prezentacije-2020-21/OOP04-Elementarne konstrukcije u Javi.pdf){:target="_blank"}
+5. Структура Јава програма [презентација](<prezentacije-2020-21/OOP04-Elementarne konstrukcije u Javi.pdf>){:target="_blank"}
 
     5.1. Језици за опис конструкција језика Јава [филм (2019/20)](https://www.youtube.com/watch?v=pIK0e6B3UHw&feature=youtu.be&t=0m0s){:target="_blank"}
 
@@ -171,7 +177,7 @@
 
         5.3.7. Белине
 
-    5.4. Типови података у Јави [презентација](/prezentacije-2020-21/OOP05-Tipovi podataka u Javi.pdf){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.4. Типови података у Јави [презентација](<prezentacije-2020-21/OOP05-Tipovi podataka u Javi.pdf>){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=0SSqu04BJqU&feature=youtu.be&t=0m0s){:target="_blank"}
 
         5.4.1. Примитивни тип
 
@@ -191,7 +197,7 @@
 
             - Енумерисани тип
 
-    5.5. Променљиве [презентација](/prezentacije-2020-21/OOP06-Slozene konstrukcije u Javi.pdf){:target="_blank"}  [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.5. Променљиве [презентација](<prezentacije-2020-21/OOP06-Slozene konstrukcije u Javi.pdf>){:target="_blank"}  [филм (2019/20)](https://www.youtube.com/watch?v=H_Um2iYeNqc&feature=youtu.be&t=0m0s){:target="_blank"}
 
         5.5.1. Декларација и иницјализација вредности променљиве
 
@@ -213,7 +219,7 @@
 
             - Оператори: арност, асоцијативност, приоритет
 
-    5.7. Наредбе гранања и наредбе циклуса [презентација](/prezentacije-2020-21/OOP07-Upravljacke stukture u Javi.pdf){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s){:target="_blank"}
+    5.7. Наредбе гранања и наредбе циклуса [презентација](<prezentacije-2020-21/OOP07-Upravljacke stukture u Javi.pdf>){:target="_blank"} [филм (2019/20)](https://www.youtube.com/watch?v=CeXqaMvtQFE&feature=youtu.be&t=0m0s){:target="_blank"}
 
         5.7.1. Наредбе гранања
 
@@ -912,5 +918,3 @@
   * [Примери из књиге "Java", аутори Хорстман, Корнел](https://github.com/MatfOOP-I/primeri-knjiga-horstman-cj2){:target="_blank"}
 
   * [Примери из књиге "Java", аутор Хортон](https://github.com/MatfOOP-I/primeri-knjiga-horton-j2){:target="_blank"}
-
-[ООП](../README.md)

@@ -1,5 +1,7 @@
 # Zadatak — nedelja 1
 
+[← Nedelja 1](README.md)
+
 ## Vođeni deo
 
 Napraviti program koji učitava dva cela broja i operaciju (+ ili -), računa i prikazuje rezultat. Najpre napisati dve metode, zatim unos i proveru. Ograničiti brojeve na -1000 do 1000. Primer: 7, 3, - daje 4.

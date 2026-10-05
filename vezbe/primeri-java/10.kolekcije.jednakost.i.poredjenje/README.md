@@ -1,3 +1,11 @@
+---
+permalink: "/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/"
+title: "Недеља 10"
+parent: "Вежбе"
+nav_order: 10
+nav_exclude: false
+---
+
 # Nedelja 10 — Kolekcije, jednakost i poređenje
 
 Ove nedelje spajamo nekoliko tema koje su tesno povezane:

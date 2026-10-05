@@ -13383,3 +13383,10 @@ predavanja/primeri-java/out/production/primeri-java/rs/math/oop1/p190201/funkcio
 target
 out
 META-INF
+
+# Jekyll
+_site
+.jekyll-cache
+.jekyll-metadata
+Gemfile.lock
+vendor

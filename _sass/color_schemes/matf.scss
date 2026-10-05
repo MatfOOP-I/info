@@ -1,0 +1,11 @@
+@import "./color_schemes/light";
+
+$matf-blue: #1f4e8c;
+$matf-blue-dark: #163a69;
+
+$link-color: $matf-blue;
+$btn-primary-color: $matf-blue;
+$nav-child-link-color: $grey-dk-100;
+$sidebar-color: #f6f8fb;
+$feedback-color: darken($sidebar-color, 3%);
+$border-color: #dfe3ea;

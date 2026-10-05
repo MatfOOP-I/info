@@ -1,3 +1,11 @@
+---
+permalink: "/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/"
+title: "Недеља 12"
+parent: "Вежбе"
+nav_order: 12
+nav_exclude: false
+---
+
 # Nedelja 12 — JavaFX i odvajanje modela od korisničkog interfejsa
 
 Ove nedelje prvi put pravimo grafičku aplikaciju.

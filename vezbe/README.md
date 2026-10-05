@@ -1,4 +1,13 @@
-# Vežbe — Objektno-orijentisano programiranje, Informatika
+---
+permalink: "/vezbe/"
+title: "Вежбе"
+nav_order: 4
+has_children: true
+has_toc: false
+nav_exclude: false
+---
+
+# Vežbe
 
 Materijali za 13 nedelja, po 2 × 45 minuta. JDK 21; svaka nedelja je samostalan Maven projekat.
 

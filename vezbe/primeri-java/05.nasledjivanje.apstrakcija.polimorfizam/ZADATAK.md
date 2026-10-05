@@ -1,5 +1,7 @@
 # Zadatak — Ulaznice za događaj
 
+[← Nedelja 5](README.md)
+
 Napraviti objektni model za prodaju ulaznica za koncert ili drugi događaj.
 
 Definisati apstraktnu klasu `Ulaznica` koja ima:
