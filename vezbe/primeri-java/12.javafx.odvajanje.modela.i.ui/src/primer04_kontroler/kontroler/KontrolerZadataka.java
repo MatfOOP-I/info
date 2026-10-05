@@ -31,21 +31,27 @@ public class KontrolerZadataka {
     }
 
     public RezultatOperacije zavrsiZadatak(int indeks) {
-        try {
-            model.zavrsi(indeks);
-            return RezultatOperacije.uspeh("Zadatak je završen.");
-        } catch (IndexOutOfBoundsException e) {
+        /*
+         * Negativan indeks znači "ništa nije izabrano" - to je očekivana
+         * situacija u UI-ju, pa je obrađujemo eksplicitno. Ostali neispravni
+         * indeksi su greška pozivaoca: model baca izuzetak, a mi ga ne hvatamo.
+         */
+        if (indeks < 0) {
             return RezultatOperacije.greska("Izaberi zadatak.");
         }
+
+        model.zavrsi(indeks);
+        return RezultatOperacije.uspeh("Zadatak je završen.");
     }
 
     public RezultatOperacije ukloniZadatak(int indeks) {
-        try {
-            model.ukloni(indeks);
-            return RezultatOperacije.uspeh("Zadatak je uklonjen.");
-        } catch (IndexOutOfBoundsException e) {
+        // Isto kao kod zavrsiZadatak: samo "ništa nije izabrano" je očekivano.
+        if (indeks < 0) {
             return RezultatOperacije.greska("Izaberi zadatak.");
         }
+
+        model.ukloni(indeks);
+        return RezultatOperacije.uspeh("Zadatak je uklonjen.");
     }
 
     public List<Zadatak> getZadaci() {

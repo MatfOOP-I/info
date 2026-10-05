@@ -30,7 +30,7 @@ Knjiga ima:
 - godinu izdanja;
 - žanr.
 
-Dve knjige smatramo jednakim ako imaju isti ISBN.
+Dve knjige smatramo jednakima ako imaju isti ISBN.
 
 Zato pravilno implementirati:
 

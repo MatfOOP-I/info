@@ -14,7 +14,7 @@ public class Primer10Math {
 
 	public static void main(String[] args) {
 		// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-		// Klasa 'Math' sadrzi vist statickih funckija vezanih za matematiku. Sledi par primera.
+		// Klasa 'Math' sadrzi vise statickih funkcija vezanih za matematiku. Sledi par primera.
 		// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 		Scanner sc = new Scanner(System.in);
 

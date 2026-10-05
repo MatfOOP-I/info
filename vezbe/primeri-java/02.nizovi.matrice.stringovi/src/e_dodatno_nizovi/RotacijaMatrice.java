@@ -9,7 +9,7 @@ public class RotacijaMatrice {
 	 * ali rotacija matrice u mestu (bez pomocnih nizova/matrica) nije ocigledna.
 	 * Sledi primer koji implementira rotaciju matrice u mestu.
 	 * 
-	 * VAZAN USLOV: Ne mozemo rotirati matricu u mesto ukoliko
+	 * VAZAN USLOV: Ne mozemo rotirati matricu u mestu ukoliko
 	 * joj broj vrsti i kolona nije jednak. U kodu koji sledi
 	 * nije vrsena provera oko dimenzija matrice, pretpostavlja
 	 * se da su jednake.
@@ -71,7 +71,7 @@ public class RotacijaMatrice {
 	static void rotateLeft(int[][] block) {
 		transpose(block);
 
-		// Sada obrcemo kolone.
+		// Sada obrcemo redosled vrsta (svaku kolonu citamo odozdo nagore).
 		for (int i = 0; i < block.length; i++) {
 			int master = 0, blaster = block.length-1;
 			while (master < blaster) {

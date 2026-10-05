@@ -50,14 +50,11 @@ baze podataka ili rasporeda rezervacija po datumima.
 
 ## Testiranje
 
-Prvo očekivanje, zatim akcija i provera. Koristimo mali Provera pomoćnik umesto
-uvođenja nove biblioteke. `mvn verify` dodatno izvršava `test/provere/Main.java`:
-proverava duplikate, neuspešne zahteve, zauzeto vozilo, terminalna stanja i granice API-ja.
-Ove nastavničke provere sadrže i refleksiju; njihova implementacija nije ispitni
-preduslov ovog časa. JUnit može biti nastavak istog principa kasnije.
+Prvo očekivanje, zatim akcija i provera. Koristimo mali `Provera` pomoćnik umesto
+uvođenja nove biblioteke. JUnit može biti nastavak istog principa kasnije.
 
 ## Promene zahteva
 
-Dodati trotinet (IS-A), vikend obračun (Strategy), ili čuvanje podataka u fajl
-(posebna odgovornost). Za svaki izbor tražiti objašnjenje. Za veoma mali životni
-ciklus enum može biti dovoljno dobar; cilj je da student razume cenu apstrakcije.
+Dodati trotinet (IS-A), vikend obračun (Strategy) ili čuvanje podataka u fajl
+(posebna odgovornost). Za svaki izbor obrazložiti odluku. Za veoma mali životni
+ciklus enum može biti dovoljno dobar; cilj je razumeti cenu apstrakcije.

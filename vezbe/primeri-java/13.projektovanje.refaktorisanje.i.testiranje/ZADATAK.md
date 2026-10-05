@@ -4,18 +4,6 @@
 
 Ovaj zadatak je namenjen za samostalno povezivanje gradiva.
 
-Početni kod je `src/zadatak_pocetni/Dostava.java`. Pokrenuti ga, zabeležiti očekivanja,
-pa refaktorisati u sopstvenom paketu. Original sačuvati radi poređenja.
-
-Cena standardne dostave je 200 + 50 dinara za svaki započeti kilogram;
-ekspresna je dvostruka standardna cena. Masa je celobrojni broj grama, 1–50000.
-Za 1500 g cene su 300 i 600. Otkazivanje je dozvoljeno samo iz KREIRANA;
-isporuka samo iz PREUZETA. Završena i otkazana pošiljka ne prihvataju nove operacije.
-
-LOMLJIV je za sada samo oznaka i ne menja cenu ili tranzicije. To je namerno:
-ne treba praviti podklasu bez razlike u ponašanju. U završnom modelu dodati registar
-koji odbija duple identifikacione brojeve, umesto da prepiše staru pošiljku.
-
 Imamo sistem dostave paketa.
 
 Početna implementacija čuva:
@@ -37,11 +25,23 @@ provera.
 
 Potrebno je osmisliti bolji OOP model.
 
+Početni kod je `src/zadatak_pocetni/Dostava.java`. Pokrenuti ga, zabeležiti očekivanja,
+pa refaktorisati u sopstvenom paketu. Original sačuvati radi poređenja.
+
+Cena standardne dostave je 200 + 50 dinara za svaki započeti kilogram;
+ekspresna je dvostruka standardna cena. Masa je celobrojni broj grama, 1–50000.
+Za 1500 g cene su 300 i 600. Otkazivanje je dozvoljeno samo iz KREIRANA;
+isporuka samo iz PREUZETA. Završena i otkazana pošiljka ne prihvataju nove operacije.
+
+LOMLJIV je za sada samo oznaka i ne menja cenu ili tranzicije. To je namerno:
+ne treba praviti podklasu bez razlike u ponašanju. U završnom modelu dodati registar
+koji odbija duple identifikacione brojeve, umesto da prepiše staru pošiljku.
+
 ---
 
-# Zahtevi
+## Zahtevi
 
-## Paket
+### Paket
 
 Svaki paket ima:
 
@@ -65,7 +65,7 @@ Ako nemaju, nemojte uvoditi nasleđivanje samo zbog naziva.
 
 ---
 
-## Obračun dostave
+### Obračun dostave
 
 Podržati:
 
@@ -78,7 +78,7 @@ bez velikog `if` grananja u klasi `Posiljka`.
 
 ---
 
-## Životni ciklus
+### Životni ciklus
 
 Posiljka prolazi kroz:
 
@@ -101,7 +101,7 @@ Nisu sve dozvoljene u svakom stanju.
 
 ---
 
-## Kolekcije
+### Kolekcije
 
 Sistem treba da:
 
@@ -112,7 +112,7 @@ Izabrati odgovarajuće kolekcije i obrazložiti izbor.
 
 ---
 
-## Greške
+### Greške
 
 Razmisliti kako predstaviti:
 
@@ -128,7 +128,7 @@ Obrazložiti odluku.
 
 ---
 
-# Testovi
+## Testovi
 
 Napisati najmanje tri mala testa:
 
@@ -140,7 +140,7 @@ Testovi ne treba da zavise od GUI-ja.
 
 ---
 
-# Najvažnije
+## Najvažnije
 
 Nije cilj da rešenje ima što više klasa.
 

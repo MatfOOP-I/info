@@ -49,7 +49,7 @@ ne dozvoljava da se u njega smesti `Ranac`.
 
 ---
 
-# Dodatak — ograničenje tipa
+## Dodatak — ograničenje tipa
 
 Definisati interfejs:
 
@@ -84,11 +84,11 @@ Razmisliti:
 2. Šta kompajler zna kada napišemo `<T extends ImaMasu>`?
 3. Zašto je ovo bolje od kastovanja na `ImaMasu` unutar klase?
 
-## Precizan ugovor
+### Precizan ugovor
 
 `null` nije dozvoljen predmet. Smeštanje u zauzet ormarić baca `IllegalStateException` i ne menja sadržaj. Smeštanje `null` baca `IllegalArgumentException`. Preuzimanje iz praznog ormarića vraća `null`. Masa praznog ormarića je 0; masa predmeta mora biti nenegativna. Kratku sintaksu bacanja izuzetka koristimo kao ugovor, a obradu detaljno radimo u nedelji 11.
 
-## Samostalni deo — Dve vrednosti
+### Samostalni deo — Dve vrednosti
 
 Potrebno je čuvati par vrednosti različitih tipova i čitati svaku bez kastovanja. Sami oblikujte API.
 

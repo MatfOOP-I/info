@@ -7,9 +7,9 @@ import java.util.regex.Pattern;
 // Regularni izrazi (na dalje regexi) su izuzetno zabavan alat koji je u stanju  da
 // prepozna razne sablone u tekstu.
 // Na primer, pronaci sve email adrese u tekstu, pronaci sve reci
-// koje pocinju sa veliki E i sadrze barem jednu cifru.
+// koje pocinju sa veliko E i sadrze barem jednu cifru.
 // 
-// Na studijama na Matfu se regexi izucavaju na kursevi Leksicka analiza (R smer)
+// Na studijama na Matfu se regexi izucavaju na kursevima Leksicka analiza (R smer)
 // i Prevodjenje programskih jezika (I smer) gde se prikazuje i teorijska osnova
 // na koju se regexi oslanjaju.
 // 
@@ -33,10 +33,10 @@ public class RegularniIzrazi01 {
 	}
 
 	static void showOnlyNumbers(String data) {
-		// [0-9]+ 	-> 1 ili vise cifri
+		// [0-9]+ 	-> 1 ili vise cifara
 		// (...)?   -> 0 ili 1 pojavljivanja sablona unutar zagrade
-		// [.] 		-> pojavljivanja karaktera .
-		// [0-9]* 	-> 0 ili vise cifri
+		// [.] 		-> pojavljivanje karaktera .
+		// [0-9]* 	-> 0 ili vise cifara
 		Pattern pattern = Pattern.compile("[0-9]+([.][0-9]*)?");
 		Matcher matcher = pattern.matcher(data);
 		while (matcher.find())

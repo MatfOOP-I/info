@@ -20,7 +20,7 @@ public class Main {
                         Prioritet.VISOK
                 );
 
-        System.out.println(prvi.getPoruka());
+        System.out.println(prvi.poruka());
 
         RezultatOperacije los =
                 kontroler.dodajZadatak(
@@ -28,7 +28,7 @@ public class Main {
                         Prioritet.NIZAK
                 );
 
-        System.out.println(los.getPoruka());
+        System.out.println(los.poruka());
 
         kontroler.zavrsiZadatak(0);
 

@@ -13,6 +13,9 @@ TextField
 VBox
 HBox
 ListView
+ChoiceBox
+RadioButton
+ToggleGroup
 ```
 
 nego i da zadržimo OOP principe koje smo gradili tokom celog kursa.
@@ -31,9 +34,17 @@ JavaFX treba da:
 
 Pravila domena i stanje aplikacije ne treba da žive u `Button` handlerima.
 
+## Šta pravimo
+
+Na kraju časa imaćemo planer zadataka: unos opisa, izbor prioriteta, lista zadataka i dugmad za završavanje i uklanjanje.
+
+![Planer zadataka: završen zadatak je označen sa ✓, a ispod liste je poruka o rezultatu](slike/primer05-posle-zavrsavanja.png)
+
+Do njega stižemo u nekoliko koraka, od najjednostavnijeg prozora do aplikacije sa razdvojenim modelom, kontrolerom i prikazom.
+
 ---
 
-# Domen
+## Domen
 
 Pravimo jednostavan planer zadataka.
 
@@ -66,7 +77,7 @@ Nova tema ove nedelje treba da bude **organizacija GUI aplikacije**, a ne razume
 
 ---
 
-# Ciljevi
+## Ciljevi
 
 Posle vežbi student treba da ume da:
 
@@ -83,7 +94,7 @@ Posle vežbi student treba da ume da:
 
 ---
 
-# Željeni smer zavisnosti
+## Željeni smer zavisnosti
 
 U završnom primeru imamo:
 
@@ -125,7 +136,7 @@ Model ne treba da zna:
 
 ---
 
-# Zašto je to važno?
+## Zašto je to važno?
 
 Ako je model obična Java:
 
@@ -151,9 +162,9 @@ onda je ona vezana za konkretan UI.
 
 ---
 
-# Redosled primera
+## Redosled primera
 
-## [`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
+### [`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
 
 Minimalna JavaFX aplikacija.
 
@@ -180,11 +191,19 @@ Ovaj primer je namerno mali.
 
 Cilj je samo da student razume osnovnu strukturu JavaFX aplikacije.
 
+| Na početku | Klik bez unetog imena | Posle unosa imena i klika |
+|---|---|---|
+| ![Prazan prozor sa pitanjem, poljem za unos i dugmetom](slike/primer01-pocetno.png) | ![Poruka „Unesi ime.“](slike/primer01-bez-imena.png) | ![Poruka „Zdravo, Ana!“](slike/primer01-pozdrav.png) |
+
 ---
 
-## [`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
+### [`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
 
 Pravimo mali planer, ali namerno loše.
+
+![Loše organizovan planer: spolja izgleda kao da sve radi](slike/primer02-planer.png)
+
+Spolja se ne vidi ništa loše — problem je u kodu.
 
 Klasa JavaFX aplikacije:
 
@@ -197,6 +216,8 @@ Klasa JavaFX aplikacije:
 
 Sve je u jednom mestu.
 
+Prioritet se bira u `ChoiceBox<String>` sa tekstovima `NIZAK`, `SREDNJI` i `VISOK`, a zadatak je običan `String`, na primer `"[VISOK] Kupiti kartu"`.
+
 Program radi.
 
 To je važno:
@@ -205,9 +226,17 @@ To je važno:
 
 Problem je što se odgovornosti mešaju.
 
+Posebno obratite pažnju na to kako se pamti da je zadatak završen:
+
+```java
+zadaci.set(indeks, "✓ " + zadatak);
+```
+
+Stanje „završen“ je zapisano **u tekstu** koji se prikazuje. Prikaz i stanje su isti `String`: da bismo saznali da li je zadatak završen, moramo da proveravamo kako počinje tekst (`startsWith("✓ ")`), a prioritet je takođe samo deo teksta. Kad bismo promenili način prikaza (na primer `[KRAJ]` umesto `✓`), pokvarilo bi se i stanje. U sledećim primerima stanje dobija pravo mesto u klasi `Zadatak`, a prikaz ga samo čita.
+
 ---
 
-## [`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx)
+### [`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx)
 
 Izdvajamo:
 
@@ -230,7 +259,7 @@ koji model koristi iz konzole.
 
 Time dokazujemo da model postoji nezavisno od GUI-ja.
 
-### Važna ideja
+#### Važna ideja
 
 Ako moramo da pokrenemo JavaFX da bismo proverili da li:
 
@@ -242,7 +271,7 @@ radi, verovatno smo previše logike stavili u UI.
 
 ---
 
-## [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
+### [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
 
 Između UI-ja i modela uvodimo mali:
 
@@ -255,6 +284,10 @@ Kontroler:
 - prima korisničku nameru;
 - poziva model;
 - vraća rezultat operacije.
+
+Rezultat je mali `record` `RezultatOperacije` sa poljima `uspesno` i `poruka`; prikaz ga čita pozivima `rezultat.uspesno()` i `rezultat.poruka()`.
+
+Ako ništa nije izabrano (indeks je negativan), kontroler to prijavljuje kao običnu grešku korisnika. Ostali neispravni indeksi su greška pozivaoca, pa izuzetak iz modela namerno ne hvatamo.
 
 Ni kontroler ne zavisi od JavaFX-a.
 
@@ -270,9 +303,15 @@ prikaz     — korisnički interfejs
 
 ---
 
-## [`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
+### [`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
 
 Spajamo sve.
+
+| Na početku | Prekratak opis |
+|---|---|
+| ![Planer sa dva početna zadatka; izabran je prioritet SREDNJI](slike/primer05-pocetno.png) | ![Poruka „Opis mora imati bar 3 znaka.“](slike/primer05-greska.png) |
+
+Poruka o grešci dolazi iz modela (`Zadatak` ne dozvoljava prekratak opis), a prikaz je samo ispisuje.
 
 Struktura:
 
@@ -285,6 +324,7 @@ primer05_zavrsna_aplikacija/
 
     kontroler/
         KontrolerZadataka.java
+        RezultatOperacije.java
 
     prikaz/
         PlanerAplikacija.java
@@ -307,9 +347,19 @@ UI:
 
 UI **ne dodaje direktno** objekat u domensku listu.
 
+#### Izbor prioriteta: `RadioButton` i `ToggleGroup`
+
+Prioritet se bira pomoću tri `RadioButton` dugmeta (`NIZAK`, `SREDNJI`, `VISOK`) poređana u `HBox` pored polja za opis.
+
+- Sva tri dugmeta su u istoj `ToggleGroup`. Grupa obezbeđuje da u jednom trenutku bude izabrano **samo jedno** dugme: izbor jednog automatski poništava izbor prethodnog. Bez grupe bi svako dugme bilo nezavisno i mogla bi biti izabrana sva tri.
+- Dugmad pravimo petljom preko `Prioritet.values()`, a sam `Prioritet` čuvamo u `setUserData(...)`. Tako iz izabranog dugmeta (`grupa.getSelectedToggle()`) čitamo vrednost enum-a pozivom `getUserData()`, umesto da poredimo tekst na dugmetu.
+- `SREDNJI` je izabran od početka. Klik na već izabrani `RadioButton` ne poništava izbor, pa je posle toga uvek izabran tačno jedan prioritet.
+
+Model i kontroler ne znaju za `RadioButton`: kontroler dobija samo `Prioritet`.
+
 ---
 
-# Model ne treba da vraća JavaFX kolekcije
+## Model ne treba da vraća JavaFX kolekcije
 
 Namerno ne koristimo:
 
@@ -337,7 +387,7 @@ Za ovaj kurs je važnije da granica između slojeva ostane jasna.
 
 ---
 
-# Event handler
+## Event handler
 
 Kod:
 
@@ -372,7 +422,7 @@ zatvaranje prozora
 
 ---
 
-# Observer ideja
+## Observer ideja
 
 Ne uvodimo Observer kao novu veliku design-pattern temu.
 
@@ -394,7 +444,7 @@ To je dovoljno za ovaj kurs.
 
 ---
 
-# Šta pripada modelu?
+## Šta pripada modelu?
 
 Na primer:
 
@@ -416,7 +466,7 @@ Stanje zadatka pripada objektu `Zadatak`.
 
 ---
 
-# Šta pripada prikazu?
+## Šta pripada prikazu?
 
 Na primer:
 
@@ -445,7 +495,7 @@ To je odluka prikaza.
 
 ---
 
-# Kontroler nije "sve što nije UI"
+## Kontroler nije "sve što nije UI"
 
 Kontroler treba da ostane mali.
 
@@ -468,7 +518,7 @@ pripada klasi `Zadatak`.
 
 ---
 
-# Zašto ne FXML ove nedelje?
+## Zašto ne FXML ove nedelje?
 
 JavaFX podržava FXML i Scene Builder.
 
@@ -489,77 +539,7 @@ FXML se kasnije može naučiti veoma brzo kada je ova arhitektonska granica jasn
 
 ---
 
-# Predlog toka jednog dvocasa
-
-## Prvih 45 minuta
-
-### 0–15 min
-
-[`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
-
-- `Application`;
-- `Stage`;
-- `Scene`;
-- layout;
-- kontrole;
-- događaj.
-
-### 15–30 min
-
-[`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
-
-Napraviti planer koji radi.
-
-Zatim pitati:
-
-> Šta je sve odgovornost ove jedne klase?
-
-### 30–45 min
-
-Početi izdvajanje modela.
-
-Pokazati `Zadatak` i `ListaZadataka`.
-
-Pokrenuti model iz običnog `Main`.
-
----
-
-## Drugih 45 minuta
-
-### 0–15 min
-
-[`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
-
-Objasniti:
-
-```text
-prikaz → kontroler → model
-```
-
-bez insistiranja na terminologiji design patterna.
-
-### 15–35 min
-
-[`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
-
-Spojiti JavaFX prikaz sa kontrolerom.
-
-Dodavanje, završavanje i brisanje zadatka.
-
-### 35–45 min
-
-Diskusija/refaktorisanje.
-
-Pitanja:
-
-- gde bi išao novi filter?
-- gde bi išla boja visokog prioriteta?
-- gde bi išlo pravilo "opis mora imati bar 3 znaka"?
-- gde bi išlo čuvanje u datoteku?
-
----
-
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Zašto model ne treba da importuje `javafx.scene.control.Button`?
 2. Da li UI sme da koristi objekte modela?
@@ -578,7 +558,7 @@ Pitanja:
 
 ---
 
-# Mini zadatak
+## Mini zadatak
 
 U `ZADATAK.md` nalazi se aplikacija za **listu za kupovinu**.
 
@@ -594,7 +574,7 @@ Studenti treba da naprave JavaFX UI, ali model mora ostati potpuno nezavisan od 
 
 ---
 
-# Maven podešavanje
+## Maven podešavanje
 
 JavaFX od JDK-a 11 više nije deo standardnog JDK-a, pa običan Java projekat neće automatski pronaći pakete:
 
@@ -617,7 +597,7 @@ koji Maven-u:
 - podešava Java 21;
 - omogućava pokretanje JavaFX aplikacije.
 
-## Provera
+### Provera
 
 Iz foldera:
 
@@ -633,7 +613,7 @@ mvn clean compile
 
 Ako se projekat kompajlira, JavaFX dependency je pravilno učitan.
 
-## Pokretanje završnog primera
+### Pokretanje završnog primera
 
 ```bash
 mvn javafx:run
@@ -645,7 +625,7 @@ Podrazumevani `mainClass` je:
 primer05_zavrsna_aplikacija.prikaz.PlanerAplikacija
 ```
 
-## Pokretanje prvog JavaFX primera
+### Pokretanje prvog JavaFX primera
 
 Možemo privremeno promeniti glavnu klasu iz komandne linije:
 
@@ -668,7 +648,7 @@ mvn javafx:run -Djavafx.mainClass=primer02_sve_u_ui.PlanerSveUAplikaciji
 
 [`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx) i [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler) ne koriste JavaFX i mogu da se pokrenu kao obične Java klase direktno iz IDE-a.
 
-## IntelliJ IDEA
+### IntelliJ IDEA
 
 Najjednostavniji postupak je:
 
@@ -681,7 +661,7 @@ Najjednostavniji postupak je:
 
 Nije potrebno ručno dodavati JavaFX SDK u `Project Structure` ako se koristi ovaj Maven projekat.
 
-## Zašto nema `module-info.java`?
+### Zašto nema `module-info.java`?
 
 Primeri su namerno **non-modular Maven projekat**.
 
@@ -694,18 +674,3 @@ opens ...
 ```
 
 To nije cilj ove nedelje. JavaFX Maven plugin podržava i non-modular projekte, pa možemo da učimo JavaFX i separation of concerns bez dodatne module sintakse.
-
-## Priprema i granice modela
-
-Pre časa otvoriti Maven projekat i pokrenuti prvi prozor. Ponoviti lambda callback
-iz nedelje 10. Na času studenti povezuju jednu akciju, ne kucaju ceo UI od nule.
-
-`List.copyOf` štiti strukturu vraćene liste, ali ne pravi duboke kopije mutabilnih
-Zadatak objekata. U ovom jednostavnom modelu Zadatak sam dopušta završi(), pa se
-njegova invarijanta ne krši. Ako sve izmene moraju ići kroz servis, potreban je
-read-only prikaz podataka ili drugačija granica pristupa.
-
-Indeksi su bezbedni ovde samo zato što prikaz prati isti redosled kao model.
-Samostalni zadatak sa filtriranjem zahteva stabilan ID ili izabrani objekat.
-Kontroler nezavisan od JavaFX-a je izbor ovog nastavnog modela, ne univerzalno
-pravilo za svaki JavaFX kontroler.

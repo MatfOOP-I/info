@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -43,6 +44,13 @@ public class PlanerSveUAplikaciji extends Application {
         TextField unos = new TextField();
         unos.setPromptText("Opis zadatka");
 
+        /*
+         * Prioritet je običan tekst - nema enum-a, pa nema ni provere tipa.
+         */
+        ChoiceBox<String> izborPrioriteta = new ChoiceBox<>();
+        izborPrioriteta.getItems().addAll("NIZAK", "SREDNJI", "VISOK");
+        izborPrioriteta.setValue("SREDNJI");
+
         Button dodaj = new Button("Dodaj");
         Button zavrsi = new Button("Završi izabrani");
         Button ukloni = new Button("Ukloni izabrani");
@@ -61,7 +69,11 @@ public class PlanerSveUAplikaciji extends Application {
             /*
              * UI direktno menja stanje aplikacije.
              */
-            zadaci.add(opis);
+            /*
+             * Prioritet se lepi na tekst zadatka: stanje i prikaz su
+             * pomešani u jednom String-u.
+             */
+            zadaci.add("[" + izborPrioriteta.getValue() + "] " + opis);
             unos.clear();
             osveziListu();
             poruka.setText("Zadatak je dodat.");
@@ -77,6 +89,9 @@ public class PlanerSveUAplikaciji extends Application {
 
             String zadatak = zadaci.get(indeks);
 
+            /*
+             * Stanje "završen" je zapisano u tekstu - mešanje stanja i prikaza.
+             */
             if (!zadatak.startsWith("✓ ")) {
                 zadaci.set(indeks, "✓ " + zadatak);
             }
@@ -98,7 +113,7 @@ public class PlanerSveUAplikaciji extends Application {
         VBox koren = new VBox(
                 10,
                 new Label("Moji zadaci"),
-                unos,
+                new HBox(10, unos, izborPrioriteta),
                 dugmad,
                 lista,
                 poruka

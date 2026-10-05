@@ -26,8 +26,8 @@ public class TestZivotnogCiklusa {
                 );
 
         /*
-         * U realnom sistemu servis rezerviše vozilo.
-         * U ovom izolovanom testu pripremamo objekat direktno.
+         * Konstruktor Rezervacije sam zauzima vozilo, pa u ovom
+         * izolovanom testu objekat možemo pripremiti direktno, bez servisa.
          */
 
         return new Rezervacija(

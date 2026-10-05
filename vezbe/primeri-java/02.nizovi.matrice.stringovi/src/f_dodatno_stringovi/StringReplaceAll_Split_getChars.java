@@ -17,7 +17,7 @@ public class StringReplaceAll_Split_getChars {
         // brojanje samoglasnika:
         // sve sto nije samoglasnik (ukljucujuci i karaktere koji nisu slova)
         // zamenjuje se praznim stringom, tj. brise
-        // tako dobijeni string sasdrzi jedino samoglasnike pa je njegova duzina
+        // tako dobijeni string sadrzi jedino samoglasnike pa je njegova duzina
         // trazeni broj samoglasnika
         String samoglasnici = zameni.replaceAll("[^aeiou]", "");
         System.out.println("\nsamoglasnika ima " + samoglasnici.length());
@@ -55,7 +55,7 @@ public class StringReplaceAll_Split_getChars {
         String brzalica = "na vrh brda vrba mrda";
         System.out.println("brzalica: " + brzalica);
         char slova[] = new char[8];
-        /* Metodom getChars() kopira se sekvenca karatkera iz stringa u zadati karakterski niz.
+        /* Metodom getChars() kopira se sekvenca karaktera iz stringa u zadati karakterski niz.
          * Iz stringa brzalica izdvajamo karaktere pocev od pozicije 3 (prvi argument),
          * a zavrsno sa pozicijom 10 (drugi argument-1),
          * i smestamo ih u niz slova (treci argument),

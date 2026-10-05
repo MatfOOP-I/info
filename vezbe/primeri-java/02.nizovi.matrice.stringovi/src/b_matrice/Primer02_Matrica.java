@@ -48,7 +48,7 @@ public class Primer02_Matrica {
 	static void ispisi2(int[][] a) {
 		// Imamo niz nizova, tako da su elementi niza nizovi.
 		// Iteracija kroz ovakvu strukturu nam daje NIZOVE kroz koje potom iteriramo.
-		for (int[] tmp: a) { 		// tmp je u stvari i-ta vrsta matrica a
+		for (int[] tmp: a) { 		// tmp je u stvari i-ta vrsta matrice a
 			for (int e: tmp)
 				System.out.print(e + " ");
 			System.out.println();

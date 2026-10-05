@@ -20,7 +20,8 @@ Posle vežbi student treba da ume da objasni:
 - razliku između članova objekta i `static` članova klase;
 - osnovnu upotrebu `final` polja;
 - da promenljiva klasnog tipa sadrži referencu na objekat;
-- da Java argumente uvek prosleđuje po vrednosti — kod objekata se kopira vrednost reference.
+- da Java argumente uvek prosleđuje po vrednosti — kod objekata se kopira vrednost reference;
+- čemu služe paketi i koji nivoi vidljivosti postoje (`private`, bez modifikatora, `public`).
 
 ## Redosled primera
 
@@ -43,6 +44,14 @@ Model dobija identitet. Svaki novčanik ima jedinstveni ID koji se dodeljuje pom
 ### [`primer05_reference`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer05_reference)
 
 Dve promenljive mogu pokazivati na isti objekat. Primer takođe demonstrira da promena samog objekta iz metode ostaje vidljiva pozivaocu, ali prevezivanje lokalnog parametra na drugi objekat ne menja promenljivu pozivaoca.
+
+### [`primer06_paketi`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer06_paketi)
+
+Pokrenuti `primer06_paketi.Main`. `package` daje puno ime tipu, a `import` skraćuje
+pisanje imena. Podpaket nije isti paket: `a` i `a.b` imaju odvojene granice pristupa.
+`private` član vidi njegova klasa (uz pravila pristupa ugnježdenih tipova), član bez
+modifikatora vidi isti paket, a `public` je javni API. `protected` detaljnije radimo
+uz nasleđivanje. `final` referenca ne garantuje da je objekat na koji pokazuje nepromenljiv.
 
 ## Centralna poruka
 
@@ -79,13 +88,7 @@ novcanik.plati(750);
 
 Na kraju direktorijuma nalazi se `ZADATAK.md`. Zadatak koristi isti skup ideja, ali drugi domen, kako bi student morao sam da prepozna invarijante i smislen API klase.
 
-## Paketi i vidljivost
-
-Pokrenuti `primer06_paketi.Main`. `package` daje puno ime tipu, a `import` skraćuje
-pisanje imena. Podpaket nije isti paket: `a` i `a.b` imaju odvojene granice pristupa.
-`private` član vidi njegova klasa (uz pravila pristupa ugnježdenih tipova), član bez
-modifikatora vidi isti paket, a `public` je javni API. `protected` detaljnije radimo
-uz nasleđivanje. `final` referenca ne garantuje da je objekat na koji pokazuje nepromenljiv.
+## Granice operacija
 
 Provera `iznos > Integer.MAX_VALUE - stanje` sprečava prekoračenje pre sabiranja.
 Odbijanje operacije ne sme delimično da promeni objekat.

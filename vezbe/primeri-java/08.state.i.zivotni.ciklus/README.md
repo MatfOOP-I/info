@@ -46,9 +46,9 @@ Posle vežbi student treba da ume da:
 
 ---
 
-# Redosled primera
+## Redosled primera
 
-## [`primer01_stanje_kao_podklasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer01_stanje_kao_podklasa)
+### [`primer01_stanje_kao_podklasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer01_stanje_kao_podklasa)
 
 Prvo pokušavamo da modelujemo:
 
@@ -81,7 +81,7 @@ To otvara pitanje:
 
 > Da li se promenila porudžbina ili samo njeno stanje?
 
-## [`primer02_problem_identiteta`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer02_problem_identiteta)
+### [`primer02_problem_identiteta`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer02_problem_identiteta)
 
 Demonstriramo problem sa referencama.
 
@@ -97,7 +97,7 @@ Ali naš model kaže:
 
 To je signal da možda modelujemo stanje na pogrešnom mestu.
 
-## [`primer03_enum_i_switch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer03_enum_i_switch)
+### [`primer03_enum_i_switch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer03_enum_i_switch)
 
 Uvodi se jednostavnije rešenje:
 
@@ -126,7 +126,7 @@ Važna poruka:
 
 > State pattern nije obavezan čim postoji enum.
 
-## [`primer04_rast_switch_logike`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer04_rast_switch_logike)
+### [`primer04_rast_switch_logike`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer04_rast_switch_logike)
 
 Kada se pravila povećaju, iste provere stanja počinju da se ponavljaju kroz više metoda.
 
@@ -134,7 +134,7 @@ Tada se ponašanje vezano za stanje rasipa kroz jednu veliku klasu.
 
 Tu se javlja razlog da pokušamo drugačiji dizajn.
 
-## [`primer05_state_objekti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer05_state_objekti)
+### [`primer05_state_objekti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer05_state_objekti)
 
 Uvodimo interfejs:
 
@@ -143,8 +143,12 @@ public interface StanjePorudzbine {
     void plati(Porudzbina porudzbina);
     void posalji(Porudzbina porudzbina);
     void otkazi(Porudzbina porudzbina);
+
+    String naziv();
 }
 ```
+
+Metoda `naziv()` vraća ime stanja; `Porudzbina.trenutnoStanje()` je samo prosleđuje.
 
 Konkretna stanja:
 
@@ -167,7 +171,7 @@ i delegira:
 stanje.plati(this);
 ```
 
-## [`primer06_tranzicije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer06_tranzicije)
+### [`primer06_tranzicije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer06_tranzicije)
 
 Konkretno stanje može da odredi sledeće stanje.
 
@@ -187,7 +191,7 @@ Tako pravilo tranzicije živi uz ponašanje stanja kome pripada.
 
 ---
 
-# State obrazac
+## State obrazac
 
 State koristimo kada:
 
@@ -206,7 +210,7 @@ State ima smisla kada životni ciklus i ponašanje postanu dovoljno složeni.
 
 ---
 
-# State i Strategy — sličnosti i razlike
+## State i Strategy — sličnosti i razlike
 
 Tehnički mogu izgledati slično:
 
@@ -220,7 +224,7 @@ polimorfizam
 
 Ali namera je drugačija.
 
-## Strategy
+### Strategy
 
 Pitanje je:
 
@@ -236,7 +240,7 @@ Plivanje
 
 Spoljni kod često bira strategiju.
 
-## State
+### State
 
 Pitanje je:
 
@@ -254,7 +258,7 @@ Sama stanja često upravljaju prelazima.
 
 ---
 
-# Važna ideja: identitet != stanje
+## Važna ideja: identitet != stanje
 
 Porudžbina sa brojem:
 
@@ -286,7 +290,7 @@ nego da za svaku tranziciju pravimo novi objekat porudžbine.
 
 ---
 
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Zašto `PlacenaPorudzbina extends Porudzbina` na prvi pogled izgleda logično?
 2. Da li "plaćena" opisuje vrstu porudžbine ili trenutno stanje?
@@ -303,7 +307,7 @@ nego da za svaku tranziciju pravimo novi objekat porudžbine.
 
 ---
 
-# Mini zadatak
+## Mini zadatak
 
 U fajlu `ZADATAK.md` nalazi se model **rezervacije bioskopske karte**.
 
@@ -317,7 +321,9 @@ KREIRANA → PLACENA → ISKORISCENA
 
 Cilj je da student samostalno primeni State bez kopiranja porudžbine.
 
-## Najpre tabela prelaza
+### Tabela prelaza porudžbine (primer06)
+
+Pre implementacije zadatka korisno je videti kako izgleda tabela prelaza za porudžbinu iz `primer06_tranzicije`. Za rezervaciju karte treba napraviti sličnu tabelu.
 
 | Stanje | plati | posalji | isporuci | otkazi |
 |---|---|---|---|---|

@@ -52,7 +52,7 @@ Napisati program koji pravi dve kartice, izvršava nekoliko uspešnih i neuspeš
 
 ## Samostalni deo — Rezervoar
 
-Rezervoar ima zadat kapacitet i trenutno količinu 0. Dozvoljeni su dopuna i potrošnja pozitivne količine. Nemoguća operacija se odbija bez delimične promene. Samostalno odrediti javni API.
+Rezervoar ima zadat kapacitet i trenutnu količinu 0. Dozvoljeni su dopuna i potrošnja pozitivne količine. Nemoguća operacija se odbija bez delimične promene. Samostalno odrediti javni API.
 
 **Kriterijum provere:** Kapacitet 10: dopuna 8 uspeva; dopuna 3 ne uspeva i ostaje 8; potrošnja 8 uspeva i ostaje 0. Koja polja su final?
 

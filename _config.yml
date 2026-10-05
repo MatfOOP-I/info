@@ -323,3 +323,4 @@ exclude:
   - Gemfile.lock
   - "**/*.iml"
   - vendor
+  - "vezbe/primeri-java/*/ZA-ASISTENTE.md"   # napomene za asistente: samo na GitHub-u

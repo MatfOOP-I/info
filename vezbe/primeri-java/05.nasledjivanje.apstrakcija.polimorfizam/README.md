@@ -67,7 +67,7 @@ ali je implementacija različita.
 
 ### [`primer03_apstraktna_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer03_apstraktna_klasa)
 
-Primećujemo da ne postoji mnogo smisla praviti "neki opšti Prevoz" ako ne znamo kako mu se računa cena.
+Primećujemo da nema mnogo smisla praviti "neki opšti Prevoz" ako ne znamo kako mu se računa cena.
 
 `Prevoz` zato postaje `abstract`, a `izracunajCenu` apstraktna metoda.
 
@@ -91,7 +91,7 @@ bez pitanja koje je konkretne klase objekat.
 
 ### [`primer05_bez_grananja_po_tipu`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer05_bez_grananja_po_tipu)
 
-Namerno pokazujemo zašto kod tipa:
+Pokazujemo kako izgleda kod u kome ne postoji grananje oblika:
 
 ```java
 if (prevoz instanceof Autobus) { ... }
@@ -99,13 +99,13 @@ else if (prevoz instanceof Voz) { ... }
 else if (prevoz instanceof Taksi) { ... }
 ```
 
-često znači da nismo iskoristili polimorfizam.
+Takav lanac često znači da nismo iskoristili polimorfizam. Metoda `Ponuda.ispisi` prima samo `Prevoz` i ne zna koje konkretne klase postoje.
 
 Dodavanje nove vrste prevoza ne treba da zahteva menjanje svakog mesta u programu koje računa cenu.
 
 ### [`primer06_rezervacija_prevoza`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer06_rezervacija_prevoza)
 
-Završni primer spaja prethodne dve nedelje:
+Ovaj primer spaja prethodne dve nedelje:
 
 ```text
 Autobus IS-A Prevoz
@@ -117,6 +117,10 @@ RezervacijaPrevoza HAS-A Prevoz
 ```
 
 Ovo je važna poruka: **kompozicija i nasleđivanje nisu konkurentske tehnike**. U realnom modelu često postoje istovremeno.
+
+### [`primer07_overload_override`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer07_overload_override)
+
+Poslednji primer razlikuje overloading i overriding, i pokazuje zašto je `toString()` posebna metoda. Objašnjenje je u odeljku [Overloading, overriding i toString](#overloading-overriding-i-tostring).
 
 ## Centralne poruke
 
@@ -163,7 +167,7 @@ U fajlu `ZADATAK.md` nalazi se model ulaznica za događaj. Zadatak traži legiti
 
 ## Overloading, overriding i toString
 
-Pokrenuti `primer07_overload_override.Main`. Različiti potpisi iste metode daju
+Pokrenite `primer07_overload_override.Main`. Različiti potpisi iste metode daju
 overloading; izbor se zasniva na tipovima izraza pri kompajliranju. Override iste
 instance metode bira implementaciju prema stvarnom objektu pri izvršavanju.
 `protected` u primeru dopušta podklasi u drugom paketu da pozove nasleđenu metodu;

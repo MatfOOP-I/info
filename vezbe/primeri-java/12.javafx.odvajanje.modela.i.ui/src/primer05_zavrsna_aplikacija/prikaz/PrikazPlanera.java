@@ -1,12 +1,17 @@
 package primer05_zavrsna_aplikacija.prikaz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -26,8 +31,8 @@ public class PrikazPlanera {
     private final KontrolerZadataka kontroler;
 
     private final TextField unosOpisa = new TextField();
-    private final ChoiceBox<Prioritet> izborPrioriteta =
-            new ChoiceBox<>();
+    private final ToggleGroup grupaPrioriteta = new ToggleGroup();
+    private final HBox izborPrioriteta = new HBox(5);
     private final ListView<String> listaZadataka =
             new ListView<>();
     private final Label poruka = new Label();
@@ -35,10 +40,39 @@ public class PrikazPlanera {
     public PrikazPlanera(KontrolerZadataka kontroler) {
         this.kontroler = kontroler;
 
-        izborPrioriteta.getItems().addAll(Prioritet.values());
-        izborPrioriteta.setValue(Prioritet.SREDNJI);
-
         unosOpisa.setPromptText("Opis zadatka");
+
+        napraviIzborPrioriteta();
+    }
+
+    /**
+     * Pravi po jedan RadioButton za svaki prioritet. Sva dugmad su u istoj
+     * ToggleGroup, pa u jednom trenutku može biti izabrano samo jedno.
+     *
+     * Prioritet čuvamo u userData dugmeta, da ga kasnije pročitamo bez
+     * poređenja teksta.
+     */
+    private void napraviIzborPrioriteta() {
+        for (Prioritet prioritet : Prioritet.values()) {
+            RadioButton dugme = new RadioButton(prioritet.name());
+            dugme.setUserData(prioritet);
+            dugme.setToggleGroup(grupaPrioriteta);
+            izborPrioriteta.getChildren().add(dugme);
+
+            /*
+             * Jedno dugme mora biti izabrano od početka. Klik na već
+             * izabrani RadioButton ne poništava izbor, pa posle toga
+             * uvek postoji izabrani prioritet.
+             */
+            if (prioritet == Prioritet.SREDNJI) {
+                dugme.setSelected(true);
+            }
+        }
+    }
+
+    private Prioritet izabraniPrioritet() {
+        Toggle izabrano = grupaPrioriteta.getSelectedToggle();
+        return (Prioritet) izabrano.getUserData();
     }
 
     /**
@@ -87,6 +121,7 @@ public class PrikazPlanera {
         BorderPane koren = new BorderPane();
         koren.setPadding(new Insets(15));
         koren.setTop(naslov);
+        BorderPane.setMargin(naslov, new Insets(0, 0, 10, 0));
         koren.setCenter(centar);
 
         osveziPrikaz();
@@ -98,12 +133,12 @@ public class PrikazPlanera {
         RezultatOperacije rezultat =
                 kontroler.dodajZadatak(
                         unosOpisa.getText(),
-                        izborPrioriteta.getValue()
+                        izabraniPrioritet()
                 );
 
-        poruka.setText(rezultat.getPoruka());
+        poruka.setText(rezultat.poruka());
 
-        if (rezultat.isUspesno()) {
+        if (rezultat.uspesno()) {
             unosOpisa.clear();
             osveziPrikaz();
         }
@@ -116,9 +151,9 @@ public class PrikazPlanera {
         RezultatOperacije rezultat =
                 kontroler.zavrsiZadatak(indeks);
 
-        poruka.setText(rezultat.getPoruka());
+        poruka.setText(rezultat.poruka());
 
-        if (rezultat.isUspesno()) {
+        if (rezultat.uspesno()) {
             osveziPrikaz();
         }
     }
@@ -130,9 +165,9 @@ public class PrikazPlanera {
         RezultatOperacije rezultat =
                 kontroler.ukloniZadatak(indeks);
 
-        poruka.setText(rezultat.getPoruka());
+        poruka.setText(rezultat.poruka());
 
-        if (rezultat.isUspesno()) {
+        if (rezultat.uspesno()) {
             osveziPrikaz();
         }
     }
@@ -141,12 +176,19 @@ public class PrikazPlanera {
      * Formatiranje je odluka prikaza, ne modela.
      */
     private void osveziPrikaz() {
-        listaZadataka.getItems().clear();
+        int izabrani =
+                listaZadataka.getSelectionModel().getSelectedIndex();
 
+        List<String> redovi = new ArrayList<>();
         for (Zadatak zadatak : kontroler.getZadaci()) {
-            listaZadataka.getItems().add(
-                    formatiraj(zadatak)
-            );
+            redovi.add(formatiraj(zadatak));
+        }
+        listaZadataka.getItems().setAll(redovi);
+
+        // setAll poništava izbor; vraćamo ga ako taj indeks još postoji.
+        if (izabrani >= 0
+                && izabrani < listaZadataka.getItems().size()) {
+            listaZadataka.getSelectionModel().select(izabrani);
         }
     }
 
@@ -155,7 +197,7 @@ public class PrikazPlanera {
                 zadatak.isZavrsen() ? "✓" : " ";
 
         return String.format(
-                "[%s] %-7s | %s",
+                "[%s] %s | %s",
                 oznaka,
                 zadatak.getPrioritet(),
                 zadatak.getOpis()

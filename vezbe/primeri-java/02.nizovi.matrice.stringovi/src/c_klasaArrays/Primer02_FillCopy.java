@@ -3,7 +3,7 @@ package c_klasaArrays;
 public class Primer02_FillCopy {
 
 	/**
-	 * Program prikazuje koriscenje funkcija Arrays.Fill i Arrays.copyRange
+	 * Program prikazuje koriscenje funkcija Arrays.fill i Arrays.copyOfRange
 	 */
 	public static void main(String[] args) {
 		// Kako da napravimo niz duzine 50 koji ima sve brojeve jednake 42?

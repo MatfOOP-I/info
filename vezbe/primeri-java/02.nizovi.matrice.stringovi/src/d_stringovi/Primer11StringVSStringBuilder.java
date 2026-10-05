@@ -1,6 +1,6 @@
 package d_stringovi;
 
-// Primer ilustruje razliku u brzini konkatenaciji stringova koristeci 'String' i 'StringBuilder'.
+// Primer ilustruje razliku u brzini konkatenacije stringova koristeci 'String' i 'StringBuilder'.
 public class Primer11StringVSStringBuilder {
 
 	static int TEST_SIZE = 10000;

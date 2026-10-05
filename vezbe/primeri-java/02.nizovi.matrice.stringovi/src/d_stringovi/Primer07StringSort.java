@@ -1,8 +1,8 @@
 package d_stringovi;
 
-/// Program ilistruje kako mozemo sortirati String.
+/// Program ilustruje kako mozemo sortirati String.
 /// -> Ne mozemo ga sortirati u mestu usled imutabilnosti,
-///     no mozemo ga transforsmisati u niz karaktera,
+///     no mozemo ga transformisati u niz karaktera,
 ///     sortirati niz karaktera i dobiti nazad String.
 public class Primer07StringSort {
 	public static void main(String[] args) {

@@ -28,4 +28,4 @@ Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatk
 - [`primeri/Primer09Character.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/primeri/Primer09Character.java)
 - [`primeri/Primer10Math.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/primeri/Primer10Math.java)
 
-Fibonacci je sada završeno referentno rešenje. Za samostalnu vežbu napisati iterativnu verziju bez gledanja rešenja. Rekurzivni primer je namerno spor i ograničen na n <= 30.
+`Primer08Fibonacci` sadrži iterativno (referentno) i rekurzivno rešenje. Za samostalnu vežbu pokušajte da iterativnu verziju napišete bez gledanja rešenja. Rekurzivni primer je namerno spor i ograničen na n <= 30.

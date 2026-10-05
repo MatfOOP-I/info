@@ -7,7 +7,7 @@ public class Primer03_RazmenaVrsti {
 	static Scanner sc = new Scanner(System.in);
 
 	/**
-	 * Program unosi matricu, a potom vrsi obrtanje i-te i j-te vrste.
+	 * Program unosi matricu, a potom vrsi razmenu i-te i j-te vrste.
 	 */
 	public static void main(String[] args) {
 		int[][] a = unesi();
@@ -18,7 +18,7 @@ public class Primer03_RazmenaVrsti {
 		
 		// Proveravamo da li su uneti indeksi validnih vrsti
 		if (i < 0 || i >= a.length || j < 0 || j >= a.length) {
-			System.out.println("Indeks vrste more biti izmedju 0 i " + (a.length-1));
+			System.out.println("Indeks vrste mora biti izmedju 0 i " + (a.length-1));
 			System.exit(1);
 		}
 		System.out.println("Pre razmene vrsta: " + i + " i " + j);

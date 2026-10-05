@@ -31,7 +31,7 @@ Drugi red sadrži grešku: `abc` nije broj godina.
 
 ---
 
-# Ciljevi
+## Ciljevi
 
 Posle vežbi student treba da ume da:
 
@@ -48,9 +48,9 @@ Posle vežbi student treba da ume da:
 
 ---
 
-# Redosled primera
+## Redosled primera
 
-## [`primer01_citanje_fajla`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer01_citanje_fajla)
+### [`primer01_citanje_fajla`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer01_citanje_fajla)
 
 Prvo samo čitamo fajl:
 
@@ -74,7 +74,7 @@ Odmah se pojavljuje pitanje:
 
 > Šta ako fajl ne postoji?
 
-## [`primer02_try_catch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer02_try_catch)
+### [`primer02_try_catch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer02_try_catch)
 
 Otvaranje i čitanje fajla može da baci `IOException`.
 
@@ -94,7 +94,7 @@ Poenta je:
 
 > Ovaj deo programa zna kako da reaguje na konkretnu grešku.
 
-## [`primer03_parsiranje_i_vise_gresaka`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer03_parsiranje_i_vise_gresaka)
+### [`primer03_parsiranje_i_vise_gresaka`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer03_parsiranje_i_vise_gresaka)
 
 Sada čitamo CSV red i pretvaramo:
 
@@ -112,7 +112,7 @@ Možemo dobiti različite probleme:
 
 To su različite greške i ne moraju sve da se tretiraju isto.
 
-## [`primer04_sopstveni_izuzetak`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer04_sopstveni_izuzetak)
+### [`primer04_sopstveni_izuzetak`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer04_sopstveni_izuzetak)
 
 Uvodi se:
 
@@ -142,7 +142,7 @@ throws NeispravanRedException
 
 Time jasno komunicira deo svog ugovora.
 
-## [`primer05_try_with_resources`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer05_try_with_resources)
+### [`primer05_try_with_resources`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer05_try_with_resources)
 
 Ručno zatvaranje:
 
@@ -164,7 +164,7 @@ Resurs se zatvara automatski.
 
 Ovo je preferirani način za resurse koji implementiraju `AutoCloseable`.
 
-## [`primer06_odgovornost_za_gresku`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer06_odgovornost_za_gresku)
+### [`primer06_odgovornost_za_gresku`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer06_odgovornost_za_gresku)
 
 Najvažniji primer.
 
@@ -198,11 +198,11 @@ Ovde se lepo vidi razdvajanje odgovornosti.
 
 ---
 
-# Tehničke i domenske greške
+## Tehničke i domenske greške
 
 Koristan mentalni model:
 
-## Tehnička greška
+### Tehnička greška
 
 Primeri:
 
@@ -214,7 +214,7 @@ disk problem
 
 Tipično dolaze iz biblioteke, npr. `IOException`.
 
-## Domenska greška
+### Domenska greška
 
 Primeri:
 
@@ -234,9 +234,9 @@ NeispravanRedException
 
 ---
 
-# `throw` i `throws`
+## `throw` i `throws`
 
-## `throw`
+### `throw`
 
 Zaista bacamo objekat izuzetka:
 
@@ -244,7 +244,7 @@ Zaista bacamo objekat izuzetka:
 throw new NeispravanRedException("...");
 ```
 
-## `throws`
+### `throws`
 
 U potpisu metode najavljujemo da metoda može da prosledi određeni izuzetak:
 
@@ -257,11 +257,11 @@ Ove dve stvari ne treba mešati.
 
 ---
 
-# Checked i unchecked izuzeci
+## Checked i unchecked izuzeci
 
 Java razlikuje dve velike grupe.
 
-## Checked
+### Checked
 
 Primer:
 
@@ -274,7 +274,7 @@ Kompajler zahteva da ga:
 - uhvatimo;
 - ili prosledimo pomoću `throws`.
 
-## Unchecked
+### Unchecked
 
 Primer:
 
@@ -294,7 +294,7 @@ Važno je razumeti:
 
 ---
 
-# Zašto ne `catch (Exception e)` svuda?
+## Zašto ne `catch (Exception e)` svuda?
 
 Zato što takav `catch` često sakrije razliku između potpuno različitih problema.
 
@@ -316,7 +316,7 @@ kada zaista znamo šta sa tim problemom treba uraditi.
 
 ---
 
-# `finally`
+## `finally`
 
 `finally` treba objasniti jer je deo jezika:
 
@@ -340,7 +340,7 @@ jer je bezbednije i čitljivije.
 
 ---
 
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Zašto metoda za čitanje fajla može da ne uspe iako je naš kod ispravan?
 2. Koja je razlika između `throw` i `throws`?
@@ -357,29 +357,7 @@ jer je bezbednije i čitljivije.
 
 ---
 
-# Šta namerno NE radimo detaljno
-
-Zbog ograničenja kursa ne ulazimo duboko u:
-
-- `FileInputStream` i binarne fajlove;
-- serijalizaciju Java objekata;
-- `ObjectInputStream`;
-- `RandomAccessFile`;
-- celu hijerarhiju `java.nio`;
-- kompleksne strategije retry mehanizama.
-
-Student treba da izađe sa jasnim modelom:
-
-```text
-fajl je resurs
-čitanje može da ne uspe
-greške imaju tip
-odgovornost za obradu greške pripada odgovarajućem nivou programa
-```
-
----
-
-# Mini zadatak
+## Mini zadatak
 
 U `ZADATAK.md` nalazi se učitavanje spiska prijavljenih studenata iz fajla.
 

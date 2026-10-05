@@ -7,7 +7,7 @@ public class Primer09StringBuilderFunctions {
 
         // Metod append vraca referencu na StringBuilder nad kojim je pozvan,
         // tako da mozemo ulancavati pozive (ovaj nacin rada koriste i neki drugi jezici)
-        sb.append("Hello").append(" ").append("word, how are you today?");
+        sb.append("Hello").append(" ").append("world, how are you today?");
 
         // Sadrzaj StringBuildera obrce u mestu.
         sb.reverse();

@@ -3,7 +3,7 @@ package primeri;
 public class Primer03 {
 	
 	// Mozemo pisati funkcije kao u programskom jeziku C.
-	// Nije treuntno neophodno razumeti sta je static.
+	// Nije trenutno neophodno razumeti sta je static.
 	// Kratko objasnjenje je da ako ga ne stavimo, funkcija ce biti
 	// shvacena kao metod koji jedino mozemo pozivati nad konkretnim objektom,
 	// a ne kao jednostavnu (C-oliku) funkciju.

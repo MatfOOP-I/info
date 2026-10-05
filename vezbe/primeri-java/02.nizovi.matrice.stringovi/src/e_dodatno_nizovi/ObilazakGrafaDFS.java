@@ -54,7 +54,7 @@ public class ObilazakGrafaDFS {
 
 		// Obilazimo sve neposecene susede tekuceg cvora
 		for (int i = 0; i < graph.length; i++) {
-			// ako postoji put od cvora 'i' do cvora 'j' i cvor 'j' nije posecen
+			// ako postoji grana od cvora 'currentNode' do cvora 'i' i cvor 'i' nije posecen
 			if (!visited[i] && graph[currentNode][i] == 1)
 				performDfs(graph, i, visited);
 		}

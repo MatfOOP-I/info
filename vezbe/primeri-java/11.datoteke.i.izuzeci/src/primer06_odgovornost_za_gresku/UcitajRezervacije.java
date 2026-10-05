@@ -45,7 +45,7 @@ public class UcitajRezervacije {
         /*
          * IOException ne hvatamo ovde.
          *
-         * Ovaj metod ne zna šta aplikacija treba da uradi
+         * Ova metoda ne zna šta aplikacija treba da uradi
          * ako fajl uopšte nije dostupan.
          *
          * Zato ga prosleđuje pozivaocu.

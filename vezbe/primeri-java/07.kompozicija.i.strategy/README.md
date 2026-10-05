@@ -29,21 +29,9 @@ Posle vežbi student treba da ume da:
 - razume osnovnu ideju Strategy obrasca;
 - objasni zašto Strategy koristi polimorfizam, iako ne mora da koristi novu hijerarhiju domena.
 
-## Važna napomena
+## Redosled primera
 
-Ne treba početi čas rečenicom:
-
-> "Danas radimo Strategy pattern."
-
-Bolje je da studenti prvo vide loše rešenje i sami osete problem.
-
-Tek kada kompozicija reši problem, uvodimo ime obrasca.
-
----
-
-# Redosled primera
-
-## [`primer01_naivno_nasledjivanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer01_naivno_nasledjivanje)
+### [`primer01_naivno_nasledjivanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer01_naivno_nasledjivanje)
 
 Počinjemo sa:
 
@@ -59,7 +47,7 @@ To je namerno.
 
 Važna lekcija je da loš dizajn često ne izgleda loše dok je sistem mali.
 
-## [`primer02_eksplozija_hijerarhije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer02_eksplozija_hijerarhije)
+### [`primer02_eksplozija_hijerarhije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer02_eksplozija_hijerarhije)
 
 Dodajemo drugu osobinu:
 
@@ -93,7 +81,7 @@ Ključno pitanje:
 
 > Da li je `HodajuciAgresivniLik` zaista nova VRSTA lika, ili smo samo spojili dva ponašanja?
 
-## [`primer03_izdvajanje_kretanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer03_izdvajanje_kretanja)
+### [`primer03_izdvajanje_kretanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer03_izdvajanje_kretanja)
 
 Prvo izdvajamo samo jednu osu ponašanja:
 
@@ -123,7 +111,7 @@ i delegira:
 ponasanjeKretanja.kreciSe(ime);
 ```
 
-## [`primer04_vise_strategija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer04_vise_strategija)
+### [`primer04_vise_strategija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer04_vise_strategija)
 
 Dodajemo novu nezavisnu osu:
 
@@ -149,7 +137,7 @@ Lucija
 
 Drugi lik može imati drugu kombinaciju, bez nove klase.
 
-## [`primer05_promena_ponasanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer05_promena_ponasanja)
+### [`primer05_promena_ponasanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer05_promena_ponasanja)
 
 Najvažniji primer.
 
@@ -181,11 +169,11 @@ lucija.postaviPonasanjeKretanja(new Plivanje());
 
 To je teško elegantno modelovati hijerarhijom podklasa.
 
-## [`primer06_strategy`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer06_strategy)
+### [`primer06_strategy`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer06_strategy)
 
 Tek sada dajemo ime ideji.
 
-### Strategy
+#### Strategy
 
 Strategy obrazac koristimo kada:
 
@@ -199,14 +187,12 @@ U našem primeru:
 ```text
 PonasanjeKretanja = strategija
 Hodanje           = konkretna strategija
-Voznja             = konkretna strategija
+Voznja            = konkretna strategija
 Plivanje           = konkretna strategija
 Lik                = objekat koji koristi strategiju
 ```
 
----
-
-# Zašto ovo nije samo "još jedan interfejs"?
+## Zašto ovo nije samo "još jedan interfejs"?
 
 Prethodne nedelje smo interfejs učili kao ugovor.
 
@@ -222,9 +208,7 @@ Poenta je:
 
 > ponašanje smo izdvojili iz klase i pretvorili u zamenljiv objekat.
 
----
-
-# Kompozicija i delegiranje
+## Kompozicija i delegiranje
 
 Strategy ovde funkcioniše zato što `Lik` **ima** objekat koji predstavlja ponašanje:
 
@@ -248,9 +232,7 @@ to je delegiranje.
 
 On samo zna **kome da prosledi posao**.
 
----
-
-# Da li je nasleđivanje sada loše?
+## Da li je nasleđivanje sada loše?
 
 Ne.
 
@@ -268,9 +250,7 @@ Dobro pitanje je:
 
 > Da li uvodim novi tip objekta ili samo novu varijantu njegovog ponašanja?
 
----
-
-# Dependency injection — samo ideja
+## Dependency injection — samo ideja
 
 Pogledati konstruktor:
 
@@ -298,9 +278,7 @@ Za sada je dovoljno zapamtiti:
 
 Ne uvodimo frameworke niti dodatnu terminologiju.
 
----
-
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Zašto početni dizajn sa `HodajuciLik` i `VozeciLik` ne izgleda odmah loše?
 2. Šta se menja kada dodamo drugu nezavisnu osobinu?
@@ -317,9 +295,7 @@ Ne uvodimo frameworke niti dodatnu terminologiju.
 13. Da li je svaka upotreba interfejsa automatski Strategy pattern?
 14. Kada biste ipak izabrali nasleđivanje umesto Strategy-ja?
 
----
-
-# Mini zadatak
+## Mini zadatak
 
 U fajlu `ZADATAK.md` nalazi se sistem navigacije.
 
@@ -331,7 +307,7 @@ Ideja je namerno drugačija od gaming primera:
 
 Cilj je da student prepozna isti dizajnerski princip bez kopiranja naziva iz glavnog primera.
 
-## Od demonstracije do ponašanja koje vraća rezultat
+### Od demonstracije do ponašanja koje vraća rezultat
 
 Ispis u primerima je svedena demonstracija delegiranja. U samostalnom zadatku
 strategija računa broj minuta; prikaz rezultata ostaje pozivaocu. Ne treba koristiti

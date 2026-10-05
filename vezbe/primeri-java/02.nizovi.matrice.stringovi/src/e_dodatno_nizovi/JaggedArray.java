@@ -24,7 +24,7 @@ public class JaggedArray {
 		
 		int[][] testerica = new int[n][];
 		for (int i = 0; i < n; i++) {
-			System.out.println("Unesitu duzinu niza br " + i);
+			System.out.println("Unesite duzinu niza br " + i);
 			int m = sc.nextInt();
 			testerica[i] = new int[m];
 			System.out.println("Unesite elemente:");

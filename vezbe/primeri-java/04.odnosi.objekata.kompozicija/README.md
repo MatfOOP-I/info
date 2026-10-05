@@ -86,9 +86,7 @@ Ako kupac promeni svoju trenutnu adresu, dobija novu `Adresa` referencu. Ranije 
 
 Ovo nije pravilo da svaki objekat treba da bude immutable. Cilj je da student vidi da je mutabilnost **dizajnerska odluka**, a ne podrazumevano stanje svake klase.
 
-#
-
-## [`primer06_record_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer06_record_adresa)
+### [`primer06_record_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer06_record_adresa)
 
 Posle klasične nepromenljive `Adresa` klase pokazujemo savremeni Java tip:
 
@@ -143,7 +141,7 @@ kupac.preseliSe(
 );
 ```
 
-### Record nije zamena za svaku klasu
+#### Record nije zamena za svaku klasu
 
 Ne treba pretvarati svaku klasu u `record`.
 
@@ -155,7 +153,7 @@ Dobro početno pitanje je:
 
 Ako je odgovor da, `record` može biti dobar izbor.
 
-### Record može da ima validaciju i metode
+#### Record može da ima validaciju i metode
 
 U primeru koristimo kompaktni konstruktor:
 
@@ -175,7 +173,7 @@ public String punaAdresa()
 
 Dakle, `record` nije samo "struct sa automatskim getterima".
 
-# Centralne poruke
+## Centralne poruke
 
 ### 1. Složen objekat se često gradi od manjih objekata
 

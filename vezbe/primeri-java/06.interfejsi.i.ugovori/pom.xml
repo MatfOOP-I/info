@@ -5,7 +5,6 @@
  <groupId>rs.ac.bg.matf.oop</groupId><artifactId>nedelja06</artifactId><version>1.0</version>
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><maven.compiler.release>21</maven.compiler.release>
-  <javafx.mainClass>primer05_zavrsna_aplikacija.prikaz.PlanerAplikacija</javafx.mainClass>
  </properties>
  
  <build>

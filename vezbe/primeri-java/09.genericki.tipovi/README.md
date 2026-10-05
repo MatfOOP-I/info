@@ -41,7 +41,7 @@ Njihov glavni cilj u ovom kursu je:
 
 ---
 
-# Ciljevi
+## Ciljevi
 
 Posle vežbi student treba da ume da:
 
@@ -57,9 +57,9 @@ Posle vežbi student treba da ume da:
 
 ---
 
-# Redosled primera
+## Redosled primera
 
-## [`primer01_problem_sa_object`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer01_problem_sa_object)
+### [`primer01_problem_sa_object`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer01_problem_sa_object)
 
 Pravimo klasu:
 
@@ -91,7 +91,7 @@ Knjiga knjiga = (Knjiga) paket.getSadrzaj();
 
 kompajler to dozvoljava, a grešku dobijamo tek tokom izvršavanja.
 
-## [`primer02_genericka_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer02_genericka_klasa)
+### [`primer02_genericka_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer02_genericka_klasa)
 
 Uvodimo:
 
@@ -125,7 +125,7 @@ paket.postaviSadrzaj(new Knjiga(...));
 
 Greška se otkriva **pri kompajliranju**, a ne kod korisnika programa.
 
-## [`primer03_genericka_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer03_genericka_metoda)
+### [`primer03_genericka_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer03_genericka_metoda)
 
 Nije obavezno da cela klasa bude generička.
 
@@ -140,9 +140,9 @@ public static <T> void prebaci(
 
 Tip `T` se zaključuje iz argumenata.
 
-Metoda radi i za telefone i za knjige, bez dupliranja implementacije.
+Ista metoda radi za `Paket<String>`, `Paket<Integer>` i paket bilo kog drugog tipa, bez dupliranja implementacije.
 
-## [`primer04_genericki_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer04_genericki_interfejs)
+### [`primer04_genericki_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer04_genericki_interfejs)
 
 Interfejs takođe može biti generički:
 
@@ -155,6 +155,7 @@ Njegov ugovor kaže:
 ```java
 void smesti(T predmet);
 T preuzmi();
+boolean jePrazno();
 ```
 
 Implementacija:
@@ -175,7 +176,7 @@ Map<K, V>
 
 iz standardne biblioteke.
 
-## [`primer05_ogranicenje_tipa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer05_ogranicenje_tipa)
+### [`primer05_ogranicenje_tipa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer05_ogranicenje_tipa)
 
 Ponekad nije dovoljno reći:
 
@@ -207,7 +208,7 @@ proceniVrednost()
 
 Zato `OsiguraniPaket` može bez kastovanja da izračuna cenu osiguranja.
 
-## [`primer06_wildcard`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer06_wildcard)
+### [`primer06_wildcard`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer06_wildcard)
 
 Ovaj primer je namerno kraći.
 
@@ -237,7 +238,7 @@ Detaljne kombinacije `extends` i `super` nisu cilj kursa.
 
 ---
 
-# Zašto ne samo `Object`?
+## Zašto ne samo `Object`?
 
 Bez generika:
 
@@ -261,7 +262,7 @@ Kompajler može da proveri kod pre izvršavanja.
 
 ---
 
-# Generici i OOP
+## Generici i OOP
 
 Generici nisu zamena za polimorfizam.
 
@@ -282,7 +283,7 @@ Ove dve ideje se veoma često koriste zajedno.
 
 ---
 
-# Type erasure — samo napomena
+## Type erasure — samo napomena
 
 Java generici su implementirani pomoću mehanizma koji se zove **type erasure**.
 
@@ -304,7 +305,7 @@ Nemojte pamtiti listu ograničenja napamet. Kada naiđemo na konkretan slučaj, 
 
 ---
 
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Šta gubimo kada vrednost čuvamo kao `Object`?
 2. Kada se greška pogrešnog kastovanja otkriva?
@@ -321,26 +322,13 @@ Nemojte pamtiti listu ograničenja napamet. Kada naiđemo na konkretan slučaj, 
 
 ---
 
-# Koliko detaljno raditi wildcard?
-
-Zbog ograničenja kursa od 13 nedelja, preporuka je:
-
-- obavezno objasniti da generici nisu kovarijantni;
-- pokazati jedan koristan primer sa `? extends`;
-- pomenuti da postoji i `? super`;
-- ne trošiti veliki deo dvocasa na PECS i složene potpise.
-
-Student treba da može da **čita** osnovne wildcard potpise iz Java API-ja, ali nije cilj da postane ekspert za Java type system.
-
----
-
-# Mini zadatak
+## Mini zadatak
 
 U `ZADATAK.md` nalazi se primer **pametnog ormarića**.
 
 Student treba da napravi generički `Ormaric<T>` i zatim ograničenu generičku klasu za predmete koji imaju masu.
 
-## Ugovor skladišta
+### Ugovor skladišta (primer04)
 
 `null` označava prazno skladište, pa ga nije dozvoljeno smestiti kao predmet.
 Pokušaj smeštanja u zauzeto skladište baca `IllegalStateException`, bez promene

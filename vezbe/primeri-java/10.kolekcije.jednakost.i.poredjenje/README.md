@@ -11,7 +11,7 @@ Ove nedelje spajamo nekoliko tema koje su tesno povezane:
 - `Comparable`;
 - `Comparator`.
 
-Glavni domen su **pesme i playliste**.
+Glavni domen su **pesme i plejliste**.
 
 Ideja nije da napamet naučimo veliki broj klasa iz Java biblioteke, već da naučimo da postavimo pitanje:
 
@@ -19,7 +19,7 @@ Ideja nije da napamet naučimo veliki broj klasa iz Java biblioteke, već da nau
 
 ---
 
-# Ciljevi
+## Ciljevi
 
 Posle vežbi student treba da ume da:
 
@@ -36,7 +36,7 @@ Posle vežbi student treba da ume da:
 
 ---
 
-# `enum Zanr`
+## `enum Zanr`
 
 U primerima koristimo:
 
@@ -76,11 +76,11 @@ jer kompajler može da spreči vrednosti poput:
 
 ---
 
-# Redosled primera
+## Redosled primera
 
-## [`primer01_lista`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer01_lista)
+### [`primer01_lista`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer01_lista)
 
-Pravimo playlistu pomoću:
+Pravimo plejlistu pomoću:
 
 ```java
 List<Pesma> plejlista = new ArrayList<>();
@@ -92,7 +92,7 @@ List<Pesma> plejlista = new ArrayList<>();
 - pozicija elementa;
 - mogućnost da isti element postoji više puta.
 
-U playlisti duplikati mogu da postoje.
+U plejlisti duplikati mogu da postoje.
 
 To nije greška `List`-e, već njena semantika.
 
@@ -106,7 +106,7 @@ Promenljiva je tipa interfejsa `List`, a konkretna implementacija je `ArrayList`
 
 Ovo je ista ideja programiranja prema ugovoru koju smo već videli kod sopstvenih interfejsa.
 
-## [`primer02_skup_bez_jednakosti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer02_skup_bez_jednakosti)
+### [`primer02_skup_bez_jednakosti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer02_skup_bez_jednakosti)
 
 Želimo kolekciju omiljenih pesama bez duplikata.
 
@@ -128,7 +128,7 @@ Domen, međutim, možda kaže:
 
 > pesme sa istim izvođačem i naslovom smatramo istom pesmom.
 
-## [`primer03_equals_i_hashcode`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer03_equals_i_hashcode)
+### [`primer03_equals_i_hashcode`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer03_equals_i_hashcode)
 
 Implementiramo semantičku jednakost:
 
@@ -152,7 +152,7 @@ Obrnuto ne mora da važi.
 
 Dva različita objekta mogu imati isti hash kod.
 
-## [`primer04_mapa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer04_mapa)
+### [`primer04_mapa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer04_mapa)
 
 Koristimo:
 
@@ -185,7 +185,7 @@ Tipični slučajevi:
 - registarska oznaka → vozilo;
 - indeks → student.
 
-## [`primer05_comparable`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer05_comparable)
+### [`primer05_comparable`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer05_comparable)
 
 Nekim objektima želimo da damo jedan **prirodan poredak**.
 
@@ -222,11 +222,11 @@ Važno:
 
 Prirodni poredak treba birati samo kada postoji jedan razuman podrazumevani poredak.
 
-## [`primer06_comparator`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer06_comparator)
+### [`primer06_comparator`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer06_comparator)
 
 Jedan prirodni poredak nije dovoljan.
 
-Istu playlistu nekad želimo da sortiramo:
+Istu plejlistu nekad želimo da sortiramo:
 
 - po trajanju;
 - po izvođaču;
@@ -255,11 +255,19 @@ Comparator<Pesma> = strategija poređenja
 
 Algoritam sortiranja ostaje isti, a način poređenja menjamo.
 
+### [`primer07_lambda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer07_lambda)
+
+Isti `Comparator` pišemo na tri načina: imenovanom klasom, anonimnom klasom i lambdom. Objašnjenje je u odeljku [Most do JavaFX-a](#most-do-javafx-a).
+
+### [`primer08_ugovori_skupova`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer08_ugovori_skupova)
+
+Pokazuje šta se dešava kada `Comparator` i `equals` ne govore isto o tome koje su dve pesme „iste“. Objašnjenje je u odeljku [Jednakost i poredak moraju da se razmotre zajedno](#jednakost-i-poredak-moraju-da-se-razmotre-zajedno).
+
 ---
 
-# List, Set ili Map?
+## List, Set ili Map?
 
-## `List`
+### `List`
 
 Koristimo kada je važan uređeni niz elemenata:
 
@@ -271,7 +279,7 @@ istorija poruka
 
 Dozvoljava duplikate.
 
-## `Set`
+### `Set`
 
 Koristimo kada želimo kolekciju jedinstvenih elemenata:
 
@@ -283,7 +291,7 @@ posećene države
 
 Pitanje "šta znači jedinstven?" vodi nas do `equals/hashCode`.
 
-## `Map`
+### `Map`
 
 Koristimo kada podatak prirodno pronalazimo po ključu:
 
@@ -299,7 +307,7 @@ Ključ ima posebnu semantiku.
 
 ---
 
-# Zašto su `equals` i `hashCode` OOP tema?
+## Zašto su `equals` i `hashCode` OOP tema?
 
 Zato što klasa sama treba da zna:
 
@@ -320,7 +328,7 @@ To je odluka modela, ne odluka `HashSet` klase.
 
 ---
 
-# `==` i `equals`
+## `==` i `equals`
 
 Za objekte:
 
@@ -340,7 +348,7 @@ Ove dve stvari ne treba mešati.
 
 ---
 
-# Ugovor `equals/hashCode`
+## Ugovor `equals/hashCode`
 
 Najvažnija praktična pravila:
 
@@ -352,9 +360,9 @@ Treća tačka je naprednija, ali je korisno pomenuti zašto su nepromenljivi ide
 
 ---
 
-# `Comparable` ili `Comparator`?
+## `Comparable` ili `Comparator`?
 
-## Comparable
+### Comparable
 
 Klasa kaže:
 
@@ -364,7 +372,7 @@ Klasa kaže:
 class Pesma implements Comparable<Pesma>
 ```
 
-## Comparator
+### Comparator
 
 Spoljni objekat kaže:
 
@@ -382,7 +390,7 @@ Koristimo Comparator kada:
 
 ---
 
-# Pitanja za diskusiju
+## Pitanja za diskusiju
 
 1. Zašto plejlista prirodno treba da bude `List`, a ne `Set`?
 2. Da li `List` garantuje jedinstvenost elemenata?
@@ -401,41 +409,7 @@ Koristimo Comparator kada:
 
 ---
 
-# Šta namerno NE radimo detaljno
-
-Zbog ograničenja na 13 nedelja ne pravimo katalog svih implementacija:
-
-```text
-ArrayList
-LinkedList
-HashSet
-TreeSet
-LinkedHashSet
-HashMap
-TreeMap
-LinkedHashMap
-...
-```
-
-Student treba da zna glavne apstrakcije:
-
-```text
-List
-Set
-Map
-```
-
-i nekoliko najčešćih implementacija.
-
-Ostale može da nauči kada mu konkretan problem zahteva drugačije osobine.
-
-Isto tako, ne ulazimo duboko u internu implementaciju hash tabela.
-
-Dovoljno je razumeti ugovor koji kolekcija očekuje od naših objekata.
-
----
-
-# Mini zadatak
+## Mini zadatak
 
 U `ZADATAK.md` nalazi se model lične biblioteke knjiga.
 
@@ -453,9 +427,9 @@ Time u jednom zadatku povezuje sve teme ove nedelje.
 
 ## Jednakost i poredak moraju da se razmotre zajedno
 
-Kod Pesma jednakost i prirodni poredak koriste naslov i izvođača; trajanje je
+Kod klase `Pesma` jednakost i prirodni poredak koriste naslov i izvođača; trajanje je
 izostavljeno iz jednakosti po odluci ovog pojednostavljenog domena. Tu odluku
-zadržavamo i u primeru sa Comparator-om.
+zadržavamo i u primeru sa `Comparator`-om.
 
 `TreeSet` smatra dva elementa istim ako poređenje daje 0. Comparator koji poredi
 samo trajanje dobar je za sortiranje liste, ali ne za skup svih različitih pesama.

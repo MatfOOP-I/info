@@ -7,7 +7,7 @@ public class Primer08StringBuilder {
 
 	// Nekada zelimo da cesto vrsimo modifikaciju stringa.
 	// Usled imutabilnosti, to moze biti neefikasno,
-	// tako da mozemo koristiti specijalizovan klasu za to
+	// tako da mozemo koristiti specijalizovanu klasu za to
 	// cije je ime StringBuilder.
 	public static void main(String[] args) {
 		// Pretpostavimo da zelimo da sa standardnog ulaza unosimo rec po rec,
@@ -21,7 +21,7 @@ public class Primer08StringBuilder {
 		String input = sc.next();
 		while (! input.equals("exit")) {
 			// Ako smo usli u petlju, znamo da je korisnik
-			// uneo nesto sto NIJE exit, tako da tu reci dodajemo u StringBuilder objekat.
+			// uneo nesto sto NIJE exit, tako da tu rec dodajemo u StringBuilder objekat.
 			sb.append(input + " ");
 			// Alternativno, mozemo ULANCAVATI pozive metoda append
 			// sb.append(input).append(" ");

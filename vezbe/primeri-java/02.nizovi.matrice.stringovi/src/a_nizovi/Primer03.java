@@ -10,7 +10,7 @@ public class Primer03 {
 	
 	/**
 	 * Program unosi niz, a potom mnozi svaki element niza
-	 * konstanom c koju unese korisnik.
+	 * konstantom c koju unese korisnik.
 	 */
 	public static void main(String[] args) {
 		int[] a = unesi();

@@ -20,12 +20,12 @@ public class Main {
         var model = new primer05_zavrsna_aplikacija.model.ListaZadataka();
         var c = new primer05_zavrsna_aplikacija.kontroler.KontrolerZadataka(model);
         var prioritet = primer05_zavrsna_aplikacija.model.Prioritet.VISOK;
-        check(!c.dodajZadatak("x",prioritet).isUspesno() && c.getZadaci().isEmpty(),"Neispravan unos");
-        check(c.dodajZadatak("Kupiti kartu",prioritet).isUspesno(),"Dodavanje");
-        check(!c.zavrsiZadatak(-1).isUspesno(),"Nema selekcije");
-        check(c.zavrsiZadatak(0).isUspesno() && c.getZadaci().get(0).isZavrsen(),"Završavanje");
+        check(!c.dodajZadatak("x",prioritet).uspesno() && c.getZadaci().isEmpty(),"Neispravan unos");
+        check(c.dodajZadatak("Kupiti kartu",prioritet).uspesno(),"Dodavanje");
+        check(!c.zavrsiZadatak(-1).uspesno(),"Nema selekcije");
+        check(c.zavrsiZadatak(0).uspesno() && c.getZadaci().get(0).isZavrsen(),"Završavanje");
         expect(UnsupportedOperationException.class, () -> c.getZadaci().clear());
-        check(c.ukloniZadatak(0).isUspesno() && c.getZadaci().isEmpty(),"Uklanjanje");
+        check(c.ukloniZadatak(0).uspesno() && c.getZadaci().isEmpty(),"Uklanjanje");
         System.out.println("NEDELJA 12: " + broj + " provera OK");
     }
 }

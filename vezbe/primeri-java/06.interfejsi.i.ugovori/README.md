@@ -151,7 +151,7 @@ To nisu konkurentski mehanizmi. Odgovaraju na različita pitanja.
 
 ### [`primer06_promena_nacina_placanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer06_promena_nacina_placanja)
 
-Završni primer ponovo koristi `Kasa`, ali sada način plaćanja možemo da promenimo tokom rada programa.
+Ovaj primer ponovo koristi `Kasa`, ali sada način plaćanja možemo da promenimo tokom rada programa.
 
 ```java
 kasa.postaviNacinPlacanja(new PlacanjeGotovinom(...));
@@ -164,6 +164,10 @@ kasa.naplati(...);
 Za sada ovo posmatramo samo kao prirodnu posledicu rada preko interfejsa.
 
 Sledeće nedelje ćemo videti situaciju u kojoj će **zamenljiva ponašanja** postati centralna ideja dizajna.
+
+### [`primer07_ugnjezdene_klase`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer07_ugnjezdene_klase)
+
+Poredimo static nested, inner, lokalnu i anonimnu klasu. Objašnjenje je u odeljku [Precizan ugovor i ugnježdeni tipovi](#precizan-ugovor-i-ugnježdeni-tipovi).
 
 ## Interfejs ili apstraktna klasa?
 
@@ -246,7 +250,7 @@ Interfejsi omogućavaju da jedan objekat poštuje više nezavisnih ugovora.
 7. Zašto jedan objekat može da implementira i `NacinPlacanja` i `Dopunjiv`?
 8. Kada bi zajedničko stanje bilo razlog da uvedemo apstraktnu klasu?
 9. Može li klasa istovremeno da nasledi jednu klasu i implementira interfejs?
-10. Kako završni primer priprema teren za zamenljiva ponašanja?
+10. Kako primer 06 priprema teren za zamenljiva ponašanja?
 
 ## Mali zadatak
 
@@ -258,6 +262,6 @@ Za sve načine plaćanja u primerima: iznos mora biti pozitivan; `false` znači 
 plaćanje nije izvršeno i da sredstva ostaju ista; `true` znači da je iznos oduzet.
 Interfejs treba dokumentovati kroz ova obećanja, ne samo kroz potpis metode.
 
-[`primer07_ugnjezdene_klase`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer07_ugnjezdene_klase) poredi static nested, inner, lokalnu i anonimnu klasu.
-Na času je obavezna razlika static/inner, a ostale pročitati pre nedelje 10.
+U primeru `primer07_ugnjezdene_klase` upoređene su static nested, inner, lokalna i anonimna klasa.
+Obavezno razlikovati static nested i inner klase; ostale vrste pročitati pre nedelje 10.
 Ovo znanje se vraća u nedelji 13: privatne ugnježdene klase skrivaju detalje State-a.
