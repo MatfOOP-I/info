@@ -1,5 +1,6 @@
 # Nedelja 3 — Klase, objekti i enkapsulacija
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija) · [preuzmi projekat (ZIP)](../03.klase.objekti.enkapsulacija.zip) · [zadatak za samostalni rad](ZADATAK.md)
 
 Ove nedelje prvi put prelazimo sa programa koji prvenstveno obrađuje podatke na program u kome **objekti čuvaju stanje i nude operacije nad tim stanjem**.
 
@@ -23,23 +24,23 @@ Posle vežbi student treba da ume da objasni:
 
 ## Redosled primera
 
-### `primer01_javna_polja`
+### [`primer01_javna_polja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer01_javna_polja)
 
 Namerno loš početni model. Pokazuje da korisnik klase može direktno da postavi nemoguće stanje, npr. negativan iznos novca.
 
-### `primer02_setter_nije_enkapsulacija`
+### [`primer02_setter_nije_enkapsulacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer02_setter_nije_enkapsulacija)
 
 Polja postaju `private`, ali uvodimo `setStanje`. Problem praktično ostaje isti. Primer služi da razdvojimo pojmove **sakrivanje podataka** i **enkapsulacija**.
 
-### `primer03_invarijante`
+### [`primer03_invarijante`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer03_invarijante)
 
 Objekat više nema `setStanje`. Stanje se menja kroz smislene operacije `uplati` i `plati`. Klasa sama čuva svoju invarijantu: stanje novčanika nikada nije negativno.
 
-### `primer04_konstruktori_static_final`
+### [`primer04_konstruktori_static_final`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer04_konstruktori_static_final)
 
 Model dobija identitet. Svaki novčanik ima jedinstveni ID koji se dodeljuje pomoću zajedničkog `static` brojača. ID i vlasnik su `final`, dok je stanje promenljivo.
 
-### `primer05_reference`
+### [`primer05_reference`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer05_reference)
 
 Dve promenljive mogu pokazivati na isti objekat. Primer takođe demonstrira da promena samog objekta iz metode ostaje vidljiva pozivaocu, ali prevezivanje lokalnog parametra na drugi objekat ne menja promenljivu pozivaoca.
 

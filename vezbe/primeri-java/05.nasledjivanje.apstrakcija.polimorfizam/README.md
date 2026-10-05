@@ -1,5 +1,7 @@
 # Nedelja 5 — Nasleđivanje, apstraktne klase i polimorfizam
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam) · [preuzmi projekat (ZIP)](../05.nasledjivanje.apstrakcija.polimorfizam.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Prethodne nedelje smo videli da se objekti veoma često povezuju odnosom **HAS-A**. Sada uvodimo drugi važan odnos:
 
 > Kada za jedan objekat ima smisla reći da **JESTE** posebna vrsta drugog objekta?
@@ -45,13 +47,13 @@ RezervacijaPrevoza HAS-A Prevoz
 
 ## Redosled primera
 
-### `primer01_osnovno_nasledjivanje`
+### [`primer01_osnovno_nasledjivanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer01_osnovno_nasledjivanje)
 
 Uvodimo baznu klasu `Prevoz` i klase `Autobus` i `Voz`.
 
 Zajedničke podatke (`naziv`, `prosecnaBrzina`) držimo u baznoj klasi. Izvedene klase koriste konstruktor bazne klase pomoću `super(...)`.
 
-### `primer02_redefinisanje_metoda`
+### [`primer02_redefinisanje_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer02_redefinisanje_metoda)
 
 Različite vrste prevoza različito računaju cenu putovanja.
 
@@ -63,13 +65,13 @@ int izracunajCenu(int udaljenostKm)
 
 ali je implementacija različita.
 
-### `primer03_apstraktna_klasa`
+### [`primer03_apstraktna_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer03_apstraktna_klasa)
 
 Primećujemo da ne postoji mnogo smisla praviti "neki opšti Prevoz" ako ne znamo kako mu se računa cena.
 
 `Prevoz` zato postaje `abstract`, a `izracunajCenu` apstraktna metoda.
 
-### `primer04_polimorfizam`
+### [`primer04_polimorfizam`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer04_polimorfizam)
 
 Pravimo niz:
 
@@ -87,7 +89,7 @@ opcije[i].izracunajCenu(udaljenostKm)
 
 bez pitanja koje je konkretne klase objekat.
 
-### `primer05_bez_grananja_po_tipu`
+### [`primer05_bez_grananja_po_tipu`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer05_bez_grananja_po_tipu)
 
 Namerno pokazujemo zašto kod tipa:
 
@@ -101,7 +103,7 @@ else if (prevoz instanceof Taksi) { ... }
 
 Dodavanje nove vrste prevoza ne treba da zahteva menjanje svakog mesta u programu koje računa cenu.
 
-### `primer06_rezervacija_prevoza`
+### [`primer06_rezervacija_prevoza`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer06_rezervacija_prevoza)
 
 Završni primer spaja prethodne dve nedelje:
 

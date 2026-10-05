@@ -1,5 +1,6 @@
 # Nedelja 11 — Datoteke i izuzeci
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci) · [preuzmi projekat (ZIP)](../11.datoteke.i.izuzeci.zip) · [zadatak za samostalni rad](ZADATAK.md)
 
 Ove nedelje spajamo dve teme koje prirodno pripadaju zajedno:
 
@@ -49,7 +50,7 @@ Posle vežbi student treba da ume da:
 
 # Redosled primera
 
-## `primer01_citanje_fajla`
+## [`primer01_citanje_fajla`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer01_citanje_fajla)
 
 Prvo samo čitamo fajl:
 
@@ -73,7 +74,7 @@ Odmah se pojavljuje pitanje:
 
 > Šta ako fajl ne postoji?
 
-## `primer02_try_catch`
+## [`primer02_try_catch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer02_try_catch)
 
 Otvaranje i čitanje fajla može da baci `IOException`.
 
@@ -93,7 +94,7 @@ Poenta je:
 
 > Ovaj deo programa zna kako da reaguje na konkretnu grešku.
 
-## `primer03_parsiranje_i_vise_gresaka`
+## [`primer03_parsiranje_i_vise_gresaka`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer03_parsiranje_i_vise_gresaka)
 
 Sada čitamo CSV red i pretvaramo:
 
@@ -111,7 +112,7 @@ Možemo dobiti različite probleme:
 
 To su različite greške i ne moraju sve da se tretiraju isto.
 
-## `primer04_sopstveni_izuzetak`
+## [`primer04_sopstveni_izuzetak`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer04_sopstveni_izuzetak)
 
 Uvodi se:
 
@@ -141,7 +142,7 @@ throws NeispravanRedException
 
 Time jasno komunicira deo svog ugovora.
 
-## `primer05_try_with_resources`
+## [`primer05_try_with_resources`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer05_try_with_resources)
 
 Ručno zatvaranje:
 
@@ -163,7 +164,7 @@ Resurs se zatvara automatski.
 
 Ovo je preferirani način za resurse koji implementiraju `AutoCloseable`.
 
-## `primer06_odgovornost_za_gresku`
+## [`primer06_odgovornost_za_gresku`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer06_odgovornost_za_gresku)
 
 Najvažniji primer.
 
@@ -392,11 +393,11 @@ Zadatak kombinuje:
 
 ## Dopune: upis, format i assert
 
-`primer07_pisanje` odvaja učitavanje od pisanja tekstualnog izveštaja. Radni
+[`primer07_pisanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer07_pisanje) odvaja učitavanje od pisanja tekstualnog izveštaja. Radni
 direktorijum je folder projekta, ne folder klase. Ulaz i izlaz koriste UTF-8.
 Završni parser zadržava sve provere iz prethodnog primera. `split(",", -1)`
 čuva završna prazna polja; ovo nije pun CSV parser (nema quoting/escaping podrške).
 
-`primer08_assert` pokazuje internu tvrdnju i pokretanje sa `-ea`. Tvrdnje nisu
+[`primer08_assert`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer08_assert) pokazuje internu tvrdnju i pokretanje sa `-ea`. Tvrdnje nisu
 zamena za validaciju javnih argumenata jer mogu biti isključene. Eksplicitno bačen
 AssertionError u proverama iz nedelje 13 ne zavisi od tog prekidača.

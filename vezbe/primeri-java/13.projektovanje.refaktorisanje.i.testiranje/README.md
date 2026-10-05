@@ -1,5 +1,7 @@
 # Nedelja 13 — Projektovanje, refaktorisanje i testiranje
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje) · [preuzmi projekat (ZIP)](../13.projektovanje.refaktorisanje.i.testiranje.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 ## Cilj
 
 Odrediti koji objekat je odgovoran za ponašanje i proveriti da promena dizajna
@@ -7,11 +9,11 @@ Odrediti koji objekat je odgovoran za ponašanje i proveriti da promena dizajna
 
 ## Redosled
 
-1. `primer01_pocetni_kod`: radi, ali koristi string oznake i rasutu logiku.
-2. `primer00_karakterizacija`: zabeležiti cenu i normalan životni ciklus PRE menjanja.
-3. `primer02_refaktorisano_resenje`: pogledati po jednu izdvojenu odgovornost.
+1. [`primer01_pocetni_kod`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer01_pocetni_kod): radi, ali koristi string oznake i rasutu logiku.
+2. [`primer00_karakterizacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer00_karakterizacija): zabeležiti cenu i normalan životni ciklus PRE menjanja.
+3. [`primer02_refaktorisano_resenje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer02_refaktorisano_resenje): pogledati po jednu izdvojenu odgovornost.
 4. Ponovo pokrenuti karakterizaciju: proverava isti scenario na obe verzije.
-5. `primer03_testiranje`: male provere obračuna, životnog ciklusa i sistema.
+5. [`primer03_testiranje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer03_testiranje): male provere obračuna, životnog ciklusa i sistema.
 
 Testove za postojeće ispravno ponašanje čuvamo tokom refaktorisanja. Ispravke grešaka
 (duple oznake, zaobilaženje tranzicija) zasebno menjaju ugovor i imaju regresione provere.

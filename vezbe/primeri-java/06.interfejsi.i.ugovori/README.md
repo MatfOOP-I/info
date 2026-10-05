@@ -1,5 +1,7 @@
 # Nedelja 6 — Interfejsi i ugovori
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori) · [preuzmi projekat (ZIP)](../06.interfejsi.i.ugovori.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Prethodne nedelje smo videli da nasleđivanje koristimo kada modelujemo odnos **IS-A**:
 
 ```text
@@ -54,7 +56,7 @@ ali ne mora da zna **kako** se konkretno plaćanje izvršava.
 
 ## Redosled primera
 
-### `primer01_prvi_interfejs`
+### [`primer01_prvi_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer01_prvi_interfejs)
 
 Uvodimo:
 
@@ -73,7 +75,7 @@ Prvi put koristimo `implements`.
 
 Važno je primetiti da promenljiva tipa `NacinPlacanja` može da pokazuje na objekat bilo koje klase koja poštuje taj ugovor.
 
-### `primer02_kasa_zavisi_od_ugovora`
+### [`primer02_kasa_zavisi_od_ugovora`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer02_kasa_zavisi_od_ugovora)
 
 Pravimo klasu `Kasa`.
 
@@ -105,7 +107,7 @@ i:
 nacinPlacanja.plati(iznos);
 ```
 
-### `primer03_vise_interfejsa`
+### [`primer03_vise_interfejsa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer03_vise_interfejsa)
 
 Uvodimo drugu, nezavisnu sposobnost:
 
@@ -124,13 +126,13 @@ Ovo je važna razlika u odnosu na nasleđivanje.
 
 Objekat može da poštuje više različitih ugovora koji opisuju različite njegove sposobnosti.
 
-### `primer04_podrazumevana_metoda`
+### [`primer04_podrazumevana_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer04_podrazumevana_metoda)
 
 Pokazujemo `default` metodu na malom primeru.
 
 Interfejs može da ponudi zajedničko ponašanje koje implementacije mogu da koriste, ali centralna ideja interfejsa i dalje ostaje **ugovor**, a ne deljenje stanja.
 
-### `primer05_apstraktna_klasa_i_interfejs`
+### [`primer05_apstraktna_klasa_i_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer05_apstraktna_klasa_i_interfejs)
 
 Spajamo gradivo prethodne i ove nedelje.
 
@@ -147,7 +149,7 @@ Interfejs `NacinPlacanja` opisuje **sposobnost** koju kartica nudi ostatku progr
 
 To nisu konkurentski mehanizmi. Odgovaraju na različita pitanja.
 
-### `primer06_promena_nacina_placanja`
+### [`primer06_promena_nacina_placanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer06_promena_nacina_placanja)
 
 Završni primer ponovo koristi `Kasa`, ali sada način plaćanja možemo da promenimo tokom rada programa.
 
@@ -256,6 +258,6 @@ Za sve načine plaćanja u primerima: iznos mora biti pozitivan; `false` znači 
 plaćanje nije izvršeno i da sredstva ostaju ista; `true` znači da je iznos oduzet.
 Interfejs treba dokumentovati kroz ova obećanja, ne samo kroz potpis metode.
 
-`primer07_ugnjezdene_klase` poredi static nested, inner, lokalnu i anonimnu klasu.
+[`primer07_ugnjezdene_klase`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer07_ugnjezdene_klase) poredi static nested, inner, lokalnu i anonimnu klasu.
 Na času je obavezna razlika static/inner, a ostale pročitati pre nedelje 10.
 Ovo znanje se vraća u nedelji 13: privatne ugnježdene klase skrivaju detalje State-a.

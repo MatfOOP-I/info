@@ -1,5 +1,7 @@
 # Nedelja 10 — Kolekcije, jednakost i poređenje
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje) · [preuzmi projekat (ZIP)](../10.kolekcije.jednakost.i.poredjenje.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Ove nedelje spajamo nekoliko tema koje su tesno povezane:
 
 - `List`;
@@ -76,7 +78,7 @@ jer kompajler može da spreči vrednosti poput:
 
 # Redosled primera
 
-## `primer01_lista`
+## [`primer01_lista`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer01_lista)
 
 Pravimo playlistu pomoću:
 
@@ -104,7 +106,7 @@ Promenljiva je tipa interfejsa `List`, a konkretna implementacija je `ArrayList`
 
 Ovo je ista ideja programiranja prema ugovoru koju smo već videli kod sopstvenih interfejsa.
 
-## `primer02_skup_bez_jednakosti`
+## [`primer02_skup_bez_jednakosti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer02_skup_bez_jednakosti)
 
 Želimo kolekciju omiljenih pesama bez duplikata.
 
@@ -126,7 +128,7 @@ Domen, međutim, možda kaže:
 
 > pesme sa istim izvođačem i naslovom smatramo istom pesmom.
 
-## `primer03_equals_i_hashcode`
+## [`primer03_equals_i_hashcode`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer03_equals_i_hashcode)
 
 Implementiramo semantičku jednakost:
 
@@ -150,7 +152,7 @@ Obrnuto ne mora da važi.
 
 Dva različita objekta mogu imati isti hash kod.
 
-## `primer04_mapa`
+## [`primer04_mapa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer04_mapa)
 
 Koristimo:
 
@@ -183,7 +185,7 @@ Tipični slučajevi:
 - registarska oznaka → vozilo;
 - indeks → student.
 
-## `primer05_comparable`
+## [`primer05_comparable`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer05_comparable)
 
 Nekim objektima želimo da damo jedan **prirodan poredak**.
 
@@ -220,7 +222,7 @@ Važno:
 
 Prirodni poredak treba birati samo kada postoji jedan razuman podrazumevani poredak.
 
-## `primer06_comparator`
+## [`primer06_comparator`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer06_comparator)
 
 Jedan prirodni poredak nije dovoljan.
 
@@ -457,7 +459,7 @@ zadržavamo i u primeru sa Comparator-om.
 
 `TreeSet` smatra dva elementa istim ako poređenje daje 0. Comparator koji poredi
 samo trajanje dobar je za sortiranje liste, ali ne za skup svih različitih pesama.
-To demonstrira `primer08_ugovori_skupova`. HashSet/HashMap ne obećavaju redosled
+To demonstrira [`primer08_ugovori_skupova`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer08_ugovori_skupova). HashSet/HashMap ne obećavaju redosled
 obilaska. Ne menjati polja koja određuju jednakost dok je objekat u hash kolekciji.
 
 Za obilazak mape koristiti `entrySet()`. Brisanje tokom obilaska raditi preko
@@ -466,7 +468,7 @@ remove pozivom usred enhanced-for petlje. Kolekcije i iteratore šire pratiti uz
 
 ## Most do JavaFX-a
 
-U `primer07_lambda` isti Comparator pišemo imenovanom klasom, anonimnom klasom i
+U [`primer07_lambda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer07_lambda) isti Comparator pišemo imenovanom klasom, anonimnom klasom i
 lambdom. Funkcionalni interfejs ima jednu apstraktnu operaciju (uz pravila o Object
 metodama). U JavaFX-u handler je callback: registrujemo ponašanje koje će se pozvati
 kasnije, kada se desi događaj. Detaljan Stream API nije preduslov ovog niza vežbi.

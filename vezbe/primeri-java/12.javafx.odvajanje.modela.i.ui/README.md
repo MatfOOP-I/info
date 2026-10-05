@@ -1,5 +1,7 @@
 # Nedelja 12 — JavaFX i odvajanje modela od korisničkog interfejsa
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui) · [preuzmi projekat (ZIP)](../12.javafx.odvajanje.modela.i.ui.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Ove nedelje prvi put pravimo grafičku aplikaciju.
 
 Cilj nije samo da naučimo:
@@ -151,7 +153,7 @@ onda je ona vezana za konkretan UI.
 
 # Redosled primera
 
-## `primer01_osnove`
+## [`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
 
 Minimalna JavaFX aplikacija.
 
@@ -180,7 +182,7 @@ Cilj je samo da student razume osnovnu strukturu JavaFX aplikacije.
 
 ---
 
-## `primer02_sve_u_ui`
+## [`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
 
 Pravimo mali planer, ali namerno loše.
 
@@ -205,7 +207,7 @@ Problem je što se odgovornosti mešaju.
 
 ---
 
-## `primer03_model_bez_javafx`
+## [`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx)
 
 Izdvajamo:
 
@@ -240,7 +242,7 @@ radi, verovatno smo previše logike stavili u UI.
 
 ---
 
-## `primer04_kontroler`
+## [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
 
 Između UI-ja i modela uvodimo mali:
 
@@ -268,7 +270,7 @@ prikaz     — korisnički interfejs
 
 ---
 
-## `primer05_zavrsna_aplikacija`
+## [`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
 
 Spajamo sve.
 
@@ -493,7 +495,7 @@ FXML se kasnije može naučiti veoma brzo kada je ova arhitektonska granica jasn
 
 ### 0–15 min
 
-`primer01_osnove`
+[`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
 
 - `Application`;
 - `Stage`;
@@ -504,7 +506,7 @@ FXML se kasnije može naučiti veoma brzo kada je ova arhitektonska granica jasn
 
 ### 15–30 min
 
-`primer02_sve_u_ui`
+[`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
 
 Napraviti planer koji radi.
 
@@ -526,7 +528,7 @@ Pokrenuti model iz običnog `Main`.
 
 ### 0–15 min
 
-`primer04_kontroler`
+[`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
 
 Objasniti:
 
@@ -538,7 +540,7 @@ bez insistiranja na terminologiji design patterna.
 
 ### 15–35 min
 
-`primer05_zavrsna_aplikacija`
+[`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
 
 Spojiti JavaFX prikaz sa kontrolerom.
 
@@ -664,7 +666,7 @@ Za namerno loše organizovani drugi primer:
 mvn javafx:run -Djavafx.mainClass=primer02_sve_u_ui.PlanerSveUAplikaciji
 ```
 
-`primer03_model_bez_javafx` i `primer04_kontroler` ne koriste JavaFX i mogu da se pokrenu kao obične Java klase direktno iz IDE-a.
+[`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx) i [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler) ne koriste JavaFX i mogu da se pokrenu kao obične Java klase direktno iz IDE-a.
 
 ## IntelliJ IDEA
 

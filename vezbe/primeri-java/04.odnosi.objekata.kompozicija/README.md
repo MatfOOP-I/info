@@ -1,5 +1,7 @@
 # Nedelja 4 — Odnosi između objekata i kompozicija
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija) · [preuzmi projekat (ZIP)](../04.odnosi.objekata.kompozicija.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Do sada smo uglavnom posmatrali jedan objekat izolovano. U realnim programima objekti skoro uvek **sarađuju sa drugim objektima**.
 
 Ove nedelje koristimo pojednostavljen sistem za poručivanje hrane. Domen je namerno jednostavan: kupac ima adresu, porudžbina ima stavke, a svaka stavka se odnosi na proizvod. Fokus nije na pravljenju aplikacije za dostavu, već na pitanju:
@@ -32,13 +34,13 @@ Kasnije ćemo moći precizno da uporedimo:
 
 ## Redosled primera
 
-### `primer01_objekat_kao_polje`
+### [`primer01_objekat_kao_polje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer01_objekat_kao_polje)
 
 `Kupac` ima `Adresu`.
 
 Prvi put eksplicitno posmatramo jedan objekat kao deo stanja drugog objekta. Diskutujemo šta se zapravo čuva u polju tipa `Adresa`: objekat ili referenca na objekat.
 
-### `primer02_porudzbina_i_stavke`
+### [`primer02_porudzbina_i_stavke`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer02_porudzbina_i_stavke)
 
 Gradimo mali graf objekata:
 
@@ -56,7 +58,7 @@ Porudzbina
 
 Pošto kolekcije još nisu obrađene, koristimo niz fiksnog kapaciteta. Tema primera nije `ArrayList`, već odnosi između objekata.
 
-### `primer03_delegiranje`
+### [`primer03_delegiranje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer03_delegiranje)
 
 Pitanje nije samo **koje podatke klasa ima**, već i **ko je odgovoran za koju operaciju**.
 
@@ -68,7 +70,7 @@ ukupno += stavka.izracunajCenu();
 
 To je jednostavan primer delegiranja odgovornosti.
 
-### `primer04_deljena_promenljiva_adresa`
+### [`primer04_deljena_promenljiva_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer04_deljena_promenljiva_adresa)
 
 Namerno pravimo problem. `Kupac` i `Porudzbina` dele isti promenljivi objekat `Adresa`.
 
@@ -76,7 +78,7 @@ Ako kupac promeni adresu, može neočekivano da se promeni i adresa već napravl
 
 Primer povezuje gradivo ove nedelje sa aliasing-om iz prethodne nedelje.
 
-### `primer05_nepromenljiva_adresa`
+### [`primer05_nepromenljiva_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer05_nepromenljiva_adresa)
 
 `Adresa` postaje mali nepromenljivi objekat: sva polja su `final`, nema settera.
 
@@ -86,7 +88,7 @@ Ovo nije pravilo da svaki objekat treba da bude immutable. Cilj je da student vi
 
 #
 
-## `primer06_record_adresa`
+## [`primer06_record_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer06_record_adresa)
 
 Posle klasične nepromenljive `Adresa` klase pokazujemo savremeni Java tip:
 

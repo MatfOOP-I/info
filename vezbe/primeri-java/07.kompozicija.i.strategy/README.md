@@ -1,5 +1,7 @@
 # Nedelja 7 — Kompozicija i Strategy obrazac
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy) · [preuzmi projekat (ZIP)](../07.kompozicija.i.strategy.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Do sada smo naučili:
 
 - klase i objekte;
@@ -41,7 +43,7 @@ Tek kada kompozicija reši problem, uvodimo ime obrasca.
 
 # Redosled primera
 
-## `primer01_naivno_nasledjivanje`
+## [`primer01_naivno_nasledjivanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer01_naivno_nasledjivanje)
 
 Počinjemo sa:
 
@@ -57,7 +59,7 @@ To je namerno.
 
 Važna lekcija je da loš dizajn često ne izgleda loše dok je sistem mali.
 
-## `primer02_eksplozija_hijerarhije`
+## [`primer02_eksplozija_hijerarhije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer02_eksplozija_hijerarhije)
 
 Dodajemo drugu osobinu:
 
@@ -91,7 +93,7 @@ Ključno pitanje:
 
 > Da li je `HodajuciAgresivniLik` zaista nova VRSTA lika, ili smo samo spojili dva ponašanja?
 
-## `primer03_izdvajanje_kretanja`
+## [`primer03_izdvajanje_kretanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer03_izdvajanje_kretanja)
 
 Prvo izdvajamo samo jednu osu ponašanja:
 
@@ -121,7 +123,7 @@ i delegira:
 ponasanjeKretanja.kreciSe(ime);
 ```
 
-## `primer04_vise_strategija`
+## [`primer04_vise_strategija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer04_vise_strategija)
 
 Dodajemo novu nezavisnu osu:
 
@@ -147,7 +149,7 @@ Lucija
 
 Drugi lik može imati drugu kombinaciju, bez nove klase.
 
-## `primer05_promena_ponasanja`
+## [`primer05_promena_ponasanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer05_promena_ponasanja)
 
 Najvažniji primer.
 
@@ -179,7 +181,7 @@ lucija.postaviPonasanjeKretanja(new Plivanje());
 
 To je teško elegantno modelovati hijerarhijom podklasa.
 
-## `primer06_strategy`
+## [`primer06_strategy`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/07.kompozicija.i.strategy/src/primer06_strategy)
 
 Tek sada dajemo ime ideji.
 

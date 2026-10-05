@@ -1,5 +1,7 @@
 # Nedelja 9 — Generički tipovi
 
+> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi) · [preuzmi projekat (ZIP)](../09.genericki.tipovi.zip) · [zadatak za samostalni rad](ZADATAK.md)
+
 Do sada smo pravili klase koje rade sa unapred poznatim tipovima.
 
 Na primer:
@@ -57,7 +59,7 @@ Posle vežbi student treba da ume da:
 
 # Redosled primera
 
-## `primer01_problem_sa_object`
+## [`primer01_problem_sa_object`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer01_problem_sa_object)
 
 Pravimo klasu:
 
@@ -89,7 +91,7 @@ Knjiga knjiga = (Knjiga) paket.getSadrzaj();
 
 kompajler to dozvoljava, a grešku dobijamo tek tokom izvršavanja.
 
-## `primer02_genericka_klasa`
+## [`primer02_genericka_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer02_genericka_klasa)
 
 Uvodimo:
 
@@ -123,7 +125,7 @@ paket.postaviSadrzaj(new Knjiga(...));
 
 Greška se otkriva **pri kompajliranju**, a ne kod korisnika programa.
 
-## `primer03_genericka_metoda`
+## [`primer03_genericka_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer03_genericka_metoda)
 
 Nije obavezno da cela klasa bude generička.
 
@@ -140,7 +142,7 @@ Tip `T` se zaključuje iz argumenata.
 
 Metoda radi i za telefone i za knjige, bez dupliranja implementacije.
 
-## `primer04_genericki_interfejs`
+## [`primer04_genericki_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer04_genericki_interfejs)
 
 Interfejs takođe može biti generički:
 
@@ -173,7 +175,7 @@ Map<K, V>
 
 iz standardne biblioteke.
 
-## `primer05_ogranicenje_tipa`
+## [`primer05_ogranicenje_tipa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer05_ogranicenje_tipa)
 
 Ponekad nije dovoljno reći:
 
@@ -205,7 +207,7 @@ proceniVrednost()
 
 Zato `OsiguraniPaket` može bez kastovanja da izračuna cenu osiguranja.
 
-## `primer06_wildcard`
+## [`primer06_wildcard`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer06_wildcard)
 
 Ovaj primer je namerno kraći.
 
