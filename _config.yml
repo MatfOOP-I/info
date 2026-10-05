@@ -1,11 +1,11 @@
 # Сајт курса Објектно-оријентисано програмирање (И смер) @ Математички факултет
-title: Објектно-оријентисано програмирање @ МАТФ
-short_title: ООП @ МАТФ
+title: Објектно-оријентисано програмирање (И смер) @ МАТФ
+short_title: ООП · И смер
 tagline: Математички факултет, Универзитет у Београду
 description: >-
   Материјали за курс Објектно-оријентисано програмирање на И смеру
   основних студија Математичког факултета Универзитета у Београду
-  (Objektno-orijentisano programiranje, Java).
+  (Objektno-orijentisano programiranje, I smer, Java).
 lang: sr
 url: https://matfoop-i.github.io
 baseurl: /info
