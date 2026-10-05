@@ -3,9 +3,7 @@
 
 ## Наставници и асистенти  
 
-* Наставник: **[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html)**
-
-* Наставник: **[др Сташа Вујичић Станковић](https://www.stasa.in.rs/)**
+* Наставник: **[др Александар Картељ](https://poincare.matf.bg.ac.rs/~aleksandar.kartelj/)**
 
 * Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/)**
 
