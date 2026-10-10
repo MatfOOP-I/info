@@ -15,6 +15,8 @@
 
 ## План и програм курса
 
+<!-- TODO: ажурирати линк ка званичном плану и програму курса, тренутни је невалидан -->
+
 * **[Званичан план и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf)**
 
 * **[Начин реализације курса](Nacin-realizacije-kursa.md)**
