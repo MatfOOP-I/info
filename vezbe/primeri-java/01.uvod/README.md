@@ -6,12 +6,12 @@ Ova nedelja je prelaz sa prethodnog programiranja na Javu.
 
 ## Glavni cilj
 
-Pokrenuti mali Java program, razlikovati kompajliranje i izvršavanje, koristiti metode, unos i debugger.
+Pokrenuti mali Java program, razlikovati kompajliranje i izvršavanje, koristiti metode, unos i debager.
 
 ## Način rada
 
-Predvideti izlaz, pokrenuti primer, postaviti breakpoint i objasniti zapaženu promenu.
-Java argumente prosleđuje po vrednosti; kod objekata ta vrednost je referenca.
+Predvideti izlaz, pokrenuti primer, postaviti tačku prekida i objasniti zapaženu promenu.
+Java argumente prosleđuje po vrednosti.
 Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatka kursa.
 
 ## Primeri
