@@ -14,7 +14,7 @@
 
 ## Предавања
 
-* Снимци предавања: [2021/22](predavanja/casovi-uzivo/README-2021-22.md), [2020/21](predavanja/casovi-uzivo/README-2020-21.md), [2019/20](predavanja/casovi-uzivo/README-2019-20.md)
+* [Снимци предавања](predavanja/casovi-uzivo/README.md) (2022/23 и 2020/21); по годинама: [2021/22](predavanja/casovi-uzivo/README-2021-22.md), [2020/21](predavanja/casovi-uzivo/README-2020-21.md), [2019/20](predavanja/casovi-uzivo/README-2019-20.md)
 * Презентације: [2021/22](predavanja/prezentacije-2021-22/README.md), [2020/21](predavanja/prezentacije-2020-21/README.md), [2019/20](predavanja/prezentacije-2019-20/README.md)
 
 ### Текстови предавања 2019/20
