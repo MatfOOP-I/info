@@ -1,10 +1,10 @@
-# Nedelja 9 — Generički tipovi
+# Недеља 9 — Генерички типови
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi) · [preuzmi projekat (ZIP)](../09.genericki.tipovi.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi) · [преузми пројекат (ZIP)](../09.genericki.tipovi.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Do sada smo pravili klase koje rade sa unapred poznatim tipovima.
+До сада смо правили класе које раде са унапред познатим типовима.
 
-Na primer:
+На пример:
 
 ```java
 class PaketTelefona {
@@ -12,22 +12,22 @@ class PaketTelefona {
 }
 ```
 
-Ali šta ako je ponašanje klase potpuno isto bez obzira na to da li paket sadrži:
+Али шта ако је понашање класе потпуно исто без обзира на то да ли пакет садржи:
 
-- telefon;
-- knjigu;
-- patike;
-- neki naš objekat?
+- телефон;
+- књигу;
+- патике;
+- неки наш објекат?
 
-Jedna mogućnost je da koristimo `Object`.
+Једна могућност је да користимо `Object`.
 
-To radi, ali gubimo informaciju o tipu.
+То ради, али губимо информацију о типу.
 
-Generici nam omogućavaju da napišemo jednu apstrakciju koja radi za različite tipove, a da kompajler i dalje proverava ispravnost tipova.
+Генерици нам омогућавају да напишемо једну апстракцију која ради за различите типове, а да компајлер и даље проверава исправност типова.
 
-## Glavna ideja
+## Главна идеја
 
-Generici nisu prvenstveno način da pišemo neobične izraze sa:
+Генерици нису првенствено начин да пишемо необичне изразе са:
 
 ```text
 <T>
@@ -35,101 +35,101 @@ Generici nisu prvenstveno način da pišemo neobične izraze sa:
 <? extends T>
 ```
 
-Njihov glavni cilj u ovom kursu je:
+Њихов главни циљ у овом курсу је:
 
-> **ponovna upotreba koda bez gubitka type safety-ja.**
-
----
-
-## Ciljevi
-
-Posle vežbi student treba da ume da:
-
-- objasni problem čuvanja vrednosti kao `Object`;
-- napravi generičku klasu;
-- koristi generički tip sa različitim argumentima tipa;
-- objasni da `Paket<Telefon>` i `Paket<Knjiga>` nisu isti tip;
-- napiše jednostavnu generičku metodu;
-- napravi generički interfejs;
-- koristi ograničenje tipa, npr. `<T extends Procenjiv>`;
-- razume osnovnu motivaciju za wildcard `?`;
-- prepozna generike u standardnim kolekcijama koje ćemo raditi sledeće nedelje.
+> **поновна употреба кода без губитка type safety-ja.**
 
 ---
 
-## Redosled primera
+## Циљеви
+
+После вежби студент треба да уме да:
+
+- објасни проблем чувања вредности као `Object`;
+- направи генеричку класу;
+- користи генерички тип са различитим аргументима типа;
+- објасни да `Paket<Telefon>` и `Paket<Knjiga>` нису исти тип;
+- напише једноставну генеричку методу;
+- направи генерички интерфејс;
+- користи ограничење типа, нпр. `<T extends Procenjiv>`;
+- разуме основну мотивацију за wildcard `?`;
+- препозна генерике у стандардним колекцијама које ћемо радити следеће недеље.
+
+---
+
+## Редослед примера
 
 ### [`primer01_problem_sa_object`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer01_problem_sa_object)
 
-Pravimo klasu:
+Правимо класу:
 
 ```java
 Paket
 ```
 
-koja čuva:
+која чува:
 
 ```java
 private Object sadrzaj;
 ```
 
-Možemo staviti bilo koji objekat.
+Можемо ставити било који објекат.
 
-Problem nastaje prilikom čitanja:
+Проблем настаје приликом читања:
 
 ```java
 Telefon telefon = (Telefon) paket.getSadrzaj();
 ```
 
-Potrebno je eksplicitno kastovanje.
+Потребно је експлицитно кастовање.
 
-Još gore:
+Још горе:
 
 ```java
 Knjiga knjiga = (Knjiga) paket.getSadrzaj();
 ```
 
-kompajler to dozvoljava, a grešku dobijamo tek tokom izvršavanja.
+компајлер то дозвољава, а грешку добијамо тек током извршавања.
 
 ### [`primer02_genericka_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer02_genericka_klasa)
 
-Uvodimo:
+Уводимо:
 
 ```java
 public class Paket<T>
 ```
 
-Sada:
+Сада:
 
 ```java
 Paket<Telefon>
 Paket<Knjiga>
 ```
 
-koriste istu implementaciju klase, ali kompajler zna šta se nalazi u konkretnom paketu.
+користе исту имплементацију класе, али компајлер зна шта се налази у конкретном пакету.
 
-Dobijamo:
+Добијамо:
 
 ```java
 Telefon telefon = paketTelefona.getSadrzaj();
 ```
 
-bez kastovanja.
+без кастовања.
 
-A ovo više ne može da se kompajlira:
+А ово више не може да се компајлира:
 
 ```java
 Paket<Telefon> paket = new Paket<>(...);
 paket.postaviSadrzaj(new Knjiga(...));
 ```
 
-Greška se otkriva **pri kompajliranju**, a ne kod korisnika programa.
+Грешка се открива **при компајлирању**, а не код корисника програма.
 
 ### [`primer03_genericka_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer03_genericka_metoda)
 
-Nije obavezno da cela klasa bude generička.
+Није обавезно да цела класа буде генеричка.
 
-Možemo napraviti samo jednu generičku metodu:
+Можемо направити само једну генеричку методу:
 
 ```java
 public static <T> void prebaci(
@@ -138,19 +138,19 @@ public static <T> void prebaci(
 )
 ```
 
-Tip `T` se zaključuje iz argumenata.
+Тип `T` се закључује из аргумената.
 
-Ista metoda radi za `Paket<String>`, `Paket<Integer>` i paket bilo kog drugog tipa, bez dupliranja implementacije.
+Иста метода ради за `Paket<String>`, `Paket<Integer>` и пакет било ког другог типа, без дуплирања имплементације.
 
 ### [`primer04_genericki_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer04_genericki_interfejs)
 
-Interfejs takođe može biti generički:
+Интерфејс такође може бити генерички:
 
 ```java
 public interface Skladiste<T>
 ```
 
-Njegov ugovor kaže:
+Његов уговор каже:
 
 ```java
 void smesti(T predmet);
@@ -158,15 +158,15 @@ T preuzmi();
 boolean jePrazno();
 ```
 
-Implementacija:
+Имплементација:
 
 ```java
 JednomesnoSkladiste<T>
 ```
 
-ne mora unapred da zna koji će konkretan tip čuvati.
+не мора унапред да зна који ће конкретан тип чувати.
 
-Ovo je važna priprema za:
+Ово је важна припрема за:
 
 ```java
 List<T>
@@ -174,19 +174,19 @@ Set<T>
 Map<K, V>
 ```
 
-iz standardne biblioteke.
+из стандардне библиотеке.
 
 ### [`primer05_ogranicenje_tipa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer05_ogranicenje_tipa)
 
-Ponekad nije dovoljno reći:
+Понекад није довољно рећи:
 
 ```java
 <T>
 ```
 
-jer želimo da nad `T` možemo da pozovemo određenu operaciju.
+јер желимо да над `T` можемо да позовемо одређену операцију.
 
-Definišemo:
+Дефинишемо:
 
 ```java
 public interface Procenjiv {
@@ -194,143 +194,143 @@ public interface Procenjiv {
 }
 ```
 
-i zatim:
+и затим:
 
 ```java
 public class OsiguraniPaket<T extends Procenjiv>
 ```
 
-Sada kompajler zna da svaki `T` ima:
+Сада компајлер зна да сваки `T` има:
 
 ```java
 proceniVrednost()
 ```
 
-Zato `OsiguraniPaket` može bez kastovanja da izračuna cenu osiguranja.
+Зато `OsiguraniPaket` може без кастовања да израчуна цену осигурања.
 
 ### [`primer06_wildcard`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/09.genericki.tipovi/src/primer06_wildcard)
 
-Ovaj primer je namerno kraći.
+Овај пример је намерно краћи.
 
-Generički tipovi u Javi su **invarijantni**.
+Генерички типови у Јави су **инваријантни**.
 
-To znači da, iako:
+То значи да, иако:
 
 ```text
 Telefon IS-A Procenjiv
 ```
 
-ne sledi:
+не следи:
 
 ```text
 Paket<Telefon> IS-A Paket<Procenjiv>
 ```
 
-Kada želimo metodu koja samo čita različite pakete procenjivih predmeta, možemo koristiti:
+Када желимо методу која само чита различите пакете процењивих предмета, можемо користити:
 
 ```java
 Paket<? extends Procenjiv>
 ```
 
-Za ovu nedelju je dovoljno razumeti motivaciju.
+За ову недељу је довољно разумети мотивацију.
 
-Detaljne kombinacije `extends` i `super` nisu cilj kursa.
+Детаљне комбинације `extends` и `super` нису циљ курса.
 
 ---
 
-## Zašto ne samo `Object`?
+## Зашто не само `Object`?
 
-Bez generika:
+Без генерика:
 
 ```java
 Object sadrzaj = ...
 ```
 
-kompajler gubi preciznu informaciju o tipu.
+компајлер губи прецизну информацију о типу.
 
-Onda korisnik mora da zna šta je stvarno unutra i da kastuje.
+Онда корисник мора да зна шта је стварно унутра и да кастује.
 
-Sa generikom:
+Са генериком:
 
 ```java
 Paket<Telefon>
 ```
 
-informacija o tipu postaje deo potpisa.
+информација о типу постаје део потписа.
 
-Kompajler može da proveri kod pre izvršavanja.
+Компајлер може да провери код пре извршавања.
 
 ---
 
-## Generici i OOP
+## Генерици и ООП
 
-Generici nisu zamena za polimorfizam.
+Генерици нису замена за полиморфизам.
 
-Na primer:
+На пример:
 
 ```java
 List<NacinPlacanja>
 ```
 
-može da sadrži različite implementacije interfejsa `NacinPlacanja`.
+може да садржи различите имплементације интерфејса `NacinPlacanja`.
 
-Ovde istovremeno koristimo:
+Овде истовремено користимо:
 
-- generike da kažemo koji tip elemenata kolekcija prihvata;
-- polimorfizam da različiti konkretni objekti mogu biti posmatrani kroz zajednički interfejs.
+- генерике да кажемо који тип елемената колекција прихвата;
+- полиморфизам да различити конкретни објекти могу бити посматрани кроз заједнички интерфејс.
 
-Ove dve ideje se veoma često koriste zajedno.
+Ове две идеје се веома често користе заједно.
 
 ---
 
-## Type erasure — samo napomena
+## Type erasure — само напомена
 
-Java generici su implementirani pomoću mehanizma koji se zove **type erasure**.
+Java генерици су имплементирани помоћу механизма који се зове **type erasure**.
 
-Za ovaj kurs nije potrebno detaljno proučavati njegovu implementaciju.
+За овај курс није потребно детаљно проучавати његову имплементацију.
 
-Važno je samo znati da zbog toga postoje neka ograničenja, na primer ne možemo jednostavno pisati:
+Важно је само знати да због тога постоје нека ограничења, на пример не можемо једноставно писати:
 
 ```java
 new T()
 ```
 
-ili:
+или:
 
 ```java
 new T[10]
 ```
 
-Nemojte pamtiti listu ograničenja napamet. Kada naiđemo na konkretan slučaj, objasnićemo ga.
+Немојте памтити листу ограничења напамет. Када наиђемо на конкретан случај, објаснићемо га.
 
 ---
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Šta gubimo kada vrednost čuvamo kao `Object`?
-2. Kada se greška pogrešnog kastovanja otkriva?
-3. Šta znači `T` u `Paket<T>`?
-4. Da li je `T` posebna Java ključna reč?
-5. Da li su `Paket<Telefon>` i `Paket<Knjiga>` isti tip?
-6. Zašto nam kod generičke klase više nije potreban cast?
-7. Koja je razlika između generičke klase i generičke metode?
-8. Zašto interfejs `Skladiste<T>` ima smisla?
-9. Zašto `OsiguraniPaket<T>` nije dovoljan ako želi da poziva `proceniVrednost()`?
-10. Šta nam garantuje `<T extends Procenjiv>`?
-11. Zašto `Paket<Telefon>` nije automatski `Paket<Procenjiv>`?
-12. Gde ćemo sledeće nedelje videti generike u standardnoj biblioteci?
+1. Шта губимо када вредност чувамо као `Object`?
+2. Када се грешка погрешног кастовања открива?
+3. Шта значи `T` у `Paket<T>`?
+4. Да ли је `T` посебна Java кључна реч?
+5. Да ли су `Paket<Telefon>` и `Paket<Knjiga>` исти тип?
+6. Зашто нам код генеричке класе више није потребан cast?
+7. Која је разлика између генеричке класе и генеричке методе?
+8. Зашто интерфејс `Skladiste<T>` има смисла?
+9. Зашто `OsiguraniPaket<T>` није довољан ако жели да позива `proceniVrednost()`?
+10. Шта нам гарантује `<T extends Procenjiv>`?
+11. Зашто `Paket<Telefon>` није аутоматски `Paket<Procenjiv>`?
+12. Где ћемо следеће недеље видети генерике у стандардној библиотеци?
 
 ---
 
-## Mini zadatak
+## Мини задатак
 
-U `ZADATAK.md` nalazi se primer **pametnog ormarića**.
+У `ZADATAK.md` налази се пример **паметног ормарића**.
 
-Student treba da napravi generički `Ormaric<T>` i zatim ograničenu generičku klasu za predmete koji imaju masu.
+Студент треба да направи генерички `Ormaric<T>` и затим ограничену генеричку класу за предмете који имају масу.
 
-### Ugovor skladišta (primer04)
+### Уговор складишта (пример04)
 
-`null` označava prazno skladište, pa ga nije dozvoljeno smestiti kao predmet.
-Pokušaj smeštanja u zauzeto skladište baca `IllegalStateException`, bez promene
-postojećeg sadržaja. `preuzmi()` iz praznog skladišta vraća null. Politika je
-eksplicitna da pozivalac ne nagađa da li je operacija uspela.
+`null` означава празно складиште, па га није дозвољено сместити као предмет.
+Покушај смештања у заузето складиште баца `IllegalStateException`, без промене
+постојећег садржаја. `preuzmi()` из празног складишта враћа null. Политика је
+експлицитна да позивалац не нагађа да ли је операција успела.

@@ -1,44 +1,44 @@
-# Nedelja 10 — Kolekcije, jednakost i poređenje
+# Недеља 10 — Колекције, једнакост и поређење
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje) · [preuzmi projekat (ZIP)](../10.kolekcije.jednakost.i.poredjenje.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje) · [преузми пројекат (ZIP)](../10.kolekcije.jednakost.i.poredjenje.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ove nedelje spajamo nekoliko tema koje su tesno povezane:
+Ове недеље спајамо неколико тема које су тесно повезане:
 
 - `List`;
 - `Set`;
 - `Map`;
-- `equals` i `hashCode`;
+- `equals` и `hashCode`;
 - `Comparable`;
 - `Comparator`.
 
-Glavni domen su **pesme i plejliste**.
+Главни домен су **песме и плејлисте**.
 
-Ideja nije da napamet naučimo veliki broj klasa iz Java biblioteke, već da naučimo da postavimo pitanje:
+Идеја није да напамет научимо велики број класа из Java библиотеке, већ да научимо да поставимо питање:
 
-> Kakvu kolekciju podataka zapravo želim da modelujem?
+> Какву колекцију података заправо желим да моделујем?
 
 ---
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da:
+После вежби студент треба да уме да:
 
-- objasni osnovnu razliku između `List`, `Set` i `Map`;
-- izabere odgovarajuću kolekciju prema semantici problema;
-- koristi `ArrayList`, `HashSet` i `HashMap`;
-- objasni zašto `HashSet` i `HashMap` zavise od `equals` i `hashCode`;
-- razlikuje identitet objekta od semantičke jednakosti;
-- pravilno implementira ugovor `equals/hashCode`;
-- definiše prirodni poredak pomoću `Comparable`;
-- definiše alternativne poretke pomoću `Comparator`;
-- prepozna `Comparator` kao praktičan primer Strategy obrasca;
-- koristi `enum` kao prirodan tip za konačan skup vrednosti.
+- објасни основну разлику између `List`, `Set` и `Map`;
+- изабере одговарајућу колекцију према семантици проблема;
+- користи `ArrayList`, `HashSet` и `HashMap`;
+- објасни зашто `HashSet` и `HashMap` зависе од `equals` и `hashCode`;
+- разликује идентитет објекта од семантичке једнакости;
+- правилно имплементира уговор `equals/hashCode`;
+- дефинише природни поредак помоћу `Comparable`;
+- дефинише алтернативне поретке помоћу `Comparator`;
+- препозна `Comparator` као практичан пример Strategy обрасца;
+- користи `enum` као природан тип за коначан скуп вредности.
 
 ---
 
 ## `enum Zanr`
 
-U primerima koristimo:
+У примерима користимо:
 
 ```java
 public enum Zanr {
@@ -51,15 +51,15 @@ public enum Zanr {
 }
 ```
 
-`enum` koristimo kada imamo **konačan, poznat skup vrednosti**.
+`enum` користимо када имамо **коначан, познат скуп вредности**.
 
-To je bolje od:
+То је боље од:
 
 ```java
 String zanr;
 ```
 
-jer kompajler može da spreči vrednosti poput:
+јер компајлер може да спречи вредности попут:
 
 ```text
 "rok"
@@ -67,209 +67,209 @@ jer kompajler može da spreči vrednosti poput:
 "ROCKK"
 ```
 
-`enum` je pravi Java tip i može:
+`enum` је прави Java тип и може:
 
-- da se koristi kao tip polja;
-- da se prosleđuje metodama;
-- da bude ključ u kolekcijama;
-- da se poredi sa `==`.
+- да се користи као тип поља;
+- да се прослеђује методама;
+- да буде кључ у колекцијама;
+- да се пореди са `==`.
 
 ---
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_lista`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer01_lista)
 
-Pravimo plejlistu pomoću:
+Правимо плејлисту помоћу:
 
 ```java
 List<Pesma> plejlista = new ArrayList<>();
 ```
 
-`List` koristimo kada su važni:
+`List` користимо када су важни:
 
-- redosled;
-- pozicija elementa;
-- mogućnost da isti element postoji više puta.
+- редослед;
+- позиција елемента;
+- могућност да исти елемент постоји више пута.
 
-U plejlisti duplikati mogu da postoje.
+У плејлисти дупликати могу да постоје.
 
-To nije greška `List`-e, već njena semantika.
+То није грешка `List`-е, већ њена семантика.
 
-Važno je primetiti i stil:
+Важно је приметити и стил:
 
 ```java
 List<Pesma> plejlista = new ArrayList<>();
 ```
 
-Promenljiva je tipa interfejsa `List`, a konkretna implementacija je `ArrayList`.
+Променљива је типа интерфејса `List`, а конкретна имплементација је `ArrayList`.
 
-Ovo je ista ideja programiranja prema ugovoru koju smo već videli kod sopstvenih interfejsa.
+Ово је иста идеја програмирања према уговору коју смо већ видели код сопствених интерфејса.
 
 ### [`primer02_skup_bez_jednakosti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer02_skup_bez_jednakosti)
 
-Želimo kolekciju omiljenih pesama bez duplikata.
+Желимо колекцију омиљених песама без дупликата.
 
-Prirodno pokušavamo:
+Природно покушавамо:
 
 ```java
 Set<Pesma> omiljene = new HashSet<>();
 ```
 
-Dodamo dva različita Java objekta koji predstavljaju istu pesmu.
+Додамо два различита Java објекта који представљају исту песму.
 
-Bez redefinisanog `equals/hashCode`, `HashSet` ih smatra različitim.
+Без редефинисаног `equals/hashCode`, `HashSet` их сматра различитим.
 
-Zašto?
+Зашто?
 
-Podrazumevana jednakost objekata se praktično oslanja na njihov identitet.
+Подразумевана једнакост објеката се практично ослања на њихов идентитет.
 
-Domen, međutim, možda kaže:
+Домен, међутим, можда каже:
 
-> pesme sa istim izvođačem i naslovom smatramo istom pesmom.
+> песме са истим извођачем и насловом сматрамо истом песмом.
 
 ### [`primer03_equals_i_hashcode`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer03_equals_i_hashcode)
 
-Implementiramo semantičku jednakost:
+Имплементирамо семантичку једнакост:
 
 ```java
 @Override
 public boolean equals(Object objekat)
 ```
 
-i povezani:
+и повезани:
 
 ```java
 @Override
 public int hashCode()
 ```
 
-Važan ugovor:
+Важан уговор:
 
-> Ako su dva objekta jednaka po `equals`, moraju imati isti `hashCode`.
+> Ако су два објекта једнака по `equals`, морају имати исти `hashCode`.
 
-Obrnuto ne mora da važi.
+Обрнуто не мора да важи.
 
-Dva različita objekta mogu imati isti hash kod.
+Два различита објекта могу имати исти hash код.
 
 ### [`primer04_mapa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer04_mapa)
 
-Koristimo:
+Користимо:
 
 ```java
 Map<String, Pesma>
 ```
 
-za katalog u kome je ključ jedinstvena šifra pesme.
+за каталог у коме је кључ јединствена шифра песме.
 
-`Map` modeluje vezu:
+`Map` моделује везу:
 
 ```text
 ključ → vrednost
 ```
 
-Ključ je jedinstven.
+Кључ је јединствен.
 
-Poziv:
+Позив:
 
 ```java
 mapa.put(istiKljuc, novaVrednost)
 ```
 
-zamenjuje prethodnu vrednost za taj ključ.
+замењује претходну вредност за тај кључ.
 
-Tipični slučajevi:
+Типични случајеви:
 
-- šifra proizvoda → proizvod;
-- korisničko ime → korisnik;
-- registarska oznaka → vozilo;
-- indeks → student.
+- шифра производа → производ;
+- корисничко име → корисник;
+- регистарска ознака → возило;
+- индекс → студент.
 
 ### [`primer05_comparable`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer05_comparable)
 
-Nekim objektima želimo da damo jedan **prirodan poredak**.
+Неким објектима желимо да дамо један **природан поредак**.
 
-`Pesma` implementira:
+`Pesma` имплементира:
 
 ```java
 Comparable<Pesma>
 ```
 
-i definiše:
+и дефинише:
 
 ```java
 compareTo(...)
 ```
 
-U primeru prirodni poredak je:
+У примеру природни поредак је:
 
-1. naslov;
-2. izvođač.
+1. наслов;
+2. извођач.
 
-To omogućava:
+То омогућава:
 
 ```java
 Collections.sort(pesme);
 ```
 
-i korišćenje uređenih kolekcija poput:
+и коришћење уређених колекција попут:
 
 ```java
 TreeSet<Pesma>
 ```
 
-Važno:
+Важно:
 
-Prirodni poredak treba birati samo kada postoji jedan razuman podrazumevani poredak.
+Природни поредак треба бирати само када постоји један разуман подразумевани поредак.
 
 ### [`primer06_comparator`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer06_comparator)
 
-Jedan prirodni poredak nije dovoljan.
+Један природни поредак није довољан.
 
-Istu plejlistu nekad želimo da sortiramo:
+Исту плејлисту некад желимо да сортирамо:
 
-- po trajanju;
-- po izvođaču;
-- po naslovu.
+- по трајању;
+- по извођачу;
+- по наслову.
 
-Ne želimo da menjamo klasu `Pesma` svaki put.
+Не желимо да мењамо класу `Pesma` сваки пут.
 
-Zato koristimo:
+Зато користимо:
 
 ```java
 Comparator<Pesma>
 ```
 
-i konkretne implementacije:
+и конкретне имплементације:
 
 ```text
 PoredjenjePoTrajanju
 PoredjenjePoIzvodjacu
 ```
 
-Ovo je odličan primer Strategy obrasca iz standardne Java biblioteke:
+Ово је одличан пример Strategy обрасца из стандардне Java библиотеке:
 
 ```text
 Comparator<Pesma> = strategija poređenja
 ```
 
-Algoritam sortiranja ostaje isti, a način poređenja menjamo.
+Алгоритам сортирања остаје исти, а начин поређења мењамо.
 
 ### [`primer07_lambda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer07_lambda)
 
-Isti `Comparator` pišemo na tri načina: imenovanom klasom, anonimnom klasom i lambdom. Objašnjenje je u odeljku [Most do JavaFX-a](#most-do-javafx-a).
+Исти `Comparator` пишемо на три начина: именованом класом, анонимном класом и ламбдом. Објашњење је у одељку [Мост до JavaFX-a](#мост-до-javafx-a).
 
 ### [`primer08_ugovori_skupova`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer08_ugovori_skupova)
 
-Pokazuje šta se dešava kada `Comparator` i `equals` ne govore isto o tome koje su dve pesme „iste“. Objašnjenje je u odeljku [Jednakost i poredak moraju da se razmotre zajedno](#jednakost-i-poredak-moraju-da-se-razmotre-zajedno).
+Показује шта се дешава када `Comparator` и `equals` не говоре исто о томе које су две песме „исте“. Објашњење је у одељку [Једнакост и поредак морају да се размотре заједно](#једнакост-и-поредак-морају-да-се-размотре-заједно).
 
 ---
 
-## List, Set ili Map?
+## List, Set или Map?
 
 ### `List`
 
-Koristimo kada je važan uređeni niz elemenata:
+Користимо када је важан уређени низ елемената:
 
 ```text
 red pesama
@@ -277,11 +277,11 @@ lista obaveza
 istorija poruka
 ```
 
-Dozvoljava duplikate.
+Дозвољава дупликате.
 
 ### `Set`
 
-Koristimo kada želimo kolekciju jedinstvenih elemenata:
+Користимо када желимо колекцију јединствених елемената:
 
 ```text
 omiljene pesme
@@ -289,11 +289,11 @@ prisutni studenti
 posećene države
 ```
 
-Pitanje "šta znači jedinstven?" vodi nas do `equals/hashCode`.
+Питање "шта значи јединствен?" води нас до `equals/hashCode`.
 
 ### `Map`
 
-Koristimo kada podatak prirodno pronalazimo po ključu:
+Користимо када податак природно проналазимо по кључу:
 
 ```text
 indeks → student
@@ -301,72 +301,72 @@ indeks → student
 korisničko ime → nalog
 ```
 
-`Map` nije "lista sa dva podatka".
+`Map` није "листа са два податка".
 
-Ključ ima posebnu semantiku.
+Кључ има посебну семантику.
 
 ---
 
-## Zašto su `equals` i `hashCode` OOP tema?
+## Зашто су `equals` и `hashCode` ООП тема?
 
-Zato što klasa sama treba da zna:
+Зато што класа сама треба да зна:
 
-> Kada dva moja objekta predstavljaju istu stvar u domenu?
+> Када два моја објекта представљају исту ствар у домену?
 
-Na primer:
+На пример:
 
 ```text
 Pesma("Numb", "Linkin Park")
 Pesma("Numb", "Linkin Park")
 ```
 
-To su dva različita Java objekta.
+То су два различита Java објекта.
 
-Ali možemo odlučiti da predstavljaju istu pesmu.
+Али можемо одлучити да представљају исту песму.
 
-To je odluka modela, ne odluka `HashSet` klase.
+То је одлука модела, не одлука `HashSet` класе.
 
 ---
 
-## `==` i `equals`
+## `==` и `equals`
 
-Za objekte:
+За објекте:
 
 ```java
 a == b
 ```
 
-pita da li obe reference pokazuju na isti objekat.
+пита да ли обе референце показују на исти објекат.
 
 ```java
 a.equals(b)
 ```
 
-pita da li ih klasa smatra semantički jednakim.
+пита да ли их класа сматра семантички једнаким.
 
-Ove dve stvari ne treba mešati.
-
----
-
-## Ugovor `equals/hashCode`
-
-Najvažnija praktična pravila:
-
-1. Ako `a.equals(b)` vraća `true`, onda `a.hashCode()` i `b.hashCode()` moraju biti isti.
-2. Polja koja učestvuju u `equals` treba dosledno da učestvuju i u `hashCode`.
-3. Ne treba menjati polja koja određuju jednakost dok je objekat ključ u hash kolekciji.
-
-Treća tačka je naprednija, ali je korisno pomenuti zašto su nepromenljivi identifikacioni podaci često dobra ideja.
+Ове две ствари не треба мешати.
 
 ---
 
-## `Comparable` ili `Comparator`?
+## Уговор `equals/hashCode`
+
+Најважнија практична правила:
+
+1. Ако `a.equals(b)` враћа `true`, онда `a.hashCode()` и `b.hashCode()` морају бити исти.
+2. Поља која учествују у `equals` треба доследно да учествују и у `hashCode`.
+3. Не треба мењати поља која одређују једнакост док је објекат кључ у hash колекцији.
+
+Трећа тачка је напреднија, али је корисно поменути зашто су непроменљиви идентификациони подаци често добра идеја.
+
+---
+
+## `Comparable` или `Comparator`?
 
 ### Comparable
 
-Klasa kaže:
+Класа каже:
 
-> Ovo je moj prirodni poredak.
+> Ово је мој природни поредак.
 
 ```java
 class Pesma implements Comparable<Pesma>
@@ -374,75 +374,75 @@ class Pesma implements Comparable<Pesma>
 
 ### Comparator
 
-Spoljni objekat kaže:
+Спољни објекат каже:
 
-> Evo jednog mogućeg načina poređenja dve pesme.
+> Ево једног могућег начина поређења две песме.
 
 ```java
 class PoredjenjePoTrajanju implements Comparator<Pesma>
 ```
 
-Koristimo Comparator kada:
+Користимо Comparator када:
 
-- imamo više smislenih poredaka;
-- ne želimo da menjamo samu klasu;
-- pravilo poređenja pripada konkretnom slučaju upotrebe.
-
----
-
-## Pitanja za diskusiju
-
-1. Zašto plejlista prirodno treba da bude `List`, a ne `Set`?
-2. Da li `List` garantuje jedinstvenost elemenata?
-3. Zašto `HashSet` u drugom primeru dozvoljava dve "iste" pesme?
-4. Koja je razlika između `==` i `equals`?
-5. Ko treba da definiše semantičku jednakost klase `Pesma`?
-6. Zašto uz `equals` implementiramo i `hashCode`?
-7. Da li isti `hashCode` znači da su objekti jednaki?
-8. Šta se dešava kada `Map.put` dobije ključ koji već postoji?
-9. Zašto deklarisati `List<Pesma>`, a praviti `new ArrayList<>()`?
-10. Koji poredak bi trebalo da bude prirodni poredak pesme?
-11. Zašto trajanje nije nužno dobar prirodni poredak?
-12. Kako `Comparator` liči na Strategy iz nedelje 7?
-13. Zašto `TreeSet` mora da zna kako da poredi elemente?
-14. Kada biste izabrali `Set`, a kada `Map`?
+- имамо више смислених поредака;
+- не желимо да мењамо саму класу;
+- правило поређења припада конкретном случају употребе.
 
 ---
 
-## Mini zadatak
+## Питања за дискусију
 
-U `ZADATAK.md` nalazi se model lične biblioteke knjiga.
+1. Зашто плејлиста природно треба да буде `List`, а не `Set`?
+2. Да ли `List` гарантује јединственост елемената?
+3. Зашто `HashSet` у другом примеру дозвољава две "исте" песме?
+4. Која је разлика између `==` и `equals`?
+5. Ко треба да дефинише семантичку једнакост класе `Pesma`?
+6. Зашто уз `equals` имплементирамо и `hashCode`?
+7. Да ли исти `hashCode` значи да су објекти једнаки?
+8. Шта се дешава када `Map.put` добије кључ који већ постоји?
+9. Зашто декларисати `List<Pesma>`, а правити `new ArrayList<>()`?
+10. Који поредак би требало да буде природни поредак песме?
+11. Зашто трајање није нужно добар природни поредак?
+12. Како `Comparator` личи на Strategy из недеље 7?
+13. Зашто `TreeSet` мора да зна како да пореди елементе?
+14. Када бисте изабрали `Set`, а када `Map`?
 
-Student treba da upotrebi:
+---
+
+## Мини задатак
+
+У `ZADATAK.md` налази се модел личне библиотеке књига.
+
+Студент треба да употреби:
 
 - `List`;
 - `Set`;
 - `Map`;
 - `equals/hashCode`;
 - `Comparable`;
-- najmanje dva `Comparator` objekta;
+- најмање два `Comparator` објекта;
 - `enum`.
 
-Time u jednom zadatku povezuje sve teme ove nedelje.
+Тиме у једном задатку повезује све теме ове недеље.
 
-## Jednakost i poredak moraju da se razmotre zajedno
+## Једнакост и поредак морају да се размотре заједно
 
-Kod klase `Pesma` jednakost i prirodni poredak koriste naslov i izvođača; trajanje je
-izostavljeno iz jednakosti po odluci ovog pojednostavljenog domena. Tu odluku
-zadržavamo i u primeru sa `Comparator`-om.
+Код класе `Pesma` једнакост и природни поредак користе наслов и извођача; трајање је
+изостављено из једнакости по одлуци овог поједностављеног домена. Ту одлуку
+задржавамо и у примеру са `Comparator`-ом.
 
-`TreeSet` smatra dva elementa istim ako poređenje daje 0. Comparator koji poredi
-samo trajanje dobar je za sortiranje liste, ali ne za skup svih različitih pesama.
-To demonstrira [`primer08_ugovori_skupova`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer08_ugovori_skupova). HashSet/HashMap ne obećavaju redosled
-obilaska. Ne menjati polja koja određuju jednakost dok je objekat u hash kolekciji.
+`TreeSet` сматра два елемента истим ако поређење даје 0. Comparator који пореди
+само трајање добар је за сортирање листе, али не за скуп свих различитих песама.
+То демонстрира [`primer08_ugovori_skupova`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer08_ugovori_skupova). HashSet/HashMap не обећавају редослед
+обиласка. Не мењати поља која одређују једнакост док је објекат у hash колекцији.
 
-Za obilazak mape koristiti `entrySet()`. Brisanje tokom obilaska raditi preko
-Iterator.remove ili, posle uvoda u lambda izraze, removeIf; ne menjati listu običnim
-remove pozivom usred enhanced-for petlje. Kolekcije i iteratore šire pratiti uz predavanja.
+За обилазак мапе користити `entrySet()`. Брисање током обиласка радити преко
+Iterator.remove или, после увода у ламбда изразе, removeIf; не мењати листу обичним
+remove позивом усред enhanced-for петље. Колекције и итераторе шире пратити уз предавања.
 
-## Most do JavaFX-a
+## Мост до JavaFX-a
 
-U [`primer07_lambda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer07_lambda) isti Comparator pišemo imenovanom klasom, anonimnom klasom i
-lambdom. Funkcionalni interfejs ima jednu apstraktnu operaciju (uz pravila o Object
-metodama). U JavaFX-u handler je callback: registrujemo ponašanje koje će se pozvati
-kasnije, kada se desi događaj. Detaljan Stream API nije preduslov ovog niza vežbi.
+У [`primer07_lambda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/10.kolekcije.jednakost.i.poredjenje/src/primer07_lambda) исти Comparator пишемо именованом класом, анонимном класом и
+ламбдом. Функционални интерфејс има једну апстрактну операцију (уз правила о Object
+методама). У JavaFX-u handler је callback: региструјемо понашање које ће се позвати
+касније, када се деси догађај. Детаљан Stream API није предуслов овог низа вежби.

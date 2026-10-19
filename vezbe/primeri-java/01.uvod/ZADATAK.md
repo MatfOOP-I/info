@@ -1,17 +1,17 @@
-# Zadatak — nedelja 1
+# Задатак — недеља 1
 
-[← Nedelja 1](README.md)
+[← Недеља 1](README.md)
 
-## Vođeni deo
+## Вођени део
 
-Napraviti program koji učitava dva cela broja i operaciju (+ ili -), računa i prikazuje rezultat. Najpre napisati dve metode, zatim unos i proveru. Ograničiti brojeve na -1000 do 1000. Primer: 7, 3, - daje 4.
+Направити програм који учитава два цела броја и операцију (+ или -), рачуна и приказује резултат. Најпре написати две методе, затим унос и проверу. Ограничити бројеве на -1000 до 1000. Пример: 7, 3, - даје 4.
 
-## Samostalni deo — Parking
+## Самостални део — Паркинг
 
-Program dobija broj započetih sati i cenu sata. Odbija nepozitivan broj sati i negativnu cenu, a zatim ispisuje ukupnu cenu. Ograničiti ulaz na najviše 24 sata i 10.000 dinara po satu.
+Програм добија број започетих сати и цену сата. Одбија непозитиван број сати и негативну цену, а затим исписује укупну цену. Ограничити улаз на највише 24 сата и 10.000 динара по сату.
 
-**Kriterijum provere:** Za 3 i 150 rezultat je 450. Za 0 i 150 ispisuje objašnjenje bez obračuna. Ne koristiti klase domena pre nego što ih obradimo.
+**Критеријум провере:** За 3 и 150 резултат је 450. За 0 и 150 исписује објашњење без обрачуна. Не користити класе домена пре него што их обрадимо.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

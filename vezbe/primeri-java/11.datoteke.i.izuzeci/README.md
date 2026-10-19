@@ -1,25 +1,25 @@
-# Nedelja 11 — Datoteke i izuzeci
+# Недеља 11 — Датотеке и изузеци
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci) · [preuzmi projekat (ZIP)](../11.datoteke.i.izuzeci.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci) · [преузми пројекат (ZIP)](../11.datoteke.i.izuzeci.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ove nedelje spajamo dve teme koje prirodno pripadaju zajedno:
+Ове недеље спајамо две теме које природно припадају заједно:
 
-- rad sa datotekama;
-- obradu grešaka pomoću izuzetaka.
+- рад са датотекама;
+- обраду грешака помоћу изузетака.
 
-Umesto da `try/catch` učimo na veštačkim primerima, koristimo realan problem:
+Уместо да `try/catch` учимо на вештачким примерима, користимо реалан проблем:
 
-> učitati podatke iz datoteke, proveriti ih i odlučiti šta raditi kada nešto nije ispravno.
+> учитати податке из датотеке, проверити их и одлучити шта радити када нешто није исправно.
 
-Glavni domen je spisak rezervacija putovanja.
+Главни домен је списак резервација путовања.
 
-Jedan red fajla izgleda ovako:
+Један ред фајла изгледа овако:
 
 ```text
 ime,prezime,godine,destinacija
 ```
 
-Na primer:
+На пример:
 
 ```text
 Ana,Jovanovic,22,Rim
@@ -27,32 +27,32 @@ Marko,Petrovic,abc,Pariz
 Milica,Ilic,31,Atina
 ```
 
-Drugi red sadrži grešku: `abc` nije broj godina.
+Други ред садржи грешку: `abc` није број година.
 
 ---
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da:
+После вежби студент треба да уме да:
 
-- čita tekstualnu datoteku red po red;
-- razume zašto rad sa fajlovima može da proizvede greške koje ne možemo unapred sprečiti;
-- koristi `try/catch`;
-- razume razliku između hvatanja i prosleđivanja izuzetka;
-- koristi `throws`;
-- napravi sopstveni izuzetak za grešku domena;
-- koristi `try-with-resources`;
-- razume zašto resurs poput fajla treba pouzdano zatvoriti;
-- razlikuje tehničku grešku od greške u sadržaju podataka;
-- donese odluku da li neispravan red treba preskočiti ili prekinuti ceo proces.
+- чита текстуалну датотеку ред по ред;
+- разуме зашто рад са фајловима може да произведе грешке које не можемо унапред спречити;
+- користи `try/catch`;
+- разуме разлику између хватања и прослеђивања изузетка;
+- користи `throws`;
+- направи сопствени изузетак за грешку домена;
+- користи `try-with-resources`;
+- разуме зашто ресурс попут фајла треба поуздано затворити;
+- разликује техничку грешку од грешке у садржају података;
+- донесе одлуку да ли неисправан ред треба прескочити или прекинути цео процес.
 
 ---
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_citanje_fajla`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer01_citanje_fajla)
 
-Prvo samo čitamo fajl:
+Прво само читамо фајл:
 
 ```java
 BufferedReader
@@ -60,9 +60,9 @@ FileReader
 readLine()
 ```
 
-Cilj nije da učimo celu `java.io` biblioteku.
+Циљ није да учимо целу `java.io` библиотеку.
 
-Dovoljno je razumeti:
+Довољно је разумети:
 
 ```text
 otvori fajl
@@ -70,15 +70,15 @@ otvori fajl
 zatvori fajl
 ```
 
-Odmah se pojavljuje pitanje:
+Одмах се појављује питање:
 
-> Šta ako fajl ne postoji?
+> Шта ако фајл не постоји?
 
 ### [`primer02_try_catch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer02_try_catch)
 
-Otvaranje i čitanje fajla može da baci `IOException`.
+Отварање и читање фајла може да баци `IOException`.
 
-Koristimo:
+Користимо:
 
 ```java
 try {
@@ -88,71 +88,71 @@ try {
 }
 ```
 
-Poenta nije "uhvati sve".
+Поента није "ухвати све".
 
-Poenta je:
+Поента је:
 
-> Ovaj deo programa zna kako da reaguje na konkretnu grešku.
+> Овај део програма зна како да реагује на конкретну грешку.
 
 ### [`primer03_parsiranje_i_vise_gresaka`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer03_parsiranje_i_vise_gresaka)
 
-Sada čitamo CSV red i pretvaramo:
+Сада читамо CSV ред и претварамо:
 
 ```text
 godine
 ```
 
-u `int`.
+у `int`.
 
-Možemo dobiti različite probleme:
+Можемо добити различите проблеме:
 
-- `IOException` — problem sa fajlom;
-- `NumberFormatException` — podatak nije broj;
-- pogrešan broj polja — loš format reda.
+- `IOException` — проблем са фајлом;
+- `NumberFormatException` — податак није број;
+- погрешан број поља — лош формат реда.
 
-To su različite greške i ne moraju sve da se tretiraju isto.
+То су различите грешке и не морају све да се третирају исто.
 
 ### [`primer04_sopstveni_izuzetak`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer04_sopstveni_izuzetak)
 
-Uvodi se:
+Уводи се:
 
 ```java
 NeispravanRedException
 ```
 
-Zašto?
+Зашто?
 
-Zato što želimo da kod koji parsira rezervaciju kaže:
+Зато што желимо да код који парсира резервацију каже:
 
-> Ovaj red ne predstavlja ispravnu rezervaciju.
+> Овај ред не представља исправну резервацију.
 
-To je preciznije od generičkog `Exception`.
+То је прецизније од генеричког `Exception`.
 
-Metoda:
+Метода:
 
 ```java
 Rezervacija parsiraj(String red)
 ```
 
-može da ima:
+може да има:
 
 ```java
 throws NeispravanRedException
 ```
 
-Time jasno komunicira deo svog ugovora.
+Тиме јасно комуницира део свог уговора.
 
 ### [`primer05_try_with_resources`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer05_try_with_resources)
 
-Ručno zatvaranje:
+Ручно затварање:
 
 ```java
 reader.close();
 ```
 
-je lako zaboraviti, naročito ako se između otvaranja i zatvaranja desi izuzetak.
+је лако заборавити, нарочито ако се између отварања и затварања деси изузетак.
 
-Zato koristimo:
+Зато користимо:
 
 ```java
 try (BufferedReader reader = ...) {
@@ -160,21 +160,21 @@ try (BufferedReader reader = ...) {
 }
 ```
 
-Resurs se zatvara automatski.
+Ресурс се затвара аутоматски.
 
-Ovo je preferirani način za resurse koji implementiraju `AutoCloseable`.
+Ово је преферирани начин за ресурсе који имплементирају `AutoCloseable`.
 
 ### [`primer06_odgovornost_za_gresku`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer06_odgovornost_za_gresku)
 
-Najvažniji primer.
+Најважнији пример.
 
-Metoda koja parsira jedan red:
+Метода која парсира један ред:
 
 ```java
 parsira red
 ```
 
-ne mora da odlučuje:
+не мора да одлучује:
 
 ```text
 da li da prekine ceo program
@@ -182,29 +182,29 @@ da li da preskoči red
 da li da prikaže upozorenje
 ```
 
-To je odluka višeg nivoa.
+То је одлука вишег нивоа.
 
-Na primer:
+На пример:
 
 ```java
 UcitajRezervacije
 ```
 
-može da odluči:
+може да одлучи:
 
-> neispravan red preskačemo, ali nastavljamo sa ostatkom fajla.
+> неисправан ред прескачемо, али настављамо са остатком фајла.
 
-Ovde se lepo vidi razdvajanje odgovornosti.
+Овде се лепо види раздвајање одговорности.
 
 ---
 
-## Tehničke i domenske greške
+## Техничке и доменске грешке
 
-Koristan mentalni model:
+Користан ментални модел:
 
-### Tehnička greška
+### Техничка грешка
 
-Primeri:
+Примери:
 
 ```text
 fajl ne postoji
@@ -212,11 +212,11 @@ nema dozvole za čitanje
 disk problem
 ```
 
-Tipično dolaze iz biblioteke, npr. `IOException`.
+Типично долазе из библиотеке, нпр. `IOException`.
 
-### Domenska greška
+### Доменска грешка
 
-Primeri:
+Примери:
 
 ```text
 godine su negativne
@@ -224,9 +224,9 @@ nedostaje destinacija
 red nema očekivani broj kolona
 ```
 
-To su pravila našeg programa.
+То су правила нашег програма.
 
-Za njih često ima smisla sopstveni izuzetak:
+За њих често има смисла сопствени изузетак:
 
 ```java
 NeispravanRedException
@@ -234,11 +234,11 @@ NeispravanRedException
 
 ---
 
-## `throw` i `throws`
+## `throw` и `throws`
 
 ### `throw`
 
-Zaista bacamo objekat izuzetka:
+Заиста бацамо објекат изузетка:
 
 ```java
 throw new NeispravanRedException("...");
@@ -246,37 +246,37 @@ throw new NeispravanRedException("...");
 
 ### `throws`
 
-U potpisu metode najavljujemo da metoda može da prosledi određeni izuzetak:
+У потпису методе најављујемо да метода може да проследи одређени изузетак:
 
 ```java
 public static Rezervacija parsiraj(String red)
         throws NeispravanRedException
 ```
 
-Ove dve stvari ne treba mešati.
+Ове две ствари не треба мешати.
 
 ---
 
-## Checked i unchecked izuzeci
+## Checked и unchecked изузеци
 
-Java razlikuje dve velike grupe.
+Java разликује две велике групе.
 
 ### Checked
 
-Primer:
+Пример:
 
 ```java
 IOException
 ```
 
-Kompajler zahteva da ga:
+Компајлер захтева да га:
 
-- uhvatimo;
-- ili prosledimo pomoću `throws`.
+- ухватимо;
+- или проследимо помоћу `throws`.
 
 ### Unchecked
 
-Primer:
+Пример:
 
 ```java
 NumberFormatException
@@ -284,41 +284,41 @@ IllegalArgumentException
 NullPointerException
 ```
 
-Kompajler nas ne tera da ih navedemo u potpisu.
+Компајлер нас не тера да их наведемо у потпису.
 
-Za ovaj kurs nije cilj da pamtimo čitavu hijerarhiju izuzetaka.
+За овај курс није циљ да памтимо читаву хијерархију изузетака.
 
-Važno je razumeti:
+Важно је разумети:
 
-> ko može da popravi problem i na kom nivou ga treba obraditi.
+> ко може да поправи проблем и на ком нивоу га треба обрадити.
 
 ---
 
-## Zašto ne `catch (Exception e)` svuda?
+## Зашто не `catch (Exception e)` свуда?
 
-Zato što takav `catch` često sakrije razliku između potpuno različitih problema.
+Зато што такав `catch` често сакрије разлику између потпуно различитих проблема.
 
-Bolje je da kod jasno govori:
+Боље је да код јасно говори:
 
 ```java
 catch (IOException e)
 ```
 
-ili:
+или:
 
 ```java
 catch (NeispravanRedException e)
 ```
 
-kada zaista znamo šta sa tim problemom treba uraditi.
+када заиста знамо шта са тим проблемом треба урадити.
 
-Široki `catch (Exception e)` ponekad ima smisla na granicama aplikacije, ali nije dobar podrazumevani stil za poslovnu logiku.
+Широки `catch (Exception e)` понекад има смисла на границама апликације, али није добар подразумевани стил за пословну логику.
 
 ---
 
 ## `finally`
 
-`finally` treba objasniti jer je deo jezika:
+`finally` треба објаснити јер је део језика:
 
 ```java
 try {
@@ -328,54 +328,54 @@ try {
 }
 ```
 
-Kod iz `finally` bloka se izvršava bez obzira na to da li je došlo do izuzetka.
+Код из `finally` блока се извршава без обзира на то да ли је дошло до изузетка.
 
-Ali za zatvaranje fajlova danas ćemo uglavnom koristiti:
+Али за затварање фајлова данас ћемо углавном користити:
 
 ```java
 try-with-resources
 ```
 
-jer je bezbednije i čitljivije.
+јер је безбедније и читљивије.
 
 ---
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Zašto metoda za čitanje fajla može da ne uspe iako je naš kod ispravan?
-2. Koja je razlika između `throw` i `throws`?
-3. Kada ima smisla da metoda uhvati izuzetak, a kada da ga prosledi?
-4. Zašto `NumberFormatException` ne moramo da navedemo u `throws`?
-5. Zašto sopstveni `NeispravanRedException` može biti bolji od običnog `Exception`?
-6. Da li parser jednog reda treba da odlučuje da li se prekida ceo program?
-7. Ko treba da odluči da li se neispravan red preskače?
-8. Zašto je `try-with-resources` bolji od ručnog `close()`?
-9. Šta se dešava sa resursom ako se izuzetak desi usred `try` bloka?
-10. Zašto nije dobro svuda koristiti `catch (Exception e)`?
-11. Da li svaka neispravna vrednost mora da se modeluje izuzetkom?
-12. Kada je običan `if` bolji od bacanja izuzetka?
+1. Зашто метода за читање фајла може да не успе иако је наш код исправан?
+2. Која је разлика између `throw` и `throws`?
+3. Када има смисла да метода ухвати изузетак, а када да га проследи?
+4. Зашто `NumberFormatException` не морамо да наведемо у `throws`?
+5. Зашто сопствени `NeispravanRedException` може бити бољи од обичног `Exception`?
+6. Да ли парсер једног реда треба да одлучује да ли се прекида цео програм?
+7. Ко треба да одлучи да ли се неисправан ред прескаче?
+8. Зашто је `try-with-resources` бољи од ручног `close()`?
+9. Шта се дешава са ресурсом ако се изузетак деси усред `try` блока?
+10. Зашто није добро свуда користити `catch (Exception e)`?
+11. Да ли свака неисправна вредност мора да се моделује изузетком?
+12. Када је обичан `if` бољи од бацања изузетка?
 
 ---
 
-## Mini zadatak
+## Мини задатак
 
-U `ZADATAK.md` nalazi se učitavanje spiska prijavljenih studenata iz fajla.
+У `ZADATAK.md` налази се учитавање списка пријављених студената из фајла.
 
-Zadatak kombinuje:
+Задатак комбинује:
 
-- čitanje fajla;
-- parsiranje;
-- sopstveni izuzetak;
-- preskakanje loših redova;
-- kolekciju iz prethodne nedelje.
+- читање фајла;
+- парсирање;
+- сопствени изузетак;
+- прескакање лоших редова;
+- колекцију из претходне недеље.
 
-## Dopune: upis, format i assert
+## Допуне: упис, формат и assert
 
-[`primer07_pisanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer07_pisanje) odvaja učitavanje od pisanja tekstualnog izveštaja. Radni
-direktorijum je folder projekta, ne folder klase. Ulaz i izlaz koriste UTF-8.
-Završni parser zadržava sve provere iz prethodnog primera. `split(",", -1)`
-čuva završna prazna polja; ovo nije pun CSV parser (nema quoting/escaping podrške).
+[`primer07_pisanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer07_pisanje) одваја учитавање од писања текстуалног извештаја. Радни
+директоријум је фолдер пројекта, не фолдер класе. Улаз и излаз користе UTF-8.
+Завршни парсер задржава све провере из претходног примера. `split(",", -1)`
+чува завршна празна поља; ово није пун CSV парсер (нема quoting/escaping подршке).
 
-[`primer08_assert`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer08_assert) pokazuje internu tvrdnju i pokretanje sa `-ea`. Tvrdnje nisu
-zamena za validaciju javnih argumenata jer mogu biti isključene. Eksplicitno bačen
-AssertionError u proverama iz nedelje 13 ne zavisi od tog prekidača.
+[`primer08_assert`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/11.datoteke.i.izuzeci/src/primer08_assert) показује интерну тврдњу и покретање са `-ea`. Тврдње нису
+замена за валидацију јавних аргумената јер могу бити искључене. Експлицитно бачен
+AssertionError у проверама из недеље 13 не зависи од тог прекидача.

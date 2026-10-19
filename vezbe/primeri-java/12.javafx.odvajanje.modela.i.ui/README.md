@@ -1,10 +1,10 @@
-# Nedelja 12 — JavaFX i odvajanje modela od korisničkog interfejsa
+# Недеља 12 — JavaFX и одвајање модела од корисничког интерфејса
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui) · [preuzmi projekat (ZIP)](../12.javafx.odvajanje.modela.i.ui.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui) · [преузми пројекат (ZIP)](../12.javafx.odvajanje.modela.i.ui.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ove nedelje prvi put pravimo grafičku aplikaciju.
+Ове недеље први пут правимо графичку апликацију.
 
-Cilj nije samo da naučimo:
+Циљ није само да научимо:
 
 ```text
 Button
@@ -18,43 +18,43 @@ RadioButton
 ToggleGroup
 ```
 
-nego i da zadržimo OOP principe koje smo gradili tokom celog kursa.
+него и да задржимо ООП принципе које смо градили током целог курса.
 
-Najvažnija poruka ove nedelje je:
+Најважнија порука ове недеље је:
 
-> **Korisnički interfejs nije model programa.**
+> **Кориснички интерфејс није модел програма.**
 
-JavaFX treba da:
+JavaFX треба да:
 
-- prikaže podatke;
-- pročita korisnički unos;
-- reaguje na događaje;
-- pozove odgovarajuću operaciju aplikacije;
-- ponovo osveži prikaz.
+- прикаже податке;
+- прочита кориснички унос;
+- реагује на догађаје;
+- позове одговарајућу операцију апликације;
+- поново освежи приказ.
 
-Pravila domena i stanje aplikacije ne treba da žive u `Button` handlerima.
+Правила домена и стање апликације не треба да живе у `Button` handlerima.
 
-## Šta pravimo
+## Шта правимо
 
-Na kraju časa imaćemo planer zadataka: unos opisa, izbor prioriteta, lista zadataka i dugmad za završavanje i uklanjanje.
+На крају часа имаћемо планер задатака: унос описа, избор приоритета, листа задатака и дугмад за завршавање и уклањање.
 
-![Planer zadataka: završen zadatak je označen sa ✓, a ispod liste je poruka o rezultatu](slike/primer05-posle-zavrsavanja.png)
+![Планер задатака: завршен задатак је означен са ✓, а испод листе је порука о резултату](slike/primer05-posle-zavrsavanja.png)
 
-Do njega stižemo u nekoliko koraka, od najjednostavnijeg prozora do aplikacije sa razdvojenim modelom, kontrolerom i prikazom.
+До њега стижемо у неколико корака, од најједноставнијег прозора до апликације са раздвојеним моделом, контролером и приказом.
 
 ---
 
-## Domen
+## Домен
 
-Pravimo jednostavan planer zadataka.
+Правимо једноставан планер задатака.
 
-Zadatak ima:
+Задатак има:
 
-- opis;
-- prioritet;
-- informaciju da li je završen.
+- опис;
+- приоритет;
+- информацију да ли је завршен.
 
-Prioritet je:
+Приоритет је:
 
 ```java
 public enum Prioritet {
@@ -64,39 +64,39 @@ public enum Prioritet {
 }
 ```
 
-Aplikacija treba da omogući:
+Апликација треба да омогући:
 
-- dodavanje zadatka;
-- prikaz svih zadataka;
-- označavanje izabranog zadatka kao završenog;
-- uklanjanje zadatka.
+- додавање задатка;
+- приказ свих задатака;
+- означавање изабраног задатка као завршеног;
+- уклањање задатка.
 
-Domen je namerno jednostavan.
+Домен је намерно једноставан.
 
-Nova tema ove nedelje treba da bude **organizacija GUI aplikacije**, a ne razumevanje poslovnog domena.
-
----
-
-## Ciljevi
-
-Posle vežbi student treba da ume da:
-
-- objasni osnovni životni ciklus JavaFX aplikacije;
-- razlikuje `Stage`, `Scene` i JavaFX kontrole;
-- koristi osnovne layout kontejnere;
-- reaguje na događaj dugmeta;
-- objasni šta je event handler;
-- prepozna problem kada UI direktno čuva i menja stanje domena;
-- izdvoji model u obične Java klase;
-- napravi UI koji koristi model, ali model ne zna da JavaFX postoji;
-- razume ulogu malog kontrolera između prikaza i modela;
-- objasni smer zavisnosti između slojeva.
+Нова тема ове недеље треба да буде **организација GUI апликације**, а не разумевање пословног домена.
 
 ---
 
-## Željeni smer zavisnosti
+## Циљеви
 
-U završnom primeru imamo:
+После вежби студент треба да уме да:
+
+- објасни основни животни циклус JavaFX апликације;
+- разликује `Stage`, `Scene` и JavaFX контроле;
+- користи основне layout контејнере;
+- реагује на догађај дугмета;
+- објасни шта је event handler;
+- препозна проблем када UI директно чува и мења стање домена;
+- издвоји модел у обичне Java класе;
+- направи UI који користи модел, али модел не зна да JavaFX постоји;
+- разуме улогу малог контролера између приказа и модела;
+- објасни смер зависности између слојева.
+
+---
+
+## Жељени смер зависности
+
+У завршном примеру имамо:
 
 ```text
         JavaFX
@@ -111,7 +111,7 @@ U završnom primeru imamo:
         model
 ```
 
-Dozvoljeno je:
+Дозвољено је:
 
 ```text
 prikaz      → kontroler
@@ -119,56 +119,56 @@ kontroler   → model
 prikaz      → model   (samo radi prikaza podataka)
 ```
 
-Nije dozvoljeno:
+Није дозвољено:
 
 ```text
 model → javafx.*
 ```
 
-Model ne treba da zna:
+Модел не треба да зна:
 
-- da postoji dugme;
-- da postoji `TextField`;
-- da postoji `ListView`;
-- da postoji prozor;
-- koje je boje tekst;
-- šta se dešava kada korisnik klikne.
+- да постоји дугме;
+- да постоји `TextField`;
+- да постоји `ListView`;
+- да постоји прозор;
+- које је боје текст;
+- шта се дешава када корисник кликне.
 
 ---
 
-## Zašto je to važno?
+## Зашто је то важно?
 
-Ako je model obična Java:
+Ако је модел обична Java:
 
 ```java
 ListaZadataka lista = new ListaZadataka();
 lista.dodaj("Kupiti kartu", Prioritet.VISOK);
 ```
 
-onda isti model možemo koristiti:
+онда исти модел можемо користити:
 
-- iz JavaFX aplikacije;
-- iz konzolnog programa;
-- iz testova;
-- jednog dana iz nekog drugog UI-ja.
+- из JavaFX апликације;
+- из конзолног програма;
+- из тестова;
+- једног дана из неког другог UI-ја.
 
-Ako poslovna logika živi u:
+Ако пословна логика живи у:
 
 ```java
 dugme.setOnAction(...)
 ```
 
-onda je ona vezana za konkretan UI.
+онда је она везана за конкретан UI.
 
 ---
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
 
-Minimalna JavaFX aplikacija.
+Минимална JavaFX апликација.
 
-Uvodimo:
+Уводимо:
 
 ```text
 Application
@@ -181,64 +181,64 @@ TextField
 Button
 ```
 
-i prvi događaj:
+и први догађај:
 
 ```java
 dugme.setOnAction(...)
 ```
 
-Ovaj primer je namerno mali.
+Овај пример је намерно мали.
 
-Cilj je samo da student razume osnovnu strukturu JavaFX aplikacije.
+Циљ је само да студент разуме основну структуру JavaFX апликације.
 
-| Na početku | Klik bez unetog imena | Posle unosa imena i klika |
+| На почетку | Клик без унетог имена | После уноса имена и клика |
 |---|---|---|
-| ![Prazan prozor sa pitanjem, poljem za unos i dugmetom](slike/primer01-pocetno.png) | ![Poruka „Unesi ime.“](slike/primer01-bez-imena.png) | ![Poruka „Zdravo, Ana!“](slike/primer01-pozdrav.png) |
+| ![Празан прозор са питањем, пољем за унос и дугметом](slike/primer01-pocetno.png) | ![Порука „Унеси име.“](slike/primer01-bez-imena.png) | ![Порука „Здраво, Ана!“](slike/primer01-pozdrav.png) |
 
 ---
 
 ### [`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
 
-Pravimo mali planer, ali namerno loše.
+Правимо мали планер, али намерно лоше.
 
-![Loše organizovan planer: spolja izgleda kao da sve radi](slike/primer02-planer.png)
+![Лоше организован планер: споља изгледа као да све ради](slike/primer02-planer.png)
 
-Spolja se ne vidi ništa loše — problem je u kodu.
+Споља се не види ништа лоше — проблем је у коду.
 
-Klasa JavaFX aplikacije:
+Класа JavaFX апликације:
 
-- čuva listu zadataka;
-- proverava validaciju;
-- dodaje zadatak;
-- formatira zadatak;
-- menja stanje;
-- ažurira GUI.
+- чува листу задатака;
+- проверава валидацију;
+- додаје задатак;
+- форматира задатак;
+- мења стање;
+- ажурира GUI.
 
-Sve je u jednom mestu.
+Све је у једном месту.
 
-Prioritet se bira u `ChoiceBox<String>` sa tekstovima `NIZAK`, `SREDNJI` i `VISOK`, a zadatak je običan `String`, na primer `"[VISOK] Kupiti kartu"`.
+Приоритет се бира у `ChoiceBox<String>` са текстовима `NIZAK`, `SREDNJI` и `VISOK`, а задатак је обичан `String`, на пример `"[VISOK] Kupiti kartu"`.
 
-Program radi.
+Програм ради.
 
-To je važno:
+То је важно:
 
-> Loš dizajn ne znači nužno da program ne radi.
+> Лош дизајн не значи нужно да програм не ради.
 
-Problem je što se odgovornosti mešaju.
+Проблем је што се одговорности мешају.
 
-Posebno obratite pažnju na to kako se pamti da je zadatak završen:
+Посебно обратите пажњу на то како се памти да је задатак завршен:
 
 ```java
 zadaci.set(indeks, "✓ " + zadatak);
 ```
 
-Stanje „završen“ je zapisano **u tekstu** koji se prikazuje. Prikaz i stanje su isti `String`: da bismo saznali da li je zadatak završen, moramo da proveravamo kako počinje tekst (`startsWith("✓ ")`), a prioritet je takođe samo deo teksta. Kad bismo promenili način prikaza (na primer `[KRAJ]` umesto `✓`), pokvarilo bi se i stanje. U sledećim primerima stanje dobija pravo mesto u klasi `Zadatak`, a prikaz ga samo čita.
+Стање „завршен“ је записано **у тексту** који се приказује. Приказ и стање су исти `String`: да бисмо сазнали да ли је задатак завршен, морамо да проверавамо како почиње текст (`startsWith("✓ ")`), а приоритет је такође само део текста. Кад бисмо променили начин приказа (на пример `[KRAJ]` уместо `✓`), покварило би се и стање. У следећим примерима стање добија право место у класи `Zadatak`, а приказ га само чита.
 
 ---
 
 ### [`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx)
 
-Izdvajamo:
+Издвајамо:
 
 ```text
 model/
@@ -247,53 +247,53 @@ model/
     ListaZadataka
 ```
 
-Nijedna od ovih klasa ne importuje ništa iz `javafx.*`.
+Ниједна од ових класа не импортује ништа из `javafx.*`.
 
-Dodajemo običan:
+Додајемо обичан:
 
 ```java
 Main
 ```
 
-koji model koristi iz konzole.
+који модел користи из конзоле.
 
-Time dokazujemo da model postoji nezavisno od GUI-ja.
+Тиме доказујемо да модел постоји независно од GUI-ја.
 
-#### Važna ideja
+#### Важна идеја
 
-Ako moramo da pokrenemo JavaFX da bismo proverili da li:
+Ако морамо да покренемо JavaFX да бисмо проверили да ли:
 
 ```java
 zavrsiZadatak(...)
 ```
 
-radi, verovatno smo previše logike stavili u UI.
+ради, вероватно смо превише логике ставили у UI.
 
 ---
 
 ### [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
 
-Između UI-ja i modela uvodimo mali:
+Између UI-ја и модела уводимо мали:
 
 ```java
 KontrolerZadataka
 ```
 
-Kontroler:
+Контролер:
 
-- prima korisničku nameru;
-- poziva model;
-- vraća rezultat operacije.
+- прима корисничку намеру;
+- позива модел;
+- враћа резултат операције.
 
-Rezultat je mali `record` `RezultatOperacije` sa poljima `uspesno` i `poruka`; prikaz ga čita pozivima `rezultat.uspesno()` i `rezultat.poruka()`.
+Резултат је мали `record` `RezultatOperacije` са пољима `uspesno` и `poruka`; приказ га чита позивима `rezultat.uspesno()` и `rezultat.poruka()`.
 
-Ako ništa nije izabrano (indeks je negativan), kontroler to prijavljuje kao običnu grešku korisnika. Ostali neispravni indeksi su greška pozivaoca, pa izuzetak iz modela namerno ne hvatamo.
+Ако ништа није изабрано (индекс је негативан), контролер то пријављује као обичну грешку корисника. Остали неисправни индекси су грешка позиваоца, па изузетак из модела намерно не хватамо.
 
-Ni kontroler ne zavisi od JavaFX-a.
+Ни контролер не зависи од JavaFX-a.
 
-Ovo nije čas o formalnom MVC obrascu.
+Ово није час о формалном MVC обрасцу.
 
-Poenta je samo da razdvojimo tri vrste odgovornosti:
+Поента је само да раздвојимо три врсте одговорности:
 
 ```text
 model      — podaci i pravila
@@ -305,15 +305,15 @@ prikaz     — korisnički interfejs
 
 ### [`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
 
-Spajamo sve.
+Спајамо све.
 
-| Na početku | Prekratak opis |
+| На почетку | Прекратак опис |
 |---|---|
-| ![Planer sa dva početna zadatka; izabran je prioritet SREDNJI](slike/primer05-pocetno.png) | ![Poruka „Opis mora imati bar 3 znaka.“](slike/primer05-greska.png) |
+| ![Планер са два почетна задатка; изабран је приоритет SREDNJI](slike/primer05-pocetno.png) | ![Порука „Опис мора имати бар 3 знака.“](slike/primer05-greska.png) |
 
-Poruka o grešci dolazi iz modela (`Zadatak` ne dozvoljava prekratak opis), a prikaz je samo ispisuje.
+Порука о грешци долази из модела (`Zadatak` не дозвољава прекратак опис), а приказ је само исписује.
 
-Struktura:
+Структура:
 
 ```text
 primer05_zavrsna_aplikacija/
@@ -331,9 +331,9 @@ primer05_zavrsna_aplikacija/
         PrikazPlanera.java
 ```
 
-`PrikazPlanera` pravi JavaFX kontrole.
+`PrikazPlanera` прави JavaFX контроле.
 
-Kada korisnik klikne:
+Када корисник кликне:
 
 ```text
 Dodaj
@@ -341,55 +341,55 @@ Dodaj
 
 UI:
 
-1. pročita sadržaj `TextField`;
-2. pozove `kontroler.dodajZadatak(...)`;
-3. osveži prikaz.
+1. прочита садржај `TextField`;
+2. позове `kontroler.dodajZadatak(...)`;
+3. освежи приказ.
 
-UI **ne dodaje direktno** objekat u domensku listu.
+UI **не додаје директно** објекат у доменску листу.
 
-#### Izbor prioriteta: `RadioButton` i `ToggleGroup`
+#### Избор приоритета: `RadioButton` и `ToggleGroup`
 
-Prioritet se bira pomoću tri `RadioButton` dugmeta (`NIZAK`, `SREDNJI`, `VISOK`) poređana u `HBox` pored polja za opis.
+Приоритет се бира помоћу три `RadioButton` дугмета (`NIZAK`, `SREDNJI`, `VISOK`) поређана у `HBox` поред поља за опис.
 
-- Sva tri dugmeta su u istoj `ToggleGroup`. Grupa obezbeđuje da u jednom trenutku bude izabrano **samo jedno** dugme: izbor jednog automatski poništava izbor prethodnog. Bez grupe bi svako dugme bilo nezavisno i mogla bi biti izabrana sva tri.
-- Dugmad pravimo petljom preko `Prioritet.values()`, a sam `Prioritet` čuvamo u `setUserData(...)`. Tako iz izabranog dugmeta (`grupa.getSelectedToggle()`) čitamo vrednost enum-a pozivom `getUserData()`, umesto da poredimo tekst na dugmetu.
-- `SREDNJI` je izabran od početka. Klik na već izabrani `RadioButton` ne poništava izbor, pa je posle toga uvek izabran tačno jedan prioritet.
+- Сва три дугмета су у истој `ToggleGroup`. Група обезбеђује да у једном тренутку буде изабрано **само једно** дугме: избор једног аутоматски поништава избор претходног. Без групе би свако дугме било независно и могла би бити изабрана сва три.
+- Дугмад правимо петљом преко `Prioritet.values()`, а сам `Prioritet` чувамо у `setUserData(...)`. Тако из изабраног дугмета (`grupa.getSelectedToggle()`) читамо вредност enum-а позивом `getUserData()`, уместо да поредимо текст на дугмету.
+- `SREDNJI` је изабран од почетка. Клик на већ изабрани `RadioButton` не поништава избор, па је после тога увек изабран тачно један приоритет.
 
-Model i kontroler ne znaju za `RadioButton`: kontroler dobija samo `Prioritet`.
+Модел и контролер не знају за `RadioButton`: контролер добија само `Prioritet`.
 
 ---
 
-## Model ne treba da vraća JavaFX kolekcije
+## Модел не треба да враћа JavaFX колекције
 
-Namerno ne koristimo:
+Намерно не користимо:
 
 ```java
 ObservableList<Zadatak>
 ```
 
-unutar modela.
+унутар модела.
 
-Zašto?
+Зашто?
 
-Zato što bi tada model morao da importuje JavaFX.
+Зато што би тада модел морао да импортује JavaFX.
 
-Umesto toga model vraća:
+Уместо тога модел враћа:
 
 ```java
 List<Zadatak>
 ```
 
-Prikaz odlučuje kako će tu listu prikazati.
+Приказ одлучује како ће ту листу приказати.
 
-Kasnije, u većim JavaFX aplikacijama, postoje različiti načini povezivanja modela i UI-ja.
+Касније, у већим JavaFX апликацијама, постоје различити начини повезивања модела и UI-ја.
 
-Za ovaj kurs je važnije da granica između slojeva ostane jasna.
+За овај курс је важније да граница између слојева остане јасна.
 
 ---
 
 ## Event handler
 
-Kod:
+Код:
 
 ```java
 dugme.setOnAction(dogadjaj -> {
@@ -397,13 +397,13 @@ dugme.setOnAction(dogadjaj -> {
 });
 ```
 
-znači:
+значи:
 
-> kada se desi događaj `ActionEvent`, izvrši ovu funkciju.
+> када се деси догађај `ActionEvent`, изврши ову функцију.
 
-Ovo je događajni način programiranja.
+Ово је догађајни начин програмирања.
 
-Program više ne ide samo linearno:
+Програм више не иде само линеарно:
 
 ```text
 naredba 1
@@ -411,7 +411,7 @@ naredba 2
 naredba 3
 ```
 
-Veći deo vremena aplikacija čeka korisničku akciju:
+Већи део времена апликација чека корисничку акцију:
 
 ```text
 klik
@@ -422,31 +422,31 @@ zatvaranje prozora
 
 ---
 
-## Observer ideja
+## Observer идеја
 
-Ne uvodimo Observer kao novu veliku design-pattern temu.
+Не уводимо Observer као нову велику design-pattern тему.
 
-Dovoljno je primetiti ideju:
+Довољно је приметити идеју:
 
-> jedan objekat može da registruje reakciju na događaj drugog objekta.
+> један објекат може да региструје реакцију на догађај другог објекта.
 
-Na primer:
+На пример:
 
 ```java
 dugme.setOnAction(...)
 ```
 
-Dugme proizvodi događaj.
+Дугме производи догађај.
 
-Naš kod registruje reakciju.
+Наш код региструје реакцију.
 
-To je dovoljno za ovaj kurs.
+То је довољно за овај курс.
 
 ---
 
-## Šta pripada modelu?
+## Шта припада моделу?
 
-Na primer:
+На пример:
 
 ```java
 if (opis == null || opis.isBlank()) {
@@ -454,21 +454,21 @@ if (opis == null || opis.isBlank()) {
 }
 ```
 
-Ako zadatak bez opisa nema smisla u domenu, model treba da štiti to pravilo.
+Ако задатак без описа нема смисла у домену, модел треба да штити то правило.
 
-Isto važi za:
+Исто важи за:
 
 ```java
 zavrsi()
 ```
 
-Stanje zadatka pripada objektu `Zadatak`.
+Стање задатка припада објекту `Zadatak`.
 
 ---
 
-## Šta pripada prikazu?
+## Шта припада приказу?
 
-Na primer:
+На пример:
 
 ```text
 boja teksta
@@ -479,90 +479,90 @@ formatiranje zadatka za prikaz
 poruka korisniku
 ```
 
-Model ne treba da zna da li je završen zadatak prikazan kao:
+Модел не треба да зна да ли је завршен задатак приказан као:
 
 ```text
 ✓ Kupiti kartu
 ```
 
-ili:
+или:
 
 ```text
 [KRAJ] Kupiti kartu
 ```
 
-To je odluka prikaza.
+То је одлука приказа.
 
 ---
 
-## Kontroler nije "sve što nije UI"
+## Контролер није "све што није UI"
 
-Kontroler treba da ostane mali.
+Контролер треба да остане мали.
 
-Loš rezultat refaktorisanja bi bio:
+Лош резултат рефакторисања би био:
 
 ```text
 pre: sva logika u JavaFX klasi
 posle: sva logika u ogromnom Kontroler.java
 ```
 
-Pravila pojedinačnog objekta i dalje pripadaju modelu.
+Правила појединачног објекта и даље припадају моделу.
 
-Na primer:
+На пример:
 
 ```java
 zadatak.zavrsi();
 ```
 
-pripada klasi `Zadatak`.
+припада класи `Zadatak`.
 
 ---
 
-## Zašto ne FXML ove nedelje?
+## Зашто не FXML ове недеље?
 
-JavaFX podržava FXML i Scene Builder.
+JavaFX подржава FXML и Сцене Builder.
 
-Oni mogu biti korisni u većim aplikacijama, ali bi ove nedelje uveli:
+Они могу бити корисни у већим апликацијама, али би ове недеље увели:
 
-- dodatni format fajla;
-- anotacije;
-- povezivanje FXML-a i kontrolera;
-- još jedan skup pravila.
+- додатни формат фајла;
+- анотације;
+- повезивање FXML-a и контролера;
+- још један скуп правила.
 
-Imamo samo 13 nedelja.
+Имамо само 13 недеља.
 
-Zato UI gradimo programatski u Javi, a vreme trošimo na važniju ideju:
+Зато UI градимо програматски у Јави, а време трошимо на важнију идеју:
 
-> **odvajanje modela i prikaza.**
+> **одвајање модела и приказа.**
 
-FXML se kasnije može naučiti veoma brzo kada je ova arhitektonska granica jasna.
-
----
-
-## Pitanja za diskusiju
-
-1. Zašto model ne treba da importuje `javafx.scene.control.Button`?
-2. Da li UI sme da koristi objekte modela?
-3. Ko treba da proveri da zadatak nema prazan opis?
-4. Ko treba da odluči kako se završen zadatak prikazuje?
-5. Zašto model vraća `List<Zadatak>`, a ne `ObservableList<Zadatak>`?
-6. Šta je event handler?
-7. Zašto program ne završava odmah posle `start()` metode?
-8. Ko treba da reaguje kada korisnik klikne "Dodaj"?
-9. Da li `KontrolerZadataka` treba da menja boju `Label` kontrole?
-10. Da li model može da radi bez JavaFX-a?
-11. Kako bismo to dokazali?
-12. Gde bismo dodali čuvanje zadataka u fajl?
-13. Da li bi zbog toga trebalo menjati klasu `PrikazPlanera`?
-14. Šta dobijamo ovakvim razdvajanjem osim "lepšeg koda"?
+FXML се касније може научити веома брзо када је ова архитектонска граница јасна.
 
 ---
 
-## Mini zadatak
+## Питања за дискусију
 
-U `ZADATAK.md` nalazi se aplikacija za **listu za kupovinu**.
+1. Зашто модел не треба да импортује `javafx.scene.control.Button`?
+2. Да ли UI сме да користи објекте модела?
+3. Ко треба да провери да задатак нема празан опис?
+4. Ко треба да одлучи како се завршен задатак приказује?
+5. Зашто модел враћа `List<Zadatak>`, а не `ObservableList<Zadatak>`?
+6. Шта је event handler?
+7. Зашто програм не завршава одмах после `start()` методе?
+8. Ко треба да реагује када корисник кликне "Додај"?
+9. Да ли `KontrolerZadataka` треба да мења боју `Label` контроле?
+10. Да ли модел може да ради без JavaFX-a?
+11. Како бисмо то доказали?
+12. Где бисмо додали чување задатака у фајл?
+13. Да ли би због тога требало мењати класу `PrikazPlanera`?
+14. Шта добијамо оваквим раздвајањем осим "лепшег кода"?
 
-Zadatak zahteva istu arhitektonsku podelu:
+---
+
+## Мини задатак
+
+У `ZADATAK.md` налази се апликација за **листу за куповину**.
+
+Задатак захтева исту архитектонску поделу:
 
 ```text
 model
@@ -570,13 +570,13 @@ kontroler
 prikaz
 ```
 
-Studenti treba da naprave JavaFX UI, ali model mora ostati potpuno nezavisan od JavaFX-a.
+Студенти треба да направе JavaFX UI, али модел мора остати потпуно независан од JavaFX-a.
 
 ---
 
-## Maven podešavanje
+## Maven подешавање
 
-JavaFX od JDK-a 11 više nije deo standardnog JDK-a, pa običan Java projekat neće automatski pronaći pakete:
+JavaFX од JDK-а 11 више није део стандардног JDK-а, па обичан Java пројекат неће аутоматски пронаћи пакете:
 
 ```java
 javafx.application.*
@@ -584,88 +584,88 @@ javafx.scene.*
 javafx.stage.*
 ```
 
-Zato ovaj folder sada sadrži:
+Зато овај фолдер сада садржи:
 
 ```text
 pom.xml
 ```
 
-koji Maven-u:
+који Maven-у:
 
-- dodaje JavaFX dependency;
-- zadržava postojeću strukturu `src/`;
-- podešava Java 21;
-- omogućava pokretanje JavaFX aplikacije.
+- додаје JavaFX dependency;
+- задржава постојећу структуру `src/`;
+- подешава Java 21;
+- омогућава покретање JavaFX апликације.
 
-### Provera
+### Провера
 
-Iz foldera:
+Из фолдера:
 
 ```text
 12.javafx.odvajanje.modela.i.ui
 ```
 
-pokrenuti:
+покренути:
 
 ```bash
 mvn clean compile
 ```
 
-Ako se projekat kompajlira, JavaFX dependency je pravilno učitan.
+Ако се пројекат компајлира, JavaFX dependency је правилно учитан.
 
-### Pokretanje završnog primera
+### Покретање завршног примера
 
 ```bash
 mvn javafx:run
 ```
 
-Podrazumevani `mainClass` je:
+Подразумевани `mainClass` је:
 
 ```text
 primer05_zavrsna_aplikacija.prikaz.PlanerAplikacija
 ```
 
-### Pokretanje prvog JavaFX primera
+### Покретање првог JavaFX примера
 
-Možemo privremeno promeniti glavnu klasu iz komandne linije:
+Можемо привремено променити главну класу из командне линије:
 
 ```bash
 mvn javafx:run \
   -Djavafx.mainClass=primer01_osnove.PozdravAplikacija
 ```
 
-Na Windows PowerShell/cmd isto može u jednoj liniji:
+На Windows PowerShell/cmd исто може у једној линији:
 
 ```text
 mvn javafx:run -Djavafx.mainClass=primer01_osnove.PozdravAplikacija
 ```
 
-Za namerno loše organizovani drugi primer:
+За намерно лоше организовани други пример:
 
 ```text
 mvn javafx:run -Djavafx.mainClass=primer02_sve_u_ui.PlanerSveUAplikaciji
 ```
 
-[`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx) i [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler) ne koriste JavaFX i mogu da se pokrenu kao obične Java klase direktno iz IDE-a.
+[`primer03_model_bez_javafx`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer03_model_bez_javafx) и [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler) не користе JavaFX и могу да се покрену као обичне Java класе директно из IDE-а.
 
 ### IntelliJ IDEA
 
-Najjednostavniji postupak je:
+Најједноставнији поступак је:
 
-1. otvoriti folder `12.javafx.odvajanje.modela.i.ui`;
-2. IDEA će prepoznati `pom.xml`;
-3. izabrati **Load Maven Project** / **Reload Maven Project**;
-4. proveriti da Project SDK bude JDK 21;
-5. sačekati da Maven preuzme `org.openjfx:javafx-controls`;
-6. zatim koristiti `mvn javafx:run` ili Maven panel → `Plugins` → `javafx` → `javafx:run`.
+1. отворити фолдер `12.javafx.odvajanje.modela.i.ui`;
+2. IDEA ће препознати `pom.xml`;
+3. изабрати **Load Maven Project** / **Reload Maven Project**;
+4. проверити да Project SDK буде JDK 21;
+5. сачекати да Maven преузме `org.openjfx:javafx-controls`;
+6. затим користити `mvn javafx:run` или Maven панел → `Plugins` → `javafx` → `javafx:run`.
 
-Nije potrebno ručno dodavati JavaFX SDK u `Project Structure` ako se koristi ovaj Maven projekat.
+Није потребно ручно додавати JavaFX SDK у `Project Structure` ако се користи овај Maven пројекат.
 
-### Zašto nema `module-info.java`?
+### Зашто нема `module-info.java`?
 
-Primeri su namerno **non-modular Maven projekat**.
+Примери су намерно **non-модулар Maven пројекат**.
 
-Java module system bi na ovom mestu dodao još jednu novu temu:
+Java module system би на овом месту додао још једну нову тему:
 
 ```text
 requires javafx.controls;
@@ -673,4 +673,4 @@ exports ...
 opens ...
 ```
 
-To nije cilj ove nedelje. JavaFX Maven plugin podržava i non-modular projekte, pa možemo da učimo JavaFX i separation of concerns bez dodatne module sintakse.
+То није циљ ове недеље. JavaFX Maven plugin подржава и non-модулар пројекте, па можемо да учимо JavaFX и separation of concerns без додатне module синтаксе.

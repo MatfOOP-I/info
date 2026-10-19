@@ -1,18 +1,18 @@
-# Nedelja 8 — State i životni ciklus objekta
+# Недеља 8 — State и животни циклус објекта
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus) · [preuzmi projekat (ZIP)](../08.state.i.zivotni.ciklus.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus) · [преузми пројекат (ZIP)](../08.state.i.zivotni.ciklus.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Prethodne nedelje smo videli Strategy:
+Претходне недеље смо видели Strategy:
 
-> objekat koristi zamenljivo ponašanje koje možemo da promenimo.
+> објекат користи заменљиво понашање које можемо да променимо.
 
-Sada razmatramo drugačiji problem:
+Сада разматрамо другачији проблем:
 
-> ponašanje objekta zavisi od njegovog trenutnog stanja.
+> понашање објекта зависи од његовог тренутног стања.
 
-Glavni primer je porudžbina.
+Главни пример је поруџбина.
 
-Porudžbina prolazi kroz životni ciklus:
+Поруџбина пролази кроз животни циклус:
 
 ```text
 NOVA → PLACENA → POSLATA → ISPORUCENA
@@ -21,36 +21,36 @@ NOVA → PLACENA → POSLATA → ISPORUCENA
     → OTKAZANA
 ```
 
-Nisu sve operacije dozvoljene u svakom stanju.
+Нису све операције дозвољене у сваком стању.
 
-Na primer:
+На пример:
 
-- nova porudžbina može da se plati;
-- plaćena može da se pošalje;
-- poslata može da se označi kao isporučena;
-- isporučena ne može ponovo da se plati;
-- otkazana više ne može da nastavi normalan tok.
+- нова поруџбина може да се плати;
+- плаћена може да се пошаље;
+- послата може да се означи као испоручена;
+- испоручена не може поново да се плати;
+- отказана више не може да настави нормалан ток.
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da:
+После вежби студент треба да уме да:
 
-- razlikuje **identitet objekta** od njegovog trenutnog stanja;
-- prepozna problem kada podklase predstavljaju prolazna stanja istog objekta;
-- objasni zašto `if/switch` nad stanjem može da postane problem kada ponašanje raste;
-- modeluje stanje kao poseban objekat;
-- delegira operacije trenutnom state objektu;
-- razume osnovnu ideju State obrasca;
-- uporedi State i Strategy;
-- razume da State nije automatski bolji od jednostavnog `enum + switch` rešenja.
+- разликује **идентитет објекта** од његовог тренутног стања;
+- препозна проблем када подкласе представљају пролазна стања истог објекта;
+- објасни зашто `if/switch` над стањем може да постане проблем када понашање расте;
+- моделује стање као посебан објекат;
+- делегира операције тренутном state објекту;
+- разуме основну идеју State обрасца;
+- упореди State и Strategy;
+- разуме да State није аутоматски бољи од једноставног `enum + switch` решења.
 
 ---
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_stanje_kao_podklasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer01_stanje_kao_podklasa)
 
-Prvo pokušavamo da modelujemo:
+Прво покушавамо да моделујемо:
 
 ```text
 Porudzbina
@@ -59,47 +59,47 @@ Porudzbina
 └── PoslataPorudzbina
 ```
 
-To na prvi pogled izgleda razumno.
+То на први поглед изгледа разумно.
 
-Problem se javlja kada porudžbina pređe iz jednog stanja u drugo.
+Проблем се јавља када поруџбина пређе из једног стања у друго.
 
-Ako:
+Ако:
 
 ```java
 NovaPorudzbina
 ```
 
-posle plaćanja treba da postane:
+после плаћања треба да постане:
 
 ```java
 PlacenaPorudzbina
 ```
 
-moramo da napravimo **nov objekat**.
+морамо да направимо **нов објекат**.
 
-To otvara pitanje:
+То отвара питање:
 
-> Da li se promenila porudžbina ili samo njeno stanje?
+> Да ли се променила поруџбина или само њено стање?
 
 ### [`primer02_problem_identiteta`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer02_problem_identiteta)
 
-Demonstriramo problem sa referencama.
+Демонстрирамо проблем са референцама.
 
-Jedan deo programa čuva referencu na staru `NovaPorudzbina`, dok drugi dobije novu `PlacenaPorudzbina`.
+Један део програма чува референцу на стару `NovaPorudzbina`, док други добије нову `PlacenaPorudzbina`.
 
-Domen kaže:
+Домен каже:
 
-> to je ista porudžbina.
+> то је иста поруџбина.
 
-Ali naš model kaže:
+Али наш модел каже:
 
-> to su dva različita Java objekta.
+> то су два различита Java објекта.
 
-To je signal da možda modelujemo stanje na pogrešnom mestu.
+То је сигнал да можда моделујемо стање на погрешном месту.
 
 ### [`primer03_enum_i_switch`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer03_enum_i_switch)
 
-Uvodi se jednostavnije rešenje:
+Уводи се једноставније решење:
 
 ```java
 enum StatusPorudzbine {
@@ -110,7 +110,7 @@ enum StatusPorudzbine {
 }
 ```
 
-i metode:
+и методе:
 
 ```java
 plati()
@@ -118,25 +118,25 @@ posalji()
 otkazi()
 ```
 
-sa proverama stanja.
+са проверама стања.
 
-Ovo rešenje je potpuno legitimno za mali sistem.
+Ово решење је потпуно легитимно за мали систем.
 
-Važna poruka:
+Важна порука:
 
-> State pattern nije obavezan čim postoji enum.
+> State pattern није обавезан чим постоји enum.
 
 ### [`primer04_rast_switch_logike`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer04_rast_switch_logike)
 
-Kada se pravila povećaju, iste provere stanja počinju da se ponavljaju kroz više metoda.
+Када се правила повећају, исте провере стања почињу да се понављају кроз више метода.
 
-Tada se ponašanje vezano za stanje rasipa kroz jednu veliku klasu.
+Тада се понашање везано за стање расипа кроз једну велику класу.
 
-Tu se javlja razlog da pokušamo drugačiji dizajn.
+Ту се јавља разлог да покушамо другачији дизајн.
 
 ### [`primer05_state_objekti`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer05_state_objekti)
 
-Uvodimo interfejs:
+Уводимо интерфејс:
 
 ```java
 public interface StanjePorudzbine {
@@ -148,9 +148,9 @@ public interface StanjePorudzbine {
 }
 ```
 
-Metoda `naziv()` vraća ime stanja; `Porudzbina.trenutnoStanje()` je samo prosleđuje.
+Метода `naziv()` враћа име стања; `Porudzbina.trenutnoStanje()` је само прослеђује.
 
-Konkretna stanja:
+Конкретна стања:
 
 ```text
 NovoStanje
@@ -159,13 +159,13 @@ PoslatoStanje
 OtkazanoStanje
 ```
 
-`Porudzbina` sada:
+`Porudzbina` сада:
 
 ```text
 HAS-A StanjePorudzbine
 ```
 
-i delegira:
+и делегира:
 
 ```java
 stanje.plati(this);
@@ -173,46 +173,46 @@ stanje.plati(this);
 
 ### [`primer06_tranzicije`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/08.state.i.zivotni.ciklus/src/primer06_tranzicije)
 
-Konkretno stanje može da odredi sledeće stanje.
+Конкретно стање може да одреди следеће стање.
 
-Na primer:
+На пример:
 
 ```java
 NovoStanje.plati(...)
 ```
 
-posle uspešnog plaćanja radi:
+после успешног плаћања ради:
 
 ```java
 porudzbina.postaviStanje(new PlacenoStanje());
 ```
 
-Tako pravilo tranzicije živi uz ponašanje stanja kome pripada.
+Тако правило транзиције живи уз понашање стања коме припада.
 
 ---
 
-## State obrazac
+## State образац
 
-State koristimo kada:
+State користимо када:
 
-- objekat prolazi kroz jasna stanja;
-- dozvoljene operacije zavise od trenutnog stanja;
-- ponašanje u tim stanjima postaje dovoljno veliko;
-- želimo da pravila pojedinačnih stanja izdvojimo iz glavne klase.
+- објекат пролази кроз јасна стања;
+- дозвољене операције зависе од тренутног стања;
+- понашање у тим стањима постаје довољно велико;
+- желимо да правила појединачних стања издвојимо из главне класе.
 
-Važno:
+Важно:
 
-> cilj nije "izbaciti svaki switch".
+> циљ није "избацити сваки switch".
 
-Ako imamo tri stanja i dve jednostavne provere, `enum + switch` može biti čitljiviji.
+Ако имамо три стања и две једноставне провере, `enum + switch` може бити читљивији.
 
-State ima smisla kada životni ciklus i ponašanje postanu dovoljno složeni.
+State има смисла када животни циклус и понашање постану довољно сложени.
 
 ---
 
-## State i Strategy — sličnosti i razlike
+## State и Strategy — сличности и разлике
 
-Tehnički mogu izgledati slično:
+Технички могу изгледати слично:
 
 ```text
 interfejs
@@ -222,15 +222,15 @@ delegiranje
 polimorfizam
 ```
 
-Ali namera je drugačija.
+Али намера је другачија.
 
 ### Strategy
 
-Pitanje je:
+Питање је:
 
-> Koji način izvršavanja želimo da koristimo?
+> Који начин извршавања желимо да користимо?
 
-Primer:
+Пример:
 
 ```text
 Hodanje
@@ -238,15 +238,15 @@ Voznja
 Plivanje
 ```
 
-Spoljni kod često bira strategiju.
+Спољни код често бира стратегију.
 
 ### State
 
-Pitanje je:
+Питање је:
 
-> U kom stanju je objekat i šta je sada dozvoljeno?
+> У ком стању је објекат и шта је сада дозвољено?
 
-Primer:
+Пример:
 
 ```text
 NOVA
@@ -254,19 +254,19 @@ PLACENA
 POSLATA
 ```
 
-Sama stanja često upravljaju prelazima.
+Сама стања често управљају прелазима.
 
 ---
 
-## Važna ideja: identitet != stanje
+## Важна идеја: идентитет != стање
 
-Porudžbina sa brojem:
+Поруџбина са бројем:
 
 ```text
 #1042
 ```
 
-ostaje porudžbina `#1042` i kada je:
+остаје поруџбина `#1042` и када је:
 
 ```text
 NOVA
@@ -275,9 +275,9 @@ POSLATA
 ISPORUCENA
 ```
 
-Menja se njeno stanje, ne njen identitet.
+Мења се њено стање, не њен идентитет.
 
-Zato je prirodnije da:
+Зато је природније да:
 
 ```java
 class Porudzbina {
@@ -286,32 +286,32 @@ class Porudzbina {
 }
 ```
 
-nego da za svaku tranziciju pravimo novi objekat porudžbine.
+него да за сваку транзицију правимо нови објекат поруџбине.
 
 ---
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Zašto `PlacenaPorudzbina extends Porudzbina` na prvi pogled izgleda logično?
-2. Da li "plaćena" opisuje vrstu porudžbine ili trenutno stanje?
-3. Šta se dešava sa starim referencama ako tranziciju modelujemo pravljenjem novog objekta?
-4. Kada je `enum + switch` sasvim dobro rešenje?
-5. Kada veliki broj provera statusa postaje znak problema?
-6. Gde se u State rešenju nalazi kompozicija?
-7. Gde se dešava delegiranje?
-8. Ko odlučuje o sledećem stanju?
-9. Zašto je `postaviStanje(...)` u primeru namerno ograničena/package-private metoda?
-10. Koja je glavna razlika između Strategy i State?
-11. Da li State znači da više nikada ne treba koristiti `enum`?
-12. Kako biste dodali stanje `ISPORUCENA`?
+1. Зашто `PlacenaPorudzbina extends Porudzbina` на први поглед изгледа логично?
+2. Да ли "плаћена" описује врсту поруџбине или тренутно стање?
+3. Шта се дешава са старим референцама ако транзицију моделујемо прављењем новог објекта?
+4. Када је `enum + switch` сасвим добро решење?
+5. Када велики број провера статуса постаје знак проблема?
+6. Где се у State решењу налази композиција?
+7. Где се дешава делегирање?
+8. Ко одлучује о следећем стању?
+9. Зашто је `postaviStanje(...)` у примеру намерно ограничена/package-private метода?
+10. Која је главна разлика између Strategy и State?
+11. Да ли State значи да више никада не треба користити `enum`?
+12. Како бисте додали стање `ISPORUCENA`?
 
 ---
 
-## Mini zadatak
+## Мини задатак
 
-U fajlu `ZADATAK.md` nalazi se model **rezervacije bioskopske karte**.
+У фајлу `ZADATAK.md` налази се модел **резервације биоскопске карте**.
 
-Rezervacija prolazi kroz:
+Резервација пролази кроз:
 
 ```text
 KREIRANA → PLACENA → ISKORISCENA
@@ -319,21 +319,21 @@ KREIRANA → PLACENA → ISKORISCENA
     → OTKAZANA   → OTKAZANA
 ```
 
-Cilj je da student samostalno primeni State bez kopiranja porudžbine.
+Циљ је да студент самостално примени State без копирања поруџбине.
 
-### Tabela prelaza porudžbine (primer06)
+### Табела прелаза поруџбине (пример06)
 
-Pre implementacije zadatka korisno je videti kako izgleda tabela prelaza za porudžbinu iz `primer06_tranzicije`. Za rezervaciju karte treba napraviti sličnu tabelu.
+Пре имплементације задатка корисно је видети како изгледа табела прелаза за поруџбину из `primer06_tranzicije`. За резервацију карте треба направити сличну табелу.
 
-| Stanje | plati | posalji | isporuci | otkazi |
+| Стање | plati | posalji | isporuci | otkazi |
 |---|---|---|---|---|
-| NOVA | PLACENA | odbij | odbij | OTKAZANA |
-| PLACENA | odbij | POSLATA | odbij | OTKAZANA |
-| POSLATA | odbij | odbij | ISPORUCENA | odbij |
-| ISPORUCENA | odbij | odbij | odbij | odbij |
-| OTKAZANA | odbij | odbij | odbij | odbij |
+| NOVA | PLACENA | одбиј | одбиј | OTKAZANA |
+| PLACENA | одбиј | POSLATA | одбиј | OTKAZANA |
+| POSLATA | одбиј | одбиј | ISPORUCENA | одбиј |
+| ISPORUCENA | одбиј | одбиј | одбиј | одбиј |
+| OTKAZANA | одбиј | одбиј | одбиј | одбиј |
 
-U ovim malim primerima odbijanje ispisuje poruku i ne menja stanje. U završnom
-modelu iz nedelje 13 koristi se izuzetak. Package-private setter u ovoj nedelji je
-nastavni korak: sav kod istog paketa je saradnik od poverenja. Privatne ugnježdene
-implementacije u nedelji 13 dodatno sužavaju taj pristup.
+У овим малим примерима одбијање исписује поруку и не мења стање. У завршном
+моделу из недеље 13 користи се изузетак. Package-private setter у овој недељи је
+наставни корак: сав код истог пакета је сарадник од поверења. Приватне угњеждене
+имплементације у недељи 13 додатно сужавају тај приступ.

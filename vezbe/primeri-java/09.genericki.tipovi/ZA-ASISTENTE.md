@@ -1,14 +1,14 @@
-# Nedelja 9 — napomene za asistente
+# Недеља 9 — напомене за асистенте
 
-[← Nedelja 9](README.md)
+[← Недеља 9](README.md)
 
-## Koliko detaljno raditi wildcard?
+## Колико детаљно радити wildcard?
 
-Zbog ograničenja kursa od 13 nedelja, preporuka je:
+Због ограничења курса од 13 недеља, препорука је:
 
-- obavezno objasniti da generici nisu kovarijantni;
-- pokazati jedan koristan primer sa `? extends`;
-- pomenuti da postoji i `? super`;
-- ne trošiti veliki deo dvočasa na PECS i složene potpise.
+- обавезно објаснити да генерици нису коваријантни;
+- показати један користан пример са `? extends`;
+- поменути да постоји и `? super`;
+- не трошити велики део двочаса на PECS и сложене потписе.
 
-Student treba da može da **čita** osnovne wildcard potpise iz Java API-ja, ali nije cilj da postane ekspert za Java type system.
+Студент треба да може да **чита** основне wildcard потписе из Java API-ја, али није циљ да постане експерт за Java type system.

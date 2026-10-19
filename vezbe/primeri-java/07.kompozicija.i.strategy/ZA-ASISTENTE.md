@@ -1,17 +1,17 @@
-# Nedelja 7 — napomene za asistente
+# Недеља 7 — напомене за асистенте
 
-[← Nedelja 7](README.md)
+[← Недеља 7](README.md)
 
-## Kako početi čas
+## Како почети час
 
-Ne treba početi čas rečenicom:
+Не треба почети час реченицом:
 
-> "Danas radimo Strategy pattern."
+> "Данас радимо Strategy pattern."
 
-Bolje je da studenti prvo vide loše rešenje (primeri 01 i 02) i sami osete problem.
+Боље је да студенти прво виде лоше решење (примери 01 и 02) и сами осете проблем.
 
-Tek kada kompozicija reši problem, uvodimo ime obrasca (primer 06).
+Тек када композиција реши проблем, уводимо име обрасца (пример 06).
 
-## Napomena o proverama
+## Напомена о проверама
 
-Fajl `test/provere/Main.java` sadrži regresione provere za održavanje materijala. U njemu se koriste lambda izrazi, koji se objašnjavaju tek u nedelji 10, pa taj fajl nije namenjen studentima.
+Фајл `test/provere/Main.java` садржи регресионе провере за одржавање материјала. У њему се користе ламбда изрази, који се објашњавају тек у недељи 10, па тај фајл није намењен студентима.

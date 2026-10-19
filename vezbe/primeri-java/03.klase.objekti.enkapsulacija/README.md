@@ -1,94 +1,94 @@
-# Nedelja 3 — Klase, objekti i enkapsulacija
+# Недеља 3 — Класе, објекти и енкапсулација
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija) · [preuzmi projekat (ZIP)](../03.klase.objekti.enkapsulacija.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija) · [преузми пројекат (ZIP)](../03.klase.objekti.enkapsulacija.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ove nedelje prvi put prelazimo sa programa koji prvenstveno obrađuje podatke na program u kome **objekti čuvaju stanje i nude operacije nad tim stanjem**.
+Ове недеље први пут прелазимо са програма који првенствено обрађује податке на програм у коме **објекти чувају стање и нуде операције над тим стањем**.
 
-Glavni primer je jednostavan digitalni novčanik. Novac predstavljamo celim brojem dinara (`int`) da se ne bismo bavili problemima zaokruživanja realnih brojeva — tema primera je objektno-orijentisani dizajn, ne finansijski softver.
+Главни пример је једноставан дигитални новчаник. Новац представљамо целим бројем динара (`int`) да се не бисмо бавили проблемима заокруживања реалних бројева — тема примера је објектно-оријентисани дизајн, не финансијски софтвер.
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da objasni:
+После вежби студент треба да уме да објасни:
 
-- razliku između klase i objekta;
-- šta predstavlja stanje objekta;
-- zašto javna polja omogućavaju da objekat završi u neispravnom stanju;
-- zašto `private` polja + automatski getteri/setteri **nisu sama po sebi dobra enkapsulacija**;
-- šta je invarijanta objekta;
-- zašto je često bolje ponuditi operaciju (`uplati`, `plati`) nego setter (`setStanje`);
-- čemu služe konstruktor i `this`;
-- razliku između članova objekta i `static` članova klase;
-- osnovnu upotrebu `final` polja;
-- da promenljiva klasnog tipa sadrži referencu na objekat;
-- da Java argumente uvek prosleđuje po vrednosti — kod objekata se kopira vrednost reference;
-- čemu služe paketi i koji nivoi vidljivosti postoje (`private`, bez modifikatora, `public`).
+- разлику између класе и објекта;
+- шта представља стање објекта;
+- зашто јавна поља омогућавају да објекат заврши у неисправном стању;
+- зашто `private` поља + аутоматски getteri/setteri **нису сама по себи добра енкапсулација**;
+- шта је инваријанта објекта;
+- зашто је често боље понудити операцију (`uplati`, `plati`) него setter (`setStanje`);
+- чему служе конструктор и `this`;
+- разлику између чланова објекта и `static` чланова класе;
+- основну употребу `final` поља;
+- да променљива класног типа садржи референцу на објекат;
+- да Java аргументе увек прослеђује по вредности — код објеката се копира вредност референце;
+- чему служе пакети и који нивои видљивости постоје (`private`, без модификатора, `public`).
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_javna_polja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer01_javna_polja)
 
-Namerno loš početni model. Pokazuje da korisnik klase može direktno da postavi nemoguće stanje, npr. negativan iznos novca.
+Намерно лош почетни модел. Показује да корисник класе може директно да постави немогуће стање, нпр. негативан износ новца.
 
 ### [`primer02_setter_nije_enkapsulacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer02_setter_nije_enkapsulacija)
 
-Polja postaju `private`, ali uvodimo `setStanje`. Problem praktično ostaje isti. Primer služi da razdvojimo pojmove **sakrivanje podataka** i **enkapsulacija**.
+Поља постају `private`, али уводимо `setStanje`. Проблем практично остаје исти. Пример служи да раздвојимо појмове **сакривање података** и **енкапсулација**.
 
 ### [`primer03_invarijante`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer03_invarijante)
 
-Objekat više nema `setStanje`. Stanje se menja kroz smislene operacije `uplati` i `plati`. Klasa sama čuva svoju invarijantu: stanje novčanika nikada nije negativno.
+Објекат више нема `setStanje`. Стање се мења кроз смислене операције `uplati` и `plati`. Класа сама чува своју инваријанту: стање новчаника никада није негативно.
 
 ### [`primer04_konstruktori_static_final`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer04_konstruktori_static_final)
 
-Model dobija identitet. Svaki novčanik ima jedinstveni ID koji se dodeljuje pomoću zajedničkog `static` brojača. ID i vlasnik su `final`, dok je stanje promenljivo.
+Модел добија идентитет. Сваки новчаник има јединствени ID који се додељује помоћу заједничког `static` бројача. ID и власник су `final`, док је стање променљиво.
 
 ### [`primer05_reference`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer05_reference)
 
-Dve promenljive mogu pokazivati na isti objekat. Primer takođe demonstrira da promena samog objekta iz metode ostaje vidljiva pozivaocu, ali prevezivanje lokalnog parametra na drugi objekat ne menja promenljivu pozivaoca.
+Две променљиве могу показивати на исти објекат. Пример такође демонстрира да промена самог објекта из методе остаје видљива позиваоцу, али превезивање локалног параметра на други објекат не мења променљиву позиваоца.
 
 ### [`primer06_paketi`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/03.klase.objekti.enkapsulacija/src/primer06_paketi)
 
-Pokrenuti `primer06_paketi.Main`. `package` daje puno ime tipu, a `import` skraćuje
-pisanje imena. Podpaket nije isti paket: `a` i `a.b` imaju odvojene granice pristupa.
-`private` član vidi njegova klasa (uz pravila pristupa ugnježdenih tipova), član bez
-modifikatora vidi isti paket, a `public` je javni API. `protected` detaljnije radimo
-uz nasleđivanje. `final` referenca ne garantuje da je objekat na koji pokazuje nepromenljiv.
+Покренути `primer06_paketi.Main`. `package` даје пуно име типу, а `import` скраћује
+писање имена. Подпакет није исти пакет: `a` и `a.b` имају одвојене границе приступа.
+`private` члан види његова класа (уз правила приступа угњеждених типова), члан без
+модификатора види исти пакет, а `public` је јавни API. `protected` детаљније радимо
+уз наслеђивање. `final` референца не гарантује да је објекат на који показује непроменљив.
 
-## Centralna poruka
+## Централна порука
 
-`private` nije cilj sam po sebi.
+`private` није циљ сам по себи.
 
-Dobra klasa treba da odredi **koje operacije imaju smisla nad njenim stanjem** i da spreči da objekat završi u stanju koje nema smisla u domenu problema.
+Добра класа треба да одреди **које операције имају смисла над њеним стањем** и да спречи да објекат заврши у стању које нема смисла у домену проблема.
 
-Umesto:
+Уместо:
 
 ```java
 novcanik.setStanje(-5000);
 ```
 
-želimo API koji govori jezikom problema:
+желимо API који говори језиком проблема:
 
 ```java
 novcanik.uplati(2000);
 novcanik.plati(750);
 ```
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Da li klasa sa svim `private` poljima automatski ima dobru enkapsulaciju?
-2. Zašto `setStanje` nije dobra operacija za digitalni novčanik?
-3. Ko treba da proveri da li na novčaniku ima dovoljno sredstava — pozivalac ili sam `Novcanik`?
-4. Da li svaki podatak mora da ima getter?
-5. Da li svaki podatak mora da ima setter?
-6. Šta bi se desilo kada bi `stanje` bilo `final`?
-7. Zašto `sledeciId` treba da bude `static`, a `id` ne treba?
-8. Ako dve promenljive pokazuju na isti objekat, koliko objekata postoji?
-9. Kada prosledimo `Novcanik` metodi, da li Java prosleđuje objekat „po referenci“?
+1. Да ли класа са свим `private` пољима аутоматски има добру енкапсулацију?
+2. Зашто `setStanje` није добра операција за дигитални новчаник?
+3. Ко треба да провери да ли на новчанику има довољно средстава — позивалац или сам `Novcanik`?
+4. Да ли сваки податак мора да има getter?
+5. Да ли сваки податак мора да има setter?
+6. Шта би се десило када би `stanje` било `final`?
+7. Зашто `sledeciId` треба да буде `static`, а `id` не треба?
+8. Ако две променљиве показују на исти објекат, колико објеката постоји?
+9. Када проследимо `Novcanik` методи, да ли Java прослеђује објекат „по референци“?
 
-## Mali zadatak
+## Мали задатак
 
-Na kraju direktorijuma nalazi se `ZADATAK.md`. Zadatak koristi isti skup ideja, ali drugi domen, kako bi student morao sam da prepozna invarijante i smislen API klase.
+На крају директоријума налази се `ZADATAK.md`. Задатак користи исти скуп идеја, али други домен, како би студент морао сам да препозна инваријанте и смислен API класе.
 
-## Granice operacija
+## Границе операција
 
-Provera `iznos > Integer.MAX_VALUE - stanje` sprečava prekoračenje pre sabiranja.
-Odbijanje operacije ne sme delimično da promeni objekat.
+Провера `iznos > Integer.MAX_VALUE - stanje` спречава прекорачење пре сабирања.
+Одбијање операције не сме делимично да промени објекат.

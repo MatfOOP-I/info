@@ -1,12 +1,12 @@
-# Nedelja 12 — napomene za asistente
+# Недеља 12 — напомене за асистенте
 
-[← Nedelja 12](README.md)
+[← Недеља 12](README.md)
 
-## Predlog toka jednog dvočasa
+## Предлог тока једног двочаса
 
-### Prvih 45 minuta
+### Првих 45 минута
 
-#### 0–15 min
+#### 0–15 мин
 
 [`primer01_osnove`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer01_osnove)
 
@@ -14,71 +14,71 @@
 - `Stage`;
 - `Scene`;
 - layout;
-- kontrole;
-- događaj.
+- контроле;
+- догађај.
 
-#### 15–30 min
+#### 15–30 мин
 
 [`primer02_sve_u_ui`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer02_sve_u_ui)
 
-Napraviti planer koji radi.
+Направити планер који ради.
 
-Zatim pitati:
+Затим питати:
 
-> Šta je sve odgovornost ove jedne klase?
+> Шта је све одговорност ове једне класе?
 
-#### 30–45 min
+#### 30–45 мин
 
-Početi izdvajanje modela.
+Почети издвајање модела.
 
-Pokazati `Zadatak` i `ListaZadataka`.
+Показати `Zadatak` и `ListaZadataka`.
 
-Pokrenuti model iz običnog `Main`.
+Покренути модел из обичног `Main`.
 
-### Drugih 45 minuta
+### Других 45 минута
 
-#### 0–15 min
+#### 0–15 мин
 
 [`primer04_kontroler`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer04_kontroler)
 
-Objasniti:
+Објаснити:
 
 ```text
 prikaz → kontroler → model
 ```
 
-bez insistiranja na terminologiji design patterna.
+без инсистирања на терминологији design patterna.
 
-#### 15–35 min
+#### 15–35 мин
 
 [`primer05_zavrsna_aplikacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/12.javafx.odvajanje.modela.i.ui/src/primer05_zavrsna_aplikacija)
 
-Spojiti JavaFX prikaz sa kontrolerom.
+Спојити JavaFX приказ са контролером.
 
-Dodavanje, završavanje i brisanje zadatka.
+Додавање, завршавање и брисање задатка.
 
-#### 35–45 min
+#### 35–45 мин
 
-Diskusija/refaktorisanje.
+Дискусија/рефакторисање.
 
-Pitanja:
+Питања:
 
-- gde bi išao novi filter?
-- gde bi išla boja visokog prioriteta?
-- gde bi išlo pravilo "opis mora imati bar 3 znaka"?
-- gde bi išlo čuvanje u datoteku?
+- где би ишао нови филтер?
+- где би ишла боја високог приоритета?
+- где би ишло правило "опис мора имати бар 3 знака"?
+- где би ишло чување у датотеку?
 
-## Priprema i granice modela
+## Припрема и границе модела
 
-Pre časa otvoriti Maven projekat i pokrenuti prvi prozor. Ponoviti lambda callback
-iz nedelje 10. Na času studenti povezuju jednu akciju, ne kucaju ceo UI od nule.
+Пре часа отворити Maven пројекат и покренути први прозор. Поновити ламбда callback
+из недеље 10. На часу студенти повезују једну акцију, не куцају цео UI од нуле.
 
-`List.copyOf` štiti strukturu vraćene liste, ali ne pravi duboke kopije mutabilnih
-Zadatak objekata. U ovom jednostavnom modelu Zadatak sam dopušta zavrsi(), pa se
-njegova invarijanta ne krši. Ako sve izmene moraju ići kroz servis, potreban je
-read-only prikaz podataka ili drugačija granica pristupa.
+`List.copyOf` штити структуру враћене листе, али не прави дубоке копије мутабилних
+Задатак објеката. У овом једноставном моделу Задатак сам допушта zavrsi(), па се
+његова инваријанта не крши. Ако све измене морају ићи кроз сервис, потребан је
+read-only приказ података или другачија граница приступа.
 
-Indeksi su bezbedni ovde samo zato što prikaz prati isti redosled kao model.
-Samostalni zadatak sa filtriranjem zahteva stabilan ID ili izabrani objekat.
-Kontroler nezavisan od JavaFX-a je izbor ovog nastavnog modela, ne univerzalno
-pravilo za svaki JavaFX kontroler.
+Индекси су безбедни овде само зато што приказ прати исти редослед као модел.
+Самостални задатак са филтрирањем захтева стабилан ID или изабрани објекат.
+Контролер независан од JavaFX-a је избор овог наставног модела, не универзално
+правило за сваки JavaFX контролер.

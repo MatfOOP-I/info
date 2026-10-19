@@ -1,10 +1,10 @@
-# Nedelja 10 — napomene za asistente
+# Недеља 10 — напомене за асистенте
 
-[← Nedelja 10](README.md)
+[← Недеља 10](README.md)
 
-## Šta namerno NE radimo detaljno
+## Шта намерно НЕ радимо детаљно
 
-Zbog ograničenja na 13 nedelja ne pravimo katalog svih implementacija:
+Због ограничења на 13 недеља не правимо каталог свих имплементација:
 
 ```text
 ArrayList
@@ -18,7 +18,7 @@ LinkedHashMap
 ...
 ```
 
-Student treba da zna glavne apstrakcije:
+Студент треба да зна главне апстракције:
 
 ```text
 List
@@ -26,10 +26,10 @@ Set
 Map
 ```
 
-i nekoliko najčešćih implementacija.
+и неколико најчешћих имплементација.
 
-Ostale može da nauči kada mu konkretan problem zahteva drugačije osobine.
+Остале може да научи када му конкретан проблем захтева другачије особине.
 
-Isto tako, ne ulazimo duboko u internu implementaciju hash tabela.
+Исто тако, не улазимо дубоко у интерну имплементацију hash табела.
 
-Dovoljno je razumeti ugovor koji kolekcija očekuje od naših objekata.
+Довољно је разумети уговор који колекција очекује од наших објеката.

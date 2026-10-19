@@ -1,27 +1,27 @@
-# Zadatak — Poklon kartica
+# Задатак — Поклон картица
 
-[← Nedelja 3](README.md)
+[← Недеља 3](README.md)
 
-Napraviti klasu `PoklonKartica` koja predstavlja poklon karticu neke prodavnice.
+Направити класу `PoklonKartica` која представља поклон картицу неке продавнице.
 
-Svaka kartica ima:
+Свака картица има:
 
-- jedinstveni celobrojni ID;
-- naziv prodavnice;
-- trenutno stanje u dinarima.
+- јединствени целобројни ID;
+- назив продавнице;
+- тренутно стање у динарима.
 
-## Pravila
+## Правила
 
-1. Nova kartica ima stanje 0 dinara.
-2. Na karticu je moguće dopuniti samo pozitivan iznos.
-3. Kupovina je moguća samo za pozitivan iznos koji nije veći od trenutnog stanja.
-4. Stanje kartice nikada ne sme da bude negativno.
-5. ID i naziv prodavnice se ne menjaju nakon kreiranja kartice.
-6. Treba omogućiti da se sazna koliko je ukupno kartica kreirano.
+1. Нова картица има стање 0 динара.
+2. На картицу је могуће допунити само позитиван износ.
+3. Куповина је могућа само за позитиван износ који није већи од тренутног стања.
+4. Стање картице никада не сме да буде негативно.
+5. ID и назив продавнице се не мењају након креирања картице.
+6. Треба омогућити да се сазна колико је укупно картица креирано.
 
-## Predloženi javni interfejs klase
+## Предложени јавни интерфејс класе
 
-Nazivi metoda mogu biti drugačiji ako smisleno opisuju operaciju.
+Називи метода могу бити другачији ако смислено описују операцију.
 
 ```java
 PoklonKartica kartica = new PoklonKartica("Knjižara");
@@ -33,29 +33,29 @@ System.out.println(kartica.getStanje());
 System.out.println(kartica.opis());
 ```
 
-## Razmisliti pre kodiranja
+## Размислити пре кодирања
 
-- Koja polja treba da budu `private`?
-- Koja polja imaju smisla kao `final`?
-- Koji podatak treba da bude `static`?
-- Da li treba da postoji `setStanje`?
-- Ko je odgovoran za proveru da li kupovina može da se izvrši?
-- Koja je invarijanta klase `PoklonKartica`?
+- Која поља треба да буду `private`?
+- Која поља имају смисла као `final`?
+- Који податак треба да буде `static`?
+- Да ли треба да постоји `setStanje`?
+- Ко је одговоран за проверу да ли куповина може да се изврши?
+- Која је инваријанта класе `PoklonKartica`?
 
-## Dodatak
+## Додатак
 
-Napisati program koji pravi dve kartice, izvršava nekoliko uspešnih i neuspešnih operacija i na kraju ispisuje obe kartice i ukupan broj kreiranih kartica.
+Написати програм који прави две картице, извршава неколико успешних и неуспешних операција и на крају исписује обе картице и укупан број креираних картица.
 
-## Granice i ugovor
+## Границе и уговор
 
-`dopuni` i `kupi` vraćaju `boolean`. Neuspeh ne menja stanje. Odbiti i uplatu koja bi prešla `Integer.MAX_VALUE`; dovoljno je proveriti `iznos > Integer.MAX_VALUE - stanje` pre sabiranja. `opis()` vraća čitljiv tekst; standardni `toString()` upoznajemo u nedelji 5.
+`dopuni` и `kupi` враћају `boolean`. Неуспех не мења стање. Одбити и уплату која би прешла `Integer.MAX_VALUE`; довољно је проверити `iznos > Integer.MAX_VALUE - stanje` пре сабирања. `opis()` враћа читљив текст; стандардни `toString()` упознајемо у недељи 5.
 
-## Samostalni deo — Rezervoar
+## Самостални део — Резервоар
 
-Rezervoar ima zadat kapacitet i trenutnu količinu 0. Dozvoljeni su dopuna i potrošnja pozitivne količine. Nemoguća operacija se odbija bez delimične promene. Samostalno odrediti javni API.
+Резервоар има задат капацитет и тренутну количину 0. Дозвољени су допуна и потрошња позитивне количине. Немогућа операција се одбија без делимичне промене. Самостално одредити јавни API.
 
-**Kriterijum provere:** Kapacitet 10: dopuna 8 uspeva; dopuna 3 ne uspeva i ostaje 8; potrošnja 8 uspeva i ostaje 0. Koja polja su final?
+**Критеријум провере:** Капацитет 10: допуна 8 успева; допуна 3 не успева и остаје 8; потрошња 8 успева и остаје 0. Која поља су final?
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

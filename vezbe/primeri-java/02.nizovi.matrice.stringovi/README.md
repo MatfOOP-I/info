@@ -1,20 +1,20 @@
-# Nedelja 2 — Nizovi, reference i stringovi
+# Недеља 2 — Низови, референце и стрингови
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/02.nizovi.matrice.stringovi) · [preuzmi projekat (ZIP)](../02.nizovi.matrice.stringovi.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/02.nizovi.matrice.stringovi) · [преузми пројекат (ZIP)](../02.nizovi.matrice.stringovi.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ova nedelja je prelaz sa prethodnog programiranja na Javu.
+Ова недеља је прелаз са претходног програмирања на Јаву.
 
-## Glavni cilj
+## Главни циљ
 
-Razlikovati referencu i objekat, menjanje niza i prevezivanje promenljive, sadržaj stringa i identitet objekta.
+Разликовати референцу и објекат, мењање низа и превезивање променљиве, садржај стринга и идентитет објекта.
 
-## Način rada
+## Начин рада
 
-Predvideti izlaz, pokrenuti primer, postaviti breakpoint i objasniti zapaženu promenu.
-Java argumente prosleđuje po vrednosti; kod objekata ta vrednost je referenca.
-Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatka kursa.
+Предвидети излаз, покренути пример, поставити breakpoint и објаснити запажену промену.
+Java аргументе прослеђује по вредности; код објеката та вредност је референца.
+Примери додатних алгоритама служе за вежбање Јаве и не одређују темпо остатка курса.
 
-## Primeri
+## Примери
 
 - [`a_nizovi/Primer01.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/02.nizovi.matrice.stringovi/src/a_nizovi/Primer01.java)
 - [`a_nizovi/Primer02.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/02.nizovi.matrice.stringovi/src/a_nizovi/Primer02.java)
@@ -43,4 +43,4 @@ Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatk
 - [`f_dodatno_stringovi/RegularniIzrazi02.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/02.nizovi.matrice.stringovi/src/f_dodatno_stringovi/RegularniIzrazi02.java)
 - [`f_dodatno_stringovi/StringReplaceAll_Split_getChars.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/02.nizovi.matrice.stringovi/src/f_dodatno_stringovi/StringReplaceAll_Split_getChars.java)
 
-Primer JShell je jednostavna petlja za obradu teksta, ne izvršava sistemske komande i nije isto što i JDK alat jshell. Poređenje brzine String/StringBuilder je samo ilustracija, bez tvrdnji o preciznom faktoru ubrzanja.
+Пример JShell је једноставна петља за обраду текста, не извршава системске команде и није исто што и JDK алат jshell. Поређење брзине String/StringBuilder је само илустрација, без тврдњи о прецизном фактору убрзања.

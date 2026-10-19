@@ -1,20 +1,20 @@
-# Nedelja 1 — Uvod u Javu i rad u IDE-u
+# Недеља 1 — Увод у Јаву и рад у IDE-у
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/01.uvod) · [preuzmi projekat (ZIP)](../01.uvod.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/01.uvod) · [преузми пројекат (ZIP)](../01.uvod.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Ova nedelja je prelaz sa prethodnog programiranja na Javu.
+Ова недеља је прелаз са претходног програмирања на Јаву.
 
-## Glavni cilj
+## Главни циљ
 
-Pokrenuti mali Java program, razlikovati kompajliranje i izvršavanje, koristiti metode, unos i debager.
+Покренути мали Java програм, разликовати компајлирање и извршавање, користити методе, унос и дебагер.
 
-## Način rada
+## Начин рада
 
-Predvideti izlaz, pokrenuti primer, postaviti tačku prekida i objasniti zapaženu promenu.
-Java argumente prosleđuje po vrednosti.
-Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatka kursa.
+Предвидети излаз, покренути пример, поставити тачку прекида и објаснити запажену промену.
+Java аргументе прослеђује по вредности.
+Примери додатних алгоритама служе за вежбање Јаве и не одређују темпо остатка курса.
 
-## Primeri
+## Примери
 
 - [`dodatno/SimpleAsciiArt.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/dodatno/SimpleAsciiArt.java)
 - [`primeri/Primer01.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/primeri/Primer01.java)
@@ -28,4 +28,4 @@ Primeri dodatnih algoritama služe za vežbanje Jave i ne određuju tempo ostatk
 - [`primeri/Primer09Character.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/primeri/Primer09Character.java)
 - [`primeri/Primer10Math.java`](https://github.com/MatfOOP-I/info/blob/main/vezbe/primeri-java/01.uvod/src/primeri/Primer10Math.java)
 
-`Primer08Fibonacci` sadrži iterativno (referentno) i rekurzivno rešenje. Za samostalnu vežbu pokušajte da iterativnu verziju napišete bez gledanja rešenja. Rekurzivni primer je namerno spor i ograničen na n <= 30.
+`Primer08Fibonacci` садржи итеративно (референтно) и рекурзивно решење. За самосталну вежбу покушајте да итеративну верзију напишете без гледања решења. Рекурзивни пример је намерно спор и ограничен на н <= 30.

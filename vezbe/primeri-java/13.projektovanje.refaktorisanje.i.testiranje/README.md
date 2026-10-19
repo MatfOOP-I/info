@@ -1,60 +1,60 @@
-# Nedelja 13 — Projektovanje, refaktorisanje i testiranje
+# Недеља 13 — Пројектовање, рефакторисање и тестирање
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje) · [preuzmi projekat (ZIP)](../13.projektovanje.refaktorisanje.i.testiranje.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje) · [преузми пројекат (ZIP)](../13.projektovanje.refaktorisanje.i.testiranje.zip) · [задатак за самостални рад](ZADATAK.md)
 
-## Cilj
+## Циљ
 
-Odrediti koji objekat je odgovoran za ponašanje i proveriti da promena dizajna
-čuva dogovoreni ugovor. Više klasa samo po sebi nije bolji dizajn.
+Одредити који објекат је одговоран за понашање и проверити да промена дизајна
+чува договорени уговор. Више класа само по себи није бољи дизајн.
 
-## Redosled
+## Редослед
 
-1. [`primer01_pocetni_kod`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer01_pocetni_kod): radi, ali koristi string oznake i rasutu logiku.
-2. [`primer00_karakterizacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer00_karakterizacija): zabeležiti cenu i normalan životni ciklus PRE menjanja.
-3. [`primer02_refaktorisano_resenje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer02_refaktorisano_resenje): pogledati po jednu izdvojenu odgovornost.
-4. Ponovo pokrenuti karakterizaciju: proverava isti scenario na obe verzije.
-5. [`primer03_testiranje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer03_testiranje): male provere obračuna, životnog ciklusa i sistema.
+1. [`primer01_pocetni_kod`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer01_pocetni_kod): ради, али користи стринг ознаке и расуту логику.
+2. [`primer00_karakterizacija`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer00_karakterizacija): забележити цену и нормалан животни циклус ПРЕ мењања.
+3. [`primer02_refaktorisano_resenje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer02_refaktorisano_resenje): погледати по једну издвојену одговорност.
+4. Поново покренути карактеризацију: проверава исти сценарио на обе верзије.
+5. [`primer03_testiranje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/13.projektovanje.refaktorisanje.i.testiranje/src/primer03_testiranje): мале провере обрачуна, животног циклуса и система.
 
-Testove za postojeće ispravno ponašanje čuvamo tokom refaktorisanja. Ispravke grešaka
-(duple oznake, zaobilaženje tranzicija) zasebno menjaju ugovor i imaju regresione provere.
+Тестове за постојеће исправно понашање чувамо током рефакторисања. Исправке грешака
+(дупле ознаке, заобилажење транзиција) засебно мењају уговор и имају регресионе провере.
 
-## Odgovornosti i javni API
+## Одговорности и јавни API
 
-- `Vozilo`: identitet, cena po danu, depozit i dostupnost. `rezervisi/oslobodi` su
-  package-private operacije modela, nisu deo javnog API-ja aplikacije.
-- `Rezervacija`: validira argumente i zatim zauzima vozilo. I direktan konstruktor
-  odbija već zauzeto vozilo. Ne treba prethodno ručno pozivati rezervisi().
-- `NacinObracunaCene`: Strategy za standardni/članski obračun. U ovom primeru
-  strategije su bez promenljivog stanja; primenjuju se na nepromenljivu cenu i broj dana.
-- `SistemIznajmljivanja`: registar vozila i rezervacija. Dupla oznaka se odbija;
-  neuspešno kreiranje ne menja dostupnost i ne troši broj rezervacije.
+- `Vozilo`: идентитет, цена по дану, депозит и доступност. `rezervisi/oslobodi` су
+  package-private операције модела, нису део јавног API-ја апликације.
+- `Rezervacija`: валидира аргументе и затим заузима возило. И директан конструктор
+  одбија већ заузето возило. Не треба претходно ручно позивати rezervisi().
+- `NacinObracunaCene`: Strategy за стандардни/члански обрачун. У овом примеру
+  стратегије су без променљивог стања; примењују се на непроменљиву цену и број дана.
+- `SistemIznajmljivanja`: регистар возила и резервација. Дупла ознака се одбија;
+  неуспешно креирање не мења доступност и не троши број резервације.
 
-## State i stvarna enkapsulacija
+## State и стварна енкапсулација
 
-`StanjeRezervacije` i četiri implementacije su **privatni ugnježdeni tipovi**
-unutar Rezervacija. Implementacije su static nested klase; rezervaciju dobijaju
-kao argument. Klijent vidi samo `preuzmi()`, `vrati()`, `otkazi()` i upit o stanju.
-Ne postoji javni promeniStanje/postaviStanje. State klase više nisu javni fajlovi
-u zasebnom paketu. Paket stanje sadrži samo javni domenski izuzetak.
+`StanjeRezervacije` и четири имплементације су **приватни угњеждени типови**
+унутар Резервација. Имплементације су static nested класе; резервацију добијају
+као аргумент. Клијент види само `preuzmi()`, `vrati()`, `otkazi()` и упит о стању.
+Не постоји јавни promeniStanje/postaviStanje. State класе више нису јавни фајлови
+у засебном пакету. Пакет стање садржи само јавни доменски изузетак.
 
-| Stanje | preuzmi | vrati | otkazi |
+| Стање | преузми | врати | откази |
 |---|---|---|---|
-| KREIRANA | AKTIVNA | odbij | OTKAZANA, oslobodi vozilo |
-| AKTIVNA | odbij | ZAVRSENA, oslobodi vozilo | odbij |
-| ZAVRSENA | odbij | odbij | odbij |
-| OTKAZANA | odbij | odbij | odbij |
+| KREIRANA | AKTIVNA | одбиј | OTKAZANA, ослободи возило |
+| AKTIVNA | одбиј | ZAVRSENA, ослободи возило | одбиј |
+| ZAVRSENA | одбиј | одбиј | одбиј |
+| OTKAZANA | одбиј | одбиј | одбиј |
 
-Odbijanje baca NedozvoljenaOperacijaException bez promene stanja. Jedinstvenost
-registracije vozila garantuje jedan sistem; ovo nije model konkurentnih rezervacija,
-baze podataka ili rasporeda rezervacija po datumima.
+Одбијање баца NedozvoljenaOperacijaException без промене стања. Јединственост
+регистрације возила гарантује један систем; ово није модел конкурентних резервација,
+базе података или распореда резервација по датумима.
 
-## Testiranje
+## Тестирање
 
-Prvo očekivanje, zatim akcija i provera. Koristimo mali `Provera` pomoćnik umesto
-uvođenja nove biblioteke. JUnit može biti nastavak istog principa kasnije.
+Прво очекивање, затим акција и провера. Користимо мали `Provera` помоћник уместо
+увођења нове библиотеке. JUnit може бити наставак истог принципа касније.
 
-## Promene zahteva
+## Промене захтева
 
-Dodati trotinet (IS-A), vikend obračun (Strategy) ili čuvanje podataka u fajl
-(posebna odgovornost). Za svaki izbor obrazložiti odluku. Za veoma mali životni
-ciklus enum može biti dovoljno dobar; cilj je razumeti cenu apstrakcije.
+Додати тротинет (IS-A), викенд обрачун (Strategy) или чување података у фајл
+(посебна одговорност). За сваки избор образложити одлуку. За веома мали животни
+циклус enum може бити довољно добар; циљ је разумети цену апстракције.

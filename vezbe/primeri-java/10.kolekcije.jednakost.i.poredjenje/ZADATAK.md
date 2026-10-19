@@ -1,12 +1,12 @@
-# Zadatak — Lična biblioteka
+# Задатак — Лична библиотека
 
-[← Nedelja 10](README.md)
+[← Недеља 10](README.md)
 
-Napraviti model za jednostavnu ličnu biblioteku.
+Направити модел за једноставну личну библиотеку.
 
 ## `ZanrKnjige`
 
-Definisati:
+Дефинисати:
 
 ```java
 public enum ZanrKnjige {
@@ -21,112 +21,112 @@ public enum ZanrKnjige {
 
 ## `Knjiga`
 
-Knjiga ima:
+Књига има:
 
 - ISBN;
-- naslov;
-- autora;
-- broj strana;
-- godinu izdanja;
-- žanr.
+- наслов;
+- аутора;
+- број страна;
+- годину издања;
+- жанр.
 
-Dve knjige smatramo jednakima ako imaju isti ISBN.
+Две књиге сматрамо једнакима ако имају исти ISBN.
 
-Zato pravilno implementirati:
+Зато правилно имплементирати:
 
 ```java
 equals
 hashCode
 ```
 
-## Kolekcije
+## Колекције
 
-Napraviti:
+Направити:
 
-### Listu za čitanje
+### Листу за читање
 
 ```java
 List<Knjiga>
 ```
 
-Redosled je važan.
+Редослед је важан.
 
-### Kolekciju knjiga koje posedujemo
+### Колекцију књига које поседујемо
 
 ```java
 Set<Knjiga>
 ```
 
-Ista knjiga ne treba da se pojavi dva puta.
+Иста књига не треба да се појави два пута.
 
-### Katalog po ISBN-u
+### Каталог по ISBN-у
 
 ```java
 Map<String, Knjiga>
 ```
 
-Knjigu treba brzo pronaći preko ISBN-a.
+Књигу треба брзо пронаћи преко ISBN-а.
 
-## Prirodni poredak
+## Природни поредак
 
-Neka `Knjiga` implementira:
+Нека `Knjiga` имплементира:
 
 ```java
 Comparable<Knjiga>
 ```
 
-Prirodni poredak neka bude:
+Природни поредак нека буде:
 
-Po ISBN-u, kako bi `compareTo(...) == 0` odgovaralo jednakosti po ISBN-u.
+По ISBN-у, како би `compareTo(...) == 0` одговарало једнакости по ISBN-у.
 
-Za sortiranje po naslovu, zatim autoru i ISBN-u, napraviti poseban `Comparator`.
-ISBN čuvati kao nepromenljiv podatak. Proveriti dva objekta sa istim ISBN-om
-i različitim naslovom: `HashSet` i `TreeSet` sa prirodnim poretkom treba oba
-da imaju jedan element. U aplikaciji bi neslaganje podataka o istom ISBN-u
-bilo dodatno pravilo validacije kataloga.
+За сортирање по наслову, затим аутору и ISBN-у, направити посебан `Comparator`.
+ISBN чувати као непроменљив податак. Проверити два објекта са истим ISBN-ом
+и различитим насловом: `HashSet` и `TreeSet` са природним поретком треба оба
+да имају један елемент. У апликацији би неслагање података о истом ISBN-у
+било додатно правило валидације каталога.
 
-## Alternativna poređenja
+## Алтернативна поређења
 
-Napraviti:
+Направити:
 
 ```java
 PoredjenjePoBrojuStrana
 PoredjenjePoGodiniIzdanja
 ```
 
-koji implementiraju:
+који имплементирају:
 
 ```java
 Comparator<Knjiga>
 ```
 
-## Demonstracija
+## Демонстрација
 
-U `Main`:
+У `Main`:
 
-1. napraviti najmanje pet knjiga;
-2. dodati ih u listu;
-3. pokušati da isti ISBN dva puta dodate u `Set`;
-4. napraviti katalog pomoću `Map`;
-5. pronaći knjigu po ISBN-u;
-6. sortirati kopiju liste prirodnim poretkom;
-7. sortirati po broju strana;
-8. sortirati po godini izdanja.
+1. направити најмање пет књига;
+2. додати их у листу;
+3. покушати да исти ISBN два пута додате у `Set`;
+4. направити каталог помоћу `Map`;
+5. пронаћи књигу по ISBN-у;
+6. сортирати копију листе природним поретком;
+7. сортирати по броју страна;
+8. сортирати по години издања.
 
-## Pitanja
+## Питања
 
-1. Zašto ISBN ima smisla za `equals/hashCode`?
-2. Zašto naslov sam nije dovoljan?
-3. Zašto lista za čitanje nije `Set`?
-4. Zašto katalog prirodno koristi `Map`?
-5. Koja je razlika između prirodnog poretka i poređenja po broju strana?
+1. Зашто ISBN има смисла за `equals/hashCode`?
+2. Зашто наслов сам није довољан?
+3. Зашто листа за читање није `Set`?
+4. Зашто каталог природно користи `Map`?
+5. Која је разлика између природног поретка и поређења по броју страна?
 
-## Samostalni deo — Evidencija prijava
+## Самостални део — Евиденција пријава
 
-Čuvamo redosled prijavljivanja, jedinstvene indekse studenata i brzo pronalaženje prijave po indeksu. Izabrati strukture i definisati ponašanje pri duplom indeksu.
+Чувамо редослед пријављивања, јединствене индексе студената и брзо проналажење пријаве по индексу. Изабрати структуре и дефинисати понашање при дуплом индексу.
 
-**Kriterijum provere:** Za dve prijave istog indeksa jasno pokazati odbijanje ili zamenu. Prikaz po imenu ne sme da promeni originalni red prijavljivanja.
+**Критеријум провере:** За две пријаве истог индекса јасно показати одбијање или замену. Приказ по имену не сме да промени оригинални ред пријављивања.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

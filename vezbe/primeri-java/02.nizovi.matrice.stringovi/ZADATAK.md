@@ -1,17 +1,17 @@
-# Zadatak — nedelja 2
+# Задатак — недеља 2
 
-[← Nedelja 2](README.md)
+[← Недеља 2](README.md)
 
-## Vođeni deo
+## Вођени део
 
-Za niz [2,4,6] napraviti drugu referencu i promeniti njen prvi element na 9. Zatim napraviti kopiju Arrays.copyOf i promeniti prvi element kopije na 0. Ispisati sva tri niza i objasniti rezultat. Očekivanje: original i druga referenca [9,4,6], kopija [0,4,6].
+За низ [2,4,6] направити другу референцу и променити њен први елемент на 9. Затим направити копију Arrays.copyOf и променити први елемент копије на 0. Исписати сва три низа и објаснити резултат. Очекивање: оригинал и друга референца [9,4,6], копија [0,4,6].
 
-## Samostalni deo — Rezultati takmičenja
+## Самостални део — Резултати такмичења
 
-Iz niza celobrojnih rezultata izdvojiti rezultate iznad praga u NOV niz. Zatim iz unete rečenice dobiti tekst bez belina i proveriti da li je palindrom.
+Из низа целобројних резултата издвојити резултате изнад прага у NOV низ. Затим из унете реченице добити текст без белина и проверити да ли је палиндром.
 
-**Kriterijum provere:** Iz [5,12,8,20] za prag 10 dobija se [12,20]; izvorni niz ostaje isti. Objasniti razliku između dodele reference i kopiranja.
+**Критеријум провере:** Из [5,12,8,20] за праг 10 добија се [12,20]; изворни низ остаје исти. Објаснити разлику између доделе референце и копирања.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

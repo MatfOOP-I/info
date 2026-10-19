@@ -1,16 +1,16 @@
-# Zadatak — Rezervacija bioskopske karte
+# Задатак — Резервација биоскопске карте
 
-[← Nedelja 8](README.md)
+[← Недеља 8](README.md)
 
-Modelovati rezervaciju bioskopske karte.
+Моделовати резервацију биоскопске карте.
 
-Rezervacija ima:
+Резервација има:
 
-- identifikacioni broj;
-- naziv filma;
-- stanje.
+- идентификациони број;
+- назив филма;
+- стање.
 
-Podržati sledeća stanja:
+Подржати следећа стања:
 
 ```text
 Kreirana
@@ -19,7 +19,7 @@ Iskoriscena
 Otkazana
 ```
 
-Operacije:
+Операције:
 
 ```java
 plati()
@@ -27,31 +27,31 @@ iskoristi()
 otkazi()
 ```
 
-## Pravila
+## Правила
 
-### Kreirana
+### Креирана
 
-- može da se plati;
-- može da se otkaže;
-- ne može da se iskoristi.
+- може да се плати;
+- може да се откаже;
+- не може да се искористи.
 
 ### Placena
 
-- može da se iskoristi;
-- može da se otkaže;
-- ne može ponovo da se plati.
+- може да се искористи;
+- може да се откаже;
+- не може поново да се плати.
 
 ### Iskoriscena
 
-- više ne dozvoljava nijednu od tri operacije.
+- више не дозвољава ниједну од три операције.
 
-### Otkazana
+### Отказана
 
-- više ne dozvoljava nijednu od tri operacije.
+- више не дозвољава ниједну од три операције.
 
-## Zahtevi
+## Захтеви
 
-Napraviti interfejs:
+Направити интерфејс:
 
 ```java
 public interface StanjeRezervacije {
@@ -61,41 +61,41 @@ public interface StanjeRezervacije {
 }
 ```
 
-`Rezervacija` treba da čuva:
+`Rezervacija` треба да чува:
 
 ```java
 private StanjeRezervacije stanje;
 ```
 
-i da operacije delegira trenutnom stanju.
+и да операције делегира тренутном стању.
 
-## Demonstracija
+## Демонстрација
 
-U `Main`:
+У `Main`:
 
-1. napraviti novu rezervaciju;
-2. pokušati `iskoristi()` pre plaćanja;
-3. platiti;
-4. pokušati ponovo da se plati;
-5. iskoristiti rezervaciju;
-6. pokušati otkazivanje nakon korišćenja.
+1. направити нову резервацију;
+2. покушати `iskoristi()` пре плаћања;
+3. платити;
+4. покушати поново да се плати;
+5. искористити резервацију;
+6. покушати отказивање након коришћења.
 
-## Pitanje
+## Питање
 
-Zašto je ovo bolji kandidat za State nego klasa koja samo ima:
+Зашто је ово бољи кандидат за State него класа која само има:
 
 ```java
 private String stanje;
 ```
 
-i veliki broj `if` provera?
+и велики број `if` провера?
 
-## Samostalni deo — Da li je State potreban?
+## Самостални део — Да ли је State потребан?
 
-Lampica ima samo stanja uključena/isključena i operaciju promeni. Zatim razmotriti uređaj sa stanjima isključen/zagrevanje/spreman/greška i različitim dozvoljenim operacijama.
+Лампица има само стања укључена/искључена и операцију промени. Затим размотрити уређај са стањима искључен/загревање/спреман/грешка и различитим дозвољеним операцијама.
 
-**Kriterijum provere:** Za oba modela prvo dati tabelu prelaza. Dozvoljeno je enum rešenje. Obrazložiti gde State donosi korist, a gde samo povećava broj klasa.
+**Критеријум провере:** За оба модела прво дати табелу прелаза. Дозвољено је enum решење. Образложити где State доноси корист, а где само повећава број класа.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

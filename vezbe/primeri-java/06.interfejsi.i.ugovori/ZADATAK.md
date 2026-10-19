@@ -1,16 +1,16 @@
-# Zadatak — Sistem obaveštavanja
+# Задатак — Систем обавештавања
 
-[← Nedelja 6](README.md)
+[← Недеља 6](README.md)
 
-Potrebno je modelovati jednostavan sistem za slanje podsetnika.
+Потребно је моделовати једноставан систем за слање подсетника.
 
-Podsetnik ima:
+Подсетник има:
 
-- tekst poruke;
-- primaoca;
-- kanal preko koga se poruka šalje.
+- текст поруке;
+- примаоца;
+- канал преко кога се порука шаље.
 
-Definisati interfejs:
+Дефинисати интерфејс:
 
 ```java
 public interface KanalObavestavanja {
@@ -18,31 +18,31 @@ public interface KanalObavestavanja {
 }
 ```
 
-Napraviti najmanje sledeće implementacije:
+Направити најмање следеће имплементације:
 
 - `SmsKanal`;
 - `ImejlKanal`;
 - `AplikacijaKanal`.
 
-Za potrebe zadatka nije potrebno stvarno slati SMS ili imejl. Dovoljno je da metoda ispiše šta bi bilo poslato i vrati `true`.
+За потребе задатка није потребно стварно слати SMS или имејл. Довољно је да метода испише шта би било послато и врати `true`.
 
-## Klasa `Podsetnik`
+## Класа `Podsetnik`
 
-`Podsetnik` treba da **ima** polje:
+`Podsetnik` треба да **има** поље:
 
 ```java
 private KanalObavestavanja kanal;
 ```
 
-i da slanje delegira tom objektu.
+и да слање делегира том објекту.
 
-Na primer:
+На пример:
 
 ```java
 podsetnik.posalji();
 ```
 
-ne treba da sadrži grananje:
+не треба да садржи гранање:
 
 ```java
 if (tipKanala == ...) {
@@ -50,17 +50,17 @@ if (tipKanala == ...) {
 }
 ```
 
-## Zahtevi
+## Захтеви
 
-1. `Podsetnik` ne sme da zavisi od konkretnih klasa `SmsKanal`, `ImejlKanal` ili `AplikacijaKanal`.
-2. Kanal se prosleđuje kroz konstruktor.
-3. Omogućiti promenu kanala nakon kreiranja podsetnika.
-4. U `Main` poslati istu poruku preko najmanje dva različita kanala.
-5. Dodati novu implementaciju `StampanoPismoKanal` bez izmene klase `Podsetnik`.
+1. `Podsetnik` не сме да зависи од конкретних класа `SmsKanal`, `ImejlKanal` или `AplikacijaKanal`.
+2. Канал се прослеђује кроз конструктор.
+3. Омогућити промену канала након креирања подсетника.
+4. У `Main` послати исту поруку преко најмање два различита канала.
+5. Додати нову имплементацију `StampanoPismoKanal` без измене класе `Podsetnik`.
 
-## Dodatak
+## Додатак
 
-Definisati još jedan interfejs:
+Дефинисати још један интерфејс:
 
 ```java
 public interface ZahtevaInternet {
@@ -68,20 +68,20 @@ public interface ZahtevaInternet {
 }
 ```
 
-Neka ga implementiraju samo kanali kojima je internet zaista potreban.
+Нека га имплементирају само канали којима је интернет заиста потребан.
 
-Razmisliti:
+Размислити:
 
-- zašto `SmsKanal` i `ImejlKanal` ne moraju da imaju zajedničku baznu klasu samo zato što oba šalju poruke;
-- zašto je korisno da `Podsetnik` zna samo za `KanalObavestavanja`;
-- koliko se menja postojeći kod kada dodamo potpuno novi kanal.
+- зашто `SmsKanal` и `ImejlKanal` не морају да имају заједничку базну класу само зато што оба шаљу поруке;
+- зашто је корисно да `Podsetnik` зна само за `KanalObavestavanja`;
+- колико се мења постојећи код када додамо потпуно нови канал.
 
-## Samostalni deo — Izvoz izveštaja
+## Самостални део — Извоз извештаја
 
-Sistem treba da prosledi tekst izveštaja različitim odredištima. Za sada simulirati ispisom u konzolu: ekran i štampač. Klijent bira odredište bez provere konkretne klase.
+Систем треба да проследи текст извештаја различитим одредиштима. За сада симулирати исписом у конзолу: екран и штампач. Клијент бира одредиште без провере конкретне класе.
 
-**Kriterijum provere:** Dodati treće odredište bez izmene klijenta. Napisati ugovor za null i prazan tekst; ne uvoditi stvarni rad sa fajlom pre nedelje 11.
+**Критеријум провере:** Додати треће одредиште без измене клијента. Написати уговор за null и празан текст; не уводити стварни рад са фајлом пре недеље 11.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

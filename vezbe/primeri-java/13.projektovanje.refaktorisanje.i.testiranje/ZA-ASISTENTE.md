@@ -1,14 +1,14 @@
-# Nedelja 13 — napomene za asistente
+# Недеља 13 — напомене за асистенте
 
-[← Nedelja 13](README.md)
+[← Недеља 13](README.md)
 
-## Nastavničke provere
+## Наставничке провере
 
-`mvn verify` dodatno izvršava `test/provere/Main.java`: proverava duplikate, neuspešne
-zahteve, zauzeto vozilo, terminalna stanja i granice API-ja. Ove nastavničke provere
-sadrže i refleksiju; njihova implementacija nije ispitni preduslov ovog časa.
+`mvn verify` додатно извршава `test/provere/Main.java`: проверава дупликате, неуспешне
+захтеве, заузето возило, терминална стања и границе API-ја. Ове наставничке провере
+садрже и рефлексију; њихова имплементација није испитни предуслов овог часа.
 
-## Promene zahteva
+## Промене захтева
 
-Pri radu na promenama zahteva (trotinet, vikend obračun, čuvanje u fajl) za svaki
-izbor tražiti od studenta objašnjenje.
+При раду на променама захтева (тротинет, викенд обрачун, чување у фајл) за сваки
+избор тражити од студента објашњење.

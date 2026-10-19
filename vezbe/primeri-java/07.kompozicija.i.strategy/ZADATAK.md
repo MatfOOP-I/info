@@ -1,16 +1,16 @@
-# Zadatak — Navigacija i izbor rute
+# Задатак — Навигација и избор руте
 
-[← Nedelja 7](README.md)
+[← Недеља 7](README.md)
 
-Potrebno je napraviti jednostavan model navigacije.
+Потребно је направити једноставан модел навигације.
 
-Navigacija treba da podrži različite načine računanja rute:
+Навигација треба да подржи различите начине рачунања руте:
 
-- automobilom;
-- peške;
-- biciklom.
+- аутомобилом;
+- пешке;
+- бициклом.
 
-Definisati interfejs:
+Дефинисати интерфејс:
 
 ```java
 public interface NacinRutiranja {
@@ -18,7 +18,7 @@ public interface NacinRutiranja {
 }
 ```
 
-Napraviti implementacije:
+Направити имплементације:
 
 ```text
 AutomobilskaRuta
@@ -26,69 +26,69 @@ PesackaRuta
 BiciklistickaRuta
 ```
 
-Za potrebe zadatka nije potrebno računati pravu rutu.
+За потребе задатка није потребно рачунати праву руту.
 
-Dovoljno je da svaka implementacija ispiše drugačiju poruku.
+Довољно је да свака имплементација испише другачију поруку.
 
-Na primer:
+На пример:
 
 ```text
 Računam najbržu automobilsku rutu od Beograda do Novog Sada.
 ```
 
-## Klasa `Navigacija`
+## Класа `Navigacija`
 
-Treba da ima:
+Треба да има:
 
 ```java
 private NacinRutiranja nacinRutiranja;
 ```
 
-i da računanje rute delegira tom objektu.
+и да рачунање руте делегира том објекту.
 
-Omogućiti:
+Омогућити:
 
 ```java
 postaviNacinRutiranja(...)
 ```
 
-kako bi korisnik mogao da promeni način rutiranja tokom rada.
+како би корисник могао да промени начин рутирања током рада.
 
-## Demonstracija
+## Демонстрација
 
-U `Main`:
+У `Main`:
 
-1. napraviti navigaciju koja računa automobilsku rutu;
-2. izračunati rutu;
-3. promeniti strategiju na pešačku;
-4. ponovo izračunati rutu;
-5. promeniti strategiju na biciklističku.
+1. направити навигацију која рачуна аутомобилску руту;
+2. израчунати руту;
+3. променити стратегију на пешачку;
+4. поново израчунати руту;
+5. променити стратегију на бициклистичку.
 
-## Dodatak
+## Додатак
 
-Dodati novu strategiju:
+Додати нову стратегију:
 
 ```text
 RutaJavnimPrevozom
 ```
 
-bez izmene klase `Navigacija`.
+без измене класе `Navigacija`.
 
-Razmisliti:
+Размислити:
 
-- zašto `Navigacija` ne treba da ima veliki `if` ili `switch`;
-- šta je ovde strategija;
-- šta je konkretna strategija;
-- gde je kompozicija;
-- gde je delegiranje;
-- zašto promena strategije ne menja identitet objekta `Navigacija`.
+- зашто `Navigacija` не треба да има велики `if` или `switch`;
+- шта је овде стратегија;
+- шта је конкретна стратегија;
+- где је композиција;
+- где је делегирање;
+- зашто промена стратегије не мења идентитет објекта `Navigacija`.
 
-## Samostalni deo — Procena trajanja puta
+## Самостални део — Процена трајања пута
 
-Navigacija bira procenu trajanja za pešačenje, bicikl i automobil. Za pozitivan broj kilometara koristiti brzine 5, 15 i 60 km/h, a rezultat zaokružiti naviše na cele minute. Nije potrebno računati put kroz graf.
+Навигација бира процену трајања за пешачење, бицикл и аутомобил. За позитиван број километара користити брзине 5, 15 и 60 км/ч, а резултат заокружити навише на целе минуте. Није потребно рачунати пут кроз граф.
 
-**Kriterijum provere:** Za 10 km očekivati 120, 40 i 10 minuta. Isti objekat navigacije menja način procene. Obrazložiti zašto strategija vraća rezultat umesto da ga samo ispisuje.
+**Критеријум провере:** За 10 км очекивати 120, 40 и 10 минута. Исти објекат навигације мења начин процене. Образложити зашто стратегија враћа резултат уместо да га само исписује.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

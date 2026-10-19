@@ -1,48 +1,48 @@
-# Nedelja 4 — Odnosi između objekata i kompozicija
+# Недеља 4 — Односи између објеката и композиција
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija) · [preuzmi projekat (ZIP)](../04.odnosi.objekata.kompozicija.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija) · [преузми пројекат (ZIP)](../04.odnosi.objekata.kompozicija.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Do sada smo uglavnom posmatrali jedan objekat izolovano. U realnim programima objekti skoro uvek **sarađuju sa drugim objektima**.
+До сада смо углавном посматрали један објекат изоловано. У реалним програмима објекти скоро увек **сарађују са другим објектима**.
 
-Ove nedelje koristimo pojednostavljen sistem za poručivanje hrane. Domen je namerno jednostavan: kupac ima adresu, porudžbina ima stavke, a svaka stavka se odnosi na proizvod. Fokus nije na pravljenju aplikacije za dostavu, već na pitanju:
+Ове недеље користимо поједностављен систем за поручивање хране. Домен је намерно једноставан: купац има адресу, поруџбина има ставке, а свака ставка се односи на производ. Фокус није на прављењу апликације за доставу, већ на питању:
 
-> Kako raspodeliti podatke i odgovornosti između više objekata?
+> Како расподелити податке и одговорности између више објеката?
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da objasni:
+После вежби студент треба да уме да објасни:
 
-- da polje objekta može da bude drugog klasnog tipa;
-- značenje odnosa **HAS-A**;
-- šta predstavlja graf objekata;
-- razliku između objekta i reference na objekat;
-- da više objekata može da deli isti objekat;
-- osnovnu ideju kompozicije;
-- šta znači **delegiranje odgovornosti**;
-- zašto klasa ne treba da zna detalje koji pripadaju drugom objektu;
-- kako mutabilnost i deljenje reference mogu da naprave neočekivane posledice;
-- zašto su mali nepromenljivi objekti često jednostavniji za bezbedno deljenje.
+- да поље објекта може да буде другог класног типа;
+- значење односа **HAS-A**;
+- шта представља граф објеката;
+- разлику између објекта и референце на објекат;
+- да више објеката може да дели исти објекат;
+- основну идеју композиције;
+- шта значи **делегирање одговорности**;
+- зашто класа не треба да зна детаље који припадају другом објекту;
+- како мутабилност и дељење референце могу да направе неочекиване последице;
+- зашто су мали непроменљиви објекти често једноставнији за безбедно дељење.
 
-## Važna napomena
+## Важна напомена
 
-Ove nedelje **ne uvodimo nasleđivanje**. Želimo da studenti prvo steknu prirodan osećaj da se složen objekat veoma često gradi od drugih objekata.
+Ове недеље **не уводимо наслеђивање**. Желимо да студенти прво стекну природан осећај да се сложен објекат веома често гради од других објеката.
 
-Kasnije ćemo moći precizno da uporedimo:
+Касније ћемо моћи прецизно да упоредимо:
 
-- `IS-A` — nasleđivanje;
-- `HAS-A` — kompozicija.
+- `IS-A` — наслеђивање;
+- `HAS-A` — композиција.
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_objekat_kao_polje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer01_objekat_kao_polje)
 
-`Kupac` ima `Adresu`.
+`Kupac` има `Adresu`.
 
-Prvi put eksplicitno posmatramo jedan objekat kao deo stanja drugog objekta. Diskutujemo šta se zapravo čuva u polju tipa `Adresa`: objekat ili referenca na objekat.
+Први пут експлицитно посматрамо један објекат као део стања другог објекта. Дискутујемо шта се заправо чува у пољу типа `Adresa`: објекат или референца на објекат.
 
 ### [`primer02_porudzbina_i_stavke`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer02_porudzbina_i_stavke)
 
-Gradimo mali graf objekata:
+Градимо мали граф објеката:
 
 ```text
 Porudzbina
@@ -56,39 +56,39 @@ Porudzbina
           +-- Proizvod
 ```
 
-Pošto kolekcije još nisu obrađene, koristimo niz fiksnog kapaciteta. Tema primera nije `ArrayList`, već odnosi između objekata.
+Пошто колекције још нису обрађене, користимо низ фиксног капацитета. Тема примера није `ArrayList`, већ односи између објеката.
 
 ### [`primer03_delegiranje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer03_delegiranje)
 
-Pitanje nije samo **koje podatke klasa ima**, već i **ko je odgovoran za koju operaciju**.
+Питање није само **које податке класа има**, већ и **ко је одговоран за коју операцију**.
 
-`Porudzbina` ne računa cenu pojedinačne stavke tako što zaviruje u sva njena polja. Ona pita stavku:
+`Porudzbina` не рачуна цену појединачне ставке тако што завирује у сва њена поља. Она пита ставку:
 
 ```java
 ukupno += stavka.izracunajCenu();
 ```
 
-To je jednostavan primer delegiranja odgovornosti.
+То је једноставан пример делегирања одговорности.
 
 ### [`primer04_deljena_promenljiva_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer04_deljena_promenljiva_adresa)
 
-Namerno pravimo problem. `Kupac` i `Porudzbina` dele isti promenljivi objekat `Adresa`.
+Намерно правимо проблем. `Kupac` и `Porudzbina` деле исти променљиви објекат `Adresa`.
 
-Ako kupac promeni adresu, može neočekivano da se promeni i adresa već napravljene porudžbine.
+Ако купац промени адресу, може неочекивано да се промени и адреса већ направљене поруџбине.
 
-Primer povezuje gradivo ove nedelje sa aliasing-om iz prethodne nedelje.
+Пример повезује градиво ове недеље са aliasing-ом из претходне недеље.
 
 ### [`primer05_nepromenljiva_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer05_nepromenljiva_adresa)
 
-`Adresa` postaje mali nepromenljivi objekat: sva polja su `final`, nema settera.
+`Adresa` постаје мали непроменљиви објекат: сва поља су `final`, нема settera.
 
-Ako kupac promeni svoju trenutnu adresu, dobija novu `Adresa` referencu. Ranije napravljena porudžbina zadržava staru adresu.
+Ако купац промени своју тренутну адресу, добија нову `Adresa` референцу. Раније направљена поруџбина задржава стару адресу.
 
-Ovo nije pravilo da svaki objekat treba da bude immutable. Cilj je da student vidi da je mutabilnost **dizajnerska odluka**, a ne podrazumevano stanje svake klase.
+Ово није правило да сваки објекат треба да буде immutable. Циљ је да студент види да је мутабилност **дизајнерска одлука**, а не подразумевано стање сваке класе.
 
 ### [`primer06_record_adresa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/04.odnosi.objekata.kompozicija/src/primer06_record_adresa)
 
-Posle klasične nepromenljive `Adresa` klase pokazujemo savremeni Java tip:
+После класичне непроменљиве `Adresa` класе показујемо савремени Java тип:
 
 ```java
 public record Adresa(
@@ -99,9 +99,9 @@ public record Adresa(
 }
 ```
 
-`record` je i dalje klasa, ali je namenjen pre svega malim objektima čiji je glavni posao da **nose skup podataka kao jednu vrednost**.
+`record` је и даље класа, али је намењен пре свега малим објектима чији је главни посао да **носе скуп података као једну вредност**.
 
-Java automatski generiše:
+Java аутоматски генерише:
 
 ```text
 konstruktor
@@ -111,29 +111,29 @@ hashCode
 toString
 ```
 
-Accessor metode nemaju klasičan `get` prefiks:
+Accessor методе немају класичан `get` префикс:
 
 ```java
 adresa.grad()
 ```
 
-umesto:
+уместо:
 
 ```java
 adresa.getGrad()
 ```
 
-Record komponente ne mogu da se menjaju nakon kreiranja objekta.
+Record компоненте не могу да се мењају након креирања објекта.
 
-Zato je `Adresa` prirodan primer:
+Зато је `Adresa` природан пример:
 
 ```text
 Adresa("Glavna 10", "Zemun", "11080")
 ```
 
-predstavlja jednu vrednost.
+представља једну вредност.
 
-Ako se kupac preseli, ne menjamo staru adresu polje po polje. Napravimo novu vrednost:
+Ако се купац пресели, не мењамо стару адресу поље по поље. Направимо нову вредност:
 
 ```java
 kupac.preseliSe(
@@ -141,21 +141,21 @@ kupac.preseliSe(
 );
 ```
 
-#### Record nije zamena za svaku klasu
+#### Record није замена за сваку класу
 
-Ne treba pretvarati svaku klasu u `record`.
+Не треба претварати сваку класу у `record`.
 
-Na primer, `Novcanik`, `Porudzbina` ili `Vozilo` imaju promenljivo stanje i ponašanje koje štiti to stanje. Obična klasa je tu prirodniji model.
+На пример, `Novcanik`, `Porudzbina` или `Vozilo` имају променљиво стање и понашање које штити то стање. Обична класа је ту природнији модел.
 
-Dobro početno pitanje je:
+Добро почетно питање је:
 
-> Da li ovaj tip prvenstveno predstavlja malu nepromenljivu vrednost?
+> Да ли овај тип првенствено представља малу непроменљиву вредност?
 
-Ako je odgovor da, `record` može biti dobar izbor.
+Ако је одговор да, `record` може бити добар избор.
 
-#### Record može da ima validaciju i metode
+#### Record може да има валидацију и методе
 
-U primeru koristimo kompaktni konstruktor:
+У примеру користимо компактни конструктор:
 
 ```java
 public Adresa {
@@ -165,19 +165,19 @@ public Adresa {
 }
 ```
 
-i običnu metodu:
+и обичну методу:
 
 ```java
 public String punaAdresa()
 ```
 
-Dakle, `record` nije samo "struct sa automatskim getterima".
+Дакле, `record` није само "struct са аутоматским getterima".
 
-## Centralne poruke
+## Централне поруке
 
-### 1. Složen objekat se često gradi od manjih objekata
+### 1. Сложен објекат се често гради од мањих објеката
 
-Umesto jedne ogromne klase:
+Уместо једне огромне класе:
 
 ```text
 Porudzbina
@@ -191,7 +191,7 @@ Porudzbina
 - ...
 ```
 
-želimo objekte sa jasnim odgovornostima:
+желимо објекте са јасним одговорностима:
 
 ```text
 Porudzbina HAS-A Kupac
@@ -200,44 +200,44 @@ Porudzbina HAS-A StavkaPorudzbine
 StavkaPorudzbine HAS-A Proizvod
 ```
 
-### 2. Objekat ne mora sve da radi sam
+### 2. Објекат не мора све да ради сам
 
-Ako `StavkaPorudzbine` zna proizvod i količinu, ona je prirodno mesto za računanje cene te stavke.
+Ако `StavkaPorudzbine` зна производ и количину, она је природно место за рачунање цене те ставке.
 
-`Porudzbina` samo koordinira objekte koje sadrži.
+`Porudzbina` само координира објекте које садржи.
 
-### 3. Deljenje objekta je važno
+### 3. Дељење објекта је важно
 
-Dve reference mogu pokazivati na isti objekat. Zato treba razmišljati:
+Две референце могу показивати на исти објекат. Зато треба размишљати:
 
-> Da li želim da se promene ovog objekta vide na svim mestima koja ga koriste?
+> Да ли желим да се промене овог објекта виде на свим местима која га користе?
 
-Ponekad je odgovor da. Ponekad nije.
+Понекад је одговор да. Понекад није.
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Da li `Kupac` **jeste** `Adresa` ili **ima** `Adresu`?
-2. Šta se fizički nalazi u polju `private Adresa adresa`?
-3. Može li isti objekat `Proizvod` da se pojavi u više porudžbina?
-4. Koliko objekata postoji ako pet stavki pokazuje na isti `Proizvod`?
-5. Ko treba da računa cenu jedne stavke — `Porudzbina` ili `StavkaPorudzbine`?
-6. Zašto nije dobro da `Porudzbina` direktno poznaje unutrašnju strukturu svake stavke?
-7. Šta se dešava kada dva objekta dele isti promenljivi objekat `Adresa`?
-8. Da li je nepromenljiv objekat automatski bolji? Kada jeste koristan?
-9. Ako kupac promeni adresu nakon što je porudžbina poslata, da li stara porudžbina treba da promeni adresu isporuke?
-10. Koji objekti u ovom primeru imaju jasan identitet, a koji više liče na vrednosti?
+1. Да ли `Kupac` **јесте** `Adresa` или **има** `Adresu`?
+2. Шта се физички налази у пољу `private Adresa adresa`?
+3. Може ли исти објекат `Proizvod` да се појави у више поруџбина?
+4. Колико објеката постоји ако пет ставки показује на исти `Proizvod`?
+5. Ко треба да рачуна цену једне ставке — `Porudzbina` или `StavkaPorudzbine`?
+6. Зашто није добро да `Porudzbina` директно познаје унутрашњу структуру сваке ставке?
+7. Шта се дешава када два објекта деле исти променљиви објекат `Adresa`?
+8. Да ли је непроменљив објекат аутоматски бољи? Када јесте користан?
+9. Ако купац промени адресу након што је поруџбина послата, да ли стара поруџбина треба да промени адресу испоруке?
+10. Који објекти у овом примеру имају јасан идентитет, а који више личе на вредности?
 
-## Mali zadatak
+## Мали задатак
 
-U fajlu `ZADATAK.md` nalazi se zadatak sa bioskopskom rezervacijom. Domen je drugačiji, ali student treba sam da prepozna HAS-A odnose, odgovornosti i objekte koji mogu bezbedno da budu nepromenljivi.
+У фајлу `ZADATAK.md` налази се задатак са биоскопском резервацијом. Домен је другачији, али студент треба сам да препозна HAS-A односе, одговорности и објекте који могу безбедно да буду непроменљиви.
 
-## Granice primera i record
+## Границе примера и рецорд
 
-Ovde reč kompozicija koristimo u širem smislu sastavljanja objekata. UML kompozicija
-u užem smislu podrazumeva i odnos vlasništva/životnog ciklusa; nije svaka HAS-A veza
-automatski takva kompozicija.
+Овде реч композиција користимо у ширем смислу састављања објеката. UML композиција
+у ужем смислу подразумева и однос власништва/животног циклуса; није свака HAS-A веза
+аутоматски таква композиција.
 
-`record` obezbeđuje final komponente, ali ne kopira duboko njihove objekte. Record sa
-`List` komponentom nije automatski duboko nepromenljiv. U primeru Adresa komponente
-su String vrednosti. Validacija kompaktnog konstruktora koristi `throw`: odbija se
-neispravno kreiranje; obradu izuzetaka sistematično radimo u nedelji 11.
+`record` обезбеђује final компоненте, али не копира дубоко њихове објекте. Record са
+`List` компонентом није аутоматски дубоко непроменљив. У примеру Адреса компоненте
+су String вредности. Валидација компактног конструктора користи `throw`: одбија се
+неисправно креирање; обраду изузетака систематично радимо у недељи 11.

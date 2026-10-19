@@ -1,37 +1,37 @@
-# Nedelja 5 — Nasleđivanje, apstraktne klase i polimorfizam
+# Недеља 5 — Наслеђивање, апстрактне класе и полиморфизам
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam) · [preuzmi projekat (ZIP)](../05.nasledjivanje.apstrakcija.polimorfizam.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam) · [преузми пројекат (ZIP)](../05.nasledjivanje.apstrakcija.polimorfizam.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Prethodne nedelje smo videli da se objekti veoma često povezuju odnosom **HAS-A**. Sada uvodimo drugi važan odnos:
+Претходне недеље смо видели да се објекти веома често повезују односом **HAS-A**. Сада уводимо други важан однос:
 
-> Kada za jedan objekat ima smisla reći da **JESTE** posebna vrsta drugog objekta?
+> Када за један објекат има смисла рећи да **ЈЕСТЕ** посебна врста другог објекта?
 
-Glavni primer je izbor načina prevoza za putovanje. Autobus, voz i taksi imaju zajedničke osobine, ali istu operaciju — računanje cene — mogu da izvršavaju različito.
+Главни пример је избор начина превоза за путовање. Аутобус, воз и такси имају заједничке особине, али исту операцију — рачунање цене — могу да извршавају различито.
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da objasni:
+После вежби студент треба да уме да објасни:
 
-- šta znači odnos **IS-A**;
-- osnovnu sintaksu `extends`;
-- šta se nasleđuje od bazne klase;
-- čemu služi `super(...)`;
-- šta znači redefinisanje (`@Override`) metode;
-- zašto referenca baznog tipa može da pokazuje na objekat izvedene klase;
-- šta je dinamičko vezivanje poziva metode;
-- čemu služe apstraktna klasa i apstraktna metoda;
-- kako polimorfizam uklanja potrebu za grananjem po konkretnom tipu objekta;
-- da se nasleđivanje i kompozicija često koriste zajedno.
+- шта значи однос **IS-A**;
+- основну синтаксу `extends`;
+- шта се наслеђује од базне класе;
+- чему служи `super(...)`;
+- шта значи редефинисање (`@Override`) методе;
+- зашто референца базног типа може да показује на објекат изведене класе;
+- шта је динамичко везивање позива методе;
+- чему служе апстрактна класа и апстрактна метода;
+- како полиморфизам уклања потребу за гранањем по конкретном типу објекта;
+- да се наслеђивање и композиција често користе заједно.
 
-## Važna ideja
+## Важна идеја
 
-Nasleđivanje ne koristimo zato što dve klase "imaju neka ista polja".
+Наслеђивање не користимо зато што две класе "имају нека иста поља".
 
-Pitanje je:
+Питање је:
 
-> Da li objekat izvedene klase stvarno može da se koristi svuda gde očekujemo objekat bazne klase?
+> Да ли објекат изведене класе стварно може да се користи свуда где очекујемо објекат базне класе?
 
-U našem primeru:
+У нашем примеру:
 
 ```text
 Autobus IS-A Prevoz
@@ -39,59 +39,59 @@ Voz     IS-A Prevoz
 Taksi   IS-A Prevoz
 ```
 
-Ali:
+Али:
 
 ```text
 RezervacijaPrevoza HAS-A Prevoz
 ```
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_osnovno_nasledjivanje`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer01_osnovno_nasledjivanje)
 
-Uvodimo baznu klasu `Prevoz` i klase `Autobus` i `Voz`.
+Уводимо базну класу `Prevoz` и класе `Autobus` и `Voz`.
 
-Zajedničke podatke (`naziv`, `prosecnaBrzina`) držimo u baznoj klasi. Izvedene klase koriste konstruktor bazne klase pomoću `super(...)`.
+Заједничке податке (`naziv`, `prosecnaBrzina`) држимо у базној класи. Изведене класе користе конструктор базне класе помоћу `super(...)`.
 
 ### [`primer02_redefinisanje_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer02_redefinisanje_metoda)
 
-Različite vrste prevoza različito računaju cenu putovanja.
+Различите врсте превоза различито рачунају цену путовања.
 
-Sve klase imaju metodu istog potpisa:
+Све класе имају методу истог потписа:
 
 ```java
 int izracunajCenu(int udaljenostKm)
 ```
 
-ali je implementacija različita.
+али је имплементација различита.
 
 ### [`primer03_apstraktna_klasa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer03_apstraktna_klasa)
 
-Primećujemo da nema mnogo smisla praviti "neki opšti Prevoz" ako ne znamo kako mu se računa cena.
+Примећујемо да нема много смисла правити "неки општи Превоз" ако не знамо како му се рачуна цена.
 
-`Prevoz` zato postaje `abstract`, a `izracunajCenu` apstraktna metoda.
+`Prevoz` зато постаје `abstract`, а `izracunajCenu` апстрактна метода.
 
 ### [`primer04_polimorfizam`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer04_polimorfizam)
 
-Pravimo niz:
+Правимо низ:
 
 ```java
 Prevoz[] opcije
 ```
 
-u kome se nalaze `Autobus`, `Voz` i `Taksi`.
+у коме се налазе `Autobus`, `Voz` и `Taksi`.
 
-U petlji pozivamo:
+У петљи позивамо:
 
 ```java
 opcije[i].izracunajCenu(udaljenostKm)
 ```
 
-bez pitanja koje je konkretne klase objekat.
+без питања које је конкретне класе објекат.
 
 ### [`primer05_bez_grananja_po_tipu`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer05_bez_grananja_po_tipu)
 
-Pokazujemo kako izgleda kod u kome ne postoji grananje oblika:
+Показујемо како изгледа код у коме не постоји гранање облика:
 
 ```java
 if (prevoz instanceof Autobus) { ... }
@@ -99,13 +99,13 @@ else if (prevoz instanceof Voz) { ... }
 else if (prevoz instanceof Taksi) { ... }
 ```
 
-Takav lanac često znači da nismo iskoristili polimorfizam. Metoda `Ponuda.ispisi` prima samo `Prevoz` i ne zna koje konkretne klase postoje.
+Такав ланац често значи да нисмо искористили полиморфизам. Метода `Ponuda.ispisi` прима само `Prevoz` и не зна које конкретне класе постоје.
 
-Dodavanje nove vrste prevoza ne treba da zahteva menjanje svakog mesta u programu koje računa cenu.
+Додавање нове врсте превоза не треба да захтева мењање сваког места у програму које рачуна цену.
 
 ### [`primer06_rezervacija_prevoza`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer06_rezervacija_prevoza)
 
-Ovaj primer spaja prethodne dve nedelje:
+Овај пример спаја претходне две недеље:
 
 ```text
 Autobus IS-A Prevoz
@@ -116,63 +116,63 @@ RezervacijaPrevoza HAS-A Relacija
 RezervacijaPrevoza HAS-A Prevoz
 ```
 
-Ovo je važna poruka: **kompozicija i nasleđivanje nisu konkurentske tehnike**. U realnom modelu često postoje istovremeno.
+Ово је важна порука: **композиција и наслеђивање нису конкурентске технике**. У реалном моделу често постоје истовремено.
 
 ### [`primer07_overload_override`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/05.nasledjivanje.apstrakcija.polimorfizam/src/primer07_overload_override)
 
-Poslednji primer razlikuje overloading i overriding, i pokazuje zašto je `toString()` posebna metoda. Objašnjenje je u odeljku [Overloading, overriding i toString](#overloading-overriding-i-tostring).
+Последњи пример разликује overloading и overriding, и показује зашто је `toString()` посебна метода. Објашњење је у одељку [Overloading, overriding и toString](#overloading-overriding-и-tostring).
 
-## Centralne poruke
+## Централне поруке
 
-### Nasleđivanje modeluje tip, ne samo ponovnu upotrebu koda
+### Наслеђивање моделује тип, не само поновну употребу кода
 
-Loš razlog:
+Лош разлог:
 
-> "Obe klase imaju naziv i cenu, hajde da jedna nasledi drugu."
+> "Обе класе имају назив и цену, хајде да једна наследи другу."
 
-Bolje pitanje:
+Боље питање:
 
-> "Da li je objekat izvedene klase stvarno jedna posebna vrsta baznog pojma?"
+> "Да ли је објекат изведене класе стварно једна посебна врста базног појма?"
 
-### Polimorfizam je korisniji od proveravanja tipa
+### Полиморфизам је кориснији од проверавања типа
 
-Želimo:
+Желимо:
 
 ```java
 int cena = prevoz.izracunajCenu(udaljenostKm);
 ```
 
-umesto da ostatak programa zna sve konkretne klase koje postoje.
+уместо да остатак програма зна све конкретне класе које постоје.
 
-### Bazni tip predstavlja zajednički ugovor ponašanja
+### Базни тип представља заједнички уговор понашања
 
-Ako metoda prima `Prevoz`, ona može da radi sa bilo kojom postojećom ili budućom vrstom prevoza koja poštuje taj ugovor.
+Ако метода прима `Prevoz`, она може да ради са било којом постојећом или будућом врстом превоза која поштује тај уговор.
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Da li je `Autobus` posebna vrsta `Prevoz`?
-2. Da li bi `Putnik extends Prevoz` imao smisla samo zato što putnik koristi prevoz?
-3. Zašto konstruktor izvedene klase poziva `super(...)`?
-4. Koja implementacija metode se poziva ako promenljiva ima tip `Prevoz`, a objekat je `Taksi`?
-5. Da li konkretan tip reference ili konkretan tip objekta određuje redefinisanu metodu koja će biti pozvana?
-6. Zašto `Prevoz` može da bude apstraktna klasa?
-7. Može li se napraviti `new Prevoz(...)` ako je `Prevoz` apstraktan?
-8. Šta dobijamo time što metoda prima `Prevoz`, umesto posebno `Autobus`, `Voz` i `Taksi`?
-9. Zašto veliki `instanceof` lanac često predstavlja signal za drugačiji dizajn?
-10. Kako završni primer istovremeno koristi i IS-A i HAS-A?
+1. Да ли је `Autobus` посебна врста `Prevoz`?
+2. Да ли би `Putnik extends Prevoz` имао смисла само зато што путник користи превоз?
+3. Зашто конструктор изведене класе позива `super(...)`?
+4. Која имплементација методе се позива ако променљива има тип `Prevoz`, а објекат је `Taksi`?
+5. Да ли конкретан тип референце или конкретан тип објекта одређује редефинисану методу која ће бити позвана?
+6. Зашто `Prevoz` може да буде апстрактна класа?
+7. Може ли се направити `new Prevoz(...)` ако је `Prevoz` апстрактан?
+8. Шта добијамо тиме што метода прима `Prevoz`, уместо посебно `Autobus`, `Voz` и `Taksi`?
+9. Зашто велики `instanceof` ланац често представља сигнал за другачији дизајн?
+10. Како завршни пример истовремено користи и IS-A и HAS-A?
 
-## Mali zadatak
+## Мали задатак
 
-U fajlu `ZADATAK.md` nalazi se model ulaznica za događaj. Zadatak traži legitimnu hijerarhiju, redefinisanje obračuna cene i polimorfnu obradu više različitih vrsta ulaznica.
+У фајлу `ZADATAK.md` налази се модел улазница за догађај. Задатак тражи легитимну хијерархију, редефинисање обрачуна цене и полиморфну обраду више различитих врста улазница.
 
-## Overloading, overriding i toString
+## Overloading, overriding и toString
 
-Pokrenite `primer07_overload_override.Main`. Različiti potpisi iste metode daju
-overloading; izbor se zasniva na tipovima izraza pri kompajliranju. Override iste
-instance metode bira implementaciju prema stvarnom objektu pri izvršavanju.
-`protected` u primeru dopušta podklasi u drugom paketu da pozove nasleđenu metodu;
-ne čini je javnom svim klijentima. Pravila pristupa kroz reference u drugom paketu
-imaju dodatna ograničenja i nisu isto što i public.
+Покрените `primer07_overload_override.Main`. Различити потписи исте методе дају
+overloading; избор се заснива на типовима израза при компајлирању. Override исте
+инстанце методе бира имплементацију према стварном објекту при извршавању.
+`protected` у примеру допушта подкласи у другом пакету да позове наслеђену методу;
+не чини је јавном свим клијентима. Правила приступа кроз референце у другом пакету
+имају додатна ограничења и нису исто што и public.
 
-`toString()` je metoda Object-a. `println(objekat)` koristi njen tekst; naše ranije
-`opis()` metode bile su obične domenske metode, bez tog automatskog povezivanja.
+`toString()` је метода Object-а. `println(objekat)` користи њен текст; наше раније
+`opis()` методе биле су обичне доменске методе, без тог аутоматског повезивања.

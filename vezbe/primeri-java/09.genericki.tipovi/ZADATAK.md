@@ -1,19 +1,19 @@
-# Zadatak — Pametni ormarić
+# Задатак — Паметни ормарић
 
-[← Nedelja 9](README.md)
+[← Недеља 9](README.md)
 
-Potrebno je napraviti generičku klasu:
+Потребно је направити генеричку класу:
 
 ```java
 public class Ormaric<T>
 ```
 
-Ormarić ima:
+Ормарић има:
 
-- broj ormarića;
-- sadržaj tipa `T`.
+- број ормарића;
+- садржај типа `T`.
 
-Treba da omogući:
+Треба да омогући:
 
 ```java
 smesti(T predmet)
@@ -21,37 +21,37 @@ T preuzmi()
 boolean jePrazan()
 ```
 
-U jedan ormarić može da se smesti samo jedan predmet.
+У један ормарић може да се смести само један предмет.
 
-## Demonstracija
+## Демонстрација
 
-Napraviti klase:
+Направити класе:
 
 ```text
 Ranac
 Laptop
 ```
 
-i zatim:
+и затим:
 
 ```java
 Ormaric<Ranac>
 Ormaric<Laptop>
 ```
 
-Pokazati da:
+Показати да:
 
 ```java
 Ormaric<Laptop>
 ```
 
-ne dozvoljava da se u njega smesti `Ranac`.
+не дозвољава да се у њега смести `Ranac`.
 
 ---
 
-## Dodatak — ograničenje tipa
+## Додатак — ограничење типа
 
-Definisati interfejs:
+Дефинисати интерфејс:
 
 ```java
 public interface ImaMasu {
@@ -59,41 +59,41 @@ public interface ImaMasu {
 }
 ```
 
-Neka ga implementiraju:
+Нека га имплементирају:
 
 ```text
 Ranac
 Laptop
 ```
 
-Zatim napraviti:
+Затим направити:
 
 ```java
 public class OrmaricSaVagom<T extends ImaMasu>
 ```
 
-koji pored standardnih operacija može da vrati:
+који поред стандардних операција може да врати:
 
 ```java
 double trenutnaMasa()
 ```
 
-Razmisliti:
+Размислити:
 
-1. Zašto običan `Ormaric<T>` ne može da pozove `masa()`?
-2. Šta kompajler zna kada napišemo `<T extends ImaMasu>`?
-3. Zašto je ovo bolje od kastovanja na `ImaMasu` unutar klase?
+1. Зашто обичан `Ormaric<T>` не може да позове `masa()`?
+2. Шта компајлер зна када напишемо `<T extends ImaMasu>`?
+3. Зашто је ово боље од кастовања на `ImaMasu` унутар класе?
 
-### Precizan ugovor
+### Прецизан уговор
 
-`null` nije dozvoljen predmet. Smeštanje u zauzet ormarić baca `IllegalStateException` i ne menja sadržaj. Smeštanje `null` baca `IllegalArgumentException`. Preuzimanje iz praznog ormarića vraća `null`. Masa praznog ormarića je 0; masa predmeta mora biti nenegativna. Kratku sintaksu bacanja izuzetka koristimo kao ugovor, a obradu detaljno radimo u nedelji 11.
+`null` није дозвољен предмет. Смештање у заузет ормарић баца `IllegalStateException` и не мења садржај. Смештање `null` баца `IllegalArgumentException`. Преузимање из празног ормарића враћа `null`. Маса празног ормарића је 0; маса предмета мора бити ненегативна. Кратку синтаксу бацања изузетка користимо као уговор, а обраду детаљно радимо у недељи 11.
 
-### Samostalni deo — Dve vrednosti
+### Самостални део — Две вредности
 
-Potrebno je čuvati par vrednosti različitih tipova i čitati svaku bez kastovanja. Sami oblikujte API.
+Потребно је чувати пар вредности различитих типова и читати сваку без кастовања. Сами обликујте API.
 
-**Kriterijum provere:** Pokazati par String/Integer i par String/String. Dodavanje broja na mesto teksta treba da bude greška kompajliranja; objasniti politiku prema null.
+**Критеријум провере:** Показати пар String/Integer и пар String/String. Додавање броја на место текста треба да буде грешка компајлирања; објаснити политику према null.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

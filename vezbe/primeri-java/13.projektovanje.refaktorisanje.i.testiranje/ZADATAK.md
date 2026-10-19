@@ -1,12 +1,12 @@
-# Završni zadatak — Refaktorisanje sistema dostave
+# Завршни задатак — Рефакторисање система доставе
 
-[← Nedelja 13](README.md)
+[← Недеља 13](README.md)
 
-Ovaj zadatak je namenjen za samostalno povezivanje gradiva.
+Овај задатак је намењен за самостално повезивање градива.
 
-Imamo sistem dostave paketa.
+Имамо систем доставе пакета.
 
-Početna implementacija čuva:
+Почетна имплементација чува:
 
 ```text
 vrsta dostave: "STANDARDNA", "EKSPRESNA"
@@ -14,73 +14,73 @@ status: "KREIRANA", "PREUZETA", "ISPORUCENA", "OTKAZANA"
 tip paketa: "OBICAN", "LOMLJIV"
 ```
 
-i koristi veliki broj:
+и користи велики број:
 
 ```java
 if
 switch
 ```
 
-provera.
+провера.
 
-Potrebno je osmisliti bolji OOP model.
+Потребно је осмислити бољи ООП модел.
 
-Početni kod je `src/zadatak_pocetni/Dostava.java`. Pokrenuti ga, zabeležiti očekivanja,
-pa refaktorisati u sopstvenom paketu. Original sačuvati radi poređenja.
+Почетни код је `src/zadatak_pocetni/Dostava.java`. Покренути га, забележити очекивања,
+па рефакторисати у сопственом пакету. Оригинал сачувати ради поређења.
 
-Cena standardne dostave je 200 + 50 dinara za svaki započeti kilogram;
-ekspresna je dvostruka standardna cena. Masa je celobrojni broj grama, 1–50000.
-Za 1500 g cene su 300 i 600. Otkazivanje je dozvoljeno samo iz KREIRANA;
-isporuka samo iz PREUZETA. Završena i otkazana pošiljka ne prihvataju nove operacije.
+Цена стандардне доставе је 200 + 50 динара за сваки започети килограм;
+експресна је двострука стандардна цена. Маса је целобројни број грама, 1–50000.
+За 1500 г цене су 300 и 600. Отказивање је дозвољено само из KREIRANA;
+испорука само из PREUZETA. Завршена и отказана пошиљка не прихватају нове операције.
 
-LOMLJIV je za sada samo oznaka i ne menja cenu ili tranzicije. To je namerno:
-ne treba praviti podklasu bez razlike u ponašanju. U završnom modelu dodati registar
-koji odbija duple identifikacione brojeve, umesto da prepiše staru pošiljku.
+LOMLJIV је за сада само ознака и не мења цену или транзиције. То је намерно:
+не треба правити подкласу без разлике у понашању. У завршном моделу додати регистар
+који одбија дупле идентификационе бројеве, уместо да препише стару пошиљку.
 
 ---
 
-## Zahtevi
+## Захтеви
 
-### Paket
+### Пакет
 
-Svaki paket ima:
+Сваки пакет има:
 
-- identifikacioni broj;
-- masu;
-- pošiljaoca;
-- primaoca.
+- идентификациони број;
+- масу;
+- пошиљаоца;
+- примаоца.
 
-Razmisliti da li:
+Размислити да ли:
 
 ```text
 ObicanPaket
 LomljivPaket
 ```
 
-zaista treba da budu podklase.
+заиста треба да буду подкласе.
 
-Ako imaju različito ponašanje, objasniti koje.
+Ако имају различито понашање, објаснити које.
 
-Ako nemaju, nemojte uvoditi nasleđivanje samo zbog naziva.
+Ако немају, немојте уводити наслеђивање само због назива.
 
 ---
 
-### Obračun dostave
+### Обрачун доставе
 
-Podržati:
+Подржати:
 
 ```text
 StandardniObracun
 EkspresniObracun
 ```
 
-bez velikog `if` grananja u klasi `Posiljka`.
+без великог `if` гранања у класи `Posiljka`.
 
 ---
 
-### Životni ciklus
+### Животни циклус
 
-Posiljka prolazi kroz:
+Posiljka пролази кроз:
 
 ```text
 KREIRANA
@@ -89,7 +89,7 @@ ISPORUCENA
 OTKAZANA
 ```
 
-Operacije:
+Операције:
 
 ```text
 preuzmi
@@ -97,24 +97,24 @@ isporuci
 otkazi
 ```
 
-Nisu sve dozvoljene u svakom stanju.
+Нису све дозвољене у сваком стању.
 
 ---
 
-### Kolekcije
+### Колекције
 
-Sistem treba da:
+Систем треба да:
 
-- brzo pronađe pošiljku po identifikacionom broju;
-- vrati listu svih pošiljki.
+- брзо пронађе пошиљку по идентификационом броју;
+- врати листу свих пошиљки.
 
-Izabrati odgovarajuće kolekcije i obrazložiti izbor.
+Изабрати одговарајуће колекције и образложити избор.
 
 ---
 
-### Greške
+### Грешке
 
-Razmisliti kako predstaviti:
+Размислити како представити:
 
 ```text
 nepostojeća pošiljka
@@ -122,38 +122,38 @@ nedozvoljena tranzicija
 neispravna masa
 ```
 
-Ne mora svaka greška biti checked exception.
+Не мора свака грешка бити цхецкед exception.
 
-Obrazložiti odluku.
-
----
-
-## Testovi
-
-Napisati najmanje tri mala testa:
-
-1. cena standardne dostave;
-2. ispravna tranzicija `KREIRANA → PREUZETA`;
-3. pokušaj da se otkazana pošiljka isporuči.
-
-Testovi ne treba da zavise od GUI-ja.
+Образложити одлуку.
 
 ---
 
-## Najvažnije
+## Тестови
 
-Nije cilj da rešenje ima što više klasa.
+Написати најмање три мала теста:
 
-Za svaku uvedenu apstrakciju treba moći odgovoriti:
+1. цена стандардне доставе;
+2. исправна транзиција `KREIRANA → PREUZETA`;
+3. покушај да се отказана пошиљка испоручи.
 
-> Koji konkretan problem ova apstrakcija rešava?
+Тестови не треба да зависе од GUI-ја.
 
-## Samostalni deo — Promena zahteva
+---
 
-Sistemu iznajmljivanja dodati električni trotinet i vikend obračun sa popustom 20%. Pravilo izbora vikend obračuna određuje pozivalac; ne uvoditi kalendar.
+## Најважније
 
-**Kriterijum provere:** Trotinet ima depozit 1000. Za cenu 5000/dan i dva dana vikend cena je 8000. Dodati test; postojeće testove sačuvati. Napisati koji fajlovi su se promenili i zašto.
+Није циљ да решење има што више класа.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+За сваку уведену апстракцију треба моћи одговорити:
+
+> Који конкретан проблем ова апстракција решава?
+
+## Самостални део — Промена захтева
+
+Систему изнајмљивања додати електрични тротинет и викенд обрачун са попустом 20%. Правило избора викенд обрачуна одређује позивалац; не уводити календар.
+
+**Критеријум провере:** Тротинет има депозит 1000. За цену 5000/дан и два дана викенд цена је 8000. Додати тест; постојеће тестове сачувати. Написати који фајлови су се променили и зашто.
+
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

@@ -1,60 +1,60 @@
-# Zadatak — Ulaznice za događaj
+# Задатак — Улазнице за догађај
 
-[← Nedelja 5](README.md)
+[← Недеља 5](README.md)
 
-Napraviti objektni model za prodaju ulaznica za koncert ili drugi događaj.
+Направити објектни модел за продају улазница за концерт или други догађај.
 
-Definisati apstraktnu klasu `Ulaznica` koja ima:
+Дефинисати апстрактну класу `Ulaznica` која има:
 
-- naziv događaja;
-- osnovnu cenu;
-- jedinstveni ID ulaznice.
+- назив догађаја;
+- основну цену;
+- јединствени ID улазнице.
 
-Svaka ulaznica mora da ponudi metodu:
+Свака улазница мора да понуди методу:
 
 ```java
 public abstract int izracunajCenu();
 ```
 
-Napraviti najmanje sledeće izvedene klase:
+Направити најмање следеће изведене класе:
 
-- `StandardnaUlaznica` — plaća punu osnovnu cenu;
-- `StudentskaUlaznica` — ima popust od 30%;
-- `VipUlaznica` — na osnovnu cenu dodaje fiksnu cenu VIP paketa.
+- `StandardnaUlaznica` — плаћа пуну основну цену;
+- `StudentskaUlaznica` — има попуст од 30%;
+- `VipUlaznica` — на основну цену додаје фиксну цену VIP пакета.
 
-## Zahtevi
+## Захтеви
 
-1. Zajedničke podatke i ponašanje staviti u baznu klasu.
-2. Koristiti `super(...)` u konstruktorima izvedenih klasa.
-3. Svaka izvedena klasa treba da redefiniše `izracunajCenu()` kada ima posebno pravilo.
-4. U `Main` napraviti niz tipa `Ulaznica[]` i u njega staviti objekte različitih izvedenih klasa.
-5. Jednom petljom ispisati opis i konačnu cenu svake ulaznice.
-6. U petlji nije dozvoljeno grananje po konkretnom tipu ulaznice.
+1. Заједничке податке и понашање ставити у базну класу.
+2. Користити `super(...)` у конструкторима изведених класа.
+3. Свака изведена класа треба да редефинише `izracunajCenu()` када има посебно правило.
+4. У `Main` направити низ типа `Ulaznica[]` и у њега ставити објекте различитих изведених класа.
+5. Једном петљом исписати опис и коначну цену сваке улазнице.
+6. У петљи није дозвољено гранање по конкретном типу улазнице.
 
-## Razmisliti
+## Размислити
 
-- Da li `StudentskaUlaznica IS-A Ulaznica` ima smisla?
-- Zašto je `Ulaznica` dobar kandidat za apstraktnu klasu?
-- Šta se dešava kada promenljiva tipa `Ulaznica` pokazuje na `VipUlaznica` objekat?
-- Koliko mesta u programu bi trebalo menjati ako kasnije dodamo `DecijaUlaznica`?
+- Да ли `StudentskaUlaznica IS-A Ulaznica` има смисла?
+- Зашто је `Ulaznica` добар кандидат за апстрактну класу?
+- Шта се дешава када променљива типа `Ulaznica` показује на `VipUlaznica` објекат?
+- Колико места у програму би требало мењати ако касније додамо `DecijaUlaznica`?
 
-## Dodatak
+## Додатак
 
-Dodati klasu `KupovinaUlaznice` koja **ima** kupca i ulaznicu.
+Додати класу `KupovinaUlaznice` која **има** купца и улазницу.
 
-Time u istom modelu treba da postoje oba odnosa:
+Тиме у истом моделу треба да постоје оба односа:
 
 ```text
 VipUlaznica IS-A Ulaznica
 KupovinaUlaznice HAS-A Ulaznica
 ```
 
-## Samostalni deo — Obračun dostave
+## Самостални део — Обрачун доставе
 
-Pošiljka koristi način dostave. Standardna dostava košta 200 din, ekspresna 400 din. Razmisliti šta ima odnos IS-A, a šta HAS-A; zatim obraditi više pošiljaka kroz zajednički tip.
+Пошиљка користи начин доставе. Стандардна достава кошта 200 дин, експресна 400 дин. Размислити шта има однос IS-A, а шта HAS-A; затим обрадити више пошиљака кроз заједнички тип.
 
-**Kriterijum provere:** Dodavanje preuzimanja u radnji sa cenom 0 ne menja petlju koja računa cenu. Objasniti i varijantu bez nasleđivanja.
+**Критеријум провере:** Додавање преузимања у радњи са ценом 0 не мења петљу која рачуна цену. Објаснити и варијанту без наслеђивања.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.

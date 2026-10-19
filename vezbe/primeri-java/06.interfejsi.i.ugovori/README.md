@@ -1,21 +1,21 @@
-# Nedelja 6 — Interfejsi i ugovori
+# Недеља 6 — Интерфејси и уговори
 
-> **Kod:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori) · [preuzmi projekat (ZIP)](../06.interfejsi.i.ugovori.zip) · [zadatak za samostalni rad](ZADATAK.md)
+> **Код:** [GitHub](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori) · [преузми пројекат (ZIP)](../06.interfejsi.i.ugovori.zip) · [задатак за самостални рад](ZADATAK.md)
 
-Prethodne nedelje smo videli da nasleđivanje koristimo kada modelujemo odnos **IS-A**:
+Претходне недеље смо видели да наслеђивање користимо када моделујемо однос **IS-A**:
 
 ```text
 Taksi IS-A Prevoz
 Voz   IS-A Prevoz
 ```
 
-Sada uvodimo drugi način apstrakcije.
+Сада уводимо други начин апстракције.
 
-Često nas ne zanima **šta objekat jeste**, već samo:
+Често нас не занима **шта објекат јесте**, већ само:
 
-> Koju sposobnost objekat garantuje da ima?
+> Коју способност објекат гарантује да има?
 
-Glavni primer ove nedelje je plaćanje. Kasir ili kupovina ne treba da znaju da li korisnik plaća gotovinom, karticom ili digitalnim novčanikom. Njima je dovoljan ugovor:
+Главни пример ове недеље је плаћање. Касир или куповина не треба да знају да ли корисник плаћа готовином, картицом или дигиталним новчаником. Њима је довољан уговор:
 
 ```java
 interface NacinPlacanja {
@@ -23,85 +23,85 @@ interface NacinPlacanja {
 }
 ```
 
-## Ciljevi
+## Циљеви
 
-Posle vežbi student treba da ume da objasni:
+После вежби студент треба да уме да објасни:
 
-- šta je interfejs i zašto predstavlja **ugovor**;
-- razliku između `extends` i `implements`;
-- zašto promenljiva interfejsnog tipa može da pokazuje na različite konkretne objekte;
-- kako se polimorfizam koristi i preko interfejsa;
-- zašto klasa često treba da zavisi od interfejsa, a ne od konkretne implementacije;
-- da jedna klasa može da implementira više nezavisnih interfejsa;
-- kada nam više odgovara apstraktna klasa, a kada interfejs;
-- da se nasleđivanje, interfejsi i kompozicija mogu koristiti zajedno.
+- шта је интерфејс и зашто представља **уговор**;
+- разлику између `extends` и `implements`;
+- зашто променљива интерфејсног типа може да показује на различите конкретне објекте;
+- како се полиморфизам користи и преко интерфејса;
+- зашто класа често треба да зависи од интерфејса, а не од конкретне имплементације;
+- да једна класа може да имплементира више независних интерфејса;
+- када нам више одговара апстрактна класа, а када интерфејс;
+- да се наслеђивање, интерфејси и композиција могу користити заједно.
 
-## Važna ideja
+## Важна идеја
 
-Interfejs ne treba posmatrati samo kao:
+Интерфејс не треба посматрати само као:
 
-> "Klasa u kojoj metode nemaju implementaciju."
+> "Класа у којој методе немају имплементацију."
 
-Mnogo korisniji mentalni model je:
+Много кориснији ментални модел је:
 
-> **Interfejs opisuje šta korisnik nekog objekta sme da očekuje od njega.**
+> **Интерфејс описује шта корисник неког објекта сме да очекује од њега.**
 
-Ako `Kasa` radi sa tipom `NacinPlacanja`, ona zna da postoji metoda:
+Ако `Kasa` ради са типом `NacinPlacanja`, она зна да постоји метода:
 
 ```java
 boolean plati(int iznos)
 ```
 
-ali ne mora da zna **kako** se konkretno plaćanje izvršava.
+али не мора да зна **како** се конкретно плаћање извршава.
 
-## Redosled primera
+## Редослед примера
 
 ### [`primer01_prvi_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer01_prvi_interfejs)
 
-Uvodimo:
+Уводимо:
 
 ```java
 NacinPlacanja
 ```
 
-i dve implementacije:
+и две имплементације:
 
 ```text
 PlacanjeGotovinom
 PlacanjeKarticom
 ```
 
-Prvi put koristimo `implements`.
+Први пут користимо `implements`.
 
-Važno je primetiti da promenljiva tipa `NacinPlacanja` može da pokazuje na objekat bilo koje klase koja poštuje taj ugovor.
+Важно је приметити да променљива типа `NacinPlacanja` може да показује на објекат било које класе која поштује тај уговор.
 
 ### [`primer02_kasa_zavisi_od_ugovora`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer02_kasa_zavisi_od_ugovora)
 
-Pravimo klasu `Kasa`.
+Правимо класу `Kasa`.
 
-Lošiji dizajn bi bio:
+Лошији дизајн би био:
 
 ```java
 private PlacanjeKarticom placanje;
 ```
 
-jer bi kasa tada bila vezana baš za jednu konkretnu implementaciju.
+јер би каса тада била везана баш за једну конкретну имплементацију.
 
-Umesto toga:
+Уместо тога:
 
 ```java
 private NacinPlacanja nacinPlacanja;
 ```
 
-Kasa zavisi od **ugovora**, a ne od konkretne klase.
+Каса зависи од **уговора**, а не од конкретне класе.
 
-Ovde ponovo koristimo kompoziciju i delegiranje:
+Овде поново користимо композицију и делегирање:
 
 ```text
 Kasa HAS-A NacinPlacanja
 ```
 
-i:
+и:
 
 ```java
 nacinPlacanja.plati(iznos);
@@ -109,49 +109,49 @@ nacinPlacanja.plati(iznos);
 
 ### [`primer03_vise_interfejsa`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer03_vise_interfejsa)
 
-Uvodimo drugu, nezavisnu sposobnost:
+Уводимо другу, независну способност:
 
 ```java
 Dopunjiv
 ```
 
-`DigitalniNovcanik` je istovremeno:
+`DigitalniNovcanik` је истовремено:
 
 ```text
 NacinPlacanja
 Dopunjiv
 ```
 
-Ovo je važna razlika u odnosu na nasleđivanje.
+Ово је важна разлика у односу на наслеђивање.
 
-Objekat može da poštuje više različitih ugovora koji opisuju različite njegove sposobnosti.
+Објекат може да поштује више различитих уговора који описују различите његове способности.
 
 ### [`primer04_podrazumevana_metoda`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer04_podrazumevana_metoda)
 
-Pokazujemo `default` metodu na malom primeru.
+Показујемо `default` методу на малом примеру.
 
-Interfejs može da ponudi zajedničko ponašanje koje implementacije mogu da koriste, ali centralna ideja interfejsa i dalje ostaje **ugovor**, a ne deljenje stanja.
+Интерфејс може да понуди заједничко понашање које имплементације могу да користе, али централна идеја интерфејса и даље остаје **уговор**, а не дељење стања.
 
 ### [`primer05_apstraktna_klasa_i_interfejs`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer05_apstraktna_klasa_i_interfejs)
 
-Spajamo gradivo prethodne i ove nedelje.
+Спајамо градиво претходне и ове недеље.
 
-Imamo:
+Имамо:
 
 ```text
 DebitnaKartica IS-A PlatnaKartica
 DebitnaKartica IMPLEMENTS NacinPlacanja
 ```
 
-Apstraktna klasa `PlatnaKartica` čuva zajedničko **stanje i identitet** kartica.
+Апстрактна класа `PlatnaKartica` чува заједничко **стање и идентитет** картица.
 
-Interfejs `NacinPlacanja` opisuje **sposobnost** koju kartica nudi ostatku programa.
+Интерфејс `NacinPlacanja` описује **способност** коју картица нуди остатку програма.
 
-To nisu konkurentski mehanizmi. Odgovaraju na različita pitanja.
+То нису конкурентски механизми. Одговарају на различита питања.
 
 ### [`primer06_promena_nacina_placanja`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer06_promena_nacina_placanja)
 
-Ovaj primer ponovo koristi `Kasa`, ali sada način plaćanja možemo da promenimo tokom rada programa.
+Овај пример поново користи `Kasa`, али сада начин плаћања можемо да променимо током рада програма.
 
 ```java
 kasa.postaviNacinPlacanja(new PlacanjeGotovinom(...));
@@ -161,33 +161,33 @@ kasa.postaviNacinPlacanja(new DigitalniNovcanik(...));
 kasa.naplati(...);
 ```
 
-Za sada ovo posmatramo samo kao prirodnu posledicu rada preko interfejsa.
+За сада ово посматрамо само као природну последицу рада преко интерфејса.
 
-Sledeće nedelje ćemo videti situaciju u kojoj će **zamenljiva ponašanja** postati centralna ideja dizajna.
+Следеће недеље ћемо видети ситуацију у којој ће **заменљива понашања** постати централна идеја дизајна.
 
 ### [`primer07_ugnjezdene_klase`](https://github.com/MatfOOP-I/info/tree/main/vezbe/primeri-java/06.interfejsi.i.ugovori/src/primer07_ugnjezdene_klase)
 
-Poredimo static nested, inner, lokalnu i anonimnu klasu. Objašnjenje je u odeljku [Precizan ugovor i ugnježdeni tipovi](#precizan-ugovor-i-ugnježdeni-tipovi).
+Поредимо static nested, inner, локалну и анонимну класу. Објашњење је у одељку [Прецизан уговор и угњеждени типови](#прецизан-уговор-и-угњеждени-типови).
 
-## Interfejs ili apstraktna klasa?
+## Интерфејс или апстрактна класа?
 
-Nema pravila koje se može svesti samo na sintaksu.
+Нема правила које се може свести само на синтаксу.
 
-Dobro početno pitanje je:
+Добро почетно питање је:
 
-### Da li modelujemo zajedničku vrstu objekta?
+### Да ли моделујемо заједничку врсту објекта?
 
-Na primer:
+На пример:
 
 ```text
 DebitnaKartica IS-A PlatnaKartica
 ```
 
-Tu apstraktna klasa može imati smisla, posebno ako postoje zajednička polja i implementacija.
+Ту апстрактна класа може имати смисла, посебно ако постоје заједничка поља и имплементација.
 
-### Ili modelujemo sposobnost/ugovor?
+### Или моделујемо способност/уговор?
 
-Na primer:
+На пример:
 
 ```text
 DigitalniNovcanik može da plaća.
@@ -195,73 +195,73 @@ DebitnaKartica može da plaća.
 PoklonKartica može da plaća.
 ```
 
-Ovi objekti ne moraju da pripadaju istoj prirodnoj hijerarhiji.
+Ови објекти не морају да припадају истој природној хијерархији.
 
-Ali svi mogu da implementiraju:
+Али сви могу да имплементирају:
 
 ```java
 NacinPlacanja
 ```
 
-## Centralne poruke
+## Централне поруке
 
-### Programiramo prema ugovoru
+### Програмирамо према уговору
 
-Klasa koja koristi plaćanje ne treba da zna sve konkretne vrste plaćanja.
+Класа која користи плаћање не треба да зна све конкретне врсте плаћања.
 
-Želimo:
+Желимо:
 
 ```java
 private NacinPlacanja nacinPlacanja;
 ```
 
-umesto:
+уместо:
 
 ```java
 private PlacanjeKarticom placanjeKarticom;
 ```
 
-ako nam je jedino važno da objekat ume da izvrši plaćanje.
+ако нам је једино важно да објекат уме да изврши плаћање.
 
-### Interfejs omogućava polimorfizam
+### Интерфејс омогућава полиморфизам
 
-Isto kao kod bazne klase, poziv:
+Исто као код базне класе, позив:
 
 ```java
 nacinPlacanja.plati(iznos);
 ```
 
-završava u konkretnoj implementaciji objekta.
+завршава у конкретној имплементацији објекта.
 
-### Jedna klasa može imati više sposobnosti
+### Једна класа може имати више способности
 
-Nasleđivanje gradi jednu hijerarhiju tipova.
+Наслеђивање гради једну хијерархију типова.
 
-Interfejsi omogućavaju da jedan objekat poštuje više nezavisnih ugovora.
+Интерфејси омогућавају да један објекат поштује више независних уговора.
 
-## Pitanja za diskusiju
+## Питања за дискусију
 
-1. Da li se može napraviti `new NacinPlacanja()`?
-2. Šta klasa obećava kada napiše `implements NacinPlacanja`?
-3. Ko određuje koja će se implementacija `plati` pozvati?
-4. Zašto `Kasa` ima polje tipa `NacinPlacanja`, a ne `PlacanjeKarticom`?
-5. Šta bismo morali da promenimo u `Kasa` klasi ako dodamo potpuno novi način plaćanja?
-6. Da li `DigitalniNovcanik IS-A NacinPlacanja` opisuje istu vrstu odnosa kao `Taksi IS-A Prevoz`?
-7. Zašto jedan objekat može da implementira i `NacinPlacanja` i `Dopunjiv`?
-8. Kada bi zajedničko stanje bilo razlog da uvedemo apstraktnu klasu?
-9. Može li klasa istovremeno da nasledi jednu klasu i implementira interfejs?
-10. Kako primer 06 priprema teren za zamenljiva ponašanja?
+1. Да ли се може направити `new NacinPlacanja()`?
+2. Шта класа обећава када напише `implements NacinPlacanja`?
+3. Ко одређује која ће се имплементација `plati` позвати?
+4. Зашто `Kasa` има поље типа `NacinPlacanja`, а не `PlacanjeKarticom`?
+5. Шта бисмо морали да променимо у `Kasa` класи ако додамо потпуно нови начин плаћања?
+6. Да ли `DigitalniNovcanik IS-A NacinPlacanja` описује исту врсту односа као `Taksi IS-A Prevoz`?
+7. Зашто један објекат може да имплементира и `NacinPlacanja` и `Dopunjiv`?
+8. Када би заједничко стање било разлог да уведемо апстрактну класу?
+9. Може ли класа истовремено да наследи једну класу и имплементира интерфејс?
+10. Како пример 06 припрема терен за заменљива понашања?
 
-## Mali zadatak
+## Мали задатак
 
-U fajlu `ZADATAK.md` nalazi se sistem obaveštavanja. Zadatak traži da različiti kanali obaveštavanja poštuju isti ugovor, a da klasa `Podsetnik` ne zavisi ni od jedne konkretne implementacije.
+У фајлу `ZADATAK.md` налази се систем обавештавања. Задатак тражи да различити канали обавештавања поштују исти уговор, а да класа `Podsetnik` не зависи ни од једне конкретне имплементације.
 
-## Precizan ugovor i ugnježdeni tipovi
+## Прецизан уговор и угњеждени типови
 
-Za sve načine plaćanja u primerima: iznos mora biti pozitivan; `false` znači da
-plaćanje nije izvršeno i da sredstva ostaju ista; `true` znači da je iznos oduzet.
-Interfejs treba dokumentovati kroz ova obećanja, ne samo kroz potpis metode.
+За све начине плаћања у примерима: износ мора бити позитиван; `false` значи да
+плаћање није извршено и да средства остају иста; `true` значи да је износ одузет.
+Интерфејс треба документовати кроз ова обећања, не само кроз потпис методе.
 
-U primeru `primer07_ugnjezdene_klase` upoređene su static nested, inner, lokalna i anonimna klasa.
-Obavezno razlikovati static nested i inner klase; ostale vrste pročitati pre nedelje 10.
-Ovo znanje se vraća u nedelji 13: privatne ugnježdene klase skrivaju detalje State-a.
+У примеру `primer07_ugnjezdene_klase` упоређене су static nested, inner, локална и анонимна класа.
+Обавезно разликовати static nested и inner класе; остале врсте прочитати пре недеље 10.
+Ово знање се враћа у недељи 13: приватне угњеждене класе скривају детаље State-а.

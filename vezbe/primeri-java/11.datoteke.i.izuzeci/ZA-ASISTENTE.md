@@ -1,19 +1,19 @@
-# Nedelja 11 — napomene za asistente
+# Недеља 11 — напомене за асистенте
 
-[← Nedelja 11](README.md)
+[← Недеља 11](README.md)
 
-## Šta namerno NE radimo detaljno
+## Шта намерно НЕ радимо детаљно
 
-Zbog ograničenja kursa ne ulazimo duboko u:
+Због ограничења курса не улазимо дубоко у:
 
-- `FileInputStream` i binarne fajlove;
-- serijalizaciju Java objekata;
+- `FileInputStream` и бинарне фајлове;
+- серијализацију Java објеката;
 - `ObjectInputStream`;
 - `RandomAccessFile`;
-- celu hijerarhiju `java.nio`;
-- kompleksne strategije retry mehanizama.
+- целу хијерархију `java.nio`;
+- комплексне стратегије retry механизама.
 
-Student treba da izađe sa jasnim modelom:
+Студент треба да изађе са јасним моделом:
 
 ```text
 fajl je resurs

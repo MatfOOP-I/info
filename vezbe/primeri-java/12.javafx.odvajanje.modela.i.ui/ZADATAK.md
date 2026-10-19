@@ -1,26 +1,26 @@
-# Zadatak — Lista za kupovinu
+# Задатак — Листа за куповину
 
-[← Nedelja 12](README.md)
+[← Недеља 12](README.md)
 
-Napraviti malu JavaFX aplikaciju za listu za kupovinu.
+Направити малу JavaFX апликацију за листу за куповину.
 
-Aplikacija treba da omogući:
+Апликација треба да омогући:
 
-- dodavanje proizvoda;
-- izbor kategorije;
-- prikaz svih proizvoda;
-- označavanje proizvoda kao kupljenog;
-- uklanjanje proizvoda.
+- додавање производа;
+- избор категорије;
+- приказ свих производа;
+- означавање производа као купљеног;
+- уклањање производа.
 
-## Model
+## Модел
 
-Napraviti paket:
+Направити пакет:
 
 ```text
 model
 ```
 
-i klase:
+и класе:
 
 ```text
 Proizvod
@@ -28,7 +28,7 @@ ListaZaKupovinu
 Kategorija
 ```
 
-`Kategorija` treba da bude `enum`, na primer:
+`Kategorija` треба да буде `enum`, на пример:
 
 ```java
 HRANA,
@@ -38,13 +38,13 @@ DOMACINSTVO,
 OSTALO
 ```
 
-`Proizvod` ima:
+`Proizvod` има:
 
-- naziv;
-- kategoriju;
-- informaciju da li je kupljen.
+- назив;
+- категорију;
+- информацију да ли је купљен.
 
-Model **ne sme** da importuje ništa iz:
+Модел **не сме** да импортује ништа из:
 
 ```text
 javafx.*
@@ -52,21 +52,21 @@ javafx.*
 
 ---
 
-## Kontroler
+## Контролер
 
-Napraviti paket:
+Направити пакет:
 
 ```text
 kontroler
 ```
 
-i klasu:
+и класу:
 
 ```text
 KontrolerKupovine
 ```
 
-Kontroler treba da omogući operacije:
+Контролер треба да омогући операције:
 
 ```java
 dodajProizvod(...)
@@ -75,19 +75,19 @@ ukloniProizvod(...)
 getProizvodi()
 ```
 
-Ni kontroler ne treba da koristi JavaFX tipove.
+Ни контролер не треба да користи JavaFX типове.
 
 ---
 
-## Prikaz
+## Приказ
 
-Napraviti paket:
+Направити пакет:
 
 ```text
 prikaz
 ```
 
-JavaFX interfejs treba da sadrži najmanje:
+JavaFX интерфејс треба да садржи најмање:
 
 ```text
 TextField
@@ -97,7 +97,7 @@ ListView
 Label
 ```
 
-i neki od layout kontejnera:
+и неки од layout контејнера:
 
 ```text
 VBox
@@ -105,38 +105,38 @@ HBox
 BorderPane
 ```
 
-UI treba da:
+UI треба да:
 
-1. pročita unos;
-2. pozove kontroler;
-3. osveži prikaz.
+1. прочита унос;
+2. позове контролер;
+3. освежи приказ.
 
-Ne treba direktno da menja internu kolekciju modela.
+Не треба директно да мења интерну колекцију модела.
 
 ---
 
-## Važan zahtev
+## Важан захтев
 
-Ovo ne treba da postoji u klasi `Proizvod`:
+Ово не треба да постоји у класи `Proizvod`:
 
 ```java
 private Button dugme;
 private Label nazivLabela;
 ```
 
-Niti u klasi `ListaZaKupovinu`:
+Нити у класи `ListaZaKupovinu`:
 
 ```java
 ObservableList<Proizvod>
 ```
 
-Model treba da bude obična Java.
+Модел треба да буде обична Java.
 
 ---
 
-## Dodatak
+## Додатак
 
-Dodati filter:
+Додати филтер:
 
 ```text
 SVI
@@ -144,18 +144,18 @@ NEKUPLJENI
 KUPLJENI
 ```
 
-Razmisliti:
+Размислити:
 
-- da li je filter deo modela ili prikaza;
-- ko treba da odluči koji proizvodi se trenutno prikazuju;
-- da li izbor boje za kupljeni proizvod pripada modelu.
+- да ли је филтер део модела или приказа;
+- ко треба да одлучи који производи се тренутно приказују;
+- да ли избор боје за купљени производ припада моделу.
 
-## Samostalni deo — Filter bez pogrešnog indeksa
+## Самостални део — Филтер без погрешног индекса
 
-Na listu za kupovinu dodati prikaz samo nekupljenih proizvoda. Definisati kako UI identifikuje izabrani proizvod kad je lista filtrirana.
+На листу за куповину додати приказ само некупљених производа. Дефинисати како UI идентификује изабрани производ кад је листа филтрирана.
 
-**Kriterijum provere:** Posle filtriranja označiti drugi vidljivi proizvod i proveriti da je promenjen pravi objekat modela. Indeks filtriranog prikaza nije nužno indeks u modelu; koristiti stabilan ID ili odgovarajući izabrani objekat.
+**Критеријум провере:** После филтрирања означити други видљиви производ и проверити да је промењен прави објекат модела. Индекс филтрираног приказа није нужно индекс у моделу; користити стабилан ID или одговарајући изабрани објекат.
 
-Predati mali `Main` sa demonstracijom i kratko obrazloženje odluka. U ovom delu
-nisu zadati nazivi klasa ili obavezni obrasci; obrazloženo jednostavnije rešenje
-je prihvatljivo. Najpre definisati ugovor i očekivani rezultat, pa implementirati.
+Предати мали `Main` са демонстрацијом и кратко образложење одлука. У овом делу
+нису задати називи класа или обавезни обрасци; образложено једноставније решење
+је прихватљиво. Најпре дефинисати уговор и очекивани резултат, па имплементирати.
