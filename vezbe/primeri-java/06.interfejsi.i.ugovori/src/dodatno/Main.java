@@ -1,4 +1,4 @@
-package primer07_ugnjezdene_klase;
+package dodatno;
 public class Main {
     public static void main(String[] args) {
         Klub klub = new Klub("Čitaonica");

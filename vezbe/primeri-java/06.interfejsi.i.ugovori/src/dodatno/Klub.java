@@ -1,4 +1,4 @@
-package primer07_ugnjezdene_klase;
+package dodatno;
 public final class Klub {
     private final String naziv;
     public Klub(String naziv) { this.naziv = naziv; }
