@@ -1,53 +1,55 @@
-# Информације о курсу -- Објектно-оријентисано програмирање (И смер) @ Математички факултет
+# Информације о курсу
 
-[ООП](../README.md)
 
 ## Наставници и асистенти  
 
-* Наставник: **[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html){:target="_blank"}**
+* Наставник: **[др Александар Картељ](https://poincare.matf.bg.ac.rs/~aleksandar.kartelj/)**
 
-* Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/){:target="_blank"}**
+* Асистент: **[Денис Аличић](http://poincare.matf.bg.ac.rs/~denis.alicic/)**
 
-* Асистент: **[Милица Карличић](http://www.matf.bg.ac.rs/p/milica-karlicic/pocetna/){:target="_blank"}**
+* Асистент: **[Милица Карличић](http://www.matf.bg.ac.rs/p/milica-karlicic/pocetna/)**
 
-* Асистент: **[Иван Поп-Јованов]{:target="_blank"}**
+* Асистент: **Марија Ристић**
 
 ---
 
 ## План и програм курса
 
-* **[План и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf){:target="_blank"}**
+<!-- TODO: ажурирати линк ка званичном плану и програму курса, тренутни је невалидан -->
 
-* **[Начин бодовања](Nacin-realizacije-kursa.md)**
+* **[Званичан план и програм курса](http://www.math.rs/files/P102_-_Objektno_orijentisano_programiranje.pdf)**
+
+* **[Начин реализације курса](Nacin-realizacije-kursa.md)**
+
+---
+
+## Консултације
+
+<!-- TODO: ажурирати термин консултација за 2026/27 (тренутни текст је из 2023/24). -->
+
+Термин за консултације код наставника је среда у 16:00, БИМ сала на Студентском тргу, уз обавезну најаву преко е-маил-а бар један дан пре самих консултација.
+
+
+---
 
 ## Аутори веб страна курса
 
-  *[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html){:target="_blank"}*
+  *[проф. др Владимир Филиповић](https://vladofilipovic.github.io/index-en.html)*
 
-  *[др Александар Картељ](http://poincare.matf.bg.ac.rs/~kartelj/){:target="_blank"}*
+  *[др Александар Картељ](http://poincare.matf.bg.ac.rs/~kartelj/)*
 
-  *[Биљана Стојановић](http://poincare.matf.bg.ac.rs/~biljana/){:target="_blank"}*
+  *[Биљана Стојановић](http://poincare.matf.bg.ac.rs/~biljana/)*
 
-  *[Немања Мићовић](http://poincare.matf.bg.ac.rs/~nemanja_micovic/){:target="_blank"}*
+  *[Немања Мићовић](http://poincare.matf.bg.ac.rs/~nemanja_micovic/)*
 
-  *[Ања Букуров](http://poincare.matf.bg.ac.rs/~anja_bukurov/){:target="_blank"}*
+  *[Ања Букуров](http://poincare.matf.bg.ac.rs/~anja_bukurov/)*
 
-  *[Иван Ристовић](http://poincare.matf.bg.ac.rs/~ivan_ristovic/){:target="_blank"}*
+  *[Иван Ристовић](http://poincare.matf.bg.ac.rs/~ivan_ristovic/)*
 
-  *[Растко Ђорђевић](http://www.matf.bg.ac.rs/p/rastko-djordjevic/pocetna/){:target="_blank"}*
+  *[Растко Ђорђевић](http://www.matf.bg.ac.rs/p/rastko-djordjevic/pocetna/)*
 
-  *[Денис Аличић](http://www.matf.bg.ac.rs/~denis_alicic/){:target="_blank"}*
+  *[Денис Аличић](http://www.matf.bg.ac.rs/~denis_alicic/)*
 
-  *[Страхиња Станојевић](http://poincare.matf.bg.ac.rs/~strahinja_stanojevic/){:target="_blank"}*
+  *[Страхиња Станојевић](http://poincare.matf.bg.ac.rs/~strahinja_stanojevic/)*
 
-  *[Владан Ковачевић](http://poincare.matf.bg.ac.rs/~vladan_kovacevic/){:target="_blank"}*
-
----
-
-[ООП](../README.md)
-
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br />Овај садржај је заштићен лиценцом <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
-
-За програмски код који се односи на садржај овог курса се може сматрати да је заштићен [MIT лиценцом](/LICENSE).
+  *[Владан Ковачевић](http://poincare.matf.bg.ac.rs/~vladan_kovacevic/)*
